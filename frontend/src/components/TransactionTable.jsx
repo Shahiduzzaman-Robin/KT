@@ -207,7 +207,10 @@ function TransactionTable({
           <tbody className="[&_tr:last-child]:border-none">
             {rows.map((transaction, index) => (
               <tr key={transaction._id} className={`${index % 2 ? 'bg-[#f8fcff]' : 'bg-white'} align-top transition hover:bg-[#eaf7ff]`}>
-                <td className="px-4 py-4 text-[13px] font-medium text-[#3d4a43]">{dayjs(transaction.date).format('DD MMM YYYY')}</td>
+                <td className="px-4 py-4 text-[13px] font-medium text-[#3d4a43]">
+                  <div>{dayjs(transaction.date).format('DD MMM YYYY')}</div>
+                  <div className="text-xs text-slate-500">{dayjs(transaction.createdAt).format('hh:mm A')}</div>
+                </td>
                 <td className="px-4 py-4 font-semibold text-[#001f2a]">
                   {transaction.ledgerId?._id ? (
                     <Link className="underline decoration-transparent transition hover:decoration-current" to={`/ledgers/${transaction.ledgerId._id}`}>
@@ -292,7 +295,7 @@ function TransactionTable({
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Ledger:</span> <span className="font-extrabold text-[#001f2a]">{actionModal.transaction.ledgerId?.name || 'N/A'}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Type:</span> <span className={`font-extrabold ${actionModal.transaction.type === 'income' ? 'text-[#00694b]' : 'text-[#93000a]'}`}>{actionModal.transaction.type.toUpperCase()}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Amount:</span> <span className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">{formatBDT(actionModal.transaction.amount)}</span></p>
-                  <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Date:</span> <span className="font-bold text-[#001f2a]">{dayjs(actionModal.transaction.date).format('YYYY-MM-DD')}</span></p>
+                  <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Date:</span> <span className="font-bold text-[#001f2a]">{dayjs(actionModal.transaction.date).format('DD MMM YYYY')}</span><br /><span className="text-sm text-slate-500">at {dayjs(actionModal.transaction.createdAt).format('hh:mm A')}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Description:</span> <span className="font-bold text-[#001f2a]">{actionModal.transaction.description || '-'}</span></p>
                 </div>
 
@@ -370,7 +373,11 @@ function TransactionTable({
                       <div className="mt-3 grid gap-3 md:grid-cols-2">
                         <div className="rounded-2xl bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Date</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">{dayjs(detailsState.transaction.date).format('DD MMM YYYY')}</p>
+                          <p className="mt-1 text-sm font-semibold text-slate-800">
+                            {dayjs(detailsState.transaction.date).format('DD MMM YYYY')}
+                            <br />
+                            <span className="text-xs text-slate-500">at {dayjs(detailsState.transaction.createdAt).format('hh:mm A')}</span>
+                          </p>
                         </div>
                         <div className="rounded-2xl bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Description</p>
