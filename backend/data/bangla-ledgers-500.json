@@ -1,0 +1,3502 @@
+[
+  {
+    "name": "Halim Brothers",
+    "type": "customer",
+    "contact": "01300000001",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Karim ট্রেডার্স",
+    "type": "supplier",
+    "contact": "01300000002",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Brothers 003",
+    "type": "employee",
+    "contact": "01300000003",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Brothers",
+    "type": "other",
+    "contact": "01300000004",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nabil সাপ্লাই",
+    "type": "customer",
+    "contact": "01300000005",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Brothers 006",
+    "type": "supplier",
+    "contact": "01300000006",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Brothers",
+    "type": "employee",
+    "contact": "01300000007",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Jamal মার্ট",
+    "type": "other",
+    "contact": "01300000008",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Brothers 009",
+    "type": "customer",
+    "contact": "01300000009",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Brothers",
+    "type": "supplier",
+    "contact": "01300000010",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rafiq লিংক",
+    "type": "employee",
+    "contact": "01300000011",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Brothers 012",
+    "type": "other",
+    "contact": "01300000012",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Brothers",
+    "type": "customer",
+    "contact": "01300000013",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nadim ইন্টারন্যাশনাল",
+    "type": "supplier",
+    "contact": "01300000014",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Brothers 015",
+    "type": "employee",
+    "contact": "01300000015",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Brothers",
+    "type": "other",
+    "contact": "01300000016",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sakib বাজার",
+    "type": "customer",
+    "contact": "01300000017",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Brothers 018",
+    "type": "supplier",
+    "contact": "01300000018",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Brothers",
+    "type": "employee",
+    "contact": "01300000019",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tanvir ক্যাশ এন্ড ক্যারি",
+    "type": "other",
+    "contact": "01300000020",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Brothers 021",
+    "type": "customer",
+    "contact": "01300000021",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Brothers",
+    "type": "supplier",
+    "contact": "01300000022",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Salam এন্টারপ্রাইজ",
+    "type": "employee",
+    "contact": "01300000023",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Brothers 024",
+    "type": "other",
+    "contact": "01300000024",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Brothers",
+    "type": "customer",
+    "contact": "01300000025",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Anwar ভান্ডার",
+    "type": "supplier",
+    "contact": "01300000026",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Brothers 027",
+    "type": "employee",
+    "contact": "01300000027",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Brothers",
+    "type": "other",
+    "contact": "01300000028",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rana হোলসেল",
+    "type": "customer",
+    "contact": "01300000029",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Brothers 030",
+    "type": "supplier",
+    "contact": "01300000030",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim and Sons",
+    "type": "employee",
+    "contact": "01300000031",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Karim পয়েন্ট",
+    "type": "other",
+    "contact": "01300000032",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib and Sons 033",
+    "type": "customer",
+    "contact": "01300000033",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib and Sons",
+    "type": "supplier",
+    "contact": "01300000034",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nabil কর্পোরেশন",
+    "type": "employee",
+    "contact": "01300000035",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel and Sons 036",
+    "type": "other",
+    "contact": "01300000036",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin and Sons",
+    "type": "customer",
+    "contact": "01300000037",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Jamal কর্নার",
+    "type": "supplier",
+    "contact": "01300000038",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal and Sons 039",
+    "type": "employee",
+    "contact": "01300000039",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul and Sons",
+    "type": "other",
+    "contact": "01300000040",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rafiq ভাই এন্ড সন্স",
+    "type": "customer",
+    "contact": "01300000041",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir and Sons 042",
+    "type": "supplier",
+    "contact": "01300000042",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim and Sons",
+    "type": "employee",
+    "contact": "01300000043",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nadim স্টোর",
+    "type": "other",
+    "contact": "01300000044",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan and Sons 045",
+    "type": "customer",
+    "contact": "01300000045",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan and Sons",
+    "type": "supplier",
+    "contact": "01300000046",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sakib সেন্টার",
+    "type": "employee",
+    "contact": "01300000047",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq and Sons 048",
+    "type": "other",
+    "contact": "01300000048",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem and Sons",
+    "type": "customer",
+    "contact": "01300000049",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tanvir ডিপো",
+    "type": "supplier",
+    "contact": "01300000050",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz and Sons 051",
+    "type": "employee",
+    "contact": "01300000051",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk and Sons",
+    "type": "other",
+    "contact": "01300000052",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Salam হাউস",
+    "type": "customer",
+    "contact": "01300000053",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul and Sons 054",
+    "type": "supplier",
+    "contact": "01300000054",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel and Sons",
+    "type": "employee",
+    "contact": "01300000055",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Anwar গ্রুপ",
+    "type": "other",
+    "contact": "01300000056",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal and Sons 057",
+    "type": "customer",
+    "contact": "01300000057",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo and Sons",
+    "type": "supplier",
+    "contact": "01300000058",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rana এজেন্সি",
+    "type": "employee",
+    "contact": "01300000059",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar and Sons 060",
+    "type": "other",
+    "contact": "01300000060",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Traders",
+    "type": "customer",
+    "contact": "01300000061",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Traders 063",
+    "type": "employee",
+    "contact": "01300000063",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Traders",
+    "type": "other",
+    "contact": "01300000064",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Traders 066",
+    "type": "supplier",
+    "contact": "01300000066",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Traders",
+    "type": "employee",
+    "contact": "01300000067",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Traders 069",
+    "type": "customer",
+    "contact": "01300000069",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Traders",
+    "type": "supplier",
+    "contact": "01300000070",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Traders 072",
+    "type": "other",
+    "contact": "01300000072",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Traders",
+    "type": "customer",
+    "contact": "01300000073",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Traders 075",
+    "type": "employee",
+    "contact": "01300000075",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Traders",
+    "type": "other",
+    "contact": "01300000076",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Traders 078",
+    "type": "supplier",
+    "contact": "01300000078",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Traders",
+    "type": "employee",
+    "contact": "01300000079",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Traders 081",
+    "type": "customer",
+    "contact": "01300000081",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Traders",
+    "type": "supplier",
+    "contact": "01300000082",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Traders 084",
+    "type": "other",
+    "contact": "01300000084",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Traders",
+    "type": "customer",
+    "contact": "01300000085",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Traders 087",
+    "type": "employee",
+    "contact": "01300000087",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Traders",
+    "type": "other",
+    "contact": "01300000088",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Traders 090",
+    "type": "supplier",
+    "contact": "01300000090",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Enterprise",
+    "type": "employee",
+    "contact": "01300000091",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Enterprise 093",
+    "type": "customer",
+    "contact": "01300000093",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Enterprise",
+    "type": "supplier",
+    "contact": "01300000094",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Enterprise 096",
+    "type": "other",
+    "contact": "01300000096",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Enterprise",
+    "type": "customer",
+    "contact": "01300000097",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Enterprise 099",
+    "type": "employee",
+    "contact": "01300000099",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Enterprise",
+    "type": "other",
+    "contact": "01300000100",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Enterprise 102",
+    "type": "supplier",
+    "contact": "01300000102",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Enterprise",
+    "type": "employee",
+    "contact": "01300000103",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Enterprise 105",
+    "type": "customer",
+    "contact": "01300000105",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Enterprise",
+    "type": "supplier",
+    "contact": "01300000106",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Enterprise 108",
+    "type": "other",
+    "contact": "01300000108",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Enterprise",
+    "type": "customer",
+    "contact": "01300000109",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Enterprise 111",
+    "type": "employee",
+    "contact": "01300000111",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Enterprise",
+    "type": "other",
+    "contact": "01300000112",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Enterprise 114",
+    "type": "supplier",
+    "contact": "01300000114",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Enterprise",
+    "type": "employee",
+    "contact": "01300000115",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Enterprise 117",
+    "type": "customer",
+    "contact": "01300000117",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Enterprise",
+    "type": "supplier",
+    "contact": "01300000118",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Enterprise 120",
+    "type": "other",
+    "contact": "01300000120",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Store",
+    "type": "customer",
+    "contact": "01300000121",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Store 123",
+    "type": "employee",
+    "contact": "01300000123",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Store",
+    "type": "other",
+    "contact": "01300000124",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Store 126",
+    "type": "supplier",
+    "contact": "01300000126",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Store",
+    "type": "employee",
+    "contact": "01300000127",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Store 129",
+    "type": "customer",
+    "contact": "01300000129",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Store",
+    "type": "supplier",
+    "contact": "01300000130",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Store 132",
+    "type": "other",
+    "contact": "01300000132",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Store",
+    "type": "customer",
+    "contact": "01300000133",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Store 135",
+    "type": "employee",
+    "contact": "01300000135",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Store",
+    "type": "other",
+    "contact": "01300000136",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Store 138",
+    "type": "supplier",
+    "contact": "01300000138",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Store",
+    "type": "employee",
+    "contact": "01300000139",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Store 141",
+    "type": "customer",
+    "contact": "01300000141",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Store",
+    "type": "supplier",
+    "contact": "01300000142",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Store 144",
+    "type": "other",
+    "contact": "01300000144",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Store",
+    "type": "customer",
+    "contact": "01300000145",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Store 147",
+    "type": "employee",
+    "contact": "01300000147",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Store",
+    "type": "other",
+    "contact": "01300000148",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Store 150",
+    "type": "supplier",
+    "contact": "01300000150",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Agency",
+    "type": "employee",
+    "contact": "01300000151",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Agency 153",
+    "type": "customer",
+    "contact": "01300000153",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Agency",
+    "type": "supplier",
+    "contact": "01300000154",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Agency 156",
+    "type": "other",
+    "contact": "01300000156",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Agency",
+    "type": "customer",
+    "contact": "01300000157",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Agency 159",
+    "type": "employee",
+    "contact": "01300000159",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Agency",
+    "type": "other",
+    "contact": "01300000160",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Agency 162",
+    "type": "supplier",
+    "contact": "01300000162",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Agency",
+    "type": "employee",
+    "contact": "01300000163",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Agency 165",
+    "type": "customer",
+    "contact": "01300000165",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Agency",
+    "type": "supplier",
+    "contact": "01300000166",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Agency 168",
+    "type": "other",
+    "contact": "01300000168",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Agency",
+    "type": "customer",
+    "contact": "01300000169",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Agency 171",
+    "type": "employee",
+    "contact": "01300000171",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Agency",
+    "type": "other",
+    "contact": "01300000172",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Agency 174",
+    "type": "supplier",
+    "contact": "01300000174",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Agency",
+    "type": "employee",
+    "contact": "01300000175",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Agency 177",
+    "type": "customer",
+    "contact": "01300000177",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Agency",
+    "type": "supplier",
+    "contact": "01300000178",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Agency 180",
+    "type": "other",
+    "contact": "01300000180",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Supply",
+    "type": "customer",
+    "contact": "01300000181",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Supply 183",
+    "type": "employee",
+    "contact": "01300000183",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Supply",
+    "type": "other",
+    "contact": "01300000184",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Supply 186",
+    "type": "supplier",
+    "contact": "01300000186",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Supply",
+    "type": "employee",
+    "contact": "01300000187",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Supply 189",
+    "type": "customer",
+    "contact": "01300000189",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Supply",
+    "type": "supplier",
+    "contact": "01300000190",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Supply 192",
+    "type": "other",
+    "contact": "01300000192",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Supply",
+    "type": "customer",
+    "contact": "01300000193",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Supply 195",
+    "type": "employee",
+    "contact": "01300000195",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Supply",
+    "type": "other",
+    "contact": "01300000196",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Supply 198",
+    "type": "supplier",
+    "contact": "01300000198",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Supply",
+    "type": "employee",
+    "contact": "01300000199",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Supply 201",
+    "type": "customer",
+    "contact": "01300000201",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Supply",
+    "type": "supplier",
+    "contact": "01300000202",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Supply 204",
+    "type": "other",
+    "contact": "01300000204",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Supply",
+    "type": "customer",
+    "contact": "01300000205",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Supply 207",
+    "type": "employee",
+    "contact": "01300000207",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Supply",
+    "type": "other",
+    "contact": "01300000208",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Supply 210",
+    "type": "supplier",
+    "contact": "01300000210",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Bhandar",
+    "type": "employee",
+    "contact": "01300000211",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Bhandar 213",
+    "type": "customer",
+    "contact": "01300000213",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Bhandar",
+    "type": "supplier",
+    "contact": "01300000214",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Bhandar 216",
+    "type": "other",
+    "contact": "01300000216",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Bhandar",
+    "type": "customer",
+    "contact": "01300000217",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Bhandar 219",
+    "type": "employee",
+    "contact": "01300000219",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Bhandar",
+    "type": "other",
+    "contact": "01300000220",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Bhandar 222",
+    "type": "supplier",
+    "contact": "01300000222",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Bhandar",
+    "type": "employee",
+    "contact": "01300000223",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Bhandar 225",
+    "type": "customer",
+    "contact": "01300000225",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Bhandar",
+    "type": "supplier",
+    "contact": "01300000226",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Bhandar 228",
+    "type": "other",
+    "contact": "01300000228",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Bhandar",
+    "type": "customer",
+    "contact": "01300000229",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Bhandar 231",
+    "type": "employee",
+    "contact": "01300000231",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Bhandar",
+    "type": "other",
+    "contact": "01300000232",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Bhandar 234",
+    "type": "supplier",
+    "contact": "01300000234",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Bhandar",
+    "type": "employee",
+    "contact": "01300000235",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Bhandar 237",
+    "type": "customer",
+    "contact": "01300000237",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Bhandar",
+    "type": "supplier",
+    "contact": "01300000238",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Bhandar 240",
+    "type": "other",
+    "contact": "01300000240",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Center",
+    "type": "customer",
+    "contact": "01300000241",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Center 243",
+    "type": "employee",
+    "contact": "01300000243",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Center",
+    "type": "other",
+    "contact": "01300000244",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Center 246",
+    "type": "supplier",
+    "contact": "01300000246",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Center",
+    "type": "employee",
+    "contact": "01300000247",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Center 249",
+    "type": "customer",
+    "contact": "01300000249",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Center",
+    "type": "supplier",
+    "contact": "01300000250",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Center 252",
+    "type": "other",
+    "contact": "01300000252",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Center",
+    "type": "customer",
+    "contact": "01300000253",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Center 255",
+    "type": "employee",
+    "contact": "01300000255",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Center",
+    "type": "other",
+    "contact": "01300000256",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Center 258",
+    "type": "supplier",
+    "contact": "01300000258",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Center",
+    "type": "employee",
+    "contact": "01300000259",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Center 261",
+    "type": "customer",
+    "contact": "01300000261",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Center",
+    "type": "supplier",
+    "contact": "01300000262",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Center 264",
+    "type": "other",
+    "contact": "01300000264",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Center",
+    "type": "customer",
+    "contact": "01300000265",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Center 267",
+    "type": "employee",
+    "contact": "01300000267",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Center",
+    "type": "other",
+    "contact": "01300000268",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Center 270",
+    "type": "supplier",
+    "contact": "01300000270",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Mart",
+    "type": "employee",
+    "contact": "01300000271",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Mart 273",
+    "type": "customer",
+    "contact": "01300000273",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Mart",
+    "type": "supplier",
+    "contact": "01300000274",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Mart 276",
+    "type": "other",
+    "contact": "01300000276",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Mart",
+    "type": "customer",
+    "contact": "01300000277",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Mart 279",
+    "type": "employee",
+    "contact": "01300000279",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Mart",
+    "type": "other",
+    "contact": "01300000280",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Mart 282",
+    "type": "supplier",
+    "contact": "01300000282",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Mart",
+    "type": "employee",
+    "contact": "01300000283",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Mart 285",
+    "type": "customer",
+    "contact": "01300000285",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Mart",
+    "type": "supplier",
+    "contact": "01300000286",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Mart 288",
+    "type": "other",
+    "contact": "01300000288",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Mart",
+    "type": "customer",
+    "contact": "01300000289",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Mart 291",
+    "type": "employee",
+    "contact": "01300000291",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Mart",
+    "type": "other",
+    "contact": "01300000292",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Mart 294",
+    "type": "supplier",
+    "contact": "01300000294",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Mart",
+    "type": "employee",
+    "contact": "01300000295",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Mart 297",
+    "type": "customer",
+    "contact": "01300000297",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Mart",
+    "type": "supplier",
+    "contact": "01300000298",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Mart 300",
+    "type": "other",
+    "contact": "01300000300",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Wholesale",
+    "type": "customer",
+    "contact": "01300000301",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Wholesale 303",
+    "type": "employee",
+    "contact": "01300000303",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Wholesale",
+    "type": "other",
+    "contact": "01300000304",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Wholesale 306",
+    "type": "supplier",
+    "contact": "01300000306",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Wholesale",
+    "type": "employee",
+    "contact": "01300000307",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Wholesale 309",
+    "type": "customer",
+    "contact": "01300000309",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Wholesale",
+    "type": "supplier",
+    "contact": "01300000310",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Wholesale 312",
+    "type": "other",
+    "contact": "01300000312",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Wholesale",
+    "type": "customer",
+    "contact": "01300000313",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Wholesale 315",
+    "type": "employee",
+    "contact": "01300000315",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Wholesale",
+    "type": "other",
+    "contact": "01300000316",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Wholesale 318",
+    "type": "supplier",
+    "contact": "01300000318",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Wholesale",
+    "type": "employee",
+    "contact": "01300000319",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Wholesale 321",
+    "type": "customer",
+    "contact": "01300000321",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Wholesale",
+    "type": "supplier",
+    "contact": "01300000322",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Wholesale 324",
+    "type": "other",
+    "contact": "01300000324",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Wholesale",
+    "type": "customer",
+    "contact": "01300000325",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Wholesale 327",
+    "type": "employee",
+    "contact": "01300000327",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Wholesale",
+    "type": "other",
+    "contact": "01300000328",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Wholesale 330",
+    "type": "supplier",
+    "contact": "01300000330",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Depot",
+    "type": "employee",
+    "contact": "01300000331",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Depot 333",
+    "type": "customer",
+    "contact": "01300000333",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Depot",
+    "type": "supplier",
+    "contact": "01300000334",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Depot 336",
+    "type": "other",
+    "contact": "01300000336",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Depot",
+    "type": "customer",
+    "contact": "01300000337",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Depot 339",
+    "type": "employee",
+    "contact": "01300000339",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Depot",
+    "type": "other",
+    "contact": "01300000340",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Depot 342",
+    "type": "supplier",
+    "contact": "01300000342",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Depot",
+    "type": "employee",
+    "contact": "01300000343",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Depot 345",
+    "type": "customer",
+    "contact": "01300000345",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Depot",
+    "type": "supplier",
+    "contact": "01300000346",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Depot 348",
+    "type": "other",
+    "contact": "01300000348",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Depot",
+    "type": "customer",
+    "contact": "01300000349",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Depot 351",
+    "type": "employee",
+    "contact": "01300000351",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Depot",
+    "type": "other",
+    "contact": "01300000352",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Depot 354",
+    "type": "supplier",
+    "contact": "01300000354",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Depot",
+    "type": "employee",
+    "contact": "01300000355",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Depot 357",
+    "type": "customer",
+    "contact": "01300000357",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Depot",
+    "type": "supplier",
+    "contact": "01300000358",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Depot 360",
+    "type": "other",
+    "contact": "01300000360",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Link",
+    "type": "customer",
+    "contact": "01300000361",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Link 363",
+    "type": "employee",
+    "contact": "01300000363",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Link",
+    "type": "other",
+    "contact": "01300000364",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Link 366",
+    "type": "supplier",
+    "contact": "01300000366",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Link",
+    "type": "employee",
+    "contact": "01300000367",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Link 369",
+    "type": "customer",
+    "contact": "01300000369",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Link",
+    "type": "supplier",
+    "contact": "01300000370",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Link 372",
+    "type": "other",
+    "contact": "01300000372",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Link",
+    "type": "customer",
+    "contact": "01300000373",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Link 375",
+    "type": "employee",
+    "contact": "01300000375",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Link",
+    "type": "other",
+    "contact": "01300000376",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Link 378",
+    "type": "supplier",
+    "contact": "01300000378",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Link",
+    "type": "employee",
+    "contact": "01300000379",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Link 381",
+    "type": "customer",
+    "contact": "01300000381",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Link",
+    "type": "supplier",
+    "contact": "01300000382",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Link 384",
+    "type": "other",
+    "contact": "01300000384",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Link",
+    "type": "customer",
+    "contact": "01300000385",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Link 387",
+    "type": "employee",
+    "contact": "01300000387",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Link",
+    "type": "other",
+    "contact": "01300000388",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Link 390",
+    "type": "supplier",
+    "contact": "01300000390",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Point",
+    "type": "employee",
+    "contact": "01300000391",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Point 393",
+    "type": "customer",
+    "contact": "01300000393",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Point",
+    "type": "supplier",
+    "contact": "01300000394",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Point 396",
+    "type": "other",
+    "contact": "01300000396",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Point",
+    "type": "customer",
+    "contact": "01300000397",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Point 399",
+    "type": "employee",
+    "contact": "01300000399",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Point",
+    "type": "other",
+    "contact": "01300000400",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Point 402",
+    "type": "supplier",
+    "contact": "01300000402",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Point",
+    "type": "employee",
+    "contact": "01300000403",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Point 405",
+    "type": "customer",
+    "contact": "01300000405",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Point",
+    "type": "supplier",
+    "contact": "01300000406",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Point 408",
+    "type": "other",
+    "contact": "01300000408",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Point",
+    "type": "customer",
+    "contact": "01300000409",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Point 411",
+    "type": "employee",
+    "contact": "01300000411",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Point",
+    "type": "other",
+    "contact": "01300000412",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Point 414",
+    "type": "supplier",
+    "contact": "01300000414",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Point",
+    "type": "employee",
+    "contact": "01300000415",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Point 417",
+    "type": "customer",
+    "contact": "01300000417",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Point",
+    "type": "supplier",
+    "contact": "01300000418",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Point 420",
+    "type": "other",
+    "contact": "01300000420",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim House",
+    "type": "customer",
+    "contact": "01300000421",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib House 423",
+    "type": "employee",
+    "contact": "01300000423",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib House",
+    "type": "other",
+    "contact": "01300000424",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel House 426",
+    "type": "supplier",
+    "contact": "01300000426",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin House",
+    "type": "employee",
+    "contact": "01300000427",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal House 429",
+    "type": "customer",
+    "contact": "01300000429",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul House",
+    "type": "supplier",
+    "contact": "01300000430",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir House 432",
+    "type": "other",
+    "contact": "01300000432",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim House",
+    "type": "customer",
+    "contact": "01300000433",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan House 435",
+    "type": "employee",
+    "contact": "01300000435",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan House",
+    "type": "other",
+    "contact": "01300000436",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq House 438",
+    "type": "supplier",
+    "contact": "01300000438",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem House",
+    "type": "employee",
+    "contact": "01300000439",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz House 441",
+    "type": "customer",
+    "contact": "01300000441",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk House",
+    "type": "supplier",
+    "contact": "01300000442",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul House 444",
+    "type": "other",
+    "contact": "01300000444",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel House",
+    "type": "customer",
+    "contact": "01300000445",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal House 447",
+    "type": "employee",
+    "contact": "01300000447",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo House",
+    "type": "other",
+    "contact": "01300000448",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar House 450",
+    "type": "supplier",
+    "contact": "01300000450",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim International",
+    "type": "employee",
+    "contact": "01300000451",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib International 453",
+    "type": "customer",
+    "contact": "01300000453",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib International",
+    "type": "supplier",
+    "contact": "01300000454",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel International 456",
+    "type": "other",
+    "contact": "01300000456",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin International",
+    "type": "customer",
+    "contact": "01300000457",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal International 459",
+    "type": "employee",
+    "contact": "01300000459",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul International",
+    "type": "other",
+    "contact": "01300000460",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir International 462",
+    "type": "supplier",
+    "contact": "01300000462",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim International",
+    "type": "employee",
+    "contact": "01300000463",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan International 465",
+    "type": "customer",
+    "contact": "01300000465",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan International",
+    "type": "supplier",
+    "contact": "01300000466",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq International 468",
+    "type": "other",
+    "contact": "01300000468",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem International",
+    "type": "customer",
+    "contact": "01300000469",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz International 471",
+    "type": "employee",
+    "contact": "01300000471",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk International",
+    "type": "other",
+    "contact": "01300000472",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul International 474",
+    "type": "supplier",
+    "contact": "01300000474",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel International",
+    "type": "employee",
+    "contact": "01300000475",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal International 477",
+    "type": "customer",
+    "contact": "01300000477",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo International",
+    "type": "supplier",
+    "contact": "01300000478",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar International 480",
+    "type": "other",
+    "contact": "01300000480",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Corporation",
+    "type": "customer",
+    "contact": "01300000481",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Corporation 483",
+    "type": "employee",
+    "contact": "01300000483",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Corporation",
+    "type": "other",
+    "contact": "01300000484",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Corporation 486",
+    "type": "supplier",
+    "contact": "01300000486",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Corporation",
+    "type": "employee",
+    "contact": "01300000487",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Corporation 489",
+    "type": "customer",
+    "contact": "01300000489",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Corporation",
+    "type": "supplier",
+    "contact": "01300000490",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Corporation 492",
+    "type": "other",
+    "contact": "01300000492",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Corporation",
+    "type": "customer",
+    "contact": "01300000493",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Corporation 495",
+    "type": "employee",
+    "contact": "01300000495",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Corporation",
+    "type": "other",
+    "contact": "01300000496",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Corporation 498",
+    "type": "supplier",
+    "contact": "01300000498",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Corporation",
+    "type": "employee",
+    "contact": "01300000499",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Corporation 501",
+    "type": "customer",
+    "contact": "01300000501",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Corporation",
+    "type": "supplier",
+    "contact": "01300000502",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Corporation 504",
+    "type": "other",
+    "contact": "01300000504",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Corporation",
+    "type": "customer",
+    "contact": "01300000505",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Corporation 507",
+    "type": "employee",
+    "contact": "01300000507",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Corporation",
+    "type": "other",
+    "contact": "01300000508",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Corporation 510",
+    "type": "supplier",
+    "contact": "01300000510",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Group",
+    "type": "employee",
+    "contact": "01300000511",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Group 513",
+    "type": "customer",
+    "contact": "01300000513",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Group",
+    "type": "supplier",
+    "contact": "01300000514",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Group 516",
+    "type": "other",
+    "contact": "01300000516",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Group",
+    "type": "customer",
+    "contact": "01300000517",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Group 519",
+    "type": "employee",
+    "contact": "01300000519",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Group",
+    "type": "other",
+    "contact": "01300000520",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Group 522",
+    "type": "supplier",
+    "contact": "01300000522",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Group",
+    "type": "employee",
+    "contact": "01300000523",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Group 525",
+    "type": "customer",
+    "contact": "01300000525",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Group",
+    "type": "supplier",
+    "contact": "01300000526",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Group 528",
+    "type": "other",
+    "contact": "01300000528",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Group",
+    "type": "customer",
+    "contact": "01300000529",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Group 531",
+    "type": "employee",
+    "contact": "01300000531",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Group",
+    "type": "other",
+    "contact": "01300000532",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Group 534",
+    "type": "supplier",
+    "contact": "01300000534",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Group",
+    "type": "employee",
+    "contact": "01300000535",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Group 537",
+    "type": "customer",
+    "contact": "01300000537",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Group",
+    "type": "supplier",
+    "contact": "01300000538",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Group 540",
+    "type": "other",
+    "contact": "01300000540",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Bazaar",
+    "type": "customer",
+    "contact": "01300000541",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Bazaar 543",
+    "type": "employee",
+    "contact": "01300000543",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Bazaar",
+    "type": "other",
+    "contact": "01300000544",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Bazaar 546",
+    "type": "supplier",
+    "contact": "01300000546",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Bazaar",
+    "type": "employee",
+    "contact": "01300000547",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Bazaar 549",
+    "type": "customer",
+    "contact": "01300000549",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Bazaar",
+    "type": "supplier",
+    "contact": "01300000550",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Bazaar 552",
+    "type": "other",
+    "contact": "01300000552",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Bazaar",
+    "type": "customer",
+    "contact": "01300000553",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Bazaar 555",
+    "type": "employee",
+    "contact": "01300000555",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Bazaar",
+    "type": "other",
+    "contact": "01300000556",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Bazaar 558",
+    "type": "supplier",
+    "contact": "01300000558",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Bazaar",
+    "type": "employee",
+    "contact": "01300000559",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Bazaar 561",
+    "type": "customer",
+    "contact": "01300000561",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Bazaar",
+    "type": "supplier",
+    "contact": "01300000562",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Bazaar 564",
+    "type": "other",
+    "contact": "01300000564",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Bazaar",
+    "type": "customer",
+    "contact": "01300000565",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Bazaar 567",
+    "type": "employee",
+    "contact": "01300000567",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Bazaar",
+    "type": "other",
+    "contact": "01300000568",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Bazaar 570",
+    "type": "supplier",
+    "contact": "01300000570",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Halim Corner",
+    "type": "employee",
+    "contact": "01300000571",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Corner 573",
+    "type": "customer",
+    "contact": "01300000573",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sajib Corner",
+    "type": "supplier",
+    "contact": "01300000574",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Corner 576",
+    "type": "other",
+    "contact": "01300000576",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shahin Corner",
+    "type": "customer",
+    "contact": "01300000577",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Corner 579",
+    "type": "employee",
+    "contact": "01300000579",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Babul Corner",
+    "type": "other",
+    "contact": "01300000580",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Corner 582",
+    "type": "supplier",
+    "contact": "01300000582",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shamim Corner",
+    "type": "employee",
+    "contact": "01300000583",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Corner 585",
+    "type": "customer",
+    "contact": "01300000585",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mizan Corner",
+    "type": "supplier",
+    "contact": "01300000586",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Corner 588",
+    "type": "other",
+    "contact": "01300000588",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Nayeem Corner",
+    "type": "customer",
+    "contact": "01300000589",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Corner 591",
+    "type": "employee",
+    "contact": "01300000591",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Faruk Corner",
+    "type": "other",
+    "contact": "01300000592",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Corner 594",
+    "type": "supplier",
+    "contact": "01300000594",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rubel Corner",
+    "type": "employee",
+    "contact": "01300000595",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Corner 597",
+    "type": "customer",
+    "contact": "01300000597",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Shuvo Corner",
+    "type": "supplier",
+    "contact": "01300000598",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Corner 600",
+    "type": "other",
+    "contact": "01300000600",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Brothers 603",
+    "type": "employee",
+    "contact": "01300000603",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Brothers 606",
+    "type": "supplier",
+    "contact": "01300000606",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Brothers 609",
+    "type": "customer",
+    "contact": "01300000609",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Brothers 612",
+    "type": "other",
+    "contact": "01300000612",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Brothers 615",
+    "type": "employee",
+    "contact": "01300000615",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Brothers 618",
+    "type": "supplier",
+    "contact": "01300000618",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Brothers 621",
+    "type": "customer",
+    "contact": "01300000621",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Brothers 624",
+    "type": "other",
+    "contact": "01300000624",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Brothers 627",
+    "type": "employee",
+    "contact": "01300000627",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Brothers 630",
+    "type": "supplier",
+    "contact": "01300000630",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib and Sons 633",
+    "type": "customer",
+    "contact": "01300000633",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel and Sons 636",
+    "type": "other",
+    "contact": "01300000636",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal and Sons 639",
+    "type": "employee",
+    "contact": "01300000639",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir and Sons 642",
+    "type": "supplier",
+    "contact": "01300000642",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan and Sons 645",
+    "type": "customer",
+    "contact": "01300000645",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq and Sons 648",
+    "type": "other",
+    "contact": "01300000648",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz and Sons 651",
+    "type": "employee",
+    "contact": "01300000651",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul and Sons 654",
+    "type": "supplier",
+    "contact": "01300000654",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal and Sons 657",
+    "type": "customer",
+    "contact": "01300000657",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar and Sons 660",
+    "type": "other",
+    "contact": "01300000660",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Traders 663",
+    "type": "employee",
+    "contact": "01300000663",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Traders 666",
+    "type": "supplier",
+    "contact": "01300000666",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Traders 669",
+    "type": "customer",
+    "contact": "01300000669",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Traders 672",
+    "type": "other",
+    "contact": "01300000672",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Traders 675",
+    "type": "employee",
+    "contact": "01300000675",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Traders 678",
+    "type": "supplier",
+    "contact": "01300000678",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Traders 681",
+    "type": "customer",
+    "contact": "01300000681",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Traders 684",
+    "type": "other",
+    "contact": "01300000684",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Traders 687",
+    "type": "employee",
+    "contact": "01300000687",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Traders 690",
+    "type": "supplier",
+    "contact": "01300000690",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Enterprise 693",
+    "type": "customer",
+    "contact": "01300000693",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Enterprise 696",
+    "type": "other",
+    "contact": "01300000696",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Enterprise 699",
+    "type": "employee",
+    "contact": "01300000699",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Enterprise 702",
+    "type": "supplier",
+    "contact": "01300000702",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Enterprise 705",
+    "type": "customer",
+    "contact": "01300000705",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Enterprise 708",
+    "type": "other",
+    "contact": "01300000708",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Enterprise 711",
+    "type": "employee",
+    "contact": "01300000711",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Enterprise 714",
+    "type": "supplier",
+    "contact": "01300000714",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Enterprise 717",
+    "type": "customer",
+    "contact": "01300000717",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Enterprise 720",
+    "type": "other",
+    "contact": "01300000720",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Store 723",
+    "type": "employee",
+    "contact": "01300000723",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Store 726",
+    "type": "supplier",
+    "contact": "01300000726",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Store 729",
+    "type": "customer",
+    "contact": "01300000729",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Store 732",
+    "type": "other",
+    "contact": "01300000732",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Store 735",
+    "type": "employee",
+    "contact": "01300000735",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Store 738",
+    "type": "supplier",
+    "contact": "01300000738",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Store 741",
+    "type": "customer",
+    "contact": "01300000741",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Store 744",
+    "type": "other",
+    "contact": "01300000744",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Store 747",
+    "type": "employee",
+    "contact": "01300000747",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Store 750",
+    "type": "supplier",
+    "contact": "01300000750",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Agency 753",
+    "type": "customer",
+    "contact": "01300000753",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Agency 756",
+    "type": "other",
+    "contact": "01300000756",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Agency 759",
+    "type": "employee",
+    "contact": "01300000759",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Agency 762",
+    "type": "supplier",
+    "contact": "01300000762",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Agency 765",
+    "type": "customer",
+    "contact": "01300000765",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Agency 768",
+    "type": "other",
+    "contact": "01300000768",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Agency 771",
+    "type": "employee",
+    "contact": "01300000771",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Agency 774",
+    "type": "supplier",
+    "contact": "01300000774",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Agency 777",
+    "type": "customer",
+    "contact": "01300000777",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Agency 780",
+    "type": "other",
+    "contact": "01300000780",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Supply 783",
+    "type": "employee",
+    "contact": "01300000783",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Supply 786",
+    "type": "supplier",
+    "contact": "01300000786",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Supply 789",
+    "type": "customer",
+    "contact": "01300000789",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Supply 792",
+    "type": "other",
+    "contact": "01300000792",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Supply 795",
+    "type": "employee",
+    "contact": "01300000795",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Supply 798",
+    "type": "supplier",
+    "contact": "01300000798",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Supply 801",
+    "type": "customer",
+    "contact": "01300000801",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Supply 804",
+    "type": "other",
+    "contact": "01300000804",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Supply 807",
+    "type": "employee",
+    "contact": "01300000807",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Supply 810",
+    "type": "supplier",
+    "contact": "01300000810",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rajib Bhandar 813",
+    "type": "customer",
+    "contact": "01300000813",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Rasel Bhandar 816",
+    "type": "other",
+    "contact": "01300000816",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Kamal Bhandar 819",
+    "type": "employee",
+    "contact": "01300000819",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Sabbir Bhandar 822",
+    "type": "supplier",
+    "contact": "01300000822",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Hasan Bhandar 825",
+    "type": "customer",
+    "contact": "01300000825",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Tariq Bhandar 828",
+    "type": "other",
+    "contact": "01300000828",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Aziz Bhandar 831",
+    "type": "employee",
+    "contact": "01300000831",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Mokbul Bhandar 834",
+    "type": "supplier",
+    "contact": "01300000834",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Belal Bhandar 837",
+    "type": "customer",
+    "contact": "01300000837",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business demo seed"
+  },
+  {
+    "name": "Bashar Bhandar 840",
+    "type": "other",
+    "contact": "01300000840",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business demo seed"
+  }
+]

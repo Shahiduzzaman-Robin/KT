@@ -1,0 +1,7002 @@
+[
+  {
+    "name": "Abbir Agro Traders",
+    "type": "customer",
+    "contact": "01300000001",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Abdib Apon Traders",
+    "type": "supplier",
+    "contact": "01300000002",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Abmir Bangla Traders",
+    "type": "employee",
+    "contact": "01300000003",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Adbir City Traders",
+    "type": "other",
+    "contact": "01300000004",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Addib Delta Traders",
+    "type": "customer",
+    "contact": "01300000005",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Admir Eastern Traders",
+    "type": "supplier",
+    "contact": "01300000006",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Afbir Fresh Traders",
+    "type": "employee",
+    "contact": "01300000007",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Afdib Green Traders",
+    "type": "other",
+    "contact": "01300000008",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Afmir Ideal Traders",
+    "type": "customer",
+    "contact": "01300000009",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ahbir Janata Traders",
+    "type": "supplier",
+    "contact": "01300000010",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ahdib Kishan Traders",
+    "type": "employee",
+    "contact": "01300000011",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ahmir Metro Traders",
+    "type": "other",
+    "contact": "01300000012",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ajbir National Traders",
+    "type": "customer",
+    "contact": "01300000013",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ajdib Prime Traders",
+    "type": "supplier",
+    "contact": "01300000014",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ajmir Royal Traders",
+    "type": "employee",
+    "contact": "01300000015",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Akbir Sonar Traders",
+    "type": "other",
+    "contact": "01300000016",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Akdib Trust Traders",
+    "type": "customer",
+    "contact": "01300000017",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Akmir United Traders",
+    "type": "supplier",
+    "contact": "01300000018",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Albir Vision Traders",
+    "type": "employee",
+    "contact": "01300000019",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Aldib Modern Traders",
+    "type": "other",
+    "contact": "01300000020",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Almir Agro Enterprise",
+    "type": "customer",
+    "contact": "01300000021",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ambir Apon Enterprise",
+    "type": "supplier",
+    "contact": "01300000022",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Amdib Bangla Enterprise",
+    "type": "employee",
+    "contact": "01300000023",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ammir City Enterprise",
+    "type": "other",
+    "contact": "01300000024",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Anbir Delta Enterprise",
+    "type": "customer",
+    "contact": "01300000025",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Andib Eastern Enterprise",
+    "type": "supplier",
+    "contact": "01300000026",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Anmir Fresh Enterprise",
+    "type": "employee",
+    "contact": "01300000027",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Arbir Green Enterprise",
+    "type": "other",
+    "contact": "01300000028",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ardib Ideal Enterprise",
+    "type": "customer",
+    "contact": "01300000029",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Armir Janata Enterprise",
+    "type": "supplier",
+    "contact": "01300000030",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Asbir Kishan Enterprise",
+    "type": "employee",
+    "contact": "01300000031",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Asdib Metro Enterprise",
+    "type": "other",
+    "contact": "01300000032",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Asmir National Enterprise",
+    "type": "customer",
+    "contact": "01300000033",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Atbir Prime Enterprise",
+    "type": "supplier",
+    "contact": "01300000034",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Atdib Royal Enterprise",
+    "type": "employee",
+    "contact": "01300000035",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Avbir Sonar Enterprise",
+    "type": "other",
+    "contact": "01300000036",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Avdib Trust Enterprise",
+    "type": "customer",
+    "contact": "01300000037",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Aybir United Enterprise",
+    "type": "supplier",
+    "contact": "01300000038",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Aydib Vision Enterprise",
+    "type": "employee",
+    "contact": "01300000039",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Babir Modern Enterprise",
+    "type": "other",
+    "contact": "01300000040",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Badib Agro Store",
+    "type": "customer",
+    "contact": "01300000041",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bajal Apon Store",
+    "type": "supplier",
+    "contact": "01300000042",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bamir Bangla Store",
+    "type": "employee",
+    "contact": "01300000043",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bdbir City Store",
+    "type": "other",
+    "contact": "01300000044",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bddib Delta Store",
+    "type": "customer",
+    "contact": "01300000045",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bdmir Eastern Store",
+    "type": "supplier",
+    "contact": "01300000046",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bebir Fresh Store",
+    "type": "employee",
+    "contact": "01300000047",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bedib Green Store",
+    "type": "other",
+    "contact": "01300000048",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bejal Ideal Store",
+    "type": "customer",
+    "contact": "01300000049",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bemir Janata Store",
+    "type": "supplier",
+    "contact": "01300000050",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bhbir Kishan Store",
+    "type": "employee",
+    "contact": "01300000051",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bhdib Metro Store",
+    "type": "other",
+    "contact": "01300000052",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bhmir National Store",
+    "type": "customer",
+    "contact": "01300000053",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bibir Prime Store",
+    "type": "supplier",
+    "contact": "01300000054",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bidib Royal Store",
+    "type": "employee",
+    "contact": "01300000055",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bijal Sonar Store",
+    "type": "other",
+    "contact": "01300000056",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bimir Trust Store",
+    "type": "customer",
+    "contact": "01300000057",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bkbir United Store",
+    "type": "supplier",
+    "contact": "01300000058",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bkdib Vision Store",
+    "type": "employee",
+    "contact": "01300000059",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bkmir Modern Store",
+    "type": "other",
+    "contact": "01300000060",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Blbir Agro Agency",
+    "type": "customer",
+    "contact": "01300000061",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bldib Apon Agency",
+    "type": "supplier",
+    "contact": "01300000062",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Blmir Bangla Agency",
+    "type": "employee",
+    "contact": "01300000063",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bnbir City Agency",
+    "type": "other",
+    "contact": "01300000064",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bndib Delta Agency",
+    "type": "customer",
+    "contact": "01300000065",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bnmir Eastern Agency",
+    "type": "supplier",
+    "contact": "01300000066",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bobir Fresh Agency",
+    "type": "employee",
+    "contact": "01300000067",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bodib Green Agency",
+    "type": "other",
+    "contact": "01300000068",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bomir Ideal Agency",
+    "type": "customer",
+    "contact": "01300000069",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Brbir Janata Agency",
+    "type": "supplier",
+    "contact": "01300000070",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Brdib Kishan Agency",
+    "type": "employee",
+    "contact": "01300000071",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Brmir Metro Agency",
+    "type": "other",
+    "contact": "01300000072",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bubir National Agency",
+    "type": "customer",
+    "contact": "01300000073",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Budib Prime Agency",
+    "type": "supplier",
+    "contact": "01300000074",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bumir Royal Agency",
+    "type": "employee",
+    "contact": "01300000075",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bybir Sonar Agency",
+    "type": "other",
+    "contact": "01300000076",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bydib Trust Agency",
+    "type": "customer",
+    "contact": "01300000077",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Bymir United Agency",
+    "type": "supplier",
+    "contact": "01300000078",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cabir Vision Agency",
+    "type": "employee",
+    "contact": "01300000079",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cadib Modern Agency",
+    "type": "other",
+    "contact": "01300000080",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cajal Agro Supply",
+    "type": "customer",
+    "contact": "01300000081",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Camir Apon Supply",
+    "type": "supplier",
+    "contact": "01300000082",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cebir Bangla Supply",
+    "type": "employee",
+    "contact": "01300000083",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cedib City Supply",
+    "type": "other",
+    "contact": "01300000084",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cejal Delta Supply",
+    "type": "customer",
+    "contact": "01300000085",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cemir Eastern Supply",
+    "type": "supplier",
+    "contact": "01300000086",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Chbir Fresh Supply",
+    "type": "employee",
+    "contact": "01300000087",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Chdib Green Supply",
+    "type": "other",
+    "contact": "01300000088",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Chjal Ideal Supply",
+    "type": "customer",
+    "contact": "01300000089",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Chmir Janata Supply",
+    "type": "supplier",
+    "contact": "01300000090",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cibir Kishan Supply",
+    "type": "employee",
+    "contact": "01300000091",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cidib Metro Supply",
+    "type": "other",
+    "contact": "01300000092",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cijal National Supply",
+    "type": "customer",
+    "contact": "01300000093",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cimir Prime Supply",
+    "type": "supplier",
+    "contact": "01300000094",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Clbir Royal Supply",
+    "type": "employee",
+    "contact": "01300000095",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cldib Sonar Supply",
+    "type": "other",
+    "contact": "01300000096",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cljal Trust Supply",
+    "type": "customer",
+    "contact": "01300000097",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Clmir United Supply",
+    "type": "supplier",
+    "contact": "01300000098",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cnbir Vision Supply",
+    "type": "employee",
+    "contact": "01300000099",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cndib Modern Supply",
+    "type": "other",
+    "contact": "01300000100",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cnmir Agro Bhandar",
+    "type": "customer",
+    "contact": "01300000101",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cobir Apon Bhandar",
+    "type": "supplier",
+    "contact": "01300000102",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Codib Bangla Bhandar",
+    "type": "employee",
+    "contact": "01300000103",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cojal City Bhandar",
+    "type": "other",
+    "contact": "01300000104",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Comir Delta Bhandar",
+    "type": "customer",
+    "contact": "01300000105",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Crbir Eastern Bhandar",
+    "type": "supplier",
+    "contact": "01300000106",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Crdib Fresh Bhandar",
+    "type": "employee",
+    "contact": "01300000107",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Crjal Green Bhandar",
+    "type": "other",
+    "contact": "01300000108",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Crmir Ideal Bhandar",
+    "type": "customer",
+    "contact": "01300000109",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cubir Janata Bhandar",
+    "type": "supplier",
+    "contact": "01300000110",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cudib Kishan Bhandar",
+    "type": "employee",
+    "contact": "01300000111",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cujal Metro Bhandar",
+    "type": "other",
+    "contact": "01300000112",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cumir National Bhandar",
+    "type": "customer",
+    "contact": "01300000113",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cybir Prime Bhandar",
+    "type": "supplier",
+    "contact": "01300000114",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cydib Royal Bhandar",
+    "type": "employee",
+    "contact": "01300000115",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cyjal Sonar Bhandar",
+    "type": "other",
+    "contact": "01300000116",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Cymir Trust Bhandar",
+    "type": "customer",
+    "contact": "01300000117",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dabir United Bhandar",
+    "type": "supplier",
+    "contact": "01300000118",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dadib Vision Bhandar",
+    "type": "employee",
+    "contact": "01300000119",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dajal Modern Bhandar",
+    "type": "other",
+    "contact": "01300000120",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Damir Agro Center",
+    "type": "customer",
+    "contact": "01300000121",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Debir Apon Center",
+    "type": "supplier",
+    "contact": "01300000122",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dedib Bangla Center",
+    "type": "employee",
+    "contact": "01300000123",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dejal City Center",
+    "type": "other",
+    "contact": "01300000124",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Demir Delta Center",
+    "type": "customer",
+    "contact": "01300000125",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dhbir Eastern Center",
+    "type": "supplier",
+    "contact": "01300000126",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dhdib Fresh Center",
+    "type": "employee",
+    "contact": "01300000127",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dhjal Green Center",
+    "type": "other",
+    "contact": "01300000128",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dhmir Ideal Center",
+    "type": "customer",
+    "contact": "01300000129",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dibir Janata Center",
+    "type": "supplier",
+    "contact": "01300000130",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Didib Kishan Center",
+    "type": "employee",
+    "contact": "01300000131",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dijal Metro Center",
+    "type": "other",
+    "contact": "01300000132",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dimir National Center",
+    "type": "customer",
+    "contact": "01300000133",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dlbir Prime Center",
+    "type": "supplier",
+    "contact": "01300000134",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dldib Royal Center",
+    "type": "employee",
+    "contact": "01300000135",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dljal Sonar Center",
+    "type": "other",
+    "contact": "01300000136",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dlmir Trust Center",
+    "type": "customer",
+    "contact": "01300000137",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dnbir United Center",
+    "type": "supplier",
+    "contact": "01300000138",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dndib Vision Center",
+    "type": "employee",
+    "contact": "01300000139",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dnmir Modern Center",
+    "type": "other",
+    "contact": "01300000140",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dobir Agro Mart",
+    "type": "customer",
+    "contact": "01300000141",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dodib Apon Mart",
+    "type": "supplier",
+    "contact": "01300000142",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dojal Bangla Mart",
+    "type": "employee",
+    "contact": "01300000143",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Domir City Mart",
+    "type": "other",
+    "contact": "01300000144",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Drbir Delta Mart",
+    "type": "customer",
+    "contact": "01300000145",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Drdib Eastern Mart",
+    "type": "supplier",
+    "contact": "01300000146",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Drjal Fresh Mart",
+    "type": "employee",
+    "contact": "01300000147",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Drmir Green Mart",
+    "type": "other",
+    "contact": "01300000148",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dubir Ideal Mart",
+    "type": "customer",
+    "contact": "01300000149",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dudib Janata Mart",
+    "type": "supplier",
+    "contact": "01300000150",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dujal Kishan Mart",
+    "type": "employee",
+    "contact": "01300000151",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dumir Metro Mart",
+    "type": "other",
+    "contact": "01300000152",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dybir National Mart",
+    "type": "customer",
+    "contact": "01300000153",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dydib Prime Mart",
+    "type": "supplier",
+    "contact": "01300000154",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dyjal Royal Mart",
+    "type": "employee",
+    "contact": "01300000155",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Dymir Sonar Mart",
+    "type": "other",
+    "contact": "01300000156",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Eabir Trust Mart",
+    "type": "customer",
+    "contact": "01300000157",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Eadib United Mart",
+    "type": "supplier",
+    "contact": "01300000158",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Eajal Vision Mart",
+    "type": "employee",
+    "contact": "01300000159",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Eamir Modern Mart",
+    "type": "other",
+    "contact": "01300000160",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ebbir Agro Wholesale",
+    "type": "customer",
+    "contact": "01300000161",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ebdib Apon Wholesale",
+    "type": "supplier",
+    "contact": "01300000162",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ebjal Bangla Wholesale",
+    "type": "employee",
+    "contact": "01300000163",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ebmir City Wholesale",
+    "type": "other",
+    "contact": "01300000164",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Edbir Delta Wholesale",
+    "type": "customer",
+    "contact": "01300000165",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Eddib Eastern Wholesale",
+    "type": "supplier",
+    "contact": "01300000166",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Edjal Fresh Wholesale",
+    "type": "employee",
+    "contact": "01300000167",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Edmir Green Wholesale",
+    "type": "other",
+    "contact": "01300000168",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Efbir Ideal Wholesale",
+    "type": "customer",
+    "contact": "01300000169",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Efdib Janata Wholesale",
+    "type": "supplier",
+    "contact": "01300000170",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Efmir Kishan Wholesale",
+    "type": "employee",
+    "contact": "01300000171",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ehbir Metro Wholesale",
+    "type": "other",
+    "contact": "01300000172",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ehdib National Wholesale",
+    "type": "customer",
+    "contact": "01300000173",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ehmir Prime Wholesale",
+    "type": "supplier",
+    "contact": "01300000174",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ejbir Royal Wholesale",
+    "type": "employee",
+    "contact": "01300000175",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ejdib Sonar Wholesale",
+    "type": "other",
+    "contact": "01300000176",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ejmir Trust Wholesale",
+    "type": "customer",
+    "contact": "01300000177",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ekbir United Wholesale",
+    "type": "supplier",
+    "contact": "01300000178",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ekdib Vision Wholesale",
+    "type": "employee",
+    "contact": "01300000179",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ekmir Modern Wholesale",
+    "type": "other",
+    "contact": "01300000180",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Elbir Agro Depot",
+    "type": "customer",
+    "contact": "01300000181",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Eldib Apon Depot",
+    "type": "supplier",
+    "contact": "01300000182",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Elmir Bangla Depot",
+    "type": "employee",
+    "contact": "01300000183",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Embir City Depot",
+    "type": "other",
+    "contact": "01300000184",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Emdib Delta Depot",
+    "type": "customer",
+    "contact": "01300000185",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Emmir Eastern Depot",
+    "type": "supplier",
+    "contact": "01300000186",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Enbir Fresh Depot",
+    "type": "employee",
+    "contact": "01300000187",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Endib Green Depot",
+    "type": "other",
+    "contact": "01300000188",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Enmir Ideal Depot",
+    "type": "customer",
+    "contact": "01300000189",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Erbir Janata Depot",
+    "type": "supplier",
+    "contact": "01300000190",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Erdib Kishan Depot",
+    "type": "employee",
+    "contact": "01300000191",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ermir Metro Depot",
+    "type": "other",
+    "contact": "01300000192",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Esbir National Depot",
+    "type": "customer",
+    "contact": "01300000193",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Esdib Prime Depot",
+    "type": "supplier",
+    "contact": "01300000194",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Esmir Royal Depot",
+    "type": "employee",
+    "contact": "01300000195",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fabir Sonar Depot",
+    "type": "other",
+    "contact": "01300000196",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fadib Trust Depot",
+    "type": "customer",
+    "contact": "01300000197",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fajal United Depot",
+    "type": "supplier",
+    "contact": "01300000198",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Famir Vision Depot",
+    "type": "employee",
+    "contact": "01300000199",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fdbir Modern Depot",
+    "type": "other",
+    "contact": "01300000200",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fddib Agro Link",
+    "type": "customer",
+    "contact": "01300000201",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fdmir Apon Link",
+    "type": "supplier",
+    "contact": "01300000202",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Febir Bangla Link",
+    "type": "employee",
+    "contact": "01300000203",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fedib City Link",
+    "type": "other",
+    "contact": "01300000204",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fejal Delta Link",
+    "type": "customer",
+    "contact": "01300000205",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Femir Eastern Link",
+    "type": "supplier",
+    "contact": "01300000206",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fibir Fresh Link",
+    "type": "employee",
+    "contact": "01300000207",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fidib Green Link",
+    "type": "other",
+    "contact": "01300000208",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fijal Ideal Link",
+    "type": "customer",
+    "contact": "01300000209",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fimir Janata Link",
+    "type": "supplier",
+    "contact": "01300000210",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Flbir Kishan Link",
+    "type": "employee",
+    "contact": "01300000211",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fldib Metro Link",
+    "type": "other",
+    "contact": "01300000212",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fljal National Link",
+    "type": "customer",
+    "contact": "01300000213",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Flmir Prime Link",
+    "type": "supplier",
+    "contact": "01300000214",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fnbir Royal Link",
+    "type": "employee",
+    "contact": "01300000215",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fndib Sonar Link",
+    "type": "other",
+    "contact": "01300000216",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fnjal Trust Link",
+    "type": "customer",
+    "contact": "01300000217",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fnmir United Link",
+    "type": "supplier",
+    "contact": "01300000218",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fobir Vision Link",
+    "type": "employee",
+    "contact": "01300000219",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fodib Modern Link",
+    "type": "other",
+    "contact": "01300000220",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fojal Agro Point",
+    "type": "customer",
+    "contact": "01300000221",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fomir Apon Point",
+    "type": "supplier",
+    "contact": "01300000222",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Frbir Bangla Point",
+    "type": "employee",
+    "contact": "01300000223",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Frdib City Point",
+    "type": "other",
+    "contact": "01300000224",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Frjal Delta Point",
+    "type": "customer",
+    "contact": "01300000225",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Frmir Eastern Point",
+    "type": "supplier",
+    "contact": "01300000226",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fubir Fresh Point",
+    "type": "employee",
+    "contact": "01300000227",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fudib Green Point",
+    "type": "other",
+    "contact": "01300000228",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fujal Ideal Point",
+    "type": "customer",
+    "contact": "01300000229",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fumir Janata Point",
+    "type": "supplier",
+    "contact": "01300000230",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fybir Kishan Point",
+    "type": "employee",
+    "contact": "01300000231",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fydib Metro Point",
+    "type": "other",
+    "contact": "01300000232",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fyjal National Point",
+    "type": "customer",
+    "contact": "01300000233",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Fymir Prime Point",
+    "type": "supplier",
+    "contact": "01300000234",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gabir Royal Point",
+    "type": "employee",
+    "contact": "01300000235",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gadib Sonar Point",
+    "type": "other",
+    "contact": "01300000236",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gajal Trust Point",
+    "type": "customer",
+    "contact": "01300000237",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gamir United Point",
+    "type": "supplier",
+    "contact": "01300000238",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gebir Vision Point",
+    "type": "employee",
+    "contact": "01300000239",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gedib Modern Point",
+    "type": "other",
+    "contact": "01300000240",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gejal Agro House",
+    "type": "customer",
+    "contact": "01300000241",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gemir Apon House",
+    "type": "supplier",
+    "contact": "01300000242",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ghbir Bangla House",
+    "type": "employee",
+    "contact": "01300000243",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ghdib City House",
+    "type": "other",
+    "contact": "01300000244",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ghjal Delta House",
+    "type": "customer",
+    "contact": "01300000245",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ghmir Eastern House",
+    "type": "supplier",
+    "contact": "01300000246",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gibir Fresh House",
+    "type": "employee",
+    "contact": "01300000247",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gidib Green House",
+    "type": "other",
+    "contact": "01300000248",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gijal Ideal House",
+    "type": "customer",
+    "contact": "01300000249",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gimir Janata House",
+    "type": "supplier",
+    "contact": "01300000250",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Glbir Kishan House",
+    "type": "employee",
+    "contact": "01300000251",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gldib Metro House",
+    "type": "other",
+    "contact": "01300000252",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gljal National House",
+    "type": "customer",
+    "contact": "01300000253",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Glmir Prime House",
+    "type": "supplier",
+    "contact": "01300000254",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gnbir Royal House",
+    "type": "employee",
+    "contact": "01300000255",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gndib Sonar House",
+    "type": "other",
+    "contact": "01300000256",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gnmir Trust House",
+    "type": "customer",
+    "contact": "01300000257",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gobir United House",
+    "type": "supplier",
+    "contact": "01300000258",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Godib Vision House",
+    "type": "employee",
+    "contact": "01300000259",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gojal Modern House",
+    "type": "other",
+    "contact": "01300000260",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gomir Agro International",
+    "type": "customer",
+    "contact": "01300000261",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Grbir Apon International",
+    "type": "supplier",
+    "contact": "01300000262",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Grdib Bangla International",
+    "type": "employee",
+    "contact": "01300000263",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Grjal City International",
+    "type": "other",
+    "contact": "01300000264",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Grmir Delta International",
+    "type": "customer",
+    "contact": "01300000265",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gubir Eastern International",
+    "type": "supplier",
+    "contact": "01300000266",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gudib Fresh International",
+    "type": "employee",
+    "contact": "01300000267",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gujal Green International",
+    "type": "other",
+    "contact": "01300000268",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gumir Ideal International",
+    "type": "customer",
+    "contact": "01300000269",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gybir Janata International",
+    "type": "supplier",
+    "contact": "01300000270",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gydib Kishan International",
+    "type": "employee",
+    "contact": "01300000271",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gyjal Metro International",
+    "type": "other",
+    "contact": "01300000272",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Gymir National International",
+    "type": "customer",
+    "contact": "01300000273",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Habir Prime International",
+    "type": "supplier",
+    "contact": "01300000274",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hadib Royal International",
+    "type": "employee",
+    "contact": "01300000275",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hajal Sonar International",
+    "type": "other",
+    "contact": "01300000276",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hamir Trust International",
+    "type": "customer",
+    "contact": "01300000277",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hdbir United International",
+    "type": "supplier",
+    "contact": "01300000278",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hddib Vision International",
+    "type": "employee",
+    "contact": "01300000279",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hdmir Modern International",
+    "type": "other",
+    "contact": "01300000280",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hebir Agro Corporation",
+    "type": "customer",
+    "contact": "01300000281",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hedib Apon Corporation",
+    "type": "supplier",
+    "contact": "01300000282",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hejal Bangla Corporation",
+    "type": "employee",
+    "contact": "01300000283",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hemir City Corporation",
+    "type": "other",
+    "contact": "01300000284",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hibir Delta Corporation",
+    "type": "customer",
+    "contact": "01300000285",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hidib Eastern Corporation",
+    "type": "supplier",
+    "contact": "01300000286",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hijal Fresh Corporation",
+    "type": "employee",
+    "contact": "01300000287",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Himir Green Corporation",
+    "type": "other",
+    "contact": "01300000288",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hlbir Ideal Corporation",
+    "type": "customer",
+    "contact": "01300000289",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hldib Janata Corporation",
+    "type": "supplier",
+    "contact": "01300000290",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hljal Kishan Corporation",
+    "type": "employee",
+    "contact": "01300000291",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hlmir Metro Corporation",
+    "type": "other",
+    "contact": "01300000292",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hnbir National Corporation",
+    "type": "customer",
+    "contact": "01300000293",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hndib Prime Corporation",
+    "type": "supplier",
+    "contact": "01300000294",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hnjal Royal Corporation",
+    "type": "employee",
+    "contact": "01300000295",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hnmir Sonar Corporation",
+    "type": "other",
+    "contact": "01300000296",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hobir Trust Corporation",
+    "type": "customer",
+    "contact": "01300000297",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hodib United Corporation",
+    "type": "supplier",
+    "contact": "01300000298",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hojal Vision Corporation",
+    "type": "employee",
+    "contact": "01300000299",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Homir Modern Corporation",
+    "type": "other",
+    "contact": "01300000300",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hrbir Agro Group",
+    "type": "customer",
+    "contact": "01300000301",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hrdib Apon Group",
+    "type": "supplier",
+    "contact": "01300000302",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hrjal Bangla Group",
+    "type": "employee",
+    "contact": "01300000303",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hrmir City Group",
+    "type": "other",
+    "contact": "01300000304",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hubir Delta Group",
+    "type": "customer",
+    "contact": "01300000305",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hudib Eastern Group",
+    "type": "supplier",
+    "contact": "01300000306",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hujal Fresh Group",
+    "type": "employee",
+    "contact": "01300000307",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Humir Green Group",
+    "type": "other",
+    "contact": "01300000308",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hybir Ideal Group",
+    "type": "customer",
+    "contact": "01300000309",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hydib Janata Group",
+    "type": "supplier",
+    "contact": "01300000310",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hyjal Kishan Group",
+    "type": "employee",
+    "contact": "01300000311",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Hymir Metro Group",
+    "type": "other",
+    "contact": "01300000312",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Iabir National Group",
+    "type": "customer",
+    "contact": "01300000313",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Iadib Prime Group",
+    "type": "supplier",
+    "contact": "01300000314",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Iajal Royal Group",
+    "type": "employee",
+    "contact": "01300000315",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Iamir Sonar Group",
+    "type": "other",
+    "contact": "01300000316",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ibbir Trust Group",
+    "type": "customer",
+    "contact": "01300000317",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ibdib United Group",
+    "type": "supplier",
+    "contact": "01300000318",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ibjal Vision Group",
+    "type": "employee",
+    "contact": "01300000319",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ibmir Modern Group",
+    "type": "other",
+    "contact": "01300000320",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Idbir Agro Bazaar",
+    "type": "customer",
+    "contact": "01300000321",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Iddib Apon Bazaar",
+    "type": "supplier",
+    "contact": "01300000322",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Idjal Bangla Bazaar",
+    "type": "employee",
+    "contact": "01300000323",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Idmir City Bazaar",
+    "type": "other",
+    "contact": "01300000324",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ifbir Delta Bazaar",
+    "type": "customer",
+    "contact": "01300000325",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ifdib Eastern Bazaar",
+    "type": "supplier",
+    "contact": "01300000326",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ifmir Fresh Bazaar",
+    "type": "employee",
+    "contact": "01300000327",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ihbir Green Bazaar",
+    "type": "other",
+    "contact": "01300000328",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ihdib Ideal Bazaar",
+    "type": "customer",
+    "contact": "01300000329",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ihmir Janata Bazaar",
+    "type": "supplier",
+    "contact": "01300000330",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ijbir Kishan Bazaar",
+    "type": "employee",
+    "contact": "01300000331",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ijdib Metro Bazaar",
+    "type": "other",
+    "contact": "01300000332",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ijmir National Bazaar",
+    "type": "customer",
+    "contact": "01300000333",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ikbir Prime Bazaar",
+    "type": "supplier",
+    "contact": "01300000334",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ikdib Royal Bazaar",
+    "type": "employee",
+    "contact": "01300000335",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ikmir Sonar Bazaar",
+    "type": "other",
+    "contact": "01300000336",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ilbir Trust Bazaar",
+    "type": "customer",
+    "contact": "01300000337",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ildib United Bazaar",
+    "type": "supplier",
+    "contact": "01300000338",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ilmir Vision Bazaar",
+    "type": "employee",
+    "contact": "01300000339",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Imbir Modern Bazaar",
+    "type": "other",
+    "contact": "01300000340",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Imdib Agro Corner",
+    "type": "customer",
+    "contact": "01300000341",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Immir Apon Corner",
+    "type": "supplier",
+    "contact": "01300000342",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Inbir Bangla Corner",
+    "type": "employee",
+    "contact": "01300000343",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Indib City Corner",
+    "type": "other",
+    "contact": "01300000344",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Inmir Delta Corner",
+    "type": "customer",
+    "contact": "01300000345",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Irbir Eastern Corner",
+    "type": "supplier",
+    "contact": "01300000346",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Irdib Fresh Corner",
+    "type": "employee",
+    "contact": "01300000347",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Irmir Green Corner",
+    "type": "other",
+    "contact": "01300000348",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Isbir Ideal Corner",
+    "type": "customer",
+    "contact": "01300000349",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Isdib Janata Corner",
+    "type": "supplier",
+    "contact": "01300000350",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ismir Kishan Corner",
+    "type": "employee",
+    "contact": "01300000351",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jabir Metro Corner",
+    "type": "other",
+    "contact": "01300000352",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jadib National Corner",
+    "type": "customer",
+    "contact": "01300000353",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jajal Prime Corner",
+    "type": "supplier",
+    "contact": "01300000354",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jamir Royal Corner",
+    "type": "employee",
+    "contact": "01300000355",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jebir Sonar Corner",
+    "type": "other",
+    "contact": "01300000356",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jedib Trust Corner",
+    "type": "customer",
+    "contact": "01300000357",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jejal United Corner",
+    "type": "supplier",
+    "contact": "01300000358",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jemir Vision Corner",
+    "type": "employee",
+    "contact": "01300000359",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jhbir Modern Corner",
+    "type": "other",
+    "contact": "01300000360",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jhdib Agro Foods",
+    "type": "customer",
+    "contact": "01300000361",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jhjal Apon Foods",
+    "type": "supplier",
+    "contact": "01300000362",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jhmir Bangla Foods",
+    "type": "employee",
+    "contact": "01300000363",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jibir City Foods",
+    "type": "other",
+    "contact": "01300000364",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jidib Delta Foods",
+    "type": "customer",
+    "contact": "01300000365",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jijal Eastern Foods",
+    "type": "supplier",
+    "contact": "01300000366",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jimir Fresh Foods",
+    "type": "employee",
+    "contact": "01300000367",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jlbir Green Foods",
+    "type": "other",
+    "contact": "01300000368",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jldib Ideal Foods",
+    "type": "customer",
+    "contact": "01300000369",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jljal Janata Foods",
+    "type": "supplier",
+    "contact": "01300000370",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jlmir Kishan Foods",
+    "type": "employee",
+    "contact": "01300000371",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jnbir Metro Foods",
+    "type": "other",
+    "contact": "01300000372",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jndib National Foods",
+    "type": "customer",
+    "contact": "01300000373",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jnmir Prime Foods",
+    "type": "supplier",
+    "contact": "01300000374",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jobir Royal Foods",
+    "type": "employee",
+    "contact": "01300000375",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jodib Sonar Foods",
+    "type": "other",
+    "contact": "01300000376",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jojal Trust Foods",
+    "type": "customer",
+    "contact": "01300000377",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jomir United Foods",
+    "type": "supplier",
+    "contact": "01300000378",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jrbir Vision Foods",
+    "type": "employee",
+    "contact": "01300000379",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jrdib Modern Foods",
+    "type": "other",
+    "contact": "01300000380",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jrjal Agro Fisheries",
+    "type": "customer",
+    "contact": "01300000381",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jrmir Apon Fisheries",
+    "type": "supplier",
+    "contact": "01300000382",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jubir Bangla Fisheries",
+    "type": "employee",
+    "contact": "01300000383",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Judib City Fisheries",
+    "type": "other",
+    "contact": "01300000384",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jujal Delta Fisheries",
+    "type": "customer",
+    "contact": "01300000385",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jumir Eastern Fisheries",
+    "type": "supplier",
+    "contact": "01300000386",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jybir Fresh Fisheries",
+    "type": "employee",
+    "contact": "01300000387",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jydib Green Fisheries",
+    "type": "other",
+    "contact": "01300000388",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jyjal Ideal Fisheries",
+    "type": "customer",
+    "contact": "01300000389",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Jymir Janata Fisheries",
+    "type": "supplier",
+    "contact": "01300000390",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kabir Kishan Fisheries",
+    "type": "employee",
+    "contact": "01300000391",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kadib Metro Fisheries",
+    "type": "other",
+    "contact": "01300000392",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kajal National Fisheries",
+    "type": "customer",
+    "contact": "01300000393",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kamir Prime Fisheries",
+    "type": "supplier",
+    "contact": "01300000394",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kebir Royal Fisheries",
+    "type": "employee",
+    "contact": "01300000395",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kedib Sonar Fisheries",
+    "type": "other",
+    "contact": "01300000396",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kejal Trust Fisheries",
+    "type": "customer",
+    "contact": "01300000397",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kemir United Fisheries",
+    "type": "supplier",
+    "contact": "01300000398",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Khbir Vision Fisheries",
+    "type": "employee",
+    "contact": "01300000399",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Khdib Modern Fisheries",
+    "type": "other",
+    "contact": "01300000400",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Khjal Agro Textiles",
+    "type": "customer",
+    "contact": "01300000401",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Khmir Apon Textiles",
+    "type": "supplier",
+    "contact": "01300000402",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kibir Bangla Textiles",
+    "type": "employee",
+    "contact": "01300000403",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kidib City Textiles",
+    "type": "other",
+    "contact": "01300000404",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kijal Delta Textiles",
+    "type": "customer",
+    "contact": "01300000405",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kimir Eastern Textiles",
+    "type": "supplier",
+    "contact": "01300000406",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Klbir Fresh Textiles",
+    "type": "employee",
+    "contact": "01300000407",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kldib Green Textiles",
+    "type": "other",
+    "contact": "01300000408",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kljal Ideal Textiles",
+    "type": "customer",
+    "contact": "01300000409",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Klmir Janata Textiles",
+    "type": "supplier",
+    "contact": "01300000410",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Knbir Kishan Textiles",
+    "type": "employee",
+    "contact": "01300000411",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kndib Metro Textiles",
+    "type": "other",
+    "contact": "01300000412",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Knmir National Textiles",
+    "type": "customer",
+    "contact": "01300000413",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kobir Prime Textiles",
+    "type": "supplier",
+    "contact": "01300000414",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kodib Royal Textiles",
+    "type": "employee",
+    "contact": "01300000415",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kojal Sonar Textiles",
+    "type": "other",
+    "contact": "01300000416",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Komir Trust Textiles",
+    "type": "customer",
+    "contact": "01300000417",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Krbir United Textiles",
+    "type": "supplier",
+    "contact": "01300000418",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Krdib Vision Textiles",
+    "type": "employee",
+    "contact": "01300000419",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Krjal Modern Textiles",
+    "type": "other",
+    "contact": "01300000420",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Krmir Agro Electronics",
+    "type": "customer",
+    "contact": "01300000421",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kubir Apon Electronics",
+    "type": "supplier",
+    "contact": "01300000422",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kudib Bangla Electronics",
+    "type": "employee",
+    "contact": "01300000423",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kujal City Electronics",
+    "type": "other",
+    "contact": "01300000424",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kumir Delta Electronics",
+    "type": "customer",
+    "contact": "01300000425",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kybir Eastern Electronics",
+    "type": "supplier",
+    "contact": "01300000426",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kydib Fresh Electronics",
+    "type": "employee",
+    "contact": "01300000427",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kyjal Green Electronics",
+    "type": "other",
+    "contact": "01300000428",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Kymir Ideal Electronics",
+    "type": "customer",
+    "contact": "01300000429",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Labir Janata Electronics",
+    "type": "supplier",
+    "contact": "01300000430",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ladib Kishan Electronics",
+    "type": "employee",
+    "contact": "01300000431",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lajal Metro Electronics",
+    "type": "other",
+    "contact": "01300000432",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lamir National Electronics",
+    "type": "customer",
+    "contact": "01300000433",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ldbir Prime Electronics",
+    "type": "supplier",
+    "contact": "01300000434",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lddib Royal Electronics",
+    "type": "employee",
+    "contact": "01300000435",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ldmir Sonar Electronics",
+    "type": "other",
+    "contact": "01300000436",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lebir Trust Electronics",
+    "type": "customer",
+    "contact": "01300000437",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ledib United Electronics",
+    "type": "supplier",
+    "contact": "01300000438",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lejal Vision Electronics",
+    "type": "employee",
+    "contact": "01300000439",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lemir Modern Electronics",
+    "type": "other",
+    "contact": "01300000440",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lhbir Agro Pharma",
+    "type": "customer",
+    "contact": "01300000441",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lhdib Apon Pharma",
+    "type": "supplier",
+    "contact": "01300000442",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lhjal Bangla Pharma",
+    "type": "employee",
+    "contact": "01300000443",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lhmir City Pharma",
+    "type": "other",
+    "contact": "01300000444",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Libir Delta Pharma",
+    "type": "customer",
+    "contact": "01300000445",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lidib Eastern Pharma",
+    "type": "supplier",
+    "contact": "01300000446",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lijal Fresh Pharma",
+    "type": "employee",
+    "contact": "01300000447",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Limir Green Pharma",
+    "type": "other",
+    "contact": "01300000448",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lnbir Ideal Pharma",
+    "type": "customer",
+    "contact": "01300000449",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lndib Janata Pharma",
+    "type": "supplier",
+    "contact": "01300000450",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lnjal Kishan Pharma",
+    "type": "employee",
+    "contact": "01300000451",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lnmir Metro Pharma",
+    "type": "other",
+    "contact": "01300000452",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lobir National Pharma",
+    "type": "customer",
+    "contact": "01300000453",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lodib Prime Pharma",
+    "type": "supplier",
+    "contact": "01300000454",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lojal Royal Pharma",
+    "type": "employee",
+    "contact": "01300000455",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lomir Sonar Pharma",
+    "type": "other",
+    "contact": "01300000456",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lrbir Trust Pharma",
+    "type": "customer",
+    "contact": "01300000457",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lrdib United Pharma",
+    "type": "supplier",
+    "contact": "01300000458",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lrjal Vision Pharma",
+    "type": "employee",
+    "contact": "01300000459",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lrmir Modern Pharma",
+    "type": "other",
+    "contact": "01300000460",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lubir Agro Imports",
+    "type": "customer",
+    "contact": "01300000461",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ludib Apon Imports",
+    "type": "supplier",
+    "contact": "01300000462",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lujal Bangla Imports",
+    "type": "employee",
+    "contact": "01300000463",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lumir City Imports",
+    "type": "other",
+    "contact": "01300000464",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lybir Delta Imports",
+    "type": "customer",
+    "contact": "01300000465",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lydib Eastern Imports",
+    "type": "supplier",
+    "contact": "01300000466",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lyjal Fresh Imports",
+    "type": "employee",
+    "contact": "01300000467",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Lymir Green Imports",
+    "type": "other",
+    "contact": "01300000468",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mabir Ideal Imports",
+    "type": "customer",
+    "contact": "01300000469",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Madib Janata Imports",
+    "type": "supplier",
+    "contact": "01300000470",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Majal Kishan Imports",
+    "type": "employee",
+    "contact": "01300000471",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mamir Metro Imports",
+    "type": "other",
+    "contact": "01300000472",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mebir National Imports",
+    "type": "customer",
+    "contact": "01300000473",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Medib Prime Imports",
+    "type": "supplier",
+    "contact": "01300000474",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mejal Royal Imports",
+    "type": "employee",
+    "contact": "01300000475",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Memir Sonar Imports",
+    "type": "other",
+    "contact": "01300000476",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mhbir Trust Imports",
+    "type": "customer",
+    "contact": "01300000477",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mhdib United Imports",
+    "type": "supplier",
+    "contact": "01300000478",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mhjal Vision Imports",
+    "type": "employee",
+    "contact": "01300000479",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mhmir Modern Imports",
+    "type": "other",
+    "contact": "01300000480",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mibir Agro Exports",
+    "type": "customer",
+    "contact": "01300000481",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Midib Apon Exports",
+    "type": "supplier",
+    "contact": "01300000482",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mijal Bangla Exports",
+    "type": "employee",
+    "contact": "01300000483",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mimir City Exports",
+    "type": "other",
+    "contact": "01300000484",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mlbir Delta Exports",
+    "type": "customer",
+    "contact": "01300000485",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mldib Eastern Exports",
+    "type": "supplier",
+    "contact": "01300000486",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mljal Fresh Exports",
+    "type": "employee",
+    "contact": "01300000487",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mlmir Green Exports",
+    "type": "other",
+    "contact": "01300000488",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mnbir Ideal Exports",
+    "type": "customer",
+    "contact": "01300000489",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mndib Janata Exports",
+    "type": "supplier",
+    "contact": "01300000490",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mnmir Kishan Exports",
+    "type": "employee",
+    "contact": "01300000491",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mobir Metro Exports",
+    "type": "other",
+    "contact": "01300000492",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Modib National Exports",
+    "type": "customer",
+    "contact": "01300000493",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mojal Prime Exports",
+    "type": "supplier",
+    "contact": "01300000494",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Momir Royal Exports",
+    "type": "employee",
+    "contact": "01300000495",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mrbir Sonar Exports",
+    "type": "other",
+    "contact": "01300000496",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mrdib Trust Exports",
+    "type": "customer",
+    "contact": "01300000497",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mrjal United Exports",
+    "type": "supplier",
+    "contact": "01300000498",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mrmir Vision Exports",
+    "type": "employee",
+    "contact": "01300000499",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mubir Modern Exports",
+    "type": "other",
+    "contact": "01300000500",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mudib Agro Distribution",
+    "type": "customer",
+    "contact": "01300000501",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mujal Apon Distribution",
+    "type": "supplier",
+    "contact": "01300000502",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mumir Bangla Distribution",
+    "type": "employee",
+    "contact": "01300000503",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mybir City Distribution",
+    "type": "other",
+    "contact": "01300000504",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mydib Delta Distribution",
+    "type": "customer",
+    "contact": "01300000505",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Mymir Eastern Distribution",
+    "type": "supplier",
+    "contact": "01300000506",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nabir Fresh Distribution",
+    "type": "employee",
+    "contact": "01300000507",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nadib Green Distribution",
+    "type": "other",
+    "contact": "01300000508",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Najal Ideal Distribution",
+    "type": "customer",
+    "contact": "01300000509",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Namir Janata Distribution",
+    "type": "supplier",
+    "contact": "01300000510",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ndbir Kishan Distribution",
+    "type": "employee",
+    "contact": "01300000511",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nddib Metro Distribution",
+    "type": "other",
+    "contact": "01300000512",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ndmir National Distribution",
+    "type": "customer",
+    "contact": "01300000513",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nebir Prime Distribution",
+    "type": "supplier",
+    "contact": "01300000514",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nedib Royal Distribution",
+    "type": "employee",
+    "contact": "01300000515",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nejal Sonar Distribution",
+    "type": "other",
+    "contact": "01300000516",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nemir Trust Distribution",
+    "type": "customer",
+    "contact": "01300000517",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nhbir United Distribution",
+    "type": "supplier",
+    "contact": "01300000518",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nhdib Vision Distribution",
+    "type": "employee",
+    "contact": "01300000519",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nhjal Modern Distribution",
+    "type": "other",
+    "contact": "01300000520",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nhmir Agro Holdings",
+    "type": "customer",
+    "contact": "01300000521",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nibir Apon Holdings",
+    "type": "supplier",
+    "contact": "01300000522",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nidib Bangla Holdings",
+    "type": "employee",
+    "contact": "01300000523",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nijal City Holdings",
+    "type": "other",
+    "contact": "01300000524",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nimir Delta Holdings",
+    "type": "customer",
+    "contact": "01300000525",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nlbir Eastern Holdings",
+    "type": "supplier",
+    "contact": "01300000526",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nldib Fresh Holdings",
+    "type": "employee",
+    "contact": "01300000527",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nljal Green Holdings",
+    "type": "other",
+    "contact": "01300000528",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nlmir Ideal Holdings",
+    "type": "customer",
+    "contact": "01300000529",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nobir Janata Holdings",
+    "type": "supplier",
+    "contact": "01300000530",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nodib Kishan Holdings",
+    "type": "employee",
+    "contact": "01300000531",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nojal Metro Holdings",
+    "type": "other",
+    "contact": "01300000532",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nomir National Holdings",
+    "type": "customer",
+    "contact": "01300000533",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nrbir Prime Holdings",
+    "type": "supplier",
+    "contact": "01300000534",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nrdib Royal Holdings",
+    "type": "employee",
+    "contact": "01300000535",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nrjal Sonar Holdings",
+    "type": "other",
+    "contact": "01300000536",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nrmir Trust Holdings",
+    "type": "customer",
+    "contact": "01300000537",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nubir United Holdings",
+    "type": "supplier",
+    "contact": "01300000538",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nudib Vision Holdings",
+    "type": "employee",
+    "contact": "01300000539",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nujal Modern Holdings",
+    "type": "other",
+    "contact": "01300000540",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Numir Agro Ventures",
+    "type": "customer",
+    "contact": "01300000541",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nybir Apon Ventures",
+    "type": "supplier",
+    "contact": "01300000542",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nydib Bangla Ventures",
+    "type": "employee",
+    "contact": "01300000543",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Nymir City Ventures",
+    "type": "other",
+    "contact": "01300000544",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Oabir Delta Ventures",
+    "type": "customer",
+    "contact": "01300000545",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Oadib Eastern Ventures",
+    "type": "supplier",
+    "contact": "01300000546",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Oajal Fresh Ventures",
+    "type": "employee",
+    "contact": "01300000547",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Oamir Green Ventures",
+    "type": "other",
+    "contact": "01300000548",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Obbir Ideal Ventures",
+    "type": "customer",
+    "contact": "01300000549",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Obdib Janata Ventures",
+    "type": "supplier",
+    "contact": "01300000550",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Objal Kishan Ventures",
+    "type": "employee",
+    "contact": "01300000551",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Obmir Metro Ventures",
+    "type": "other",
+    "contact": "01300000552",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Odbir National Ventures",
+    "type": "customer",
+    "contact": "01300000553",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Oddib Prime Ventures",
+    "type": "supplier",
+    "contact": "01300000554",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Odmir Royal Ventures",
+    "type": "employee",
+    "contact": "01300000555",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ofbir Sonar Ventures",
+    "type": "other",
+    "contact": "01300000556",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ofdib Trust Ventures",
+    "type": "customer",
+    "contact": "01300000557",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ofmir United Ventures",
+    "type": "supplier",
+    "contact": "01300000558",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ohbir Vision Ventures",
+    "type": "employee",
+    "contact": "01300000559",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ohdib Modern Ventures",
+    "type": "other",
+    "contact": "01300000560",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ohmir Agro Associates",
+    "type": "customer",
+    "contact": "01300000561",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ojbir Apon Associates",
+    "type": "supplier",
+    "contact": "01300000562",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ojdib Bangla Associates",
+    "type": "employee",
+    "contact": "01300000563",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ojmir City Associates",
+    "type": "other",
+    "contact": "01300000564",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Okbir Delta Associates",
+    "type": "customer",
+    "contact": "01300000565",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Okdib Eastern Associates",
+    "type": "supplier",
+    "contact": "01300000566",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Okmir Fresh Associates",
+    "type": "employee",
+    "contact": "01300000567",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Olbir Green Associates",
+    "type": "other",
+    "contact": "01300000568",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Oldib Ideal Associates",
+    "type": "customer",
+    "contact": "01300000569",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Olmir Janata Associates",
+    "type": "supplier",
+    "contact": "01300000570",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ombir Kishan Associates",
+    "type": "employee",
+    "contact": "01300000571",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Omdib Metro Associates",
+    "type": "other",
+    "contact": "01300000572",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ommir National Associates",
+    "type": "customer",
+    "contact": "01300000573",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Onbir Prime Associates",
+    "type": "supplier",
+    "contact": "01300000574",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ondib Royal Associates",
+    "type": "employee",
+    "contact": "01300000575",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Onmir Sonar Associates",
+    "type": "other",
+    "contact": "01300000576",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Orbir Trust Associates",
+    "type": "customer",
+    "contact": "01300000577",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ordib United Associates",
+    "type": "supplier",
+    "contact": "01300000578",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ormir Vision Associates",
+    "type": "employee",
+    "contact": "01300000579",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Osbir Modern Associates",
+    "type": "other",
+    "contact": "01300000580",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Osdib Agro Solutions",
+    "type": "customer",
+    "contact": "01300000581",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Osmir Apon Solutions",
+    "type": "supplier",
+    "contact": "01300000582",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pabir Bangla Solutions",
+    "type": "employee",
+    "contact": "01300000583",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Padib City Solutions",
+    "type": "other",
+    "contact": "01300000584",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pajal Delta Solutions",
+    "type": "customer",
+    "contact": "01300000585",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pamir Eastern Solutions",
+    "type": "supplier",
+    "contact": "01300000586",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pebir Fresh Solutions",
+    "type": "employee",
+    "contact": "01300000587",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pedib Green Solutions",
+    "type": "other",
+    "contact": "01300000588",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pejal Ideal Solutions",
+    "type": "customer",
+    "contact": "01300000589",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pemir Janata Solutions",
+    "type": "supplier",
+    "contact": "01300000590",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Phbir Kishan Solutions",
+    "type": "employee",
+    "contact": "01300000591",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Phdib Metro Solutions",
+    "type": "other",
+    "contact": "01300000592",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Phjal National Solutions",
+    "type": "customer",
+    "contact": "01300000593",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Phmir Prime Solutions",
+    "type": "supplier",
+    "contact": "01300000594",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pibir Royal Solutions",
+    "type": "employee",
+    "contact": "01300000595",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pidib Sonar Solutions",
+    "type": "other",
+    "contact": "01300000596",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pijal Trust Solutions",
+    "type": "customer",
+    "contact": "01300000597",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pimir United Solutions",
+    "type": "supplier",
+    "contact": "01300000598",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Plbir Vision Solutions",
+    "type": "employee",
+    "contact": "01300000599",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pldib Modern Solutions",
+    "type": "other",
+    "contact": "01300000600",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pljal Agro Traders",
+    "type": "customer",
+    "contact": "01300000601",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Plmir Apon Traders",
+    "type": "supplier",
+    "contact": "01300000602",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pnbir Bangla Traders",
+    "type": "employee",
+    "contact": "01300000603",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pndib City Traders",
+    "type": "other",
+    "contact": "01300000604",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pnmir Delta Traders",
+    "type": "customer",
+    "contact": "01300000605",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pobir Eastern Traders",
+    "type": "supplier",
+    "contact": "01300000606",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Podib Fresh Traders",
+    "type": "employee",
+    "contact": "01300000607",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pojal Green Traders",
+    "type": "other",
+    "contact": "01300000608",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pomir Ideal Traders",
+    "type": "customer",
+    "contact": "01300000609",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Prbir Janata Traders",
+    "type": "supplier",
+    "contact": "01300000610",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Prdib Kishan Traders",
+    "type": "employee",
+    "contact": "01300000611",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Prjal Metro Traders",
+    "type": "other",
+    "contact": "01300000612",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Prmir National Traders",
+    "type": "customer",
+    "contact": "01300000613",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pubir Prime Traders",
+    "type": "supplier",
+    "contact": "01300000614",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pudib Royal Traders",
+    "type": "employee",
+    "contact": "01300000615",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pujal Sonar Traders",
+    "type": "other",
+    "contact": "01300000616",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pumir Trust Traders",
+    "type": "customer",
+    "contact": "01300000617",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pybir United Traders",
+    "type": "supplier",
+    "contact": "01300000618",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pydib Vision Traders",
+    "type": "employee",
+    "contact": "01300000619",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Pymir Modern Traders",
+    "type": "other",
+    "contact": "01300000620",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qabir Agro Enterprise",
+    "type": "customer",
+    "contact": "01300000621",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qadib Apon Enterprise",
+    "type": "supplier",
+    "contact": "01300000622",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qajal Bangla Enterprise",
+    "type": "employee",
+    "contact": "01300000623",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qamir City Enterprise",
+    "type": "other",
+    "contact": "01300000624",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qdbir Delta Enterprise",
+    "type": "customer",
+    "contact": "01300000625",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qddib Eastern Enterprise",
+    "type": "supplier",
+    "contact": "01300000626",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qdmir Fresh Enterprise",
+    "type": "employee",
+    "contact": "01300000627",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qebir Green Enterprise",
+    "type": "other",
+    "contact": "01300000628",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qedib Ideal Enterprise",
+    "type": "customer",
+    "contact": "01300000629",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qejal Janata Enterprise",
+    "type": "supplier",
+    "contact": "01300000630",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qemir Kishan Enterprise",
+    "type": "employee",
+    "contact": "01300000631",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qibir Metro Enterprise",
+    "type": "other",
+    "contact": "01300000632",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qidib National Enterprise",
+    "type": "customer",
+    "contact": "01300000633",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qijal Prime Enterprise",
+    "type": "supplier",
+    "contact": "01300000634",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qimir Royal Enterprise",
+    "type": "employee",
+    "contact": "01300000635",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qlbir Sonar Enterprise",
+    "type": "other",
+    "contact": "01300000636",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qldib Trust Enterprise",
+    "type": "customer",
+    "contact": "01300000637",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qljal United Enterprise",
+    "type": "supplier",
+    "contact": "01300000638",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qlmir Vision Enterprise",
+    "type": "employee",
+    "contact": "01300000639",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qnbir Modern Enterprise",
+    "type": "other",
+    "contact": "01300000640",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qndib Agro Store",
+    "type": "customer",
+    "contact": "01300000641",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qnmir Apon Store",
+    "type": "supplier",
+    "contact": "01300000642",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qobir Bangla Store",
+    "type": "employee",
+    "contact": "01300000643",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qodib City Store",
+    "type": "other",
+    "contact": "01300000644",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qojal Delta Store",
+    "type": "customer",
+    "contact": "01300000645",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qomir Eastern Store",
+    "type": "supplier",
+    "contact": "01300000646",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qrbir Fresh Store",
+    "type": "employee",
+    "contact": "01300000647",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qrdib Green Store",
+    "type": "other",
+    "contact": "01300000648",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qrjal Ideal Store",
+    "type": "customer",
+    "contact": "01300000649",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qrmir Janata Store",
+    "type": "supplier",
+    "contact": "01300000650",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qubir Kishan Store",
+    "type": "employee",
+    "contact": "01300000651",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qudib Metro Store",
+    "type": "other",
+    "contact": "01300000652",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qujal National Store",
+    "type": "customer",
+    "contact": "01300000653",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qumir Prime Store",
+    "type": "supplier",
+    "contact": "01300000654",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qybir Royal Store",
+    "type": "employee",
+    "contact": "01300000655",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qydib Sonar Store",
+    "type": "other",
+    "contact": "01300000656",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qyjal Trust Store",
+    "type": "customer",
+    "contact": "01300000657",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Qymir United Store",
+    "type": "supplier",
+    "contact": "01300000658",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rabir Vision Store",
+    "type": "employee",
+    "contact": "01300000659",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Radib Modern Store",
+    "type": "other",
+    "contact": "01300000660",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rajal Agro Agency",
+    "type": "customer",
+    "contact": "01300000661",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ramir Apon Agency",
+    "type": "supplier",
+    "contact": "01300000662",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rebir Bangla Agency",
+    "type": "employee",
+    "contact": "01300000663",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Redib City Agency",
+    "type": "other",
+    "contact": "01300000664",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rejal Delta Agency",
+    "type": "customer",
+    "contact": "01300000665",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Remir Eastern Agency",
+    "type": "supplier",
+    "contact": "01300000666",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rhbir Fresh Agency",
+    "type": "employee",
+    "contact": "01300000667",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rhdib Green Agency",
+    "type": "other",
+    "contact": "01300000668",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rhjal Ideal Agency",
+    "type": "customer",
+    "contact": "01300000669",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rhmir Janata Agency",
+    "type": "supplier",
+    "contact": "01300000670",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ribir Kishan Agency",
+    "type": "employee",
+    "contact": "01300000671",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ridib Metro Agency",
+    "type": "other",
+    "contact": "01300000672",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rijal National Agency",
+    "type": "customer",
+    "contact": "01300000673",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rimir Prime Agency",
+    "type": "supplier",
+    "contact": "01300000674",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rlbir Royal Agency",
+    "type": "employee",
+    "contact": "01300000675",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rldib Sonar Agency",
+    "type": "other",
+    "contact": "01300000676",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rljal Trust Agency",
+    "type": "customer",
+    "contact": "01300000677",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rlmir United Agency",
+    "type": "supplier",
+    "contact": "01300000678",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rnbir Vision Agency",
+    "type": "employee",
+    "contact": "01300000679",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rndib Modern Agency",
+    "type": "other",
+    "contact": "01300000680",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rnmir Agro Supply",
+    "type": "customer",
+    "contact": "01300000681",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Robir Apon Supply",
+    "type": "supplier",
+    "contact": "01300000682",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rodib Bangla Supply",
+    "type": "employee",
+    "contact": "01300000683",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rojal City Supply",
+    "type": "other",
+    "contact": "01300000684",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Romir Delta Supply",
+    "type": "customer",
+    "contact": "01300000685",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rrbir Eastern Supply",
+    "type": "supplier",
+    "contact": "01300000686",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rrdib Fresh Supply",
+    "type": "employee",
+    "contact": "01300000687",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rrjal Green Supply",
+    "type": "other",
+    "contact": "01300000688",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rrmir Ideal Supply",
+    "type": "customer",
+    "contact": "01300000689",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rubir Janata Supply",
+    "type": "supplier",
+    "contact": "01300000690",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rudib Kishan Supply",
+    "type": "employee",
+    "contact": "01300000691",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rujal Metro Supply",
+    "type": "other",
+    "contact": "01300000692",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rumir National Supply",
+    "type": "customer",
+    "contact": "01300000693",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rybir Prime Supply",
+    "type": "supplier",
+    "contact": "01300000694",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rydib Royal Supply",
+    "type": "employee",
+    "contact": "01300000695",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Rymir Sonar Supply",
+    "type": "other",
+    "contact": "01300000696",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sabir Trust Supply",
+    "type": "customer",
+    "contact": "01300000697",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sadib United Supply",
+    "type": "supplier",
+    "contact": "01300000698",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sajal Vision Supply",
+    "type": "employee",
+    "contact": "01300000699",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Samir Modern Supply",
+    "type": "other",
+    "contact": "01300000700",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sebir Agro Bhandar",
+    "type": "customer",
+    "contact": "01300000701",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sedib Apon Bhandar",
+    "type": "supplier",
+    "contact": "01300000702",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sejal Bangla Bhandar",
+    "type": "employee",
+    "contact": "01300000703",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Semir City Bhandar",
+    "type": "other",
+    "contact": "01300000704",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Shbir Delta Bhandar",
+    "type": "customer",
+    "contact": "01300000705",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Shdib Eastern Bhandar",
+    "type": "supplier",
+    "contact": "01300000706",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Shjal Fresh Bhandar",
+    "type": "employee",
+    "contact": "01300000707",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Shmir Green Bhandar",
+    "type": "other",
+    "contact": "01300000708",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sibir Ideal Bhandar",
+    "type": "customer",
+    "contact": "01300000709",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sidib Janata Bhandar",
+    "type": "supplier",
+    "contact": "01300000710",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sijal Kishan Bhandar",
+    "type": "employee",
+    "contact": "01300000711",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Simir Metro Bhandar",
+    "type": "other",
+    "contact": "01300000712",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Slbir National Bhandar",
+    "type": "customer",
+    "contact": "01300000713",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sldib Prime Bhandar",
+    "type": "supplier",
+    "contact": "01300000714",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sljal Royal Bhandar",
+    "type": "employee",
+    "contact": "01300000715",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Slmir Sonar Bhandar",
+    "type": "other",
+    "contact": "01300000716",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Snbir Trust Bhandar",
+    "type": "customer",
+    "contact": "01300000717",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sndib United Bhandar",
+    "type": "supplier",
+    "contact": "01300000718",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Snmir Vision Bhandar",
+    "type": "employee",
+    "contact": "01300000719",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sobir Modern Bhandar",
+    "type": "other",
+    "contact": "01300000720",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sodib Agro Center",
+    "type": "customer",
+    "contact": "01300000721",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sojal Apon Center",
+    "type": "supplier",
+    "contact": "01300000722",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Somir Bangla Center",
+    "type": "employee",
+    "contact": "01300000723",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Srbir City Center",
+    "type": "other",
+    "contact": "01300000724",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Srdib Delta Center",
+    "type": "customer",
+    "contact": "01300000725",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Srjal Eastern Center",
+    "type": "supplier",
+    "contact": "01300000726",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Srmir Fresh Center",
+    "type": "employee",
+    "contact": "01300000727",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Subir Green Center",
+    "type": "other",
+    "contact": "01300000728",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sudib Ideal Center",
+    "type": "customer",
+    "contact": "01300000729",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sujal Janata Center",
+    "type": "supplier",
+    "contact": "01300000730",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sumir Kishan Center",
+    "type": "employee",
+    "contact": "01300000731",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sybir Metro Center",
+    "type": "other",
+    "contact": "01300000732",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Sydib National Center",
+    "type": "customer",
+    "contact": "01300000733",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Symir Prime Center",
+    "type": "supplier",
+    "contact": "01300000734",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tabir Royal Center",
+    "type": "employee",
+    "contact": "01300000735",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tadib Sonar Center",
+    "type": "other",
+    "contact": "01300000736",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tajal Trust Center",
+    "type": "customer",
+    "contact": "01300000737",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tamir United Center",
+    "type": "supplier",
+    "contact": "01300000738",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tebir Vision Center",
+    "type": "employee",
+    "contact": "01300000739",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tedib Modern Center",
+    "type": "other",
+    "contact": "01300000740",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tejal Agro Mart",
+    "type": "customer",
+    "contact": "01300000741",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Temir Apon Mart",
+    "type": "supplier",
+    "contact": "01300000742",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Thbir Bangla Mart",
+    "type": "employee",
+    "contact": "01300000743",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Thdib City Mart",
+    "type": "other",
+    "contact": "01300000744",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Thjal Delta Mart",
+    "type": "customer",
+    "contact": "01300000745",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Thmir Eastern Mart",
+    "type": "supplier",
+    "contact": "01300000746",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tibir Fresh Mart",
+    "type": "employee",
+    "contact": "01300000747",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tidib Green Mart",
+    "type": "other",
+    "contact": "01300000748",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tijal Ideal Mart",
+    "type": "customer",
+    "contact": "01300000749",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Timir Janata Mart",
+    "type": "supplier",
+    "contact": "01300000750",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tlbir Kishan Mart",
+    "type": "employee",
+    "contact": "01300000751",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tldib Metro Mart",
+    "type": "other",
+    "contact": "01300000752",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tljal National Mart",
+    "type": "customer",
+    "contact": "01300000753",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tlmir Prime Mart",
+    "type": "supplier",
+    "contact": "01300000754",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tnbir Royal Mart",
+    "type": "employee",
+    "contact": "01300000755",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tndib Sonar Mart",
+    "type": "other",
+    "contact": "01300000756",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tnmir Trust Mart",
+    "type": "customer",
+    "contact": "01300000757",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tobir United Mart",
+    "type": "supplier",
+    "contact": "01300000758",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Todib Vision Mart",
+    "type": "employee",
+    "contact": "01300000759",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tojal Modern Mart",
+    "type": "other",
+    "contact": "01300000760",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tomir Agro Wholesale",
+    "type": "customer",
+    "contact": "01300000761",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Trbir Apon Wholesale",
+    "type": "supplier",
+    "contact": "01300000762",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Trdib Bangla Wholesale",
+    "type": "employee",
+    "contact": "01300000763",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Trjal City Wholesale",
+    "type": "other",
+    "contact": "01300000764",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Trmir Delta Wholesale",
+    "type": "customer",
+    "contact": "01300000765",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tubir Eastern Wholesale",
+    "type": "supplier",
+    "contact": "01300000766",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tudib Fresh Wholesale",
+    "type": "employee",
+    "contact": "01300000767",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tujal Green Wholesale",
+    "type": "other",
+    "contact": "01300000768",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tumir Ideal Wholesale",
+    "type": "customer",
+    "contact": "01300000769",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tybir Janata Wholesale",
+    "type": "supplier",
+    "contact": "01300000770",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tydib Kishan Wholesale",
+    "type": "employee",
+    "contact": "01300000771",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Tymir Metro Wholesale",
+    "type": "other",
+    "contact": "01300000772",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uabir National Wholesale",
+    "type": "customer",
+    "contact": "01300000773",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uadib Prime Wholesale",
+    "type": "supplier",
+    "contact": "01300000774",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uajal Royal Wholesale",
+    "type": "employee",
+    "contact": "01300000775",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uamir Sonar Wholesale",
+    "type": "other",
+    "contact": "01300000776",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ubbir Trust Wholesale",
+    "type": "customer",
+    "contact": "01300000777",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ubdib United Wholesale",
+    "type": "supplier",
+    "contact": "01300000778",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ubjal Vision Wholesale",
+    "type": "employee",
+    "contact": "01300000779",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ubmir Modern Wholesale",
+    "type": "other",
+    "contact": "01300000780",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Udbir Agro Depot",
+    "type": "customer",
+    "contact": "01300000781",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uddib Apon Depot",
+    "type": "supplier",
+    "contact": "01300000782",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Udmir Bangla Depot",
+    "type": "employee",
+    "contact": "01300000783",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ufbir City Depot",
+    "type": "other",
+    "contact": "01300000784",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ufdib Delta Depot",
+    "type": "customer",
+    "contact": "01300000785",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ufmir Eastern Depot",
+    "type": "supplier",
+    "contact": "01300000786",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uhbir Fresh Depot",
+    "type": "employee",
+    "contact": "01300000787",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uhdib Green Depot",
+    "type": "other",
+    "contact": "01300000788",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uhmir Ideal Depot",
+    "type": "customer",
+    "contact": "01300000789",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ujbir Janata Depot",
+    "type": "supplier",
+    "contact": "01300000790",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ujdib Kishan Depot",
+    "type": "employee",
+    "contact": "01300000791",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ujmir Metro Depot",
+    "type": "other",
+    "contact": "01300000792",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ukbir National Depot",
+    "type": "customer",
+    "contact": "01300000793",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ukdib Prime Depot",
+    "type": "supplier",
+    "contact": "01300000794",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ukmir Royal Depot",
+    "type": "employee",
+    "contact": "01300000795",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ulbir Sonar Depot",
+    "type": "other",
+    "contact": "01300000796",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Uldib Trust Depot",
+    "type": "customer",
+    "contact": "01300000797",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ulmir United Depot",
+    "type": "supplier",
+    "contact": "01300000798",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Umbir Vision Depot",
+    "type": "employee",
+    "contact": "01300000799",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Umdib Modern Depot",
+    "type": "other",
+    "contact": "01300000800",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ummir Agro Link",
+    "type": "customer",
+    "contact": "01300000801",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Unbir Apon Link",
+    "type": "supplier",
+    "contact": "01300000802",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Undib Bangla Link",
+    "type": "employee",
+    "contact": "01300000803",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Unmir City Link",
+    "type": "other",
+    "contact": "01300000804",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Urbir Delta Link",
+    "type": "customer",
+    "contact": "01300000805",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Urdib Eastern Link",
+    "type": "supplier",
+    "contact": "01300000806",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Urmir Fresh Link",
+    "type": "employee",
+    "contact": "01300000807",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Usbir Green Link",
+    "type": "other",
+    "contact": "01300000808",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Usdib Ideal Link",
+    "type": "customer",
+    "contact": "01300000809",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Usmir Janata Link",
+    "type": "supplier",
+    "contact": "01300000810",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vabir Kishan Link",
+    "type": "employee",
+    "contact": "01300000811",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vadib Metro Link",
+    "type": "other",
+    "contact": "01300000812",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vajal National Link",
+    "type": "customer",
+    "contact": "01300000813",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vamir Prime Link",
+    "type": "supplier",
+    "contact": "01300000814",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vdbir Royal Link",
+    "type": "employee",
+    "contact": "01300000815",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vddib Sonar Link",
+    "type": "other",
+    "contact": "01300000816",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vdmir Trust Link",
+    "type": "customer",
+    "contact": "01300000817",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vebir United Link",
+    "type": "supplier",
+    "contact": "01300000818",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vedib Vision Link",
+    "type": "employee",
+    "contact": "01300000819",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vejal Modern Link",
+    "type": "other",
+    "contact": "01300000820",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vemir Agro Point",
+    "type": "customer",
+    "contact": "01300000821",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vibir Apon Point",
+    "type": "supplier",
+    "contact": "01300000822",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vidib Bangla Point",
+    "type": "employee",
+    "contact": "01300000823",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vijal City Point",
+    "type": "other",
+    "contact": "01300000824",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vimir Delta Point",
+    "type": "customer",
+    "contact": "01300000825",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vlbir Eastern Point",
+    "type": "supplier",
+    "contact": "01300000826",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vldib Fresh Point",
+    "type": "employee",
+    "contact": "01300000827",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vljal Green Point",
+    "type": "other",
+    "contact": "01300000828",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vlmir Ideal Point",
+    "type": "customer",
+    "contact": "01300000829",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vnbir Janata Point",
+    "type": "supplier",
+    "contact": "01300000830",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vndib Kishan Point",
+    "type": "employee",
+    "contact": "01300000831",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vnmir Metro Point",
+    "type": "other",
+    "contact": "01300000832",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vobir National Point",
+    "type": "customer",
+    "contact": "01300000833",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vodib Prime Point",
+    "type": "supplier",
+    "contact": "01300000834",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vojal Royal Point",
+    "type": "employee",
+    "contact": "01300000835",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vomir Sonar Point",
+    "type": "other",
+    "contact": "01300000836",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vrbir Trust Point",
+    "type": "customer",
+    "contact": "01300000837",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vrdib United Point",
+    "type": "supplier",
+    "contact": "01300000838",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vrjal Vision Point",
+    "type": "employee",
+    "contact": "01300000839",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vrmir Modern Point",
+    "type": "other",
+    "contact": "01300000840",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vubir Agro House",
+    "type": "customer",
+    "contact": "01300000841",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vudib Apon House",
+    "type": "supplier",
+    "contact": "01300000842",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vujal Bangla House",
+    "type": "employee",
+    "contact": "01300000843",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vumir City House",
+    "type": "other",
+    "contact": "01300000844",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vybir Delta House",
+    "type": "customer",
+    "contact": "01300000845",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vydib Eastern House",
+    "type": "supplier",
+    "contact": "01300000846",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vyjal Fresh House",
+    "type": "employee",
+    "contact": "01300000847",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Vymir Green House",
+    "type": "other",
+    "contact": "01300000848",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wabir Ideal House",
+    "type": "customer",
+    "contact": "01300000849",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wadib Janata House",
+    "type": "supplier",
+    "contact": "01300000850",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wajal Kishan House",
+    "type": "employee",
+    "contact": "01300000851",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wamir Metro House",
+    "type": "other",
+    "contact": "01300000852",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wdbir National House",
+    "type": "customer",
+    "contact": "01300000853",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wddib Prime House",
+    "type": "supplier",
+    "contact": "01300000854",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wdmir Royal House",
+    "type": "employee",
+    "contact": "01300000855",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Webir Sonar House",
+    "type": "other",
+    "contact": "01300000856",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wedib Trust House",
+    "type": "customer",
+    "contact": "01300000857",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wejal United House",
+    "type": "supplier",
+    "contact": "01300000858",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wemir Vision House",
+    "type": "employee",
+    "contact": "01300000859",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wibir Modern House",
+    "type": "other",
+    "contact": "01300000860",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Widib Agro International",
+    "type": "customer",
+    "contact": "01300000861",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wijal Apon International",
+    "type": "supplier",
+    "contact": "01300000862",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wimir Bangla International",
+    "type": "employee",
+    "contact": "01300000863",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wlbir City International",
+    "type": "other",
+    "contact": "01300000864",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wldib Delta International",
+    "type": "customer",
+    "contact": "01300000865",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wljal Eastern International",
+    "type": "supplier",
+    "contact": "01300000866",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wlmir Fresh International",
+    "type": "employee",
+    "contact": "01300000867",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wnbir Green International",
+    "type": "other",
+    "contact": "01300000868",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wndib Ideal International",
+    "type": "customer",
+    "contact": "01300000869",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wnmir Janata International",
+    "type": "supplier",
+    "contact": "01300000870",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wobir Kishan International",
+    "type": "employee",
+    "contact": "01300000871",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wodib Metro International",
+    "type": "other",
+    "contact": "01300000872",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wojal National International",
+    "type": "customer",
+    "contact": "01300000873",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Womir Prime International",
+    "type": "supplier",
+    "contact": "01300000874",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wrbir Royal International",
+    "type": "employee",
+    "contact": "01300000875",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wrdib Sonar International",
+    "type": "other",
+    "contact": "01300000876",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wrjal Trust International",
+    "type": "customer",
+    "contact": "01300000877",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wrmir United International",
+    "type": "supplier",
+    "contact": "01300000878",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wubir Vision International",
+    "type": "employee",
+    "contact": "01300000879",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wudib Modern International",
+    "type": "other",
+    "contact": "01300000880",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wujal Agro Corporation",
+    "type": "customer",
+    "contact": "01300000881",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wumir Apon Corporation",
+    "type": "supplier",
+    "contact": "01300000882",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wybir Bangla Corporation",
+    "type": "employee",
+    "contact": "01300000883",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wydib City Corporation",
+    "type": "other",
+    "contact": "01300000884",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wyjal Delta Corporation",
+    "type": "customer",
+    "contact": "01300000885",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Wymir Eastern Corporation",
+    "type": "supplier",
+    "contact": "01300000886",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xabir Fresh Corporation",
+    "type": "employee",
+    "contact": "01300000887",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xadib Green Corporation",
+    "type": "other",
+    "contact": "01300000888",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xajal Ideal Corporation",
+    "type": "customer",
+    "contact": "01300000889",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xamir Janata Corporation",
+    "type": "supplier",
+    "contact": "01300000890",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xdbir Kishan Corporation",
+    "type": "employee",
+    "contact": "01300000891",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xddib Metro Corporation",
+    "type": "other",
+    "contact": "01300000892",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xdmir National Corporation",
+    "type": "customer",
+    "contact": "01300000893",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xebir Prime Corporation",
+    "type": "supplier",
+    "contact": "01300000894",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xedib Royal Corporation",
+    "type": "employee",
+    "contact": "01300000895",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xejal Sonar Corporation",
+    "type": "other",
+    "contact": "01300000896",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xemir Trust Corporation",
+    "type": "customer",
+    "contact": "01300000897",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xibir United Corporation",
+    "type": "supplier",
+    "contact": "01300000898",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xidib Vision Corporation",
+    "type": "employee",
+    "contact": "01300000899",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xijal Modern Corporation",
+    "type": "other",
+    "contact": "01300000900",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ximir Agro Group",
+    "type": "customer",
+    "contact": "01300000901",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xlbir Apon Group",
+    "type": "supplier",
+    "contact": "01300000902",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xldib Bangla Group",
+    "type": "employee",
+    "contact": "01300000903",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xljal City Group",
+    "type": "other",
+    "contact": "01300000904",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xlmir Delta Group",
+    "type": "customer",
+    "contact": "01300000905",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xnbir Eastern Group",
+    "type": "supplier",
+    "contact": "01300000906",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xndib Fresh Group",
+    "type": "employee",
+    "contact": "01300000907",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xnmir Green Group",
+    "type": "other",
+    "contact": "01300000908",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xobir Ideal Group",
+    "type": "customer",
+    "contact": "01300000909",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xodib Janata Group",
+    "type": "supplier",
+    "contact": "01300000910",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xojal Kishan Group",
+    "type": "employee",
+    "contact": "01300000911",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xomir Metro Group",
+    "type": "other",
+    "contact": "01300000912",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xrbir National Group",
+    "type": "customer",
+    "contact": "01300000913",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xrdib Prime Group",
+    "type": "supplier",
+    "contact": "01300000914",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xrjal Royal Group",
+    "type": "employee",
+    "contact": "01300000915",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xrmir Sonar Group",
+    "type": "other",
+    "contact": "01300000916",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xubir Trust Group",
+    "type": "customer",
+    "contact": "01300000917",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xudib United Group",
+    "type": "supplier",
+    "contact": "01300000918",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xujal Vision Group",
+    "type": "employee",
+    "contact": "01300000919",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xumir Modern Group",
+    "type": "other",
+    "contact": "01300000920",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xybir Agro Bazaar",
+    "type": "customer",
+    "contact": "01300000921",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xydib Apon Bazaar",
+    "type": "supplier",
+    "contact": "01300000922",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xyjal Bangla Bazaar",
+    "type": "employee",
+    "contact": "01300000923",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Xymir City Bazaar",
+    "type": "other",
+    "contact": "01300000924",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yabir Delta Bazaar",
+    "type": "customer",
+    "contact": "01300000925",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yadib Eastern Bazaar",
+    "type": "supplier",
+    "contact": "01300000926",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yajal Fresh Bazaar",
+    "type": "employee",
+    "contact": "01300000927",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yamir Green Bazaar",
+    "type": "other",
+    "contact": "01300000928",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ydbir Ideal Bazaar",
+    "type": "customer",
+    "contact": "01300000929",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yddib Janata Bazaar",
+    "type": "supplier",
+    "contact": "01300000930",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ydmir Kishan Bazaar",
+    "type": "employee",
+    "contact": "01300000931",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yebir Metro Bazaar",
+    "type": "other",
+    "contact": "01300000932",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yedib National Bazaar",
+    "type": "customer",
+    "contact": "01300000933",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yejal Prime Bazaar",
+    "type": "supplier",
+    "contact": "01300000934",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yemir Royal Bazaar",
+    "type": "employee",
+    "contact": "01300000935",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yhbir Sonar Bazaar",
+    "type": "other",
+    "contact": "01300000936",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yhdib Trust Bazaar",
+    "type": "customer",
+    "contact": "01300000937",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yhjal United Bazaar",
+    "type": "supplier",
+    "contact": "01300000938",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yhmir Vision Bazaar",
+    "type": "employee",
+    "contact": "01300000939",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yibir Modern Bazaar",
+    "type": "other",
+    "contact": "01300000940",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yidib Agro Corner",
+    "type": "customer",
+    "contact": "01300000941",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yijal Apon Corner",
+    "type": "supplier",
+    "contact": "01300000942",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yimir Bangla Corner",
+    "type": "employee",
+    "contact": "01300000943",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ylbir City Corner",
+    "type": "other",
+    "contact": "01300000944",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yldib Delta Corner",
+    "type": "customer",
+    "contact": "01300000945",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yljal Eastern Corner",
+    "type": "supplier",
+    "contact": "01300000946",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ylmir Fresh Corner",
+    "type": "employee",
+    "contact": "01300000947",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ynbir Green Corner",
+    "type": "other",
+    "contact": "01300000948",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yndib Ideal Corner",
+    "type": "customer",
+    "contact": "01300000949",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Ynmir Janata Corner",
+    "type": "supplier",
+    "contact": "01300000950",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yobir Kishan Corner",
+    "type": "employee",
+    "contact": "01300000951",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yodib Metro Corner",
+    "type": "other",
+    "contact": "01300000952",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yojal National Corner",
+    "type": "customer",
+    "contact": "01300000953",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yomir Prime Corner",
+    "type": "supplier",
+    "contact": "01300000954",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yrbir Royal Corner",
+    "type": "employee",
+    "contact": "01300000955",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yrdib Sonar Corner",
+    "type": "other",
+    "contact": "01300000956",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yrjal Trust Corner",
+    "type": "customer",
+    "contact": "01300000957",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yrmir United Corner",
+    "type": "supplier",
+    "contact": "01300000958",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yubir Vision Corner",
+    "type": "employee",
+    "contact": "01300000959",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yudib Modern Corner",
+    "type": "other",
+    "contact": "01300000960",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yujal Agro Foods",
+    "type": "customer",
+    "contact": "01300000961",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Yumir Apon Foods",
+    "type": "supplier",
+    "contact": "01300000962",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zabir Bangla Foods",
+    "type": "employee",
+    "contact": "01300000963",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zadib City Foods",
+    "type": "other",
+    "contact": "01300000964",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zajal Delta Foods",
+    "type": "customer",
+    "contact": "01300000965",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zamir Eastern Foods",
+    "type": "supplier",
+    "contact": "01300000966",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zebir Fresh Foods",
+    "type": "employee",
+    "contact": "01300000967",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zedib Green Foods",
+    "type": "other",
+    "contact": "01300000968",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zejal Ideal Foods",
+    "type": "customer",
+    "contact": "01300000969",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zemir Janata Foods",
+    "type": "supplier",
+    "contact": "01300000970",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zhbir Kishan Foods",
+    "type": "employee",
+    "contact": "01300000971",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zhdib Metro Foods",
+    "type": "other",
+    "contact": "01300000972",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zhjal National Foods",
+    "type": "customer",
+    "contact": "01300000973",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zhmir Prime Foods",
+    "type": "supplier",
+    "contact": "01300000974",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zibir Royal Foods",
+    "type": "employee",
+    "contact": "01300000975",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zidib Sonar Foods",
+    "type": "other",
+    "contact": "01300000976",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zijal Trust Foods",
+    "type": "customer",
+    "contact": "01300000977",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zimir United Foods",
+    "type": "supplier",
+    "contact": "01300000978",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zlbir Vision Foods",
+    "type": "employee",
+    "contact": "01300000979",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zldib Modern Foods",
+    "type": "other",
+    "contact": "01300000980",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zljal Agro Fisheries",
+    "type": "customer",
+    "contact": "01300000981",
+    "address": "Motijheel, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zlmir Apon Fisheries",
+    "type": "supplier",
+    "contact": "01300000982",
+    "address": "Uttara, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Znbir Bangla Fisheries",
+    "type": "employee",
+    "contact": "01300000983",
+    "address": "Dhanmondi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zndib City Fisheries",
+    "type": "other",
+    "contact": "01300000984",
+    "address": "Mirpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Znmir Delta Fisheries",
+    "type": "customer",
+    "contact": "01300000985",
+    "address": "Jatrabari, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zobir Eastern Fisheries",
+    "type": "supplier",
+    "contact": "01300000986",
+    "address": "Narayanganj, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zodib Fresh Fisheries",
+    "type": "employee",
+    "contact": "01300000987",
+    "address": "Gazipur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zojal Green Fisheries",
+    "type": "other",
+    "contact": "01300000988",
+    "address": "Chattogram, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zomir Ideal Fisheries",
+    "type": "customer",
+    "contact": "01300000989",
+    "address": "Khulna, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zrbir Janata Fisheries",
+    "type": "supplier",
+    "contact": "01300000990",
+    "address": "Rajshahi, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zrdib Kishan Fisheries",
+    "type": "employee",
+    "contact": "01300000991",
+    "address": "Barishal, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zrjal Metro Fisheries",
+    "type": "other",
+    "contact": "01300000992",
+    "address": "Sylhet, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zrmir National Fisheries",
+    "type": "customer",
+    "contact": "01300000993",
+    "address": "Cumilla, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zubir Prime Fisheries",
+    "type": "supplier",
+    "contact": "01300000994",
+    "address": "Mymensingh, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zudib Royal Fisheries",
+    "type": "employee",
+    "contact": "01300000995",
+    "address": "Rangpur, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zujal Sonar Fisheries",
+    "type": "other",
+    "contact": "01300000996",
+    "address": "Jessore, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zumir Trust Fisheries",
+    "type": "customer",
+    "contact": "01300000997",
+    "address": "Bogura, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zybir United Fisheries",
+    "type": "supplier",
+    "contact": "01300000998",
+    "address": "Noakhali, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zydib Vision Fisheries",
+    "type": "employee",
+    "contact": "01300000999",
+    "address": "Feni, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  },
+  {
+    "name": "Zymir Modern Fisheries",
+    "type": "other",
+    "contact": "01300001000",
+    "address": "Tangail, Bangladesh",
+    "notes": "Bangla business fresh seed"
+  }
+]
