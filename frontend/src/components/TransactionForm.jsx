@@ -51,6 +51,17 @@ function TransactionForm({ editingTransaction, onSaved }) {
     }
   }, [role, editingTransaction]);
 
+  // Lock date to today for non-admin users
+  useEffect(() => {
+    if (role !== 'admin') {
+      const todayDate = dayjs().format('YYYY-MM-DD');
+      setForm((prev) => ({
+        ...prev,
+        date: todayDate,
+      }));
+    }
+  }, [role]);
+
   useEffect(() => {
     if (!showConfirm) return;
 
@@ -306,11 +317,13 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div>
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Date</label>
           <input
-            className={`w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] ${errors.date ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
+            className={`w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] disabled:cursor-not-allowed disabled:opacity-60 ${errors.date ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
             type="date"
             value={form.date}
             onChange={(event) => setForm((prev) => ({ ...prev, date: event.target.value }))}
+            disabled={role !== 'admin'}
           />
+          {role !== 'admin' && <p className="mt-1 text-xs text-slate-500">🔒 Date is locked to today for {role === 'data-entry' ? 'data entry users' : 'viewers'}</p>}
           {errors.date ? <p className="error-text">{errors.date}</p> : null}
         </div>
 
