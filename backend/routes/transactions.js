@@ -205,14 +205,14 @@ router.post('/', requireAuth, authorizeRoles('admin', 'data-entry'), async (req,
       transactionId: String(transaction._id),
     });
 
-    // Send Discord notification
-    await sendDiscordNotification({
-      action: 'CREATE_TRANSACTION',
-      transaction: await transaction.populate('ledgerId', 'name type'),
-      user: { username: userName, role },
-    });
-
     const populated = await transaction.populate('ledgerId', 'name type');
+
+    // Send Discord notification (fire-and-forget, don't block response)
+    sendDiscordNotification({
+      action: 'CREATE_TRANSACTION',
+      transaction: populated,
+      user: { username: userName, role },
+    }).catch(() => {});
     res.status(201).json(populated);
   } catch (error) {
     console.error('Transaction creation error:', error);
@@ -291,8 +291,8 @@ router.put('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => {
       transactionId: String(transaction._id),
     });
 
-    // Send Discord notification
-    await sendDiscordNotification({
+    // Send Discord notification (fire-and-forget, don't block response)
+    sendDiscordNotification({
       action: 'UPDATE_TRANSACTION',
       transaction,
       changes: {
@@ -300,7 +300,7 @@ router.put('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => {
         after: formatHistorySnapshot(transaction.toObject(), transaction),
       },
       user: { username: userName, role },
-    });
+    }).catch(() => {});
 
     res.json(transaction);
   } catch (error) {
@@ -337,12 +337,12 @@ router.delete('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => 
       transactionId: String(before._id),
     });
 
-    // Send Discord notification
-    await sendDiscordNotification({
+    // Send Discord notification (fire-and-forget, don't block response)
+    sendDiscordNotification({
       action: 'DELETE_TRANSACTION',
       transaction: { ...before, ledgerId: { name: before.ledgerId?.name } },
       user: { username: userName, role },
-    });
+    }).catch(() => {});
 
     res.json({ message: 'Transaction deleted' });
   } catch (error) {
