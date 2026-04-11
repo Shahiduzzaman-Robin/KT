@@ -15,7 +15,7 @@ function Dashboard({ daily }) {
     {
       label: 'Daily Outgoing',
       value: daily.outgoing,
-      valueTone: 'text-[#001f2a]',
+      valueTone: 'text-[#ba1a1a]',
       iconTone: 'bg-[#ffdad6] text-[#93000a]',
       chip: 'Stable',
       chipTone: 'text-slate-500 bg-slate-100',
