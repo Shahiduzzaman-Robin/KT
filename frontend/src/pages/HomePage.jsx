@@ -9,7 +9,6 @@ import CustomSelect from '../components/CustomSelect';
 import UserSessionBadge from '../components/UserSessionBadge';
 import { getSocketUrl } from '../utils/socket';
 import AppSidebar from '../components/AppSidebar';
-import DailyClosure from '../components/DailyClosure';
 import { useCurrentRole } from '../utils/auth';
 
 function HomePage() {
@@ -485,13 +484,6 @@ function HomePage() {
                 </p>
               ) : null}
             </section>
-
-            {/* Daily Z-Report Section */}
-            {role === 'admin' && (
-              <div className="mt-14 max-w-2xl">
-                <DailyClosure />
-              </div>
-            )}
           </div>
         </main>
       </div>

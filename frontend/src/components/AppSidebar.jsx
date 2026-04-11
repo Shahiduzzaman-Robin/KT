@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useCurrentRole, useCurrentUser } from '../utils/auth';
+import DailyClosure from './DailyClosure';
 
 function AppSidebar({ onExport, compactFilters }) {
   const role = useCurrentRole();
@@ -65,6 +66,8 @@ function AppSidebar({ onExport, compactFilters }) {
             Export All Records
           </button>
         ) : null}
+
+        {role === 'admin' && <DailyClosure />}
       </div>
     </aside>
   );
