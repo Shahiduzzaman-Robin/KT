@@ -319,65 +319,29 @@ function TransactionTable({
         ? createPortal(
             <div className="fixed inset-0 z-[400] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
               <div className="w-full max-w-6xl max-h-[90vh] overflow-hidden rounded-3xl bg-white shadow-2xl">
-                <div className="flex items-start justify-between gap-3 bg-[#e6f6ff] px-6 py-5">
+                <div className="flex items-start justify-between gap-3 bg-[#eaf7ff] px-6 py-6 border-b border-slate-100">
                   <div>
-                    <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Transaction Details</h3>
-                    <p className="mt-1 text-sm text-[#3d4a43]">Creator, every edit, edit time, and value changes in one place.</p>
+                    <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-3xl font-extrabold text-[#001f2a]">Transaction Details</h3>
+                    <p className="mt-1 text-sm font-semibold text-[#00694b]">
+                      Ledger: <span className="font-extrabold text-[#001f2a]">{detailsState.transaction.ledgerId?.name || detailsState.transaction.ledger || 'N/A'}</span>
+                    </p>
                   </div>
-                  <button className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#d9f2ff]" type="button" onClick={closeDetails}>
+                  <button className="rounded-xl bg-white px-4 py-2 text-sm font-bold text-[#001f2a] shadow-[0_4px_14px_rgba(0,31,42,0.1)] transition hover:bg-[#d9f2ff]" type="button" onClick={closeDetails}>
                     Close
                   </button>
                 </div>
 
-                <div className="max-h-[calc(90vh-92px)] overflow-auto px-6 py-5">
+                <div className="max-h-[calc(90vh-100px)] overflow-auto bg-slate-50/30 px-6 py-8">
                   {detailsLoading ? (
-                    <p className="text-sm text-slate-600">Loading details...</p>
+                    <div className="flex flex-col items-center py-12">
+                      <div className="h-8 w-8 animate-spin rounded-full border-4 border-[#00694b] border-t-transparent"></div>
+                      <p className="mt-4 text-sm font-medium text-slate-500">Loading history...</p>
+                    </div>
                   ) : detailsError ? (
-                    <p className="text-sm text-red-700">{detailsError}</p>
+                    <p className="rounded-xl bg-red-50 p-4 text-sm font-medium text-red-700">{detailsError}</p>
                   ) : (
                     <>
-                      <div className="grid gap-3 md:grid-cols-4">
-                        <div className="rounded-2xl bg-slate-50 p-4">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Ledger</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">{detailsState.transaction.ledgerId?.name || detailsState.transaction.ledger || 'N/A'}</p>
-                        </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Type</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">{formatTransactionValue(detailsState.transaction.type)}</p>
-                        </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Amount</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">{formatBDT(detailsState.transaction.amount)}</p>
-                        </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Created By</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">{detailsState.transaction.createdBy || '-'}</p>
-                        </div>
-                      </div>
-
-                      <div className="mt-3 grid gap-3 md:grid-cols-1">
-                        <div className="rounded-2xl bg-slate-50 p-4">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Last Edited By</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">{detailsState.transaction.updatedBy || '-'}</p>
-                        </div>
-                      </div>
-
-                      <div className="mt-3 grid gap-3 md:grid-cols-2">
-                        <div className="rounded-2xl bg-slate-50 p-4">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Date</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">
-                            {dayjs(detailsState.transaction.date).format('DD MMM YYYY')}
-                            <br />
-                            <span className="text-xs text-slate-500">at {dayjs(detailsState.transaction.createdAt).format('hh:mm A')}</span>
-                          </p>
-                        </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Description</p>
-                          <p className="mt-1 text-sm font-semibold text-slate-800">{detailsState.transaction.description || '-'}</p>
-                        </div>
-                      </div>
-
-                      <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4">
+                      <div className="rounded-3xl bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] ring-1 ring-slate-100">
                         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                           <h4 className="text-sm font-bold uppercase tracking-wide text-slate-500">Edit Timeline</h4>
                           <p className="text-xs text-slate-500">Latest activity appears first. Created event stays at the bottom.</p>
