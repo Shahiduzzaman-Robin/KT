@@ -8,21 +8,45 @@ function formatBDT(amount) {
 }
 
 /**
- * Send webhook using native https (bypasses Cloudflare issues with axios on shared hosting)
+ * Send webhook using native https
+ * Tries alternative Discord domains to bypass Cloudflare rate limits on shared hosting
  */
-function postToDiscord(webhookUrl, data) {
+async function postToDiscord(webhookUrl, data) {
+  const domains = [
+    'discordapp.com',
+    'canary.discord.com',
+    'ptb.discord.com',
+    'discord.com',
+  ];
+
+  // Extract the path from the webhook URL
+  const originalUrl = new URL(webhookUrl);
+  const webhookPath = originalUrl.pathname;
+
+  for (const domain of domains) {
+    try {
+      const result = await sendHttps(domain, webhookPath, data);
+      console.log(`[Discord] Successfully sent via ${domain}`);
+      return result;
+    } catch (err) {
+      console.log(`[Discord] Failed via ${domain}: ${err.message}`);
+      if (domain === domains[domains.length - 1]) throw err;
+    }
+  }
+}
+
+function sendHttps(hostname, path, data) {
   return new Promise((resolve, reject) => {
-    const url = new URL(webhookUrl);
     const payload = JSON.stringify(data);
 
     const options = {
-      hostname: url.hostname,
-      path: url.pathname,
+      hostname,
+      path,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(payload),
-        'User-Agent': 'KamrulTradersBot/1.0 (Node.js)',
+        'User-Agent': 'KamrulTradersBot/1.0 (Node.js; +https://kt-jz1b.onrender.com)',
         'Accept': 'application/json',
       },
     };
@@ -34,9 +58,8 @@ function postToDiscord(webhookUrl, data) {
         if (res.statusCode >= 200 && res.statusCode < 300) {
           resolve({ status: res.statusCode, data: body });
         } else {
-          const error = new Error(`Discord API responded with ${res.statusCode}: ${body}`);
+          const error = new Error(`${res.statusCode}: ${body}`);
           error.status = res.statusCode;
-          error.response = body;
           reject(error);
         }
       });
