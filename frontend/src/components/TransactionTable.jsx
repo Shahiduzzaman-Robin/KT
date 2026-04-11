@@ -206,7 +206,7 @@ function TransactionTable({
           </thead>
           <tbody className="[&_tr:last-child]:border-none">
             {rows.map((transaction, index) => (
-              <tr key={transaction._id} className={`${index % 2 ? 'bg-[#f8fcff]' : 'bg-white'} align-top transition hover:bg-[#eaf7ff]`}>
+              <tr key={transaction._id} className={`${index % 2 ? 'bg-[#f8fcff]' : 'bg-white'} border-b border-slate-200 align-top transition hover:bg-[#eaf7ff]`}>
                 <td className="px-4 py-4 text-[13px] font-medium text-[#3d4a43]">
                   <div>{dayjs(transaction.date).format('DD MMM YYYY')}</div>
                   <div className="text-xs text-slate-500">{dayjs(transaction.createdAt).format('hh:mm A')}</div>
