@@ -50,6 +50,30 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Test endpoint for Discord webhook
+app.get('/api/test-discord', async (req, res) => {
+  const { sendDiscordNotification } = require('./utils/discord');
+  const url = process.env.DISCORD_WEBHOOK_URL;
+  console.log('[Test] DISCORD_WEBHOOK_URL:', url || 'NOT SET');
+
+  try {
+    await sendDiscordNotification({
+      action: 'CREATE_TRANSACTION',
+      transaction: {
+        ledgerId: { name: 'Test Ledger' },
+        type: 'income',
+        amount: 50000,
+        date: new Date(),
+        description: 'Test from Render - real function',
+      },
+      user: { username: 'System Test', role: 'admin' },
+    });
+    res.json({ ok: true, webhookUrl: url ? url.substring(0, 60) + '...' : 'NOT SET' });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: err.message, stack: err.stack });
+  }
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/ledgers', ledgerRoutes);
