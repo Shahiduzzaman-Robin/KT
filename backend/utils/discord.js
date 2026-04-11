@@ -19,6 +19,9 @@ async function sendDiscordNotification({
 }) {
   const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 
+  console.log(`[Discord] Attempting to send notification for action: ${action}`);
+  console.log(`[Discord] Webhook URL configured: ${DISCORD_WEBHOOK_URL ? 'YES (' + DISCORD_WEBHOOK_URL.substring(0, 50) + '...)' : 'NO'}`);
+
   // Skip if webhook is not configured
   if (!DISCORD_WEBHOOK_URL) {
     console.log('[Discord] Webhook URL not configured, skipping notification');
