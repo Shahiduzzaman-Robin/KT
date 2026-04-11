@@ -61,13 +61,42 @@ function DailyReportsPage() {
 
   return (
     <div className="relative min-h-screen bg-[#f4faff] text-[#001f2a] [font-family:Inter,ui-sans-serif,system-ui]">
-      <style jsx>{`
+      <style>{`
         @media print {
-          .no-print { visibility: hidden !important; display: none !important; }
-          body { background: white !important; margin: 0 !important; }
-          .document-container { 
-            width: 100% !important; 
-            max-width: 100% !important;
+          /* Hide the main app layout completely */
+          #root > .no-print, 
+          #root > div:not(.portal-root),
+          .no-print { 
+            display: none !important; 
+            height: 0 !important;
+            overflow: hidden !important;
+          }
+          
+          /* Reset body for printing */
+          body { 
+            background: white !important; 
+            margin: 0 !important; 
+            padding: 0 !important;
+            overflow: visible !important;
+          }
+
+          /* Force the portal/modal to be visible and standard layout */
+          .print-container {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            background: white !important;
+            z-index: 99999 !important;
+          }
+
+          .document-container {
+            box-shadow: none !important;
+            border: none !important;
+            width: 100% !important;
+            max-width: none !important;
             margin: 0 !important;
             padding: 0 !important;
           }
@@ -147,7 +176,7 @@ function DailyReportsPage() {
       </div>
 
       {selectedReport && createPortal(
-        <div className="fixed inset-0 z-[500] flex items-start justify-center overflow-y-auto bg-slate-900/60 p-4 backdrop-blur-sm print:relative print:z-0 print:bg-white print:p-0 print:overflow-visible">
+        <div className="fixed inset-0 z-[500] flex items-start justify-center overflow-y-auto bg-slate-900/60 p-4 backdrop-blur-sm print-container print:relative print:z-0 print:bg-white print:p-0 print:overflow-visible">
           <div className="relative w-full max-w-4xl rounded-2xl bg-white shadow-2xl document-container my-10 min-h-[90vh] flex flex-col print:my-0 print:min-h-0 print:shadow-none print:w-full">
             
             {/* Document Header Controls */}
