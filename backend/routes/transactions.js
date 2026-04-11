@@ -14,15 +14,18 @@ const router = express.Router();
 // Middleware to check if the transaction date is already locked (Shop Closed)
 async function checkIfDayLocked(req, res, next) {
   try {
-    // For POST/PUT use body.date, for DELETE or if missing use the transaction's own date
     let targetDate = req.body.date;
     
+    // If no date in body (Edit/Delete), find the transaction to get its date
     if (!targetDate && req.params.id) {
-      const existing = await Transaction.findById(req.params.id);
-      if (existing) targetDate = existing.date;
+      const existing = await Transaction.findById(req.params.id).select('date');
+      if (!existing) {
+        return res.status(404).json({ message: 'Transaction not found or already deleted' });
+      }
+      targetDate = existing.date;
     }
 
-    if (!targetDate) return next(); // Can't check if no date
+    if (!targetDate) return next();
 
     const startOfDay = dayjs(targetDate).startOf('day').toDate();
     const endOfDay = dayjs(targetDate).endOf('day').toDate();
@@ -34,13 +37,14 @@ async function checkIfDayLocked(req, res, next) {
 
     if (isLocked) {
       return res.status(403).json({ 
-        message: `This day (${dayjs(targetDate).format('DD MMM YYYY')}) is already closed and archived. You cannot modify records for a locked date.` 
+        message: `This day (${dayjs(targetDate).format('DD MMM YYYY')}) is already closed and archived. Records are locked.` 
       });
     }
 
     next();
   } catch (err) {
-    res.status(500).json({ message: 'Error checking report status', error: err.message });
+    console.error('[LockCheck Error]:', err);
+    res.status(500).json({ message: 'Internal server error during closure check', details: err.message });
   }
 }
 
