@@ -92,9 +92,10 @@ async function sendDiscordNotification({
     let embed = {};
 
     if (action === 'CREATE_TRANSACTION') {
+      const color = transaction.type === 'income' ? 3447003 : 16776960; // Blue for Income, Yellow for Outgoing
       embed = {
         title: '✅ Transaction Created',
-        color: 3066993,
+        color: color,
         fields: [
           { name: 'Ledger', value: transaction.ledgerId?.name || 'N/A', inline: true },
           { name: 'Type', value: transaction.type?.toUpperCase() || 'N/A', inline: true },
