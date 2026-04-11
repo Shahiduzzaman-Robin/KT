@@ -7,8 +7,42 @@ const { logAudit } = require('../utils/audit');
 const { emitTransactionsChanged } = require('../utils/realtime');
 const { sendDiscordNotification } = require('../utils/discord');
 const { requireAuth, authorizeRoles } = require('../middleware/auth');
+const DailyReport = require('../models/DailyReport');
 
 const router = express.Router();
+
+// Middleware to check if the transaction date is already locked (Shop Closed)
+async function checkIfDayLocked(req, res, next) {
+  try {
+    // For POST/PUT use body.date, for DELETE or if missing use the transaction's own date
+    let targetDate = req.body.date;
+    
+    if (!targetDate && req.params.id) {
+      const existing = await Transaction.findById(req.params.id);
+      if (existing) targetDate = existing.date;
+    }
+
+    if (!targetDate) return next(); // Can't check if no date
+
+    const startOfDay = dayjs(targetDate).startOf('day').toDate();
+    const endOfDay = dayjs(targetDate).endOf('day').toDate();
+
+    const isLocked = await DailyReport.findOne({
+      date: { $gte: startOfDay, $lte: endOfDay },
+      status: 'locked'
+    });
+
+    if (isLocked) {
+      return res.status(403).json({ 
+        message: `This day (${dayjs(targetDate).format('DD MMM YYYY')}) is already closed and archived. You cannot modify records for a locked date.` 
+      });
+    }
+
+    next();
+  } catch (err) {
+    res.status(500).json({ message: 'Error checking report status', error: err.message });
+  }
+}
 
 function isReadableLedgerValue(value) {
   return Boolean(
@@ -145,7 +179,7 @@ router.get('/:id/history', requireAuth, async (req, res) => {
   }
 });
 
-router.post('/', requireAuth, authorizeRoles('admin', 'data-entry'), async (req, res) => {
+router.post('/', requireAuth, authorizeRoles('admin', 'data-entry'), checkIfDayLocked, async (req, res) => {
   try {
     const userName = req.user.username || req.user.name;
     const role = req.user.role;
@@ -236,7 +270,7 @@ router.post('/', requireAuth, authorizeRoles('admin', 'data-entry'), async (req,
   }
 });
 
-router.put('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => {
+router.put('/:id', requireAuth, authorizeRoles('admin'), checkIfDayLocked, async (req, res) => {
   try {
     const userName = req.user.username || req.user.name;
     const role = req.user.role;
@@ -308,7 +342,7 @@ router.put('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => {
   }
 });
 
-router.delete('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => {
+router.delete('/:id', requireAuth, authorizeRoles('admin'), checkIfDayLocked, async (req, res) => {
   try {
     const userName = req.user.username || req.user.name;
     const role = req.user.role;
