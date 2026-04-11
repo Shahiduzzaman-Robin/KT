@@ -50,48 +50,6 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Temporary test endpoint for Discord webhook
-app.get('/api/test-discord', async (req, res) => {
-  const axios = require('axios');
-  const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
-  const results = {};
-
-  try {
-    // Test 1: Simple text message (like curl)
-    const test1 = await axios.post(webhookUrl, {
-      content: '🔔 Test from Render server - simple text',
-    });
-    results.simpleText = { status: test1.status, statusText: test1.statusText };
-  } catch (err) {
-    results.simpleText = { error: err.message, response: err.response?.data };
-  }
-
-  try {
-    // Test 2: Embed message
-    const test2 = await axios.post(webhookUrl, {
-      content: '📊 Embed test from Render:',
-      embeds: [{
-        title: '✅ Test Transaction Created',
-        color: 3066993,
-        fields: [
-          { name: 'Ledger', value: 'Test Ledger', inline: true },
-          { name: 'Amount', value: '৳ 100', inline: true },
-        ],
-        timestamp: new Date().toISOString(),
-      }],
-      username: 'Kamrul Traders Bot',
-    });
-    results.embed = { status: test2.status, statusText: test2.statusText };
-  } catch (err) {
-    results.embed = { error: err.message, response: err.response?.data };
-  }
-
-  res.json({
-    webhookUrl: webhookUrl ? webhookUrl.substring(0, 60) + '...' : 'NOT SET',
-    results,
-  });
-});
-
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/ledgers', ledgerRoutes);
