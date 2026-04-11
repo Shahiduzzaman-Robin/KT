@@ -1,7 +1,5 @@
 const axios = require('axios');
 
-const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
-
 /**
  * Format BDT currency
  */
@@ -19,6 +17,8 @@ async function sendDiscordNotification({
   user,
   error = null,
 }) {
+  const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
+
   // Skip if webhook is not configured
   if (!DISCORD_WEBHOOK_URL) {
     console.log('[Discord] Webhook URL not configured, skipping notification');
