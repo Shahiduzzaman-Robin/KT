@@ -14,6 +14,7 @@ const summaryRoutes = require('./routes/summaries');
 const exportRoutes = require('./routes/exports');
 const { ensureDefaultUsers } = require('./utils/defaultUsers');
 const auditRoutes = require('./routes/auditLogs');
+const reportRoutes = require('./routes/reports');
 const { attachAuditContext } = require('./middleware/auditContext');
 const { setSocketServer } = require('./utils/realtime');
 const Transaction = require('./models/Transaction');
@@ -57,6 +58,7 @@ app.use('/api/transactions', transactionRoutes);
 app.use('/api/summary', summaryRoutes);
 app.use('/api/exports', exportRoutes);
 app.use('/api/audit-logs', auditRoutes);
+app.use('/api/reports', reportRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });

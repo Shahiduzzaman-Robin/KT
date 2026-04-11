@@ -224,17 +224,37 @@ async function sendDiscordNotification({
     } else if (action === 'DELETE_LEDGER' || action === 'ARCHIVE_LEDGER') {
       const isArchive = action === 'ARCHIVE_LEDGER';
       embed = {
-        title: isArchive ? '🗄️ Ledger Archived' : '🗑️ Ledger Deleted',
-        color: 15158332, // Red
+        title: isArchive ? '📦 Ledger Archived' : '🗑️ Ledger Deleted',
+        color: 15158332,
         fields: [
           { name: 'Name', value: ledger.name || 'N/A', inline: true },
-          { name: 'Type', value: ledger.type?.toUpperCase() || 'N/A', inline: true },
+          { name: 'Final Balance', value: formatBDT(ledger.currentBalance || 0), inline: true },
           {
             name: isArchive ? 'Archived By' : 'Deleted By',
             value: `${user?.username || 'Unknown'} (${user?.role || 'N/A'})`,
             inline: true,
           },
         ],
+        timestamp: new Date().toISOString(),
+      };
+    }
+    // --- REPORT ACTIONS ---
+    else if (action === 'CLOSE_DAY') {
+      webhookToUse = process.env.DISCORD_LEDGER_WEBHOOK_URL || webhookToUse;
+      const report = after;
+      embed = {
+        title: '📈 Daily Z-Report: Shop Closed',
+        description: `Financial summary for **${dayjs(report.date).format('DD MMMM YYYY')}**`,
+        color: 3447003, // Blue
+        fields: [
+          { name: 'Opening Cash', value: formatBDT(report.openingBalance), inline: true },
+          { name: 'Total Income', value: `+ ${formatBDT(report.totalIncome)}`, inline: true },
+          { name: 'Total Expenses', value: `- ${formatBDT(report.totalOutgoing)}`, inline: true },
+          { name: 'Closing Cash', value: `**${formatBDT(report.closingBalance)}**`, inline: true },
+          { name: 'Tx Count', value: String(report.transactionCount), inline: true },
+          { name: 'Closed By', value: report.generatedBy, inline: true },
+        ],
+        footer: { text: report.notes ? `Notes: ${report.notes}` : 'M/S Kamrul Traders' },
         timestamp: new Date().toISOString(),
       };
     }
