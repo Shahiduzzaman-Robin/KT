@@ -72,25 +72,35 @@ function sendHttps(hostname, path, data) {
 }
 
 /**
- * Send Discord notification for transaction events
+ * Send Discord notification for transaction and ledger events
  */
 async function sendDiscordNotification({
   action,
   transaction,
+  ledger,
   changes = null,
   user,
   error = null,
 }) {
-  const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
+  // Use specific webhook for ledgers if provided, otherwise fallback to transaction webhook
+  const isLedgerAction = action.includes('LEDGER');
+  const DISCORD_WEBHOOK_URL = isLedgerAction 
+    ? (process.env.DISCORD_LEDGER_WEBHOOK_URL || process.env.DISCORD_WEBHOOK_URL)
+    : process.env.DISCORD_WEBHOOK_URL;
 
   if (!DISCORD_WEBHOOK_URL) {
-    console.log('[Discord] Webhook URL not configured, skipping notification');
+    console.log(`[Discord] Webhook URL for ${isLedgerAction ? 'Ledger' : 'Transaction'} not configured, skipping notification`);
     return;
   }
+
+  const botName = isLedgerAction 
+    ? 'M/S Kamrul Traders - Ledger Bot' 
+    : 'M/S Kamrul Traders - Transaction Bot';
 
   try {
     let embed = {};
 
+    // --- TRANSACTION ACTIONS ---
     if (action === 'CREATE_TRANSACTION') {
       const color = transaction.type === 'income' ? 3447003 : 16776960; // Blue for Income, Yellow for Outgoing
       embed = {
@@ -163,6 +173,70 @@ async function sendDiscordNotification({
         timestamp: new Date().toISOString(),
       };
     }
+    // --- LEDGER ACTIONS ---
+    else if (action === 'CREATE_LEDGER') {
+      embed = {
+        title: '📁 Ledger Created',
+        color: 3066993, // Green
+        fields: [
+          { name: 'Name', value: ledger.name || 'N/A', inline: true },
+          { name: 'Type', value: ledger.type?.toUpperCase() || 'N/A', inline: true },
+          { name: 'Posting', value: ledger.isPosting ? 'Yes' : 'No', inline: true },
+          { name: 'Contact', value: ledger.contact || '-', inline: true },
+          {
+            name: 'Created By',
+            value: `${user?.username || 'Unknown'} (${user?.role || 'N/A'})`,
+            inline: true,
+          },
+        ],
+        timestamp: new Date().toISOString(),
+      };
+    } else if (action === 'UPDATE_LEDGER') {
+      const changeFields = [];
+      if (changes) {
+        for (const field of Object.keys(changes.after || {})) {
+          const before = changes.before?.[field];
+          const after = changes.after?.[field];
+          if (String(before) !== String(after)) {
+            changeFields.push({
+              name: `${field}:`,
+              value: `**Before:** ${before || '-'}\n**After:** ${after || '-'}`,
+              inline: false,
+            });
+          }
+        }
+      }
+      embed = {
+        title: '📁 Ledger Updated',
+        color: 15105570, // Orange
+        fields: [
+          { name: 'Name', value: ledger.name || 'N/A', inline: true },
+          ...changeFields,
+          {
+            name: 'Updated By',
+            value: `${user?.username || 'Unknown'} (${user?.role || 'N/A'})`,
+            inline: true,
+          },
+        ],
+        timestamp: new Date().toISOString(),
+      };
+    } else if (action === 'DELETE_LEDGER' || action === 'ARCHIVE_LEDGER') {
+      const isArchive = action === 'ARCHIVE_LEDGER';
+      embed = {
+        title: isArchive ? '🗄️ Ledger Archived' : '🗑️ Ledger Deleted',
+        color: 15158332, // Red
+        fields: [
+          { name: 'Name', value: ledger.name || 'N/A', inline: true },
+          { name: 'Type', value: ledger.type?.toUpperCase() || 'N/A', inline: true },
+          {
+            name: isArchive ? 'Archived By' : 'Deleted By',
+            value: `${user?.username || 'Unknown'} (${user?.role || 'N/A'})`,
+            inline: true,
+          },
+        ],
+        timestamp: new Date().toISOString(),
+      };
+    }
 
     if (error) {
       embed.color = 15158332;
@@ -175,7 +249,7 @@ async function sendDiscordNotification({
 
     await postToDiscord(DISCORD_WEBHOOK_URL, {
       embeds: [embed],
-      username: 'M/S Kamrul Traders - Transaction Bot',
+      username: botName,
     });
 
     console.log(`[Discord] Notification sent for ${action}`);

@@ -3,6 +3,7 @@ const dayjs = require('dayjs');
 const Ledger = require('../models/Ledger');
 const Transaction = require('../models/Transaction');
 const { logAudit } = require('../utils/audit');
+const { sendDiscordNotification } = require('../utils/discord');
 const { requireAuth, authorizeRoles } = require('../middleware/auth');
 
 const router = express.Router();
@@ -246,6 +247,13 @@ router.post('/', requireAuth, authorizeRoles('admin', 'data-entry'), async (req,
       after: ledger.toObject(),
     });
 
+    // Send Discord notification (fire-and-forget)
+    sendDiscordNotification({
+      action: 'CREATE_LEDGER',
+      ledger,
+      user: { username: userName, role },
+    }).catch(() => {});
+
     res.status(201).json(ledger);
   } catch (error) {
     res.status(400).json({ message: 'Failed to create ledger', error: error.message });
@@ -278,6 +286,17 @@ router.put('/:id', requireAuth, authorizeRoles('admin', 'data-entry'), async (re
       before,
       after: ledger.toObject(),
     });
+
+    // Send Discord notification (fire-and-forget)
+    sendDiscordNotification({
+      action: 'UPDATE_LEDGER',
+      ledger,
+      changes: {
+        before,
+        after: ledger.toObject(),
+      },
+      user: { username: userName, role },
+    }).catch(() => {});
 
     res.json(ledger);
   } catch (error) {
@@ -316,6 +335,13 @@ router.delete('/:id', requireAuth, authorizeRoles('admin', 'data-entry'), async 
         after: ledger.toObject(),
       });
 
+      // Send Discord notification (fire-and-forget)
+      sendDiscordNotification({
+        action: 'ARCHIVE_LEDGER',
+        ledger: before,
+        user: { username: userName, role },
+      }).catch(() => {});
+
       return res.json({
         message: `Ledger archived because it has ${linkedTransactionCount} linked transactions`,
         archived: true,
@@ -339,6 +365,13 @@ router.delete('/:id', requireAuth, authorizeRoles('admin', 'data-entry'), async 
       before,
       after: null,
     });
+
+    // Send Discord notification (fire-and-forget)
+    sendDiscordNotification({
+      action: 'DELETE_LEDGER',
+      ledger: before,
+      user: { username: userName, role },
+    }).catch(() => {});
 
     res.json({ message: 'Ledger deleted', archived: false, transactionCount: 0 });
   } catch (error) {
