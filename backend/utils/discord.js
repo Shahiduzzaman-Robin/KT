@@ -1,4 +1,4 @@
-const axios = require('axios');
+const https = require('https');
 
 /**
  * Format BDT currency
@@ -8,23 +8,44 @@ function formatBDT(amount) {
 }
 
 /**
- * Send request to Discord with retry on rate limit (429)
+ * Send webhook using native https (bypasses Cloudflare issues with axios on shared hosting)
  */
-async function postWithRetry(url, data, retries = 3) {
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const response = await axios.post(url, data);
-      return response;
-    } catch (err) {
-      if (err.response?.status === 429 && attempt < retries) {
-        const retryAfter = (err.response?.data?.retry_after || 30) * 1000;
-        console.log(`[Discord] Rate limited. Retrying in ${retryAfter / 1000}s (attempt ${attempt}/${retries})`);
-        await new Promise((resolve) => setTimeout(resolve, retryAfter));
-      } else {
-        throw err;
-      }
-    }
-  }
+function postToDiscord(webhookUrl, data) {
+  return new Promise((resolve, reject) => {
+    const url = new URL(webhookUrl);
+    const payload = JSON.stringify(data);
+
+    const options = {
+      hostname: url.hostname,
+      path: url.pathname,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(payload),
+        'User-Agent': 'KamrulTradersBot/1.0 (Node.js)',
+        'Accept': 'application/json',
+      },
+    };
+
+    const req = https.request(options, (res) => {
+      let body = '';
+      res.on('data', (chunk) => { body += chunk; });
+      res.on('end', () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          resolve({ status: res.statusCode, data: body });
+        } else {
+          const error = new Error(`Discord API responded with ${res.statusCode}: ${body}`);
+          error.status = res.statusCode;
+          error.response = body;
+          reject(error);
+        }
+      });
+    });
+
+    req.on('error', reject);
+    req.write(payload);
+    req.end();
+  });
 }
 
 /**
@@ -128,7 +149,7 @@ async function sendDiscordNotification({
       ];
     }
 
-    await postWithRetry(DISCORD_WEBHOOK_URL, {
+    await postToDiscord(DISCORD_WEBHOOK_URL, {
       embeds: [embed],
       username: 'M/S Kamrul Traders - Transaction Bot',
     });
