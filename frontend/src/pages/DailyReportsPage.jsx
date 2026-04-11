@@ -61,16 +61,14 @@ function DailyReportsPage() {
 
   return (
     <div className="relative min-h-screen bg-[#f4faff] text-[#001f2a] [font-family:Inter,ui-sans-serif,system-ui]">
-      <style>{`
+      <style jsx>{`
         @media print {
-          .no-print { display: none !important; }
-          .print-only { display: block !important; }
-          body { background: white !important; padding: 0 !important; margin: 0 !important; }
+          .no-print { visibility: hidden !important; display: none !important; }
+          body { background: white !important; margin: 0 !important; }
           .document-container { 
-            box-shadow: none !important; 
-            border: none !important; 
             width: 100% !important; 
-            max-width: none !important;
+            max-width: 100% !important;
+            margin: 0 !important;
             padding: 0 !important;
           }
         }
@@ -149,8 +147,8 @@ function DailyReportsPage() {
       </div>
 
       {selectedReport && createPortal(
-        <div className="fixed inset-0 z-[500] flex items-start justify-center overflow-y-auto bg-slate-900/60 p-4 backdrop-blur-sm no-print">
-          <div className="relative w-full max-w-4xl rounded-2xl bg-white shadow-2xl document-container my-10 min-h-[90vh] flex flex-col">
+        <div className="fixed inset-0 z-[500] flex items-start justify-center overflow-y-auto bg-slate-900/60 p-4 backdrop-blur-sm print:relative print:z-0 print:bg-white print:p-0 print:overflow-visible">
+          <div className="relative w-full max-w-4xl rounded-2xl bg-white shadow-2xl document-container my-10 min-h-[90vh] flex flex-col print:my-0 print:min-h-0 print:shadow-none print:w-full">
             
             {/* Document Header Controls */}
             <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-8 py-4 rounded-t-2xl no-print">
