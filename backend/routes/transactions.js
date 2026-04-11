@@ -5,6 +5,7 @@ const Ledger = require('../models/Ledger');
 const AuditLog = require('../models/AuditLog');
 const { logAudit } = require('../utils/audit');
 const { emitTransactionsChanged } = require('../utils/realtime');
+const { sendDiscordNotification } = require('../utils/discord');
 const { requireAuth, authorizeRoles } = require('../middleware/auth');
 
 const router = express.Router();
@@ -204,6 +205,13 @@ router.post('/', requireAuth, authorizeRoles('admin', 'data-entry'), async (req,
       transactionId: String(transaction._id),
     });
 
+    // Send Discord notification
+    await sendDiscordNotification({
+      action: 'CREATE_TRANSACTION',
+      transaction: await transaction.populate('ledgerId', 'name type'),
+      user: { username: userName, role },
+    });
+
     const populated = await transaction.populate('ledgerId', 'name type');
     res.status(201).json(populated);
   } catch (error) {
@@ -283,6 +291,17 @@ router.put('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => {
       transactionId: String(transaction._id),
     });
 
+    // Send Discord notification
+    await sendDiscordNotification({
+      action: 'UPDATE_TRANSACTION',
+      transaction,
+      changes: {
+        before: formatHistorySnapshot(before, before),
+        after: formatHistorySnapshot(transaction.toObject(), transaction),
+      },
+      user: { username: userName, role },
+    });
+
     res.json(transaction);
   } catch (error) {
     res.status(400).json({ message: 'Failed to update transaction', error: error.message });
@@ -316,6 +335,13 @@ router.delete('/:id', requireAuth, authorizeRoles('admin'), async (req, res) => 
     emitTransactionsChanged({
       action: 'deleted',
       transactionId: String(before._id),
+    });
+
+    // Send Discord notification
+    await sendDiscordNotification({
+      action: 'DELETE_TRANSACTION',
+      transaction: { ...before, ledgerId: { name: before.ledgerId?.name } },
+      user: { username: userName, role },
     });
 
     res.json({ message: 'Transaction deleted' });
