@@ -1,5 +1,6 @@
 import { flushSync } from 'react-dom';
 import { useEffect, useState } from 'react';
+import dayjs from 'dayjs';
 import api from '../utils/api';
 
 function formatBDT(value) {
@@ -135,7 +136,7 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
                 <span className="min-w-0">
                   <span className="block truncate font-medium text-slate-700">{ledger.name}{ledger.isGroup ? ' 📊' : ''}</span>
                   <span className="mt-0.5 block truncate text-xs text-slate-500">
-                    Balance: {formatBDT(ledger.currentBalance)}
+                    Last Tx: {ledger.lastTransactionAt ? dayjs(ledger.lastTransactionAt).format('DD MMM YYYY') : 'None'}
                     <span className="mx-1">|</span>
                     {ledger.contact || 'No phone'}
                     {ledger.address ? ` | ${ledger.address}` : ''}

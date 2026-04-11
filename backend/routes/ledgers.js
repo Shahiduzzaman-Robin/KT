@@ -72,7 +72,7 @@ router.get('/', async (req, res) => {
       .lean();
 
     const ledgerIds = ledgers.map((ledger) => ledger._id);
-    const balances = await Transaction.aggregate([
+    const stats = await Transaction.aggregate([
       { $match: { ledgerId: { $in: ledgerIds } } },
       {
         $group: {
@@ -87,21 +87,29 @@ router.get('/', async (req, res) => {
               $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0],
             },
           },
+          lastTransactionAt: { $max: '$date' },
         },
       },
     ]);
 
-    const balanceMap = new Map(
-      balances.map((entry) => [
+    const statsMap = new Map(
+      stats.map((entry) => [
         String(entry._id),
-        Number(entry.income || 0) - Number(entry.outgoing || 0),
+        {
+          balance: Number(entry.income || 0) - Number(entry.outgoing || 0),
+          lastTransactionAt: entry.lastTransactionAt,
+        },
       ])
     );
 
-    const enrichedLedgers = ledgers.map((ledger) => ({
-      ...ledger,
-      currentBalance: balanceMap.get(String(ledger._id)) || 0,
-    }));
+    const enrichedLedgers = ledgers.map((ledger) => {
+      const s = statsMap.get(String(ledger._id)) || { balance: 0, lastTransactionAt: null };
+      return {
+        ...ledger,
+        currentBalance: s.balance,
+        lastTransactionAt: s.lastTransactionAt,
+      };
+    });
 
     res.json(enrichedLedgers);
   } catch (error) {
