@@ -88,7 +88,7 @@ function TransactionTable({
   onDelete,
 }) {
   const role = useCurrentRole();
-  const colSpan = role === 'viewer' ? 6 : 7;
+  const colSpan = role === 'viewer' ? 7 : 8;
   const [actionModal, setActionModal] = useState(null);
   const [processing, setProcessing] = useState(false);
   const [detailsState, setDetailsState] = useState(null);
@@ -196,7 +196,8 @@ function TransactionTable({
             <tr>
               <th className="rounded-l-xl bg-[#e6f6ff] px-4 py-3 text-left">Date</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Ledger</th>
-              <th className="bg-[#e6f6ff] px-4 py-3 text-left">Amount</th>
+              <th className="bg-[#e6f6ff] px-4 py-3 text-right">Income</th>
+              <th className="bg-[#e6f6ff] px-4 py-3 text-right">Outgoing</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Description</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Created By</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Details</th>
@@ -219,8 +220,11 @@ function TransactionTable({
                     transaction.ledgerId?.name || 'N/A'
                   )}
                 </td>
-                <td className={transaction.type === 'income' ? 'px-4 py-4 [font-family:Manrope,ui-sans-serif,system-ui] text-lg font-bold text-[#00694b]' : 'px-4 py-4 [font-family:Manrope,ui-sans-serif,system-ui] text-lg font-bold text-[#ba1a1a]'}>
-                  {formatBDT(transaction.amount)}
+                <td className="px-4 py-4 [font-family:Manrope,ui-sans-serif,system-ui] text-right text-lg font-bold text-[#00694b]">
+                  {transaction.type === 'income' ? formatBDT(transaction.amount) : '-'}
+                </td>
+                <td className="px-4 py-4 [font-family:Manrope,ui-sans-serif,system-ui] text-right text-lg font-bold text-[#ba1a1a]">
+                  {transaction.type === 'outgoing' ? formatBDT(transaction.amount) : '-'}
                 </td>
                 <td className="max-w-[280px] px-4 py-4 text-[13px] text-[#3d4a43]">{transaction.description || '-'}</td>
                 <td className="px-4 py-4 text-[13px] text-[#3d4a43]">{transaction.createdBy || '-'}</td>
