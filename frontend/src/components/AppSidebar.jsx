@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useCurrentRole, useCurrentUser } from '../utils/auth';
-import DailyClosure from './DailyClosure';
 
 function AppSidebar({ onExport, compactFilters }) {
   const role = useCurrentRole();
@@ -14,7 +13,7 @@ function AppSidebar({ onExport, compactFilters }) {
   ];
 
   return (
-    <aside className="hidden h-[calc(100vh-2.5rem)] w-72 shrink-0 flex-col overflow-y-auto rounded-3xl bg-[#e6f6ff] p-4 xl:flex">
+    <aside className="hidden h-fit w-72 shrink-0 flex-col rounded-3xl bg-[#e6f6ff] p-4 xl:flex sticky top-5">
       <div className="mb-8 flex items-center gap-3 px-2">
         <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#00694b] text-xl font-bold text-white">
           {String(user?.displayName || user?.username || 'K').slice(0, 1).toUpperCase()}
@@ -51,7 +50,7 @@ function AppSidebar({ onExport, compactFilters }) {
       ) : null}
 
       <div className="mt-5 space-y-4 px-2">
-        {typeof onExport === 'function' ? (
+        {role === 'admin' && typeof onExport === 'function' ? (
           <button
             className="w-full cursor-pointer rounded-xl bg-[#001f2a] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition hover:opacity-90 shadow-md"
             type="button"
@@ -60,8 +59,6 @@ function AppSidebar({ onExport, compactFilters }) {
             Export All Records
           </button>
         ) : null}
-
-        {role === 'admin' && <DailyClosure />}
       </div>
     </aside>
   );
