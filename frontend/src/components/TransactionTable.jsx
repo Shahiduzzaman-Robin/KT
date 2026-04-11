@@ -42,7 +42,7 @@ function formatTransactionFieldValue(field, value) {
 }
 
 function buildTransactionChangeRows(before = {}, after = {}) {
-  const fields = ['ledger', 'type', 'amount', 'date', 'description', 'createdBy', 'createdByRole'];
+  const fields = ['type', 'amount', 'date', 'description', 'createdBy', 'createdByRole'];
 
   return fields
     .map((field) => ({
