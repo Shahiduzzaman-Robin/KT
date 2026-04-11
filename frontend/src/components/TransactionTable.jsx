@@ -196,7 +196,6 @@ function TransactionTable({
             <tr>
               <th className="rounded-l-xl bg-[#e6f6ff] px-4 py-3 text-left">Date</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Ledger</th>
-              <th className="bg-[#e6f6ff] px-4 py-3 text-left">Type</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Amount</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Description</th>
               <th className="bg-[#e6f6ff] px-4 py-3 text-left">Created By</th>
@@ -219,17 +218,6 @@ function TransactionTable({
                   ) : (
                     transaction.ledgerId?.name || 'N/A'
                   )}
-                </td>
-                <td className="px-4 py-4">
-                  <span
-                    className={`inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
-                      transaction.type === 'income'
-                        ? 'bg-[#84f8c8] text-[#005139]'
-                        : 'bg-[#ffdad6] text-[#93000a]'
-                    }`}
-                  >
-                    {transaction.type}
-                  </span>
                 </td>
                 <td className={transaction.type === 'income' ? 'px-4 py-4 [font-family:Manrope,ui-sans-serif,system-ui] text-lg font-bold text-[#00694b]' : 'px-4 py-4 [font-family:Manrope,ui-sans-serif,system-ui] text-lg font-bold text-[#ba1a1a]'}>
                   {formatBDT(transaction.amount)}
