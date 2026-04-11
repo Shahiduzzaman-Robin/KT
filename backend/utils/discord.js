@@ -182,6 +182,7 @@ async function sendDiscordNotification({
           { name: 'Name', value: ledger.name || 'N/A', inline: true },
           { name: 'Type', value: ledger.type?.toUpperCase() || 'N/A', inline: true },
           { name: 'Posting', value: ledger.isPosting ? 'Yes' : 'No', inline: true },
+          { name: 'Location', value: ledger.address || '-', inline: true },
           { name: 'Contact', value: ledger.contact || '-', inline: true },
           {
             name: 'Created By',
