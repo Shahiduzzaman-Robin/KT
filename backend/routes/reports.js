@@ -20,6 +20,28 @@ router.get('/', requireAuth, async (req, res) => {
   }
 });
 
+// Get detailed transactions for a specific closure
+router.get('/:id/details', requireAuth, async (req, res) => {
+  try {
+    const report = await DailyReport.findById(req.params.id);
+    if (!report) return res.status(404).json({ message: 'Report not found' });
+
+    const startOfDay = dayjs(report.date).startOf('day').toDate();
+    const endOfDay = dayjs(report.date).endOf('day').toDate();
+
+    const transactions = await Transaction.find({
+      date: { $gte: startOfDay, $lte: endOfDay }
+    }).populate('ledgerId', 'name type').sort({ createdAt: 1 });
+
+    res.json({
+      report,
+      transactions
+    });
+  } catch (err) {
+    res.status(500).json({ message: 'Failed to fetch report details', error: err.message });
+  }
+});
+
 // Calculate current status for "Closing" preview
 router.get('/preview', requireAuth, async (req, res) => {
   try {

@@ -14,6 +14,9 @@ const router = express.Router();
 // Middleware to check if the transaction date is already locked (Shop Closed)
 async function checkIfDayLocked(req, res, next) {
   try {
+    // ADMIN BYPASS: Allow admins to modify even if locked for emergency corrections
+    if (req.user.role === 'admin') return next();
+
     // Safety check: req.body might be undefined on some DELETE requests
     let targetDate = req.body?.date;
     
