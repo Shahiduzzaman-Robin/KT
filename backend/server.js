@@ -52,24 +52,44 @@ app.get('/api/health', (req, res) => {
 
 // Temporary test endpoint for Discord webhook
 app.get('/api/test-discord', async (req, res) => {
-  const { sendDiscordNotification } = require('./utils/discord');
+  const axios = require('axios');
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+  const results = {};
+
   try {
-    console.log('[Test] DISCORD_WEBHOOK_URL:', process.env.DISCORD_WEBHOOK_URL ? 'SET' : 'NOT SET');
-    await sendDiscordNotification({
-      action: 'CREATE_TRANSACTION',
-      transaction: {
-        ledgerId: { name: 'Test Ledger' },
-        type: 'income',
-        amount: 100,
-        date: new Date(),
-        description: 'Test transaction from Render',
-      },
-      user: { username: 'System Test', role: 'admin' },
+    // Test 1: Simple text message (like curl)
+    const test1 = await axios.post(webhookUrl, {
+      content: '🔔 Test from Render server - simple text',
     });
-    res.json({ message: 'Discord test sent! Check your channel.', webhookConfigured: !!process.env.DISCORD_WEBHOOK_URL });
+    results.simpleText = { status: test1.status, statusText: test1.statusText };
   } catch (err) {
-    res.status(500).json({ error: err.message, webhookConfigured: !!process.env.DISCORD_WEBHOOK_URL });
+    results.simpleText = { error: err.message, response: err.response?.data };
   }
+
+  try {
+    // Test 2: Embed message
+    const test2 = await axios.post(webhookUrl, {
+      content: '📊 Embed test from Render:',
+      embeds: [{
+        title: '✅ Test Transaction Created',
+        color: 3066993,
+        fields: [
+          { name: 'Ledger', value: 'Test Ledger', inline: true },
+          { name: 'Amount', value: '৳ 100', inline: true },
+        ],
+        timestamp: new Date().toISOString(),
+      }],
+      username: 'Kamrul Traders Bot',
+    });
+    results.embed = { status: test2.status, statusText: test2.statusText };
+  } catch (err) {
+    results.embed = { error: err.message, response: err.response?.data };
+  }
+
+  res.json({
+    webhookUrl: webhookUrl ? webhookUrl.substring(0, 60) + '...' : 'NOT SET',
+    results,
+  });
 });
 
 app.use('/api/auth', authRoutes);
