@@ -14,7 +14,7 @@ function createWindow() {
   });
 
   // Point to your live website
-  win.loadURL('https://kt-jz1b.onrender.com');
+  win.loadURL('https://kt-sage.vercel.app/');
 
   // Optional: Remove the default top menu bar for a cleaner "App" look
   // Menu.setApplicationMenu(null);
