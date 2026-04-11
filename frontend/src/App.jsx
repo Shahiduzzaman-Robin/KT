@@ -4,6 +4,7 @@ import LedgersPage from './pages/LedgersPage';
 import LedgerDetailsPage from './pages/LedgerDetailsPage';
 import UsersPage from './pages/UsersPage';
 import AuditLogsPage from './pages/AuditLogsPage';
+import DailyReportsPage from './pages/DailyReportsPage';
 import LoginPage from './pages/LoginPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -49,6 +50,14 @@ function App() {
           element={
             <ProtectedRoute allowedRoles={['admin']}>
               <AuditLogsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/reports"
+          element={
+            <ProtectedRoute allowedRoles={['admin']}>
+              <DailyReportsPage />
             </ProtectedRoute>
           }
         />

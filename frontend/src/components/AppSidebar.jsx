@@ -9,7 +9,13 @@ function AppSidebar({ onExport, compactFilters }) {
   const links = [
     { to: '/', label: 'Dashboard' },
     { to: '/ledgers', label: 'Ledger' },
-    ...(role === 'admin' ? [{ to: '/audit-logs', label: 'Audit Logs' }, { to: '/users', label: 'Users' }] : []),
+    ...(role === 'admin'
+      ? [
+          { to: '/reports', label: 'Reports Archive' },
+          { to: '/audit-logs', label: 'Audit Logs' },
+          { to: '/users', label: 'Users' },
+        ]
+      : []),
   ];
 
   return (
