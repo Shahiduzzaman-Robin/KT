@@ -1,0 +1,28 @@
+{
+  "name": "kamrul-traders-mgt",
+  "version": "1.0.0",
+  "description": "Cash Management System for Kamrul Traders",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
+  },
+  "author": "Shahiduzzaman Robin",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.kamrul.traders",
+    "productName": "Kamrul Traders MGT",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
