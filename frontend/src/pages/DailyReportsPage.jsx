@@ -39,7 +39,11 @@ function DailyReportsPage() {
       const combined = [
         ...(data.transactions || []).map(t => ({ ...t, kind: 'transaction' })),
         ...(data.loans || []).map(l => ({ ...l, kind: 'loan' }))
-      ].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+      ].sort((a, b) => {
+        const timeA = new Date(a.createdAt).getTime();
+        const timeB = new Date(b.createdAt).getTime();
+        return timeA - timeB;
+      });
 
       setDetails({ ...data, combined });
     } catch (err) {

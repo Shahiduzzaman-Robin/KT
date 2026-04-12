@@ -40,11 +40,15 @@ function DailyClosurePage() {
         params: { from: dateToFetch, to: dateToFetch }
       });
 
-      // Combine and sort by time (createdAt)
+      // Combine and sort by time (absolute chronological order)
       const combined = [
         ...(txRes.items || []).map(t => ({ ...t, kind: 'transaction' })),
         ...(loansRes || []).map(l => ({ ...l, kind: 'loan' }))
-      ].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+      ].sort((a, b) => {
+        const timeA = new Date(a.createdAt).getTime();
+        const timeB = new Date(b.createdAt).getTime();
+        return timeA - timeB;
+      });
 
       setTransactions(combined);
     } catch (err) {
