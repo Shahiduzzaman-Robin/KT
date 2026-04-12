@@ -119,14 +119,49 @@ function LoansPage() {
             </div>
             <div className="flex items-center gap-3">
               <UserSessionBadge compact />
-              <button 
-                onClick={() => setShowAddModal(true)}
-                className="rounded-lg bg-[#00694b] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/10 transition hover:bg-[#005a40]"
-              >
-                + Issue New Loan
-              </button>
             </div>
           </header>
+
+          {/* Integrated Issue New Loan Form */}
+          <section className="rounded-xl bg-white p-6 shadow-sm border-t-4 border-[#00694b]">
+            <div className="mb-4">
+              <h2 className="text-lg font-black text-[#001f2a]">Issue New Loan / Advance</h2>
+              <p className="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Transaction will be automatically recorded in cash ledger</p>
+            </div>
+            
+            <form onSubmit={handleAddLoan} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 items-end">
+              <div className="lg:col-span-1">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Borrower Name</label>
+                <input required className="w-full rounded-lg bg-slate-50 border-none p-3 text-xs font-bold outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500" value={newLoan.borrowerName} onChange={e => setNewLoan({...newLoan, borrowerName: e.target.value})} placeholder="e.g. Joynal Bokhsho" />
+              </div>
+              <div className="lg:col-span-1">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Amount (BDT)</label>
+                <input required type="number" className="w-full rounded-lg bg-slate-50 border-none p-3 text-xs font-bold outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500" value={newLoan.amount} onChange={e => setNewLoan({...newLoan, amount: e.target.value})} />
+              </div>
+              <div className="lg:col-span-1">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Type</label>
+                <select className="w-full rounded-lg bg-slate-50 border-none p-3 text-xs font-bold outline-none ring-1 ring-slate-200" value={newLoan.type} onChange={e => setNewLoan({...newLoan, type: e.target.value})}>
+                  <option value="loan">Loan</option>
+                  <option value="advance">Advance</option>
+                </select>
+              </div>
+              <div className="lg:col-span-1">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Cash Account / Ledger</label>
+                <LedgerAutocomplete 
+                  value={newLoan.ledgerInput}
+                  onChange={val => setNewLoan({...newLoan, ledgerInput: val})}
+                  onSelect={l => setNewLoan({...newLoan, ledgerId: l?._id || ''})}
+                />
+              </div>
+              <div className="lg:col-span-1 text-center pb-1">
+                 <p className="text-[9px] font-black text-emerald-600 uppercase">Automatic Cash Entry</p>
+                 <p className="text-[8px] text-slate-400 font-bold">REDUCED FROM DRAWER</p>
+              </div>
+              <div className="lg:col-span-1">
+                <button type="submit" className="w-full rounded-lg bg-[#00694b] py-3 text-xs font-black text-white shadow-lg shadow-emerald-900/10 hover:bg-[#005a40] uppercase tracking-widest transition-transform active:scale-95">Issue Loan</button>
+              </div>
+            </form>
+          </section>
 
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-xl bg-white p-6 shadow-sm border-l-4 border-emerald-500">
@@ -210,49 +245,6 @@ function LoansPage() {
           </section>
         </main>
       </div>
-
-      {/* Add Loan Modal */}
-      {showAddModal && (
-        <div className="fixed inset-0 z-[1200] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-md">
-          <div className="w-full max-w-lg rounded-2xl bg-white p-8 shadow-2xl animate-in zoom-in duration-200">
-            <h2 className="text-2xl font-black text-[#001f2a]">Issue Personal Loan</h2>
-            <p className="text-sm text-slate-500 mb-6">Create a new loan or advance record.</p>
-            
-            <form onSubmit={handleAddLoan} className="space-y-4">
-              <div>
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Borrower Name</label>
-                <input required className="w-full rounded-lg bg-slate-50 border-none p-3 text-sm font-bold outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500" value={newLoan.borrowerName} onChange={e => setNewLoan({...newLoan, borrowerName: e.target.value})} placeholder="e.g. Joynal Bokhsho" />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Amount (BDT)</label>
-                  <input required type="number" className="w-full rounded-lg bg-slate-50 border-none p-3 text-sm font-bold outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500" value={newLoan.amount} onChange={e => setNewLoan({...newLoan, amount: e.target.value})} />
-                </div>
-                <div>
-                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Type</label>
-                  <select className="w-full rounded-lg bg-slate-50 border-none p-3 text-sm font-bold outline-none ring-1 ring-slate-200" value={newLoan.type} onChange={e => setNewLoan({...newLoan, type: e.target.value})}>
-                    <option value="loan">Loan</option>
-                    <option value="advance">Advance</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Ledger (Auto-Transaction)</label>
-                <LedgerAutocomplete 
-                  value={newLoan.ledgerInput}
-                  onChange={val => setNewLoan({...newLoan, ledgerInput: val})}
-                  onSelect={l => setNewLoan({...newLoan, ledgerId: l?._id || ''})}
-                />
-                <p className="mt-1 text-[10px] font-bold text-slate-400">This will automatically reduce your cash balance.</p>
-              </div>
-              <div className="flex gap-3 pt-4">
-                <button type="button" onClick={() => setShowAddModal(false)} className="flex-1 py-3 text-sm font-bold text-slate-400 hover:text-slate-600 uppercase tracking-widest">Cancel</button>
-                <button type="submit" className="flex-1 rounded-lg bg-[#00694b] py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/10 hover:bg-[#005a40] uppercase tracking-widest">Confirm & Issue</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
 
       {/* Reduce Loan Modal */}
       {showReduceModal && selectedLoan && (
