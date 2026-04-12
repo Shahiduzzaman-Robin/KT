@@ -33,8 +33,24 @@ router.get('/daily', async (req, res) => {
     const date = req.query.date ? dayjs(req.query.date) : dayjs();
     const start = date.startOf('day').toDate();
     const end = date.endOf('day').toDate();
+    
+    // Get transaction summary
     const summary = await sumBetween(start, end);
-    res.json({ date: date.format('YYYY-MM-DD'), ...summary });
+    
+    // Get loans issued today
+    const Loan = require('../models/Loan');
+    const loansIssued = await Loan.aggregate([
+      { $match: { date: { $gte: start, $lte: end } } },
+      { $group: { _id: null, total: { $sum: '$totalAmount' } } }
+    ]);
+
+    const loansIssuedToday = loansIssued[0]?.total || 0;
+
+    res.json({ 
+      date: date.format('YYYY-MM-DD'), 
+      ...summary,
+      loansIssuedToday 
+    });
   } catch (error) {
     res.status(500).json({ message: 'Failed to fetch daily summary', error: error.message });
   }
