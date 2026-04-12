@@ -100,7 +100,7 @@ function AppSidebar({ onExport, compactFilters }) {
       ) : null}
 
       <div className="mt-5 space-y-4 px-2">
-        {role === 'admin' && typeof onExport === 'function' ? (
+        {(role === 'admin' || role === 'data-entry') && typeof onExport === 'function' ? (
           <button
             className="w-full cursor-pointer rounded-xl bg-[#001f2a] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition hover:opacity-90 shadow-md"
             type="button"
