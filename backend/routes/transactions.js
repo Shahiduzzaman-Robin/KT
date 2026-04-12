@@ -34,13 +34,18 @@ async function checkIfDayLocked(req, res, next) {
     const endOfDay = dayjs(targetDate).endOf('day').toDate();
 
     const isLocked = await DailyReport.findOne({
-      date: { $gte: startOfDay, $lte: endOfDay },
+      date: { $gte: startOfDay },
       status: 'locked'
-    });
+    }).sort({ date: 1 }); // Find the earliest report that locks this date
 
     if (isLocked) {
+      const lockDate = dayjs(isLocked.date).format('DD MMM YYYY');
+      const isExactDay = dayjs(isLocked.date).isSame(startOfDay, 'day');
+      
       return res.status(403).json({ 
-        message: `This day (${dayjs(targetDate).format('DD MMM YYYY')}) is already closed and archived. Records are locked.` 
+        message: isExactDay 
+          ? `This day (${lockDate}) is already closed and locked. Records are permanent.`
+          : `This day is implicitly locked by a subsequent closure on ${lockDate}. Revert that closure first to make changes here.`
       });
     }
 

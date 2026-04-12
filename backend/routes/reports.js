@@ -107,7 +107,10 @@ router.get('/preview', requireAuth, async (req, res) => {
     const closingBalance = openingBalance + dayData.income - dayData.outgoing;
 
     const existingReport = await DailyReport.findOne({ date: { $gte: todayStart, $lte: todayEnd } });
-    
+    const nextReport = await DailyReport.findOne({ 
+      date: { $gt: todayEnd } 
+    }).sort({ date: 1 });
+
     res.json({
       date: todayStr,
       openingBalance,
@@ -116,8 +119,10 @@ router.get('/preview', requireAuth, async (req, res) => {
       closingBalance,
       transactionCount: dayData.count,
       isAlreadyLocked: !!existingReport,
+      isImplicitlyLocked: !existingReport && !!nextReport,
       reportId: existingReport?._id,
-      lastReportDate: lastReport?.date
+      lastReportDate: lastReport?.date,
+      nextReportDate: nextReport?.date
     });
   } catch (err) {
     res.status(500).json({ message: 'Failed to generate preview', error: err.message });

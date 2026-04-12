@@ -117,6 +117,8 @@ function DailyClosurePage() {
                  </h1>
                  {data?.isAlreadyLocked ? (
                    <span className="rounded bg-red-100 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-red-700">Records Locked 🔒</span>
+                 ) : data?.isImplicitlyLocked ? (
+                   <span className="rounded bg-amber-100 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-700">Implicitly Finalized 🛡️</span>
                  ) : (
                    <span className="rounded bg-emerald-100 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-emerald-700 animate-pulse">Live Audit Active</span>
                  )}
@@ -159,6 +161,14 @@ function DailyClosurePage() {
                     <div>
                         <p className={`text-[10px] font-bold uppercase tracking-widest ${data?.isAlreadyLocked ? 'text-emerald-200/70' : 'text-slate-400'}`}>Opening Cash</p>
                         <p className="text-xl font-black mt-1">{formatBDT(data?.openingBalance)}</p>
+                        {data?.lastReportDate && (
+                           <p className={`text-[9px] mt-2 font-bold uppercase tracking-tighter ${data?.isAlreadyLocked ? 'text-emerald-300/50' : 'text-slate-400'}`}>
+                              From {dayjs(data.lastReportDate).format('DD MMM')} 
+                              {dayjs(targetDate).diff(dayjs(data.lastReportDate), 'day') > 1 && (
+                                <span className="ml-1 text-amber-500 font-black">({dayjs(targetDate).diff(dayjs(data.lastReportDate), 'day') - 1} Day Gap)</span>
+                              )}
+                           </p>
+                         )}
                     </div>
                     <div className={`h-12 w-12 rounded-lg flex items-center justify-center ${data?.isAlreadyLocked ? 'bg-white/10 text-emerald-200' : 'bg-slate-50 text-slate-300'}`}>
                       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -211,6 +221,26 @@ function DailyClosurePage() {
                         Unlock Business Day
                       </button>
                     </div>
+                  ) : data?.isImplicitlyLocked ? (
+                   <div className="py-2">
+                      <div className="mx-auto h-16 w-16 mb-4 rounded-lg bg-amber-50 flex items-center justify-center text-amber-500">
+                         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 00-2 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                         </svg>
+                      </div>
+                      <h3 className="text-xl font-black text-[#001f2a] tracking-tight">Implicitly Locked</h3>
+                      <p className="mt-2 text-sm font-semibold text-slate-400 max-w-[300px] mx-auto whitespace-pre-line">
+                        This day is read-only because a future closure exists (<strong>{dayjs(data?.nextReportDate).format('DD MMM')}</strong>).{"\n"}
+                        To edit these records, you must first unlock the later dates.
+                      </p>
+                      
+                      <button 
+                        onClick={() => setIsCloseConfirmOpen(true)}
+                        className="mt-8 flex w-full items-center justify-center gap-3 rounded-lg border-2 border-slate-100 py-4 text-xs font-black uppercase tracking-widest text-slate-500 transition hover:bg-slate-50 hover:text-[#00694b] hover:border-emerald-100"
+                      >
+                        Archive Retroactively
+                      </button>
+                   </div>
                   ) : (
                     <div className="space-y-5">
                        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 mb-6 text-left">Closure Finalization</h3>
