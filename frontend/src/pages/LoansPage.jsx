@@ -31,6 +31,8 @@ function LoansPage() {
     ledgerInput: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const fetchLoans = useCallback(async () => {
     setLoading(true);
     try {
@@ -53,9 +55,11 @@ function LoansPage() {
       setStatusMessage({ title: 'Ledger Required', message: 'You must select a ledger to record the outgoing cash.', type: 'warning' });
       return;
     }
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
     try {
       await api.post('/loans', { ...newLoan, createTransaction: true });
-      setShowAddModal(false);
       setNewLoan({
         borrowerName: '',
         amount: '',
@@ -69,6 +73,8 @@ function LoansPage() {
       setStatusMessage({ title: 'Success', message: 'Loan added successfully', type: 'success' });
     } catch (error) {
       setStatusMessage({ title: 'Error', message: error.response?.data?.message || 'Failed to add loan', type: 'danger' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -78,6 +84,9 @@ function LoansPage() {
       setStatusMessage({ title: 'Ledger Required', message: 'You must select a ledger to record the income.', type: 'warning' });
       return;
     }
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
     try {
       await api.post(`/loans/${selectedLoan._id}/reduce`, { ...reduceAmount, createTransaction: true });
       setShowReduceModal(false);
@@ -92,6 +101,8 @@ function LoansPage() {
       setStatusMessage({ title: 'Success', message: 'Loan balance reduced successfully', type: 'success' });
     } catch (error) {
       setStatusMessage({ title: 'Error', message: error.response?.data?.message || 'Failed to reduce loan', type: 'danger' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -160,7 +171,13 @@ function LoansPage() {
                  <p className="text-[8px] text-slate-400 font-bold">REDUCED FROM DRAWER</p>
               </div>
               <div className="lg:col-span-1">
-                <button type="submit" className="w-full rounded-lg bg-[#00694b] py-3 text-xs font-black text-white shadow-lg shadow-emerald-900/10 hover:bg-[#005a40] uppercase tracking-widest transition-transform active:scale-95">Issue Loan</button>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className={`w-full rounded-lg py-3 text-xs font-black text-white shadow-lg shadow-emerald-900/10 uppercase tracking-widest transition-all ${isSubmitting ? 'bg-slate-400 cursor-not-allowed opacity-50' : 'bg-[#00694b] hover:bg-[#005a40] active:scale-95'}`}
+                >
+                  {isSubmitting ? 'Issuing...' : 'Issue Loan'}
+                </button>
               </div>
             </form>
           </section>
@@ -272,8 +289,14 @@ function LoansPage() {
                 <p className="mt-1 text-[10px] font-bold text-slate-400">This will automatically increase your cash balance.</p>
               </div>
               <div className="flex gap-3 pt-4">
-                <button type="button" onClick={() => setShowReduceModal(false)} className="flex-1 py-3 text-sm font-bold text-slate-400 hover:text-slate-600 uppercase tracking-widest">Cancel</button>
-                <button type="submit" className="flex-1 rounded-lg bg-[#00694b] py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/10 hover:bg-[#005a40] uppercase tracking-widest">Save Repayment</button>
+                <button type="button" disabled={isSubmitting} onClick={() => setShowReduceModal(false)} className="flex-1 py-3 text-sm font-bold text-slate-400 hover:text-slate-600 uppercase tracking-widest disabled:opacity-30">Cancel</button>
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className={`flex-1 rounded-lg py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/10 uppercase tracking-widest transition-all ${isSubmitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-[#00694b] hover:bg-[#005a40]'}`}
+                >
+                  {isSubmitting ? 'Saving...' : 'Save Repayment'}
+                </button>
               </div>
             </form>
           </div>
