@@ -7,6 +7,7 @@ import { getSocketUrl } from '../utils/socket';
 import { io } from 'socket.io-client';
 import AppSidebar from '../components/AppSidebar';
 import UserSessionBadge from '../components/UserSessionBadge';
+import PasswordModal from '../components/PasswordModal';
 
 function formatBDT(value) {
   return `৳ ${Number(value || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
@@ -19,6 +20,8 @@ function DailyClosurePage() {
   const [data, setData] = useState(null);
   const [notes, setNotes] = useState('');
   const [transactions, setTransactions] = useState([]);
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [revertLoading, setRevertLoading] = useState(false);
 
   async function fetchFullData() {
     try {
@@ -63,12 +66,9 @@ function DailyClosurePage() {
     }
   }
 
-  async function handleRevert() {
-    const password = window.prompt('DANGER: You are about to UNLOCK today\'s business records. Everything will become editable again.\n\nPlease enter your ADMIN PASSWORD to confirm:');
-    if (!password) return;
-
+  async function handleRevertConfirm(password) {
     try {
-      setLoading(true);
+      setRevertLoading(true);
       // Find the report ID for today
       const { data: reports } = await api.get('/reports');
       const todayReport = reports.find(r => dayjs(r.date).isSame(dayjs(), 'day'));
@@ -80,11 +80,12 @@ function DailyClosurePage() {
 
       await api.post(`/reports/${todayReport._id}/revert`, { password });
       alert('Day successfully unlocked!');
+      setIsPasswordModalOpen(false);
       fetchFullData();
     } catch (err) {
       alert(err.response?.data?.message || 'Verification failed. Day remains locked.');
     } finally {
-      setLoading(false);
+      setRevertLoading(false);
     }
   }
 
@@ -179,7 +180,7 @@ function DailyClosurePage() {
                      <p className="mt-2 text-sm font-semibold text-slate-400 max-w-[300px] mx-auto">This day is locked for security. To make corrections, you must revert the closure.</p>
                      
                      <button 
-                       onClick={handleRevert}
+                       onClick={() => setIsPasswordModalOpen(true)}
                        disabled={loading}
                        className="mt-8 flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-slate-100 py-4 text-xs font-black uppercase tracking-widest text-slate-500 transition hover:bg-slate-50 hover:text-red-600 hover:border-red-100 disabled:opacity-50"
                      >
@@ -261,6 +262,14 @@ function DailyClosurePage() {
           </div>
         </main>
       </div>
+      <PasswordModal 
+        isOpen={isPasswordModalOpen}
+        onClose={() => setIsPasswordModalOpen(false)}
+        onConfirm={handleRevertConfirm}
+        loading={revertLoading}
+        title="Confirm Unlock"
+        message="DANGER: You are about to UNLOCK today's records. They will become editable and the archival report will be deleted."
+      />
     </div>
   );
 }

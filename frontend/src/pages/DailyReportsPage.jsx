@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import api from '../utils/api';
 import AppSidebar from '../components/AppSidebar';
 import UserSessionBadge from '../components/UserSessionBadge';
+import PasswordModal from '../components/PasswordModal';
 
 function formatBDT(value) {
   if (value === 0) return '0.00';
@@ -16,6 +17,8 @@ function DailyReportsPage() {
   const [selectedReport, setSelectedReport] = useState(null);
   const [details, setDetails] = useState(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [revertLoading, setRevertLoading] = useState(false);
 
   async function fetchReports() {
     try {
@@ -59,20 +62,18 @@ function DailyReportsPage() {
     window.print();
   };
 
-  const handleRevert = async () => {
-    const password = window.prompt('DANGER: You are about to UNLOCK this business day. All records for this date will become editable again.\n\nPlease enter your ADMIN PASSWORD to confirm:');
-    if (!password) return;
-
+  const handleRevertConfirm = async (password) => {
     try {
-      setLoadingDetails(true);
+      setRevertLoading(true);
       await api.post(`/reports/${selectedReport._id}/revert`, { password });
       alert('Day successfully unlocked! You can now edit transactions for this date.');
+      setIsPasswordModalOpen(false);
       closeDocument();
       fetchReports();
     } catch (err) {
       alert(err.response?.data?.message || 'Failed to revert closure');
     } finally {
-      setLoadingDetails(false);
+      setRevertLoading(false);
     }
   };
 
@@ -204,7 +205,7 @@ function DailyReportsPage() {
               </div>
               <div className="flex items-center gap-3">
                 <button 
-                  onClick={handleRevert}
+                  onClick={() => setIsPasswordModalOpen(true)}
                   className="flex items-center gap-2 rounded-xl bg-red-100 px-4 py-2 text-xs font-bold text-red-700 transition hover:bg-red-200"
                   title="Unlock this day for corrections"
                 >
@@ -334,6 +335,14 @@ function DailyReportsPage() {
         </div>,
         document.body
       )}
+      <PasswordModal 
+        isOpen={isPasswordModalOpen}
+        onClose={() => setIsPasswordModalOpen(false)}
+        onConfirm={handleRevertConfirm}
+        loading={revertLoading}
+        title="Confirm Historical Unlock"
+        message={`DANGER: You are about to UNLOCK the records for ${dayjs(selectedReport?.date).format('DD MMM YYYY')}. This will delete the archived report and allow edits for this date.`}
+      />
     </div>
   );
 }
