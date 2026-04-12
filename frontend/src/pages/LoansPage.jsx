@@ -11,8 +11,9 @@ function LoansPage() {
   const [loading, setLoading] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
   const [showReduceModal, setShowReduceModal] = useState(false);
-  const [selectedLoan, setSelectedLoan] = useState(null);
-  const [statusMessage, setStatusMessage] = useState(null);
+   const [selectedLoan, setSelectedLoan] = useState(null);
+   const [statusMessage, setStatusMessage] = useState(null);
+   const [deleteConfirm, setDeleteConfirm] = useState(null);
 
   const [newLoan, setNewLoan] = useState({
     borrowerName: '',
@@ -107,12 +108,13 @@ function LoansPage() {
   };
 
   const handleRemoveLoan = async (id) => {
-    if (!window.confirm('Are you sure you want to remove this loan record?')) return;
     try {
       await api.delete(`/loans/${id}`);
+      setDeleteConfirm(null);
       fetchLoans();
-      setStatusMessage({ title: 'Removed', message: 'Loan record has been deleted', type: 'success' });
+      setStatusMessage({ title: 'Removed', message: 'Loan record has been deleted', type: 'success', confirmText: 'OK' });
     } catch (error) {
+      setDeleteConfirm(null);
       setStatusMessage({ title: 'Error', message: 'Failed to delete loan', type: 'danger' });
     }
   };
@@ -249,7 +251,7 @@ function LoansPage() {
                             </button>
                           )}
                           <button 
-                            onClick={() => handleRemoveLoan(loan._id)}
+                            onClick={() => setDeleteConfirm(loan._id)}
                             className="rounded-lg bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600 hover:bg-red-100"
                           >
                             Remove
@@ -310,6 +312,17 @@ function LoansPage() {
         title={statusMessage?.title}
         message={statusMessage?.message}
         type={statusMessage?.type}
+        confirmText={statusMessage?.confirmText}
+      />
+
+      <ActionModal 
+        isOpen={!!deleteConfirm}
+        onClose={() => setDeleteConfirm(null)}
+        onConfirm={() => handleRemoveLoan(deleteConfirm)}
+        title="Confirm Removal"
+        message="Are you sure you want to permanently remove this loan record? This action cannot be undone."
+        type="danger"
+        confirmText="Delete Permanently"
       />
     </div>
   );
