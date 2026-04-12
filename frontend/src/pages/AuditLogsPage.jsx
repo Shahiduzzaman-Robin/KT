@@ -109,7 +109,7 @@ function AuditLogsPage() {
       const { data } = await api.get('/audit-logs', {
         params: {
           page: nextPage,
-          limit: 25,
+          limit: 100,
           ...filters,
           from: filters.from || undefined,
           to: filters.to || undefined,
@@ -313,6 +313,27 @@ function AuditLogsPage() {
                 </tbody>
               </table>
             </div>
+            {totalPages > 1 && (
+              <div className="bg-slate-50/50 px-6 py-4 border-t border-slate-50 flex items-center justify-between">
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Page {page} of {totalPages}</p>
+                <div className="flex gap-2">
+                  <button 
+                    disabled={page <= 1 || loading}
+                    onClick={() => loadLogs(page - 1)}
+                    className="rounded-lg bg-white border border-slate-200 px-4 py-2 text-[10px] font-black uppercase hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition"
+                  >
+                    Previous
+                  </button>
+                  <button 
+                    disabled={page >= totalPages || loading}
+                    onClick={() => loadLogs(page + 1)}
+                    className="rounded-lg bg-white border border-slate-200 px-4 py-2 text-[10px] font-black uppercase hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition"
+                  >
+                    Next
+                  </button>
+                </div>
+              </div>
+            )}
           </section>
         </main>
       </div>
