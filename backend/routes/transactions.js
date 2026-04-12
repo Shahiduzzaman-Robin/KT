@@ -120,7 +120,7 @@ router.get('/', async (req, res) => {
 
     const query = { 
       // Default: Exclude loan-related transactions from the formal ledger list
-      loanId: { $exists: false },
+      loanId: null,
       description: { $not: /loan/i }
     };
     if (type && ['income', 'outgoing'].includes(type)) query.type = type;
