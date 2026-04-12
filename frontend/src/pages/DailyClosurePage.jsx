@@ -18,21 +18,23 @@ function DailyClosurePage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [transactions, setTransactions] = useState([]);
+  const [targetDate, setTargetDate] = useState(dayjs().format('YYYY-MM-DD'));
   const [notes, setNotes] = useState('');
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
   const [isCloseConfirmOpen, setIsCloseConfirmOpen] = useState(false);
   const [revertLoading, setRevertLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
-  async function fetchClosureData() {
+  async function fetchClosureData(dateToFetch = targetDate) {
     try {
       setLoading(true);
-      const { data: res } = await api.get('/reports/preview');
+      const { data: res } = await api.get('/reports/preview', {
+        params: { date: dateToFetch }
+      });
       setData(res);
       
-      const today = dayjs().format('YYYY-MM-DD');
       const { data: txRes } = await api.get('/transactions', {
-        params: { from: today, to: today, limit: 100 }
+        params: { from: dateToFetch, to: dateToFetch, limit: 100 }
       });
       setTransactions(txRes.items || []);
     } catch (err) {
@@ -43,24 +45,24 @@ function DailyClosurePage() {
   }
 
   useEffect(() => {
-    fetchClosureData();
+    fetchClosureData(targetDate);
 
     const socket = io(getSocketUrl());
-    socket.on('transactions:changed', fetchClosureData);
+    socket.on('transactions:changed', () => fetchClosureData(targetDate));
     return () => socket.disconnect();
-  }, []);
+  }, [targetDate]);
 
   async function handleCloseDayConfirm() {
     try {
       setLoading(true);
-      await api.post('/reports', { notes });
+      await api.post('/reports', { notes, date: targetDate });
       setStatusMessage({
         title: 'Success',
         message: 'Business day closed successfully! All records have been locked and archived.',
         type: 'success'
       });
       setIsCloseConfirmOpen(false);
-      fetchClosureData();
+      fetchClosureData(targetDate);
     } catch (err) {
       setStatusMessage({
         title: 'Error',
@@ -119,7 +121,15 @@ function DailyClosurePage() {
                    <span className="rounded bg-emerald-100 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-emerald-700 animate-pulse">Live Audit Active</span>
                  )}
               </div>
-              <p className="mt-2 text-sm font-medium text-slate-500 uppercase tracking-[0.2em]">Business Day: {dayjs().format('DD MMMM YYYY')}</p>
+              <p className="mt-2 text-sm font-medium text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
+                Business Day: 
+                <input 
+                  type="date" 
+                  value={targetDate}
+                  onChange={(e) => setTargetDate(e.target.value)}
+                  className="bg-transparent border-none p-0 text-sm font-black text-[#00694b] focus:ring-0 cursor-pointer"
+                />
+              </p>
             </div>
             <div className="flex items-center gap-4">
               <UserSessionBadge compact />
@@ -226,7 +236,7 @@ function DailyClosurePage() {
             <div className="lg:col-span-7 bg-white rounded-lg shadow-[0_12px_40px_rgba(0,31,42,0.06)] border border-slate-50 flex flex-col h-full overflow-hidden min-h-[600px]">
                <div className="p-8 border-b border-slate-50 flex items-center justify-between">
                   <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Activity Audit List</h3>
-                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">{transactions.length} entries today</span>
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">{transactions.length} entries on this day</span>
                </div>
                
                <div className="flex-1 overflow-y-auto">
