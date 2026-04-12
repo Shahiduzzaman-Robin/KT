@@ -14,6 +14,12 @@ const transactionSchema = new mongoose.Schema(
       default: null,
       index: true,
     },
+    loanId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Loan',
+      default: null,
+      index: true,
+    },
     type: {
       type: String,
       enum: ['income', 'outgoing'],
@@ -72,7 +78,7 @@ const transactionSchema = new mongoose.Schema(
       },
       importKey: {
         type: String,
-        default: '',
+        default: null,
       },
       ledgerCode: {
         type: Number,

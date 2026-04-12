@@ -50,19 +50,26 @@ router.post('/', async (req, res) => {
       createdBy: req.user?.username || 'admin',
     });
 
-    await loan.save();
+    let tx;
+    try {
+      await loan.save();
 
-    // Optionally create an outgoing transaction
-    if (createTransaction && ledgerId) {
-      const tx = new Transaction({
-        ledgerId,
-        type: 'outgoing',
-        amount: amount,
-        date: date || new Date(),
-        description: `Loan Issued to ${borrowerName}: ${description}`,
-        createdBy: req.user?.username || 'admin',
-      });
-      await tx.save();
+      // Optionally create an outgoing transaction
+      if (createTransaction && ledgerId) {
+        tx = new Transaction({
+          ledgerId,
+          loanId: loan._id,
+          type: 'outgoing',
+          amount: amount,
+          date: date || new Date(),
+          description: `Loan Issued to ${borrowerName}: ${description}`,
+          createdBy: req.user?.username || 'admin',
+        });
+        await tx.save();
+      }
+    } catch (error) {
+      if (tx) await Transaction.findByIdAndDelete(tx._id);
+      throw error;
     }
 
     res.status(201).json(loan);
@@ -88,6 +95,7 @@ router.post('/:id/reduce', async (req, res) => {
     if (createTransaction && ledgerId) {
       const tx = new Transaction({
         ledgerId,
+        loanId: loan._id,
         type: 'income',
         amount: amount,
         date: date || new Date(),
@@ -120,9 +128,15 @@ router.post('/:id/reduce', async (req, res) => {
 // Remove loan (Delete)
 router.delete('/:id', async (req, res) => {
   try {
-    const loan = await Loan.findByIdAndDelete(req.params.id);
+    const loanId = req.params.id;
+    // 1. Delete associated transactions (Initial and Repayments)
+    await Transaction.deleteMany({ loanId: loanId });
+    
+    // 2. Delete the loan itself
+    const loan = await Loan.findByIdAndDelete(loanId);
+    
     if (!loan) return res.status(404).json({ message: 'Loan not found' });
-    res.json({ message: 'Loan record removed' });
+    res.json({ message: 'Loan and all associated transactions removed' });
   } catch (error) {
     res.status(500).json({ message: 'Failed to delete loan', error: error.message });
   }
