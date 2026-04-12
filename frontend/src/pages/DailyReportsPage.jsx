@@ -41,7 +41,14 @@ function DailyReportsPage() {
         ...(data.loans || []).map(l => ({ ...l, kind: 'loan' }))
       ]
       .filter(item => dayjs(item.date).isSame(dayjs(details.report.date), 'day'))
-      .sort((a, b) => dayjs(a.createdAt).valueOf() - dayjs(b.createdAt).valueOf());
+      .sort((a, b) => {
+        const da = dayjs(a.createdAt);
+        const db = dayjs(b.createdAt);
+        const ma = da.hour() * 60 + da.minute();
+        const mb = db.hour() * 60 + db.minute();
+        if (ma !== mb) return ma - mb;
+        return da.valueOf() - db.valueOf();
+      });
 
       setDetails({ ...data, combined });
     } catch (err) {
