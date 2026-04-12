@@ -64,14 +64,16 @@ router.get('/preview', requireAuth, async (req, res) => {
       {
         $group: {
           _id: null,
-          income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
-          outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
+          income: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
+          outgoing: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
+          loanIssued: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
+          loanSettled: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
           count: { $sum: 1 },
         },
       },
     ]);
 
-    const dayData = stats[0] || { income: 0, outgoing: 0, count: 0 };
+    const dayData = stats[0] || { income: 0, outgoing: 0, loanIssued: 0, loanSettled: 0, count: 0 };
 
     // 2. Calculate Opening Balance with smart "Gap Catch-up"
     const lastReport = await DailyReport.findOne({ 
@@ -110,7 +112,7 @@ router.get('/preview', requireAuth, async (req, res) => {
       openingBalance = legacyData.income - legacyData.outgoing;
     }
 
-    const closingBalance = openingBalance + dayData.income - dayData.outgoing;
+    const closingBalance = openingBalance + dayData.income - dayData.outgoing - dayData.loanIssued + dayData.loanSettled;
 
     // 3. Calculate Outstanding Loans
     const activeLoans = await Loan.aggregate([
@@ -146,6 +148,8 @@ router.get('/preview', requireAuth, async (req, res) => {
       openingBalance,
       totalIncome: dayData.income,
       totalOutgoing: dayData.outgoing,
+      totalLoansIssuedToday: dayData.loanIssued,
+      totalLoansSettledToday: dayData.loanSettled,
       closingBalance,
       totalLoanOutstanding,
       transactionCount: dayData.count,
@@ -181,14 +185,16 @@ router.post('/', requireAuth, authorizeRoles('admin'), async (req, res) => {
       {
         $group: {
           _id: null,
-          income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
-          outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
+          income: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
+          outgoing: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
+          loanIssued: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
+          loanSettled: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
           count: { $sum: 1 },
         },
       },
     ]);
 
-    const dayData = stats[0] || { income: 0, outgoing: 0, count: 0 };
+    const dayData = stats[0] || { income: 0, outgoing: 0, loanIssued: 0, loanSettled: 0, count: 0 };
     
     // Smart Gap Catch-up for actual closure
     const lastReport = await DailyReport.findOne({ date: { $lt: targetDate } }).sort({ date: -1 });
@@ -222,12 +228,12 @@ router.post('/', requireAuth, authorizeRoles('admin'), async (req, res) => {
       openingBalance = legacyData.income - legacyData.outgoing;
     }
 
-    const closingBalance = openingBalance + dayData.income - dayData.outgoing;
+    const closingBalance = openingBalance + dayData.income - dayData.outgoing - dayData.loanIssued + dayData.loanSettled;
 
     // Calculate Outstanding Loans for Closure
     const activeLoans = await Loan.aggregate([
       { $match: { status: 'active' } },
-      { $group: { _id: null, total: { $sum: '$remainingAmount' } } }
+      { $group: { _id: null, total: { $sum: { $toDecimal: "$remainingAmount" } } } }
     ]);
     const totalLoanOutstanding = activeLoans[0]?.total || 0;
 
@@ -236,6 +242,8 @@ router.post('/', requireAuth, authorizeRoles('admin'), async (req, res) => {
       openingBalance,
       totalIncome: dayData.income,
       totalOutgoing: dayData.outgoing,
+      totalLoansIssuedToday: dayData.loanIssued,
+      totalLoansSettledToday: dayData.loanSettled,
       closingBalance,
       totalLoanOutstanding,
       transactionCount: dayData.count,

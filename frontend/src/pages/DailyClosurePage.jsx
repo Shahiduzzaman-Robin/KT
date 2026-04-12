@@ -183,20 +183,28 @@ function DailyClosurePage() {
                     </div>
                   </div>
 
-                  <div className={`grid grid-cols-2 gap-6 pt-4 border-t ${data?.isAlreadyLocked ? 'border-emerald-700' : 'border-slate-50'}`}>
-                     <div className={`p-4 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-emerald-50/50 border-emerald-100/50'}`}>
+                  <div className={`grid grid-cols-2 gap-4 pt-4 border-t ${data?.isAlreadyLocked ? 'border-emerald-700' : 'border-slate-50'}`}>
+                     <div className={`p-3 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-emerald-50/50 border-emerald-100/50'}`}>
                         <p className={`text-[9px] font-black uppercase tracking-widest mb-1 ${data?.isAlreadyLocked ? 'text-emerald-300' : 'text-emerald-600'}`}>Total Income</p>
-                        <p className={`text-lg font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-emerald-800'}`}>+{formatBDT(data?.totalIncome)}</p>
+                        <p className={`text-base font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-emerald-800'}`}>+{formatBDT(data?.totalIncome)}</p>
                      </div>
-                     <div className={`p-4 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-red-50/50 border-red-100/50'}`}>
+                     <div className={`p-3 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-red-50/50 border-red-100/50'}`}>
                         <p className={`text-[9px] font-black uppercase tracking-widest mb-1 ${data?.isAlreadyLocked ? 'text-red-300' : 'text-red-500'}`}>Total Expense</p>
-                        <p className={`text-lg font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-red-800'}`}>-{formatBDT(data?.totalOutgoing)}</p>
+                        <p className={`text-base font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-red-800'}`}>-{formatBDT(data?.totalOutgoing)}</p>
+                     </div>
+                     <div className={`p-3 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-blue-50/50 border-blue-100/50'}`}>
+                        <p className={`text-[9px] font-black uppercase tracking-widest mb-1 ${data?.isAlreadyLocked ? 'text-blue-300' : 'text-blue-600'}`}>Lent Today</p>
+                        <p className={`text-base font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-blue-800'}`}>-{formatBDT(data?.totalLoansIssuedToday)}</p>
+                     </div>
+                     <div className={`p-3 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-amber-50/50 border-amber-100/50'}`}>
+                        <p className={`text-[9px] font-black uppercase tracking-widest mb-1 ${data?.isAlreadyLocked ? 'text-amber-300' : 'text-amber-600'}`}>Collected Today</p>
+                        <p className={`text-base font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-amber-800'}`}>+{formatBDT(data?.totalLoansSettledToday)}</p>
                      </div>
                   </div>
 
-                  <div className={`p-4 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-blue-50/50 border-blue-100/50'}`}>
-                    <p className={`text-[9px] font-black uppercase tracking-widest mb-1 ${data?.isAlreadyLocked ? 'text-blue-200' : 'text-blue-600'}`}>Active Loans & Advances</p>
-                    <p className={`text-xl font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-blue-800'}`}>৳ {Number(data?.totalLoanOutstanding || 0).toLocaleString()}</p>
+                  <div className={`p-4 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-slate-50/50 border-slate-100/50'}`}>
+                    <p className={`text-[9px] font-black uppercase tracking-widest mb-1 ${data?.isAlreadyLocked ? 'text-emerald-200' : 'text-slate-500'}`}>Total Outstanding Loans</p>
+                    <p className={`text-xl font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-slate-800'}`}>৳ {Number(data?.totalLoanOutstanding || 0).toLocaleString()}</p>
                   </div>
 
                   <div className="pt-8 space-y-4">
