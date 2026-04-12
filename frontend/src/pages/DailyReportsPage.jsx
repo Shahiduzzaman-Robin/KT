@@ -32,18 +32,11 @@ function DailyReportsPage() {
     }
   }
 
-  async function fetchDetails(reportId) {
-    try {
-      setLoadingDetails(true);
-      const { data } = await api.get(`/reports/${reportId}/details`);
-      const combined = [
-        ...(data.transactions || []).map(t => ({ ...t, kind: 'transaction' })),
-        ...(data.loans || []).map(l => ({ ...l, kind: 'loan' }))
-      ]
-      .filter(item => dayjs(item.date).isSame(dayjs(details.report.date), 'day'))
-      .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+      const items = (data.transactions || [])
+        .filter(item => dayjs(item.date).isSame(dayjs(data.report.date), 'day'))
+        .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 
-      setDetails({ ...data, combined });
+      setDetails({ ...data, combined: items });
     } catch (err) {
       setStatusMessage({
         title: 'Load Error',
@@ -259,30 +252,26 @@ function DailyReportsPage() {
                           </tr>
                        </thead>
                        <tbody className="text-[11px]">
-                           {details.combined?.map((item) => (
-                             <tr key={item._id} className="border-b border-black/10 print:border-black">
-                                <td className="border-r border-black/10 print:border-black p-2 whitespace-nowrap">{dayjs(item.createdAt).format('hh:mm A')}</td>
-                                <td className="border-r border-black/10 print:border-black p-2 font-bold">
-                                   {item.kind === 'loan' ? (
-                                     <>
-                                       <span className="text-blue-800">[LOAN] {item.borrowerName}</span>
-                                       {item.description && <div className="text-[9px] font-normal italic mt-0.5 text-slate-600 print:text-black">Note: {item.description}</div>}
-                                     </>
-                                   ) : (
-                                     <>
+                           {details.combined?.map((item) => {
+                             const isLoan = item.description?.toLowerCase().includes('loan');
+                             return (
+                               <tr key={item._id} className="border-b border-black/10 print:border-black">
+                                  <td className="border-r border-black/10 print:border-black p-2 whitespace-nowrap">{dayjs(item.createdAt).format('hh:mm A')}</td>
+                                  <td className="border-r border-black/10 print:border-black p-2 font-bold">
+                                     <div className={isLoan ? "text-blue-800" : ""}>
                                        {item.ledgerId?.name || 'N/A'}
-                                       {item.description && <div className="text-[9px] font-normal italic mt-0.5 text-slate-600 print:text-black">Note: {item.description}</div>}
-                                     </>
-                                   )}
-                                </td>
-                                <td className="border-r border-black/10 print:border-black p-2 text-right">
-                                   {item.kind === 'transaction' && item.type === 'income' ? formatBDT(item.amount) : '-'}
-                                </td>
-                                <td className="p-2 text-right">
-                                   {item.kind === 'loan' ? formatBDT(item.totalAmount) : (item.kind === 'transaction' && item.type === 'outgoing' ? formatBDT(item.amount) : '-')}
-                                </td>
-                             </tr>
-                           ))}
+                                     </div>
+                                     {item.description && <div className="text-[9px] font-normal italic mt-0.5 text-slate-600 print:text-black">{item.description}</div>}
+                                  </td>
+                                  <td className="border-r border-black/10 print:border-black p-2 text-right">
+                                     {item.type === 'income' ? formatBDT(item.amount) : '-'}
+                                  </td>
+                                  <td className="p-2 text-right">
+                                     {item.type === 'outgoing' ? formatBDT(item.amount) : '-'}
+                                  </td>
+                               </tr>
+                             );
+                           })}
                            {(!details.combined || details.combined.length === 0) && (
                              <tr><td colSpan="4" className="p-8 text-center text-slate-400">No activity recorded for this day.</td></tr>
                            )}
@@ -316,13 +305,13 @@ function DailyReportsPage() {
                                  <span className="text-xl font-black">৳ {formatBDT(details.report.closingBalance)}</span>
                               </div>
                            </div>
-                           <div className="pt-2 border-t border-black/20 print:border-black">
-                              <p className="text-[10px] uppercase font-bold text-[#000] mb-1 text-center border-b border-black pb-1">Total Net Asset Value</p>
-                              <div className="flex justify-center flex-col items-center py-1">
-                                 <span className="text-2xl font-black">৳ {formatBDT((details.report.closingBalance || 0) + (details.report.totalLoanOutstanding || 0))}</span>
-                                 <span className="text-[9px] mt-1 font-bold italic">*** System Validated & Locked ***</span>
-                              </div>
-                           </div>
+                            <div className="pt-2 border-t border-black/20 print:border-black">
+                               <p className="text-[10px] uppercase font-bold text-[#000] mb-1 text-center border-b border-black pb-1">Verified Net Cash</p>
+                               <div className="flex justify-center flex-col items-center py-1">
+                                  <span className="text-2xl font-black">৳ {formatBDT(details.report.closingBalance)}</span>
+                                  <span className="text-[9px] mt-1 font-bold italic">*** System Validated & Locked ***</span>
+                               </div>
+                            </div>
                         </div>
                     </div>
 
