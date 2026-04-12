@@ -111,6 +111,22 @@ router.get('/preview', requireAuth, async (req, res) => {
       date: { $gt: todayEnd } 
     }).sort({ date: 1 });
 
+    if (existingReport) {
+      return res.json({
+        date: todayStr,
+        openingBalance: existingReport.openingBalance,
+        totalIncome: existingReport.totalIncome,
+        totalOutgoing: existingReport.totalOutgoing,
+        closingBalance: existingReport.closingBalance,
+        transactionCount: existingReport.transactionCount,
+        isAlreadyLocked: true,
+        isImplicitlyLocked: false,
+        reportId: existingReport._id,
+        lastReportDate: lastReport?.date,
+        nextReportDate: nextReport?.date
+      });
+    }
+
     res.json({
       date: todayStr,
       openingBalance,
