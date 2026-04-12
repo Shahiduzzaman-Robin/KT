@@ -150,8 +150,8 @@ function LoansPage() {
                 <LedgerAutocomplete 
                   value={newLoan.ledgerInput}
                   selectedLedgerId={newLoan.ledgerId}
-                  onChange={val => setNewLoan({...newLoan, ledgerInput: val})}
-                  onSelect={l => setNewLoan({...newLoan, ledgerId: l?._id || ''})}
+                  onChange={val => setNewLoan(prev => ({...prev, ledgerInput: val}))}
+                  onSelect={l => setNewLoan(prev => ({...prev, ledgerId: l?._id || ''}))}
                   excludeGroups={true}
                 />
               </div>
@@ -265,8 +265,8 @@ function LoansPage() {
                 <LedgerAutocomplete 
                   value={reduceAmount.ledgerInput}
                   selectedLedgerId={reduceAmount.ledgerId}
-                  onChange={val => setReduceAmount({...reduceAmount, ledgerInput: val})}
-                  onSelect={l => setReduceAmount({...reduceAmount, ledgerId: l?._id || ''})}
+                  onChange={val => setReduceAmount(prev => ({...prev, ledgerInput: val}))}
+                  onSelect={l => setReduceAmount(prev => ({...prev, ledgerId: l?._id || ''}))}
                   excludeGroups={true}
                 />
                 <p className="mt-1 text-[10px] font-bold text-slate-400">This will automatically increase your cash balance.</p>
