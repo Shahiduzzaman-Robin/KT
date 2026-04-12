@@ -2,9 +2,16 @@ const express = require('express');
 const Loan = require('../models/Loan');
 const Transaction = require('../models/Transaction');
 const Ledger = require('../models/Ledger');
-const { audit } = require('../utils/audit'); // Assuming an audit util exists
+const { requireAuth } = require('../middleware/auth');
+const { logAudit } = require('../utils/audit');
 
 const router = express.Router();
+
+// Health check ping
+router.get('/ping', (req, res) => res.json({ message: 'Loan API is alive' }));
+
+// Apply basic auth to all loan routes
+router.use(requireAuth);
 
 // Get all loans
 router.get('/', async (req, res) => {
