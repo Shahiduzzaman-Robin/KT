@@ -12,6 +12,9 @@ async function sumBetween(startDate, endDate) {
           $gte: startDate,
           $lte: endDate,
         },
+        // Exclude loan-related movements from business totals
+        loanId: { $exists: false },
+        description: { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }
       },
     },
     {
@@ -86,7 +89,13 @@ router.get('/category-breakdown', async (req, res) => {
     const to = req.query.to ? dayjs(req.query.to).endOf('day').toDate() : dayjs().endOf('day').toDate();
 
     const rows = await Transaction.aggregate([
-      { $match: { date: { $gte: from, $lte: to } } },
+      {
+        $match: {
+          date: { $gte: from, $lte: to },
+          loanId: { $exists: false },
+          description: { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }
+        }
+      },
       {
         $lookup: {
           from: 'ledgers',

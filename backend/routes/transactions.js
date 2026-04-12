@@ -118,12 +118,16 @@ router.get('/', async (req, res) => {
       limit = 20,
     } = req.query;
 
-    const query = {};
+    const query = { 
+      // Default: Exclude loan-related transactions from the formal ledger list
+      loanId: { $exists: false },
+      description: { $not: { $regex: /loan/i } }
+    };
     if (type && ['income', 'outgoing'].includes(type)) query.type = type;
     if (ledgerId) query.ledgerId = ledgerId;
 
     if (from || to) {
-      query.date = {};
+      if (!query.date) query.date = {};
       if (from) query.date.$gte = dayjs(from).startOf('day').toDate();
       if (to) query.date.$lte = dayjs(to).endOf('day').toDate();
     }
