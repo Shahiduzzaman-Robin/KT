@@ -39,11 +39,9 @@ function DailyReportsPage() {
       const combined = [
         ...(data.transactions || []).map(t => ({ ...t, kind: 'transaction' })),
         ...(data.loans || []).map(l => ({ ...l, kind: 'loan' }))
-      ].sort((a, b) => {
-        const timeA = new Date(a.createdAt).getTime();
-        const timeB = new Date(b.createdAt).getTime();
-        return timeA - timeB;
-      });
+      ]
+      .filter(item => dayjs(item.date).isSame(dayjs(details.report.date), 'day'))
+      .sort((a, b) => dayjs(a.createdAt).valueOf() - dayjs(b.createdAt).valueOf());
 
       setDetails({ ...data, combined });
     } catch (err) {

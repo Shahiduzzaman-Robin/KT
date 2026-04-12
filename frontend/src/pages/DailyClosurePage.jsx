@@ -40,13 +40,15 @@ function DailyClosurePage() {
         params: { from: dateToFetch, to: dateToFetch }
       });
 
-      // Combine and sort by time (absolute chronological order)
+      // Filter only current date logically (UTC Shift Safety) AND sort
       const combined = [
         ...(txRes.items || []).map(t => ({ ...t, kind: 'transaction' })),
         ...(loansRes || []).map(l => ({ ...l, kind: 'loan' }))
-      ].sort((a, b) => {
-        const timeA = new Date(a.createdAt).getTime();
-        const timeB = new Date(b.createdAt).getTime();
+      ]
+      .filter(item => dayjs(item.date).isSame(dayjs(dateToFetch), 'day'))
+      .sort((a, b) => {
+        const timeA = dayjs(a.createdAt).valueOf();
+        const timeB = dayjs(b.createdAt).getTime ? dayjs(b.createdAt).valueOf() : new Date(b.createdAt).getTime();
         return timeA - timeB;
       });
 
