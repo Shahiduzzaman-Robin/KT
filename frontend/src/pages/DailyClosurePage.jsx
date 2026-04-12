@@ -193,15 +193,24 @@ function DailyClosurePage() {
                     <p className={`text-xl font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-blue-800'}`}>৳ {Number(data?.totalLoanOutstanding || 0).toLocaleString()}</p>
                   </div>
 
-                  <div className="pt-8">
-                     <p className={`text-[10px] font-bold uppercase tracking-[0.2em] mb-1 ${data?.isAlreadyLocked ? 'text-emerald-200' : 'text-slate-400'}`}>Theoretical Closing Balance</p>
-                     <div className="flex items-center gap-3">
-                        <span className="text-5xl font-black tracking-tighter tabular-nums">{formatBDT(data?.closingBalance)}</span>
-                        {data?.isAlreadyLocked && (
-                          <div className="h-10 w-10 flex items-center justify-center bg-white/20 rounded-lg text-white">
-                             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                          </div>
-                        )}
+                  <div className="pt-8 space-y-4">
+                     <div>
+                        <p className={`text-[10px] font-bold uppercase tracking-[0.2em] mb-1 ${data?.isAlreadyLocked ? 'text-emerald-200' : 'text-slate-400'}`}>Liquid Cash Balance</p>
+                        <div className="flex items-center gap-3">
+                           <span className="text-4xl font-black tracking-tighter tabular-nums">{formatBDT(data?.closingBalance)}</span>
+                           {data?.isAlreadyLocked && (
+                             <div className="h-10 w-10 flex items-center justify-center bg-white/20 rounded-lg text-white">
+                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                             </div>
+                           )}
+                        </div>
+                     </div>
+
+                     <div className={`pt-4 border-t ${data?.isAlreadyLocked ? 'border-emerald-700' : 'border-slate-100'}`}>
+                        <p className={`text-[10px] font-bold uppercase tracking-[0.2em] mb-1 ${data?.isAlreadyLocked ? 'text-emerald-200/70' : 'text-[#00694b]'}`}>Total Business Valuation (Cash + Loans)</p>
+                        <p className="text-3xl font-black tracking-tighter tabular-nums">
+                           {formatBDT((data?.closingBalance || 0) + (data?.totalLoanOutstanding || 0))}
+                        </p>
                      </div>
                   </div>
                 </div>

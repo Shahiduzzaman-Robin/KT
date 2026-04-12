@@ -293,13 +293,21 @@ function DailyReportsPage() {
                              <span className="font-bold">৳ {Number(details.report.totalLoanOutstanding || 0).toLocaleString()}</span>
                           </div>
                        </div>
-                       <div className="border-2 border-black bg-slate-50 p-4 print:bg-white">
-                          <p className="text-[10px] uppercase font-bold text-[#000] mb-1 text-center border-b border-black pb-1">Final Closing Cash</p>
-                          <div className="flex justify-center flex-col items-center py-2">
-                             <span className="text-2xl font-black">৳ {formatBDT(details.report.closingBalance)}</span>
-                             <span className="text-[9px] mt-1 font-bold italic">*** System Validated & Locked ***</span>
-                          </div>
-                       </div>
+                        <div className="border-2 border-black bg-slate-50 p-4 print:bg-white space-y-3">
+                           <div>
+                              <p className="text-[10px] uppercase font-bold text-[#000] mb-1 text-center border-b border-black pb-1">Final Closing Cash</p>
+                              <div className="flex justify-center flex-col items-center py-1">
+                                 <span className="text-xl font-black">৳ {formatBDT(details.report.closingBalance)}</span>
+                              </div>
+                           </div>
+                           <div className="pt-2 border-t border-black/20 print:border-black">
+                              <p className="text-[10px] uppercase font-bold text-[#000] mb-1 text-center border-b border-black pb-1">Total Net Asset Value</p>
+                              <div className="flex justify-center flex-col items-center py-1">
+                                 <span className="text-2xl font-black">৳ {formatBDT((details.report.closingBalance || 0) + (details.report.totalLoanOutstanding || 0))}</span>
+                                 <span className="text-[9px] mt-1 font-bold italic">*** System Validated & Locked ***</span>
+                              </div>
+                           </div>
+                        </div>
                     </div>
 
                     <div className="flex justify-between mt-20 text-[10px] uppercase font-bold">
