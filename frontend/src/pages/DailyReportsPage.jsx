@@ -18,8 +18,6 @@ function DailyReportsPage() {
   const [selectedReport, setSelectedReport] = useState(null);
   const [details, setDetails] = useState(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
-  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
-  const [revertLoading, setRevertLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
   async function fetchReports() {
@@ -40,7 +38,11 @@ function DailyReportsPage() {
       const { data } = await api.get(`/reports/${reportId}/details`);
       setDetails(data);
     } catch (err) {
-      alert('Failed to load document details');
+      setStatusMessage({
+        title: 'Load Error',
+        message: 'Failed to load document details from the server.',
+        type: 'danger'
+      });
     } finally {
       setLoadingDetails(false);
     }
@@ -62,29 +64,6 @@ function DailyReportsPage() {
 
   const handlePrint = () => {
     window.print();
-  };
-
-  const handleRevertConfirm = async (password) => {
-    try {
-      setRevertLoading(true);
-      await api.post(`/reports/${selectedReport._id}/revert`, { password });
-      setStatusMessage({
-        title: 'Unlock Success',
-        message: 'Day successfully unlocked! You can now edit transactions for this date.',
-        type: 'success'
-      });
-      setIsPasswordModalOpen(false);
-      closeDocument();
-      fetchReports();
-    } catch (err) {
-      setStatusMessage({
-        title: 'Unlock Failed',
-        message: err.response?.data?.message || 'Verification failed. Password might be incorrect.',
-        type: 'danger'
-      });
-    } finally {
-      setRevertLoading(false);
-    }
   };
 
   return (
@@ -215,16 +194,6 @@ function DailyReportsPage() {
               </div>
               <div className="flex items-center gap-3">
                 <button 
-                  onClick={() => setIsPasswordModalOpen(true)}
-                  className="flex items-center gap-2 rounded-xl bg-red-100 px-4 py-2 text-xs font-bold text-red-700 transition hover:bg-red-200"
-                  title="Unlock this day for corrections"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 00-2 2z" />
-                  </svg>
-                  Unlock & Revert
-                </button>
-                <button 
                    onClick={handlePrint}
                   className="flex items-center gap-2 rounded-xl bg-[#001f2a] px-4 py-2 text-xs font-bold text-white transition hover:opacity-90"
                 >
@@ -345,14 +314,6 @@ function DailyReportsPage() {
         </div>,
         document.body
       )}
-      <PasswordModal 
-        isOpen={isPasswordModalOpen}
-        onClose={() => setIsPasswordModalOpen(false)}
-        onConfirm={handleRevertConfirm}
-        loading={revertLoading}
-        title="Confirm Historical Unlock"
-        message={`DANGER: You are about to UNLOCK the records for ${dayjs(selectedReport?.date).format('DD MMM YYYY')}. This will delete the archived report and allow edits for this date.`}
-      />
 
       <ActionModal 
         isOpen={!!statusMessage}
