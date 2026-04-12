@@ -5,6 +5,7 @@ import LedgerDetailsPage from './pages/LedgerDetailsPage';
 import UsersPage from './pages/UsersPage';
 import AuditLogsPage from './pages/AuditLogsPage';
 import DailyReportsPage from './pages/DailyReportsPage';
+import DailyClosurePage from './pages/DailyClosurePage';
 import LoginPage from './pages/LoginPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -58,6 +59,14 @@ function App() {
           element={
             <ProtectedRoute allowedRoles={['admin']}>
               <DailyReportsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/close-day"
+          element={
+            <ProtectedRoute allowedRoles={['admin']}>
+              <DailyClosurePage />
             </ProtectedRoute>
           }
         />
