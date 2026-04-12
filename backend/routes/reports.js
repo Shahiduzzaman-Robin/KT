@@ -64,16 +64,32 @@ router.get('/preview', requireAuth, async (req, res) => {
       {
         $group: {
           _id: null,
-          income: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
-          outgoing: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
-          loanIssued: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
-          loanSettled: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
+          income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
+          outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
           count: { $sum: 1 },
         },
       },
     ]);
 
-    const dayData = stats[0] || { income: 0, outgoing: 0, loanIssued: 0, loanSettled: 0, count: 0 };
+    // Independent Loan Data Collection
+    const loansIssuedStats = await Loan.aggregate([
+      { $match: { date: { $gte: todayStart, $lte: todayEnd } } },
+      { $group: { _id: null, total: { $sum: '$totalAmount' } } }
+    ]);
+    
+    const repaymentsStats = await Loan.aggregate([
+      { $unwind: '$repaymentHistory' },
+      { $match: { 'repaymentHistory.date': { $gte: todayStart, $lte: todayEnd } } },
+      { $group: { _id: null, total: { $sum: '$repaymentHistory.amount' } } }
+    ]);
+
+    const dayData = {
+      income: stats[0]?.income || 0,
+      outgoing: stats[0]?.outgoing || 0,
+      loanIssued: loansIssuedStats[0]?.total || 0,
+      loanSettled: repaymentsStats[0]?.total || 0,
+      count: (stats[0]?.count || 0) + (loansIssuedStats[0]?._id ? 1 : 0)
+    };
 
     // 2. Calculate Opening Balance with smart "Gap Catch-up"
     const lastReport = await DailyReport.findOne({ 
@@ -179,22 +195,37 @@ router.post('/', requireAuth, authorizeRoles('admin'), async (req, res) => {
       return res.status(400).json({ message: 'This day is already closed and locked.' });
     }
 
-    // Calculate totals (identical to preview)
+    // Calculate totals for actual closure (Identical logic)
     const stats = await Transaction.aggregate([
       { $match: { date: { $gte: targetDate, $lte: targetEnd } } },
       {
         $group: {
           _id: null,
-          income: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
-          outgoing: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }] }, '$amount', 0] } },
-          loanIssued: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'outgoing'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
-          loanSettled: { $sum: { $cond: [{ $and: [{ $eq: ['$type', 'income'] }, { $regexMatch: { input: "$description", regex: /loan/i } }] }, '$amount', 0] } },
+          income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
+          outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
           count: { $sum: 1 },
         },
       },
     ]);
 
-    const dayData = stats[0] || { income: 0, outgoing: 0, loanIssued: 0, loanSettled: 0, count: 0 };
+    const loansIssuedStats = await Loan.aggregate([
+      { $match: { date: { $gte: targetDate, $lte: targetEnd } } },
+      { $group: { _id: null, total: { $sum: '$totalAmount' } } }
+    ]);
+    
+    const repaymentsStats = await Loan.aggregate([
+      { $unwind: '$repaymentHistory' },
+      { $match: { 'repaymentHistory.date': { $gte: targetDate, $lte: targetEnd } } },
+      { $group: { _id: null, total: { $sum: '$repaymentHistory.amount' } } }
+    ]);
+
+    const dayData = {
+      income: stats[0]?.income || 0,
+      outgoing: stats[0]?.outgoing || 0,
+      loanIssued: loansIssuedStats[0]?.total || 0,
+      loanSettled: repaymentsStats[0]?.total || 0,
+      count: (stats[0]?.count || 0) + (loansIssuedStats[0]?._id ? 1 : 0)
+    };
     
     // Smart Gap Catch-up for actual closure
     const lastReport = await DailyReport.findOne({ date: { $lt: targetDate } }).sort({ date: -1 });

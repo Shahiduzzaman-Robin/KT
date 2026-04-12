@@ -50,70 +50,35 @@ router.post('/', async (req, res) => {
       createdBy: req.user?.username || 'admin',
     });
 
-    let tx;
+    // 2. Issuance
     try {
       await loan.save();
-
-      // Optionally create an outgoing transaction
-      if (createTransaction && ledgerId) {
-        tx = new Transaction({
-          ledgerId,
-          loanId: loan._id,
-          type: 'outgoing',
-          amount: amount,
-          date: date || new Date(),
-          description: `Loan Issued to ${borrowerName}: ${description}`,
-          createdBy: req.user?.username || 'admin',
-        });
-        await tx.save();
-      }
     } catch (error) {
-      if (tx) await Transaction.findByIdAndDelete(tx._id);
       throw error;
     }
-
+ 
     res.status(201).json(loan);
   } catch (error) {
-    res.status(400).json({ message: 'Failed to create loan', error: error.message });
+    res.status(500).json({ message: 'Failed to issue loan', error: error.message });
   }
 });
 
-// Reduce loan (Partial repayment)
-router.post('/:id/reduce', async (req, res) => {
+// Record Repayment
+router.post('/:id/repay', async (req, res) => {
   try {
     const { amount, date, description, ledgerId, createTransaction } = req.body;
     const loan = await Loan.findById(req.params.id);
-
+ 
     if (!loan) return res.status(404).json({ message: 'Loan not found' });
-    if (loan.status === 'closed') return res.status(400).json({ message: 'Loan is already closed' });
-
-    if (amount > loan.remainingAmount) {
-      return res.status(400).json({ message: 'Repayment amount exceeds remaining balance' });
-    }
-
-    let transactionId = null;
-    if (createTransaction && ledgerId) {
-      const tx = new Transaction({
-        ledgerId,
-        loanId: loan._id,
-        type: 'income',
-        amount: amount,
-        date: date || new Date(),
-        description: `Loan Repayment from ${loan.borrowerName}: ${description}`,
-        createdBy: req.user?.username || 'admin',
-      });
-      await tx.save();
-      transactionId = tx._id;
-    }
-
-    loan.remainingAmount -= amount;
+ 
+    // Add to internal history
     loan.repaymentHistory.push({
-      amount,
+      amount: Number(amount),
       date: date || new Date(),
-      description,
-      transactionId,
+      description
     });
-
+ 
+    loan.remainingAmount -= Number(amount);
     if (loan.remainingAmount <= 0) {
       loan.status = 'closed';
     }
