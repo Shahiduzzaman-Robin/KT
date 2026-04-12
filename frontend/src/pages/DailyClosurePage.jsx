@@ -107,7 +107,7 @@ function DailyClosurePage() {
       <div className="mx-auto flex max-w-[1700px] gap-5 px-4 py-5 md:px-6">
         <AppSidebar />
         <main className="min-w-0 flex-1 space-y-6">
-          <header className="rounded-xl bg-white p-8 shadow-[0_12px_40px_rgba(0,31,42,0.06)] flex items-center justify-between border border-slate-50">
+          <header className="rounded-lg bg-white p-8 shadow-[0_12px_40px_rgba(0,31,42,0.06)] flex items-center justify-between border border-slate-50">
             <div>
               <div className="flex items-center gap-3">
                  <h1 className="[font-family:Manrope,ui-sans-serif,system-ui] text-4xl font-black tracking-tight text-[#001f2a]">
@@ -138,7 +138,7 @@ function DailyClosurePage() {
             <div className="lg:col-span-5 space-y-6">
               
               {/* Main Totals Card */}
-              <div className={`rounded-xl p-8 shadow-[0_30px_70px_rgba(0,31,42,0.12)] border ${data?.isAlreadyLocked ? 'bg-gradient-to-br from-[#00694b] to-[#004d37] border-emerald-800 text-white' : 'bg-white border-slate-100'}`}>
+              <div className={`rounded-lg p-8 shadow-[0_30px_70px_rgba(0,31,42,0.12)] border ${data?.isAlreadyLocked ? 'bg-gradient-to-br from-[#00694b] to-[#004d37] border-emerald-800 text-white' : 'bg-white border-slate-100'}`}>
                 <h3 className={`text-xs font-black uppercase tracking-[0.3em] mb-8 border-b pb-4 ${data?.isAlreadyLocked ? 'text-emerald-200/50 border-emerald-700' : 'text-slate-400 border-slate-50'}`}>
                   {data?.isAlreadyLocked ? 'Audit Snapshot (Finalized)' : 'Financial Snapshots'}
                 </h3>
@@ -182,7 +182,7 @@ function DailyClosurePage() {
               </div>
 
                {/* Action & Notes */}
-               <div className="rounded-xl bg-white p-8 shadow-[0_20px_50px_rgba(0,31,42,0.08)] border border-slate-100 text-center">
+               <div className="rounded-lg bg-white p-8 shadow-[0_20px_50px_rgba(0,31,42,0.08)] border border-slate-100 text-center">
                   {data?.isAlreadyLocked ? (
                     <div className="py-2">
                       <div className="mx-auto h-16 w-16 mb-4 rounded-lg bg-red-50 flex items-center justify-center text-red-500">
@@ -223,7 +223,7 @@ function DailyClosurePage() {
             </div>
 
             {/* RIGHT COLUMN: Live Audit List */}
-            <div className="lg:col-span-7 bg-white rounded-xl shadow-[0_12px_40px_rgba(0,31,42,0.06)] border border-slate-50 flex flex-col h-full overflow-hidden min-h-[600px]">
+            <div className="lg:col-span-7 bg-white rounded-lg shadow-[0_12px_40px_rgba(0,31,42,0.06)] border border-slate-50 flex flex-col h-full overflow-hidden min-h-[600px]">
                <div className="p-8 border-b border-slate-50 flex items-center justify-between">
                   <h3 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Activity Audit List</h3>
                   <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">{transactions.length} entries today</span>

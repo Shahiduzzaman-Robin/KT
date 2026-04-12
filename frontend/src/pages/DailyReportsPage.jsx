@@ -114,7 +114,7 @@ function DailyReportsPage() {
         <AppSidebar />
 
         <main className="min-w-0 flex-1 space-y-4">
-          <header className="rounded-xl bg-white p-6 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
+          <header className="rounded-lg bg-white p-6 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="[font-family:Manrope,ui-sans-serif,system-ui] text-3xl font-bold tracking-tight text-[#001f2a]">
@@ -126,7 +126,7 @@ function DailyReportsPage() {
             </div>
           </header>
 
-          <div className="rounded-xl bg-white shadow-[0_12px_40px_rgba(0,31,42,0.06)] overflow-hidden">
+          <div className="rounded-lg bg-white shadow-[0_12px_40px_rgba(0,31,42,0.06)] overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
@@ -184,12 +184,12 @@ function DailyReportsPage() {
 
       {selectedReport && createPortal(
         <div className="fixed inset-0 z-[500] flex items-start justify-center overflow-y-auto bg-slate-900/60 p-4 backdrop-blur-sm print-container print:relative print:z-0 print:bg-white print:p-0 print:overflow-visible">
-          <div className="relative w-full max-w-4xl rounded-xl bg-white shadow-2xl document-container my-10 min-h-[90vh] flex flex-col print:my-0 print:min-h-0 print:shadow-none print:w-full">
+          <div className="relative w-full max-w-4xl rounded-lg bg-white shadow-2xl document-container my-10 min-h-[90vh] flex flex-col print:my-0 print:min-h-0 print:shadow-none print:w-full">
             
             {/* Document Header Controls */}
             <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-8 py-4 rounded-t-xl no-print">
               <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="h-2 w-2 rounded-lg bg-emerald-500 animate-pulse" />
                 <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Document View</span>
               </div>
               <div className="flex items-center gap-3">

@@ -199,8 +199,8 @@ function HomePage() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[#f4faff] text-[#001f2a] [font-family:Inter,ui-sans-serif,system-ui]">
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-40 right-[-10%] h-96 w-96 rounded-full bg-[#84f8c8]/30 blur-[110px]" />
-        <div className="absolute bottom-[-16%] left-[-5%] h-80 w-80 rounded-full bg-[#d9f2ff] blur-[100px]" />
+        <div className="absolute -top-40 right-[-10%] h-96 w-96 rounded-lg bg-[#84f8c8]/30 blur-[110px]" />
+        <div className="absolute bottom-[-16%] left-[-5%] h-80 w-80 rounded-lg bg-[#d9f2ff] blur-[100px]" />
       </div>
 
       <div className="mx-auto flex max-w-[1700px] gap-5 px-4 py-5 md:px-6">
@@ -211,7 +211,7 @@ function HomePage() {
               <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4 no-print">
                 <h3 className="text-xl font-black tracking-tight text-[#001f2a]">Ledger Filters</h3>
                 <button
-                  className="p-2 rounded-xl text-slate-400 hover:bg-white hover:text-[#ba1a1a] transition-all"
+                  className="p-2 rounded-lg text-slate-400 hover:bg-white hover:text-[#ba1a1a] transition-all"
                   type="button"
                   title="Reset all filters"
                   onClick={() => {
@@ -332,7 +332,7 @@ function HomePage() {
               </div>
 
               <button 
-                className="w-full rounded-xl bg-[#00694b] py-5 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl shadow-emerald-900/20 transition-all hover:scale-[1.02] hover:bg-[#004d37] active:scale-[0.98]" 
+                className="w-full rounded-lg bg-[#00694b] py-5 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl shadow-emerald-900/20 transition-all hover:scale-[1.02] hover:bg-[#004d37] active:scale-[0.98]" 
                 type="button" 
                 onClick={() => loadTransactions(1)}
               >
@@ -343,7 +343,7 @@ function HomePage() {
         />
 
         <main className="min-w-0 flex-1 space-y-4">
-          <header className="sticky top-2 z-30 overflow-visible rounded-xl bg-white/92 p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] backdrop-blur md:p-5">
+          <header className="sticky top-2 z-30 overflow-visible rounded-lg bg-white/92 p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] backdrop-blur md:p-5">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#00694b] via-[#008560] to-[#67dbad]" />
 
             <div className="flex flex-wrap items-start gap-3 pt-1">
@@ -355,11 +355,11 @@ function HomePage() {
               </div>
 
               <div className="ml-auto flex flex-wrap items-center justify-end gap-2">
-                <div className="rounded-xl bg-[#e6f6ff] p-2">
+                <div className="rounded-lg bg-[#e6f6ff] p-2">
                   <UserSessionBadge compact />
                 </div>
                 <button
-                  className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/15 transition hover:opacity-95"
+                  className="rounded-lg bg-gradient-to-br from-[#00694b] to-[#008560] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/15 transition hover:opacity-95"
                   type="button"
                   onClick={openNewTransactionArea}
                 >
@@ -372,7 +372,7 @@ function HomePage() {
           <div className="space-y-10 pb-12">
             <Dashboard daily={daily} monthly={monthly} />
 
-            <section className="rounded-3xl bg-[#e6f6ff] p-4 md:p-6 xl:hidden">
+            <section className="rounded-lg bg-[#e6f6ff] p-4 md:p-6 xl:hidden">
               <div className="mb-3 flex flex-wrap items-center gap-2">
                 <h2 className="mr-auto [font-family:Manrope,ui-sans-serif,system-ui] text-xl font-bold">Filters</h2>
                 <button
@@ -428,13 +428,13 @@ function HomePage() {
                       { value: 'income', label: 'Income' },
                       { value: 'outgoing', label: 'Outgoing' },
                     ]}
-                    buttonClassName="!rounded-xl !border-transparent !bg-white !text-[#001f2a]"
+                    buttonClassName="!rounded-lg !border-transparent !bg-white !text-[#001f2a]"
                   />
                 </div>
                 <div>
                   <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">From</label>
                   <input
-                    className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20"
+                    className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20"
                     type="date"
                     value={filters.from}
                     onChange={(event) => {
@@ -446,7 +446,7 @@ function HomePage() {
                 <div>
                   <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">To</label>
                   <input
-                    className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20"
+                    className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20"
                     type="date"
                     value={filters.to}
                     onChange={(event) => {
@@ -457,19 +457,19 @@ function HomePage() {
                 </div>
                 <div>
                   <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Min Amount</label>
-                  <input className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20" type="number" placeholder="Min" value={filters.minAmount} onChange={(event) => setFilters((prev) => ({ ...prev, minAmount: event.target.value }))} />
+                  <input className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20" type="number" placeholder="Min" value={filters.minAmount} onChange={(event) => setFilters((prev) => ({ ...prev, minAmount: event.target.value }))} />
                 </div>
                 <div>
                   <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Max Amount</label>
-                  <input className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20" type="number" placeholder="Max" value={filters.maxAmount} onChange={(event) => setFilters((prev) => ({ ...prev, maxAmount: event.target.value }))} />
+                  <input className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-sm outline-none focus:border-[#006c4d]/20" type="number" placeholder="Max" value={filters.maxAmount} onChange={(event) => setFilters((prev) => ({ ...prev, maxAmount: event.target.value }))} />
                 </div>
               </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                <button className="rounded-xl bg-white px-4 py-2 text-xs font-bold text-[#001f2a] transition hover:bg-slate-100" type="button" onClick={exportExcel}>
+                <button className="rounded-lg bg-white px-4 py-2 text-xs font-bold text-[#001f2a] transition hover:bg-slate-100" type="button" onClick={exportExcel}>
                   Export Excel
                 </button>
-                <button className="rounded-xl bg-[#00694b] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#008560]" type="button" onClick={() => loadTransactions(1)}>
+                <button className="rounded-lg bg-[#00694b] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#008560]" type="button" onClick={() => loadTransactions(1)}>
                   Apply Filters
                 </button>
               </div>
@@ -477,7 +477,7 @@ function HomePage() {
 
             <section
               ref={formSectionRef}
-              className={`rounded-xl transition ${formHighlight ? 'ring-4 ring-[#84f8c8]/60' : ''}`}
+              className={`rounded-lg transition ${formHighlight ? 'ring-4 ring-[#84f8c8]/60' : ''}`}
             >
               <TransactionForm
                 editingTransaction={editingTransaction}
@@ -497,7 +497,7 @@ function HomePage() {
                   <path d="M21 21L16.65 16.65M18.5 10.5C18.5 14.9183 14.9183 18.5 10.5 18.5C6.08172 18.5 2.5 14.9183 2.5 10.5C2.5 6.08172 6.08172 2.5 10.5 2.5C14.9183 2.5 18.5 6.08172 18.5 10.5Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                 </svg>
                 <input
-                  className="w-full rounded-xl bg-[#f4faff] py-3 pl-9 pr-4 text-sm text-[#001f2a] outline-none ring-0 placeholder:text-slate-400 focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+                  className="w-full rounded-lg bg-[#f4faff] py-3 pl-9 pr-4 text-sm text-[#001f2a] outline-none ring-0 placeholder:text-slate-400 focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
                   placeholder="Search current page transactions..."
                   value={quickSearch}
                   onChange={(event) => setQuickSearch(event.target.value)}
@@ -529,7 +529,7 @@ function HomePage() {
       </div>
 
       <button
-        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-xl bg-[#00694b] text-3xl text-white shadow-2xl shadow-emerald-900/25 transition hover:scale-105 md:flex"
+        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-lg bg-[#00694b] text-3xl text-white shadow-2xl shadow-emerald-900/25 transition hover:scale-105 md:flex"
         type="button"
         aria-label="New transaction"
         onClick={openNewTransactionArea}

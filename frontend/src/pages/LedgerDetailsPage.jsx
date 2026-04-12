@@ -288,15 +288,15 @@ function LedgerDetailsPage() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-[#f4faff] px-4 py-6 md:px-8">
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-32 right-[-8%] h-96 w-96 rounded-full bg-[#84f8c8]/25 blur-[110px]" />
-        <div className="absolute bottom-[-18%] left-[-8%] h-80 w-80 rounded-full bg-[#d9f2ff] blur-[100px]" />
+        <div className="absolute -top-32 right-[-8%] h-96 w-96 rounded-lg bg-[#84f8c8]/25 blur-[110px]" />
+        <div className="absolute bottom-[-18%] left-[-8%] h-80 w-80 rounded-lg bg-[#d9f2ff] blur-[100px]" />
       </div>
 
       <div className="mx-auto flex max-w-[1700px] gap-5 px-0 md:px-0">
         <AppSidebar />
 
         <main className="min-w-0 flex-1 space-y-5">
-          <header className="relative z-20 overflow-visible rounded-3xl bg-white/92 p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] backdrop-blur md:p-5">
+          <header className="relative z-20 overflow-visible rounded-xl bg-white/92 p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] backdrop-blur md:p-5">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#00694b] via-[#008560] to-[#67dbad]" />
 
             <div className="flex flex-wrap items-start gap-3 pt-1">
@@ -313,21 +313,21 @@ function LedgerDetailsPage() {
               </div>
 
               <div className="flex flex-wrap items-center gap-2">
-                <Link className="rounded-xl bg-[#e6f6ff] px-4 py-2 text-sm font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff]" to="/ledgers">
+                <Link className="rounded-lg bg-[#e6f6ff] px-4 py-2 text-sm font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff]" to="/ledgers">
                   Back to Ledgers
                 </Link>
-                <Link className="rounded-xl bg-[#e6f6ff] px-4 py-2 text-sm font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff]" to="/">
+                <Link className="rounded-lg bg-[#e6f6ff] px-4 py-2 text-sm font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff]" to="/">
                   Dashboard
                 </Link>
               </div>
             </div>
 
-            <div className="mt-4 rounded-2xl bg-[#e6f6ff] p-2">
+            <div className="mt-4 rounded-lg bg-[#e6f6ff] p-2">
               <UserSessionBadge compact />
             </div>
 
             {isGroupLedger && (
-              <div className="mt-3 rounded-2xl border-2 border-[#0066cc] bg-[#cce5ff] p-3">
+              <div className="mt-3 rounded-lg border-2 border-[#0066cc] bg-[#cce5ff] p-3">
                 <p className="text-sm font-semibold text-[#0066cc]">📊 This is a group ledger</p>
                 <p className="text-xs text-[#003d99]">Transactions can only be added to child posting ledgers. Browse child accounts below.</p>
               </div>
@@ -336,21 +336,21 @@ function LedgerDetailsPage() {
 
           <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             {stats.map((item) => (
-              <div key={item.key} className="rounded-2xl bg-white p-4 shadow-[0_12px_30px_rgba(0,31,42,0.05)]">
+              <div key={item.key} className="rounded-lg bg-white p-4 shadow-[0_12px_30px_rgba(0,31,42,0.05)]">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3d4a43]">{item.label}</p>
                 <p className={`mt-2 [font-family:Manrope,ui-sans-serif,system-ui] text-3xl font-bold ${item.tone}`}>{item.value}</p>
-                <span className={`mt-3 inline-flex rounded-full px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#3d4a43] ${item.bg}`}>
+                <span className={`mt-3 inline-flex rounded-lg px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#3d4a43] ${item.bg}`}>
                   Ledger Metric
                 </span>
               </div>
             ))}
           </section>
 
-          <section className="rounded-3xl bg-[#e6f6ff] p-5">
+          <section className="rounded-xl bg-[#e6f6ff] p-5">
             <div className="mb-3 flex flex-wrap items-center gap-2">
               <h2 className="mr-auto [font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Transaction Filters</h2>
               <button
-                className="rounded-xl bg-white px-3 py-2 text-xs font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff]"
+                className="rounded-lg bg-white px-3 py-2 text-xs font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff]"
                 type="button"
                 onClick={() => setFilters({ type: '', from: '', to: '', minAmount: '', maxAmount: '', search: '' })}
               >
@@ -367,18 +367,18 @@ function LedgerDetailsPage() {
                   { value: 'income', label: 'Income' },
                   { value: 'outgoing', label: 'Outgoing' },
                 ]}
-                buttonClassName="!rounded-xl !border-transparent !bg-white"
+                buttonClassName="!rounded-lg !border-transparent !bg-white"
               />
-              <input className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="date" value={filters.from} onChange={(event) => setFilters((prev) => ({ ...prev, from: event.target.value }))} />
-              <input className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="date" value={filters.to} onChange={(event) => setFilters((prev) => ({ ...prev, to: event.target.value }))} />
-              <input className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="number" placeholder="Min amount" value={filters.minAmount} onChange={(event) => setFilters((prev) => ({ ...prev, minAmount: event.target.value }))} />
-              <input className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="number" placeholder="Max amount" value={filters.maxAmount} onChange={(event) => setFilters((prev) => ({ ...prev, maxAmount: event.target.value }))} />
-              <input className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="text" placeholder="Search description" value={filters.search} onChange={(event) => setFilters((prev) => ({ ...prev, search: event.target.value }))} />
+              <input className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="date" value={filters.from} onChange={(event) => setFilters((prev) => ({ ...prev, from: event.target.value }))} />
+              <input className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="date" value={filters.to} onChange={(event) => setFilters((prev) => ({ ...prev, to: event.target.value }))} />
+              <input className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="number" placeholder="Min amount" value={filters.minAmount} onChange={(event) => setFilters((prev) => ({ ...prev, minAmount: event.target.value }))} />
+              <input className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="number" placeholder="Max amount" value={filters.maxAmount} onChange={(event) => setFilters((prev) => ({ ...prev, maxAmount: event.target.value }))} />
+              <input className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" type="text" placeholder="Search description" value={filters.search} onChange={(event) => setFilters((prev) => ({ ...prev, search: event.target.value }))} />
             </div>
           </section>
 
           {isGroupLedger ? (
-            <section className="rounded-3xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
+            <section className="rounded-xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
               <h2 className="mb-4 [font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Child Posting Ledgers</h2>
               {childLedgers.length === 0 ? (
                 <p className="text-sm text-[#3d4a43]">No child ledgers for this group.</p>
@@ -410,7 +410,7 @@ function LedgerDetailsPage() {
                             {formatBDT(childLedger.totalDebit - childLedger.totalCredit)}
                           </td>
                           <td className="px-4 py-4">
-                            <Link className="rounded-xl bg-[#e6f6ff] px-3 py-2 text-xs font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff] inline-block" to={`/ledgers/${childLedger._id}`}>
+                            <Link className="rounded-lg bg-[#e6f6ff] px-3 py-2 text-xs font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff] inline-block" to={`/ledgers/${childLedger._id}`}>
                               View
                             </Link>
                           </td>
@@ -422,10 +422,10 @@ function LedgerDetailsPage() {
               )}
             </section>
           ) : (
-            <section className="rounded-3xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
+            <section className="rounded-xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
               <div className="mb-4 flex flex-wrap items-center gap-2">
                 <h2 className="mr-auto [font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Ledger Transactions</h2>
-                <p className="rounded-xl bg-[#e6f6ff] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#3d4a43]">Total {total}</p>
+                <p className="rounded-lg bg-[#e6f6ff] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#3d4a43]">Total {total}</p>
               </div>
 
               {error ? <p className="mb-3 text-sm text-[#93000a]">{error}</p> : null}
@@ -481,7 +481,7 @@ function LedgerDetailsPage() {
                       </td>
                       <td className="px-4 py-4">
                         <button
-                          className="rounded-xl bg-white px-3 py-2 text-xs font-semibold text-[#001f2a] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
+                          className="rounded-lg bg-white px-3 py-2 text-xs font-semibold text-[#001f2a] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
                           type="button"
                           onClick={(event) => {
                             event.stopPropagation();
@@ -504,13 +504,13 @@ function LedgerDetailsPage() {
             </div>
 
             <div className="mt-5 flex items-center justify-between">
-              <button className="rounded-xl bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff] disabled:cursor-not-allowed disabled:opacity-50" type="button" disabled={page <= 1} onClick={() => loadTransactions(page - 1)}>
+              <button className="rounded-lg bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff] disabled:cursor-not-allowed disabled:opacity-50" type="button" disabled={page <= 1} onClick={() => loadTransactions(page - 1)}>
                 Previous
               </button>
               <p className="text-sm font-medium text-[#3d4a43]">
                 Page {page} / {Math.max(totalPages, 1)} (100 per page)
               </p>
-              <button className="rounded-xl bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff] disabled:cursor-not-allowed disabled:opacity-50" type="button" disabled={page >= totalPages} onClick={() => loadTransactions(page + 1)}>
+              <button className="rounded-lg bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff] disabled:cursor-not-allowed disabled:opacity-50" type="button" disabled={page >= totalPages} onClick={() => loadTransactions(page + 1)}>
                 Next
               </button>
             </div>
@@ -522,13 +522,13 @@ function LedgerDetailsPage() {
       {selectedTransaction
         ? createPortal(
             <div className="fixed inset-0 z-[400] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-              <div className="w-full max-w-6xl max-h-[90vh] overflow-hidden rounded-3xl bg-white shadow-2xl">
+              <div className="w-full max-w-6xl max-h-[90vh] overflow-hidden rounded-xl bg-white shadow-2xl">
                 <div className="flex items-start justify-between gap-3 bg-[#e6f6ff] px-6 py-5">
                   <div>
                     <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Transaction Details</h3>
                     <p className="mt-1 text-sm text-[#3d4a43]">Creator, every edit, edit time, and value changes in one place.</p>
                   </div>
-                  <button className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#d9f2ff]" type="button" onClick={closeTransactionDetails}>
+                  <button className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#d9f2ff]" type="button" onClick={closeTransactionDetails}>
                     Close
                   </button>
                 </div>
@@ -541,43 +541,43 @@ function LedgerDetailsPage() {
                   ) : (
                     <>
                       <div className="grid gap-3 md:grid-cols-4">
-                        <div className="rounded-2xl bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Ledger</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{transactionDetailsState.transaction.ledgerId?.name || transactionDetailsState.transaction.ledger || 'N/A'}</p>
                         </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Type</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{formatTransactionValue(transactionDetailsState.transaction.type)}</p>
                         </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Amount</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{formatBDT(transactionDetailsState.transaction.amount)}</p>
                         </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Created By</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{transactionDetailsState.transaction.createdBy || '-'}</p>
                         </div>
                       </div>
 
                       <div className="mt-3 grid gap-3 md:grid-cols-1">
-                        <div className="rounded-2xl bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Last Edited By</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{transactionDetailsState.transaction.updatedBy || '-'}</p>
                         </div>
                       </div>
 
                       <div className="mt-3 grid gap-3 md:grid-cols-2">
-                        <div className="rounded-2xl bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Date</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{dayjs(transactionDetailsState.transaction.date).format('DD MMM YYYY')}</p>
                         </div>
-                        <div className="rounded-2xl bg-slate-50 p-4">
+                        <div className="rounded-lg bg-slate-50 p-4">
                           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Description</p>
                           <p className="mt-1 text-sm font-semibold text-slate-800">{transactionDetailsState.transaction.description || '-'}</p>
                         </div>
                       </div>
 
-                      <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-4">
+                      <div className="mt-4 rounded-lg border border-slate-200 bg-white p-4">
                         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                           <h4 className="text-sm font-bold uppercase tracking-wide text-slate-500">Edit Timeline</h4>
                           <p className="text-xs text-slate-500">Latest activity appears first. Created event stays at the bottom.</p>
@@ -597,9 +597,9 @@ function LedgerDetailsPage() {
                               return (
                                 <div key={event.id} className="relative pl-14">
                                   {!isLastItem ? <span className="absolute left-[20px] top-12 bottom-[-18px] w-px bg-slate-200" /> : null}
-                                  <span className={`absolute left-[8px] top-4 h-6 w-6 rounded-full border-4 ${dotTone} shadow-sm`} />
+                                  <span className={`absolute left-[8px] top-4 h-6 w-6 rounded-lg border-4 ${dotTone} shadow-sm`} />
 
-                                  <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+                                  <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
                                     <div className="flex flex-wrap items-start justify-between gap-3">
                                       <div>
                                         <p className="text-[2rem] font-extrabold tracking-wide text-slate-800">{timelineHeading}</p>
@@ -610,7 +610,7 @@ function LedgerDetailsPage() {
                                       </div>
                                       <div className="text-right text-sm text-slate-500">
                                         <p>{dayjs(event.timestamp).format('DD MMM YYYY, hh:mm:ss A')}</p>
-                                        <p className={`mt-2 inline-flex rounded-full px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${event.status === 'SUCCESS' ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
+                                        <p className={`mt-2 inline-flex rounded-lg px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${event.status === 'SUCCESS' ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
                                           {event.status}
                                         </p>
                                       </div>
@@ -619,7 +619,7 @@ function LedgerDetailsPage() {
                                     <p className="mt-3 text-sm text-slate-700">{event.description || '-'}</p>
 
                                     {changeRows.length > 0 ? (
-                                      <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                                      <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 p-3">
                                         <table className="w-full min-w-[640px] text-sm">
                                           <thead>
                                             <tr className="border-b border-slate-200 text-left text-slate-500">

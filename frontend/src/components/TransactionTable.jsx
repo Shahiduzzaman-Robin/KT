@@ -184,7 +184,7 @@ function TransactionTable({
   );
 
   return (
-    <section className="rounded-3xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)] md:p-6">
+    <section className="rounded-xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)] md:p-6">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Recent Transactions</h2>
         <p className="rounded-xl bg-[#e6f6ff] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#3d4a43]">Total {total}</p>
@@ -273,7 +273,7 @@ function TransactionTable({
       {actionModal
         ? createPortal(
             <div className="fixed inset-0 z-[300] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-              <div className="w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl">
+              <div className="w-full max-w-xl rounded-xl bg-white p-6 shadow-2xl">
                 <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">
                   {actionModal.type === 'edit' ? 'Confirm Edit Transaction' : 'Confirm Delete Transaction'}
                 </h3>
@@ -283,7 +283,7 @@ function TransactionTable({
                     : 'This action will permanently delete this transaction.'}
                 </p>
 
-                <div className="mt-4 space-y-3 rounded-2xl bg-[#e6f6ff] p-4">
+                <div className="mt-4 space-y-3 rounded-lg bg-[#e6f6ff] p-4">
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Ledger:</span> <span className="font-extrabold text-[#001f2a]">{actionModal.transaction.ledgerId?.name || 'N/A'}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Type:</span> <span className={`font-extrabold ${actionModal.transaction.type === 'income' ? 'text-[#00694b]' : 'text-[#93000a]'}`}>{actionModal.transaction.type.toUpperCase()}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Amount:</span> <span className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">{formatBDT(actionModal.transaction.amount)}</span></p>
@@ -318,7 +318,7 @@ function TransactionTable({
       {detailsState
         ? createPortal(
             <div className="fixed inset-0 z-[400] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-              <div className="w-full max-w-6xl max-h-[90vh] overflow-hidden rounded-3xl bg-white shadow-2xl">
+              <div className="w-full max-w-6xl max-h-[90vh] overflow-hidden rounded-xl bg-white shadow-2xl">
                 <div className="flex items-start justify-between gap-3 bg-[#eaf7ff] px-6 py-6 border-b border-slate-100">
                   <div>
                     <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-3xl font-extrabold text-[#001f2a]">Transaction Details</h3>
@@ -334,14 +334,14 @@ function TransactionTable({
                 <div className="max-h-[calc(90vh-100px)] overflow-auto bg-slate-50/30 px-6 py-8">
                   {detailsLoading ? (
                     <div className="flex flex-col items-center py-12">
-                      <div className="h-8 w-8 animate-spin rounded-full border-4 border-[#00694b] border-t-transparent"></div>
+                      <div className="h-8 w-8 animate-spin rounded-lg border-4 border-[#00694b] border-t-transparent"></div>
                       <p className="mt-4 text-sm font-medium text-slate-500">Loading history...</p>
                     </div>
                   ) : detailsError ? (
                     <p className="rounded-xl bg-red-50 p-4 text-sm font-medium text-red-700">{detailsError}</p>
                   ) : (
                     <>
-                      <div className="rounded-3xl bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] ring-1 ring-slate-100">
+                      <div className="rounded-xl bg-white p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] ring-1 ring-slate-100">
                         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                           <h4 className="text-sm font-bold uppercase tracking-wide text-slate-500">Edit Timeline</h4>
                           <p className="text-xs text-slate-500">Latest activity appears first. Created event stays at the bottom.</p>
@@ -362,9 +362,9 @@ function TransactionTable({
                               return (
                                 <div key={event.id} className="relative pl-14">
                                   {!isLastItem ? <span className="absolute left-[20px] top-12 bottom-[-18px] w-px bg-slate-200" /> : null}
-                                  <span className={`absolute left-[8px] top-4 h-6 w-6 rounded-full border-4 ${dotTone} shadow-sm`} />
+                                  <span className={`absolute left-[8px] top-4 h-6 w-6 rounded-lg border-4 ${dotTone} shadow-sm`} />
 
-                                  <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+                                  <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
                                     <div className="flex flex-wrap items-start justify-between gap-3">
                                       <div>
                                         <p className="text-3 font-extrabold tracking-wide text-slate-800 md:text-[2rem]">{timelineHeading}</p>
@@ -375,7 +375,7 @@ function TransactionTable({
                                       </div>
                                       <div className="text-right text-sm text-slate-500">
                                         <p>{formatDateTime(event.timestamp)}</p>
-                                        <p className={`mt-2 inline-flex rounded-full px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${event.status === 'SUCCESS' ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
+                                        <p className={`mt-2 inline-flex rounded-lg px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${event.status === 'SUCCESS' ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}>
                                           {event.status}
                                         </p>
                                       </div>
@@ -384,7 +384,7 @@ function TransactionTable({
                                     <p className="mt-3 text-sm text-slate-700">{event.description || '-'}</p>
 
                                     {changeRows.length > 0 ? (
-                                      <div className="mt-4 overflow-x-auto rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                                      <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 p-3">
                                         <table className="w-full min-w-[640px] text-sm">
                                           <thead>
                                             <tr className="border-b border-slate-200 text-left text-slate-500">

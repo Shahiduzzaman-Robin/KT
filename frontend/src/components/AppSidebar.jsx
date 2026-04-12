@@ -59,9 +59,9 @@ function AppSidebar({ onExport, compactFilters }) {
   ];
 
   return (
-    <aside className="hidden h-fit w-72 shrink-0 flex-col rounded-[2rem] bg-[#e6f6ff] p-5 xl:flex sticky top-5 shadow-2xl shadow-blue-900/5 border border-white/50 backdrop-blur-sm">
+    <aside className="hidden h-fit w-72 shrink-0 flex-col rounded-xl bg-[#e6f6ff] p-5 xl:flex sticky top-5 shadow-2xl shadow-blue-900/5 border border-white/50 backdrop-blur-sm">
       <div className="mb-10 flex items-center gap-4 px-2">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#00694b] text-xl font-black text-white shadow-lg shadow-emerald-900/20">
+        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#00694b] text-xl font-black text-white shadow-lg shadow-emerald-900/20">
           {String(user?.displayName || user?.username || 'K').slice(0, 1).toUpperCase()}
         </div>
         <div>
@@ -77,7 +77,7 @@ function AppSidebar({ onExport, compactFilters }) {
             <Link
               key={item.to}
               to={item.to}
-              className={`flex items-center gap-3 rounded-2xl px-5 py-3.5 text-sm font-bold transition-all duration-300 ${
+              className={`flex items-center gap-3 rounded-lg px-5 py-3.5 text-sm font-bold transition-all duration-300 ${
                 active
                   ? 'bg-white text-[#00694b] shadow-[0_8px_20px_rgba(0,105,75,0.08)] scale-[1.02]'
                   : 'text-slate-500 hover:bg-white/50 hover:text-[#001f2a] hover:translate-x-1'
@@ -93,7 +93,7 @@ function AppSidebar({ onExport, compactFilters }) {
       </nav>
 
       {compactFilters ? (
-        <div className="mt-4 rounded-2xl bg-white/70 p-3">
+        <div className="mt-4 rounded-lg bg-white/70 p-3">
           {compactFilters}
         </div>
       ) : null}
@@ -112,7 +112,7 @@ function AppSidebar({ onExport, compactFilters }) {
         {role === 'admin' && (
           <Link
             to="/close-day"
-            className="flex w-full items-center justify-between overflow-hidden rounded-2xl bg-[#001f2a] p-4 text-white shadow-lg transition active:scale-[0.98] group relative"
+            className="flex w-full items-center justify-between overflow-hidden rounded-lg bg-[#001f2a] p-4 text-white shadow-lg transition active:scale-[0.98] group relative"
           >
              <div className="absolute inset-0 bg-emerald-500/0 group-hover:bg-emerald-500/10 transition-colors" />
              <div className="relative">
