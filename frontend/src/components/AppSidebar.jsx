@@ -34,9 +34,6 @@ function AppSidebar({ onExport, compactFilters }) {
         </svg>
       )
     },
-  ];
-
-  const adminLinks = [
     { 
       to: '/reports', 
       label: 'Reports Archive', 
@@ -46,6 +43,9 @@ function AppSidebar({ onExport, compactFilters }) {
         </svg>
       )
     },
+  ];
+
+  const adminLinks = [
     { 
       to: '/users', 
       label: 'Users', 
