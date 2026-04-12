@@ -32,6 +32,10 @@ function DailyReportsPage() {
     }
   }
 
+  async function fetchDetails(reportId) {
+    try {
+      setLoadingDetails(true);
+      const { data } = await api.get(`/reports/${reportId}/details`);
       const items = (data.transactions || [])
         .filter(item => dayjs(item.date).isSame(dayjs(data.report.date), 'day'))
         .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
