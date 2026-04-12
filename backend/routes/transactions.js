@@ -14,15 +14,17 @@ const router = express.Router();
 // Middleware to check if the transaction date is already locked (Shop Closed)
 async function checkIfDayLocked(req, res, next) {
   try {
-    // Safety check: req.body might be undefined on some DELETE requests
     let targetDate = req.body?.date;
     
-    // If no date in body (Edit/Delete), find the transaction to get its date
+    // If no date in body AND it's a new entry (POST), assume it's for TODAY
+    if (!targetDate && req.method === 'POST') {
+      targetDate = new Date();
+    }
+
+    // If no date in body AND we have a transaction ID (PUT/DELETE), lookup the transaction date
     if (!targetDate && req.params.id) {
       const existing = await Transaction.findById(req.params.id).select('date');
-      if (!existing) {
-        return res.status(404).json({ message: 'Transaction not found or already deleted' });
-      }
+      if (!existing) return next(); // Let the route handle the 404
       targetDate = existing.date;
     }
 
