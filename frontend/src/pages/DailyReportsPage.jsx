@@ -136,6 +136,7 @@ function DailyReportsPage() {
                     <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-emerald-600 text-right">Income</th>
                     <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-red-600 text-right">Expenses</th>
                     <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-[#001f2a] text-right">Closing Cash</th>
+                    <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-blue-600 text-right">Loans Bal.</th>
                     <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-slate-500 text-center">Entries</th>
                   </tr>
                 </thead>
@@ -166,6 +167,9 @@ function DailyReportsPage() {
                         <td className="px-6 py-4 text-sm font-bold text-red-700 text-right text-mono">-{formatBDT(report.totalOutgoing)}</td>
                         <td className="px-6 py-4 text-right">
                            <div className="text-base font-black text-[#001f2a] text-mono">৳{formatBDT(report.closingBalance)}</div>
+                        </td>
+                        <td className="px-6 py-4 text-right">
+                           <div className="text-sm font-bold text-blue-700 text-mono whitespace-nowrap">৳{Number(report.totalLoanOutstanding || 0).toLocaleString()}</div>
                         </td>
                         <td className="px-6 py-4 text-center">
                            <div className="inline-flex items-center justify-center rounded-lg bg-slate-100 px-2.5 py-1 text-xs font-bold text-slate-600">
@@ -283,6 +287,10 @@ function DailyReportsPage() {
                           <div className="flex justify-between text-xs mt-1">
                              <span>Entry Count:</span>
                              <span className="font-bold">{details.report.transactionCount}</span>
+                          </div>
+                          <div className="flex justify-between text-xs mt-3 pt-2 border-t border-slate-200 print:border-black">
+                             <span className="font-bold">Outstanding Loans:</span>
+                             <span className="font-bold">৳ {Number(details.report.totalLoanOutstanding || 0).toLocaleString()}</span>
                           </div>
                        </div>
                        <div className="border-2 border-black bg-slate-50 p-4 print:bg-white">

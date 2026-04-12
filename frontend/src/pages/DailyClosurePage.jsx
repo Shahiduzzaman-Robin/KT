@@ -188,6 +188,11 @@ function DailyClosurePage() {
                      </div>
                   </div>
 
+                  <div className={`p-4 rounded-lg border ${data?.isAlreadyLocked ? 'bg-white/5 border-white/10' : 'bg-blue-50/50 border-blue-100/50'}`}>
+                    <p className={`text-[9px] font-black uppercase tracking-widest mb-1 ${data?.isAlreadyLocked ? 'text-blue-200' : 'text-blue-600'}`}>Active Loans & Advances</p>
+                    <p className={`text-xl font-black ${data?.isAlreadyLocked ? 'text-white' : 'text-blue-800'}`}>৳ {Number(data?.totalLoanOutstanding || 0).toLocaleString()}</p>
+                  </div>
+
                   <div className="pt-8">
                      <p className={`text-[10px] font-bold uppercase tracking-[0.2em] mb-1 ${data?.isAlreadyLocked ? 'text-emerald-200' : 'text-slate-400'}`}>Theoretical Closing Balance</p>
                      <div className="flex items-center gap-3">

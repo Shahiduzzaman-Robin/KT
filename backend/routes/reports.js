@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const DailyReport = require('../models/DailyReport');
 const Transaction = require('../models/Transaction');
 const User = require('../models/User');
+const Loan = require('../models/Loan');
 const { requireAuth, authorizeRoles } = require('../middleware/auth');
 const { sendDiscordNotification } = require('../utils/discord');
 const { logAudit } = require('../utils/audit');
@@ -106,6 +107,13 @@ router.get('/preview', requireAuth, async (req, res) => {
 
     const closingBalance = openingBalance + dayData.income - dayData.outgoing;
 
+    // 3. Calculate Outstanding Loans
+    const activeLoans = await Loan.aggregate([
+      { $match: { status: 'active' } },
+      { $group: { _id: null, total: { $sum: '$remainingAmount' } } }
+    ]);
+    const totalLoanOutstanding = activeLoans[0]?.total || 0;
+
     const existingReport = await DailyReport.findOne({ date: { $gte: todayStart, $lte: todayEnd } });
     const nextReport = await DailyReport.findOne({ 
       date: { $gt: todayEnd } 
@@ -118,6 +126,7 @@ router.get('/preview', requireAuth, async (req, res) => {
         totalIncome: existingReport.totalIncome,
         totalOutgoing: existingReport.totalOutgoing,
         closingBalance: existingReport.closingBalance,
+        totalLoanOutstanding: existingReport.totalLoanOutstanding || 0,
         transactionCount: existingReport.transactionCount,
         isAlreadyLocked: true,
         isImplicitlyLocked: false,
@@ -133,6 +142,7 @@ router.get('/preview', requireAuth, async (req, res) => {
       totalIncome: dayData.income,
       totalOutgoing: dayData.outgoing,
       closingBalance,
+      totalLoanOutstanding,
       transactionCount: dayData.count,
       isAlreadyLocked: !!existingReport,
       isImplicitlyLocked: !existingReport && !!nextReport,
@@ -209,12 +219,20 @@ router.post('/', requireAuth, authorizeRoles('admin'), async (req, res) => {
 
     const closingBalance = openingBalance + dayData.income - dayData.outgoing;
 
+    // Calculate Outstanding Loans for Closure
+    const activeLoans = await Loan.aggregate([
+      { $match: { status: 'active' } },
+      { $group: { _id: null, total: { $sum: '$remainingAmount' } } }
+    ]);
+    const totalLoanOutstanding = activeLoans[0]?.total || 0;
+
     const report = await DailyReport.create({
       date: targetDate,
       openingBalance,
       totalIncome: dayData.income,
       totalOutgoing: dayData.outgoing,
       closingBalance,
+      totalLoanOutstanding,
       transactionCount: dayData.count,
       generatedBy: req.user.username || req.user.name,
       notes,

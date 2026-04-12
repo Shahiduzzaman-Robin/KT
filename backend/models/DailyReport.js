@@ -40,6 +40,10 @@ const dailyReportSchema = new mongoose.Schema(
       trim: true,
       default: '',
     },
+    totalLoanOutstanding: {
+      type: Number,
+      default: 0,
+    },
     status: {
       type: String,
       enum: ['draft', 'locked'],

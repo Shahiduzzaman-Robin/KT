@@ -38,11 +38,22 @@ function Dashboard({ daily }) {
       ),
       iconStyle: 'bg-white/20 text-white',
     },
+    {
+      label: 'Active Loans',
+      value: daily.loanOutstanding,
+      valueTone: 'text-blue-800',
+      icon: (
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
+      iconStyle: 'bg-blue-100 text-blue-700',
+    },
   ];
 
   return (
     <section aria-label="Performance summary" className="space-y-4">
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {cardData.map((card) => (
           <div
             key={card.label}

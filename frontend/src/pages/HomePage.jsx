@@ -34,7 +34,7 @@ function HomePage() {
 
   const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
-  const [daily, setDaily] = useState({ income: 0, outgoing: 0, balance: 0 });
+  const [daily, setDaily] = useState({ income: 0, outgoing: 0, balance: 0, loanOutstanding: 0 });
   const [monthly, setMonthly] = useState({ income: 0, outgoing: 0, balance: 0 });
   const pageRef = useRef(page);
   const refreshRef = useRef(null);
@@ -72,12 +72,15 @@ function HomePage() {
 
   const loadSummary = useCallback(async () => {
     try {
-      const [dailyRes, monthlyRes] = await Promise.all([
+      const [dailyRes, monthlyRes, loansRes] = await Promise.all([
         api.get('/summary/daily', { params: { date: dayjs().format('YYYY-MM-DD') } }),
         api.get('/summary/monthly', { params: { month: dayjs().format('YYYY-MM') } }),
+        api.get('/loans/summary')
       ]);
 
-      setDaily(dailyRes.data);
+      const loanTotal = loansRes.data.reduce((acc, curr) => acc + curr.totalOutstanding, 0);
+
+      setDaily({ ...dailyRes.data, loanOutstanding: loanTotal });
       setMonthly(monthlyRes.data);
     } catch (error) {
       console.error(error);

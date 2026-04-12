@@ -6,6 +6,7 @@ import UsersPage from './pages/UsersPage';
 import AuditLogsPage from './pages/AuditLogsPage';
 import DailyReportsPage from './pages/DailyReportsPage';
 import DailyClosurePage from './pages/DailyClosurePage';
+import LoansPage from './pages/LoansPage';
 import LoginPage from './pages/LoginPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -67,6 +68,14 @@ function App() {
           element={
             <ProtectedRoute allowedRoles={['admin']}>
               <DailyClosurePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/loans"
+          element={
+            <ProtectedRoute>
+              <LoansPage />
             </ProtectedRoute>
           }
         />

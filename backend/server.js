@@ -59,6 +59,7 @@ app.use('/api/summary', summaryRoutes);
 app.use('/api/exports', exportRoutes);
 app.use('/api/audit-logs', auditRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/loans', require('./routes/loans'));
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
