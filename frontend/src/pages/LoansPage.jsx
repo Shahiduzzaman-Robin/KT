@@ -149,8 +149,10 @@ function LoansPage() {
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Cash Account / Ledger</label>
                 <LedgerAutocomplete 
                   value={newLoan.ledgerInput}
+                  selectedLedgerId={newLoan.ledgerId}
                   onChange={val => setNewLoan({...newLoan, ledgerInput: val})}
                   onSelect={l => setNewLoan({...newLoan, ledgerId: l?._id || ''})}
+                  excludeGroups={true}
                 />
               </div>
               <div className="lg:col-span-1 text-center pb-1">
@@ -262,8 +264,10 @@ function LoansPage() {
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Source Ledger (Audit trail)</label>
                 <LedgerAutocomplete 
                   value={reduceAmount.ledgerInput}
+                  selectedLedgerId={reduceAmount.ledgerId}
                   onChange={val => setReduceAmount({...reduceAmount, ledgerInput: val})}
                   onSelect={l => setReduceAmount({...reduceAmount, ledgerId: l?._id || ''})}
+                  excludeGroups={true}
                 />
                 <p className="mt-1 text-[10px] font-bold text-slate-400">This will automatically increase your cash balance.</p>
               </div>
