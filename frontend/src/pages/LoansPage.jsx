@@ -71,7 +71,6 @@ function LoansPage() {
         ledgerInput: ''
       });
       fetchLoans();
-      setStatusMessage({ title: 'Success', message: 'Loan added successfully', type: 'success' });
     } catch (error) {
       setStatusMessage({ title: 'Error', message: error.response?.data?.message || 'Failed to add loan', type: 'danger' });
     } finally {
@@ -99,7 +98,6 @@ function LoansPage() {
       });
       setSelectedLoan(null);
       fetchLoans();
-      setStatusMessage({ title: 'Success', message: 'Loan balance reduced successfully', type: 'success' });
     } catch (error) {
       setStatusMessage({ title: 'Error', message: error.response?.data?.message || 'Failed to reduce loan', type: 'danger' });
     } finally {
@@ -112,7 +110,6 @@ function LoansPage() {
       await api.delete(`/loans/${id}`);
       setDeleteConfirm(null);
       fetchLoans();
-      setStatusMessage({ title: 'Removed', message: 'Loan record has been deleted', type: 'success', confirmText: 'OK' });
     } catch (error) {
       setDeleteConfirm(null);
       setStatusMessage({ title: 'Error', message: 'Failed to delete loan', type: 'danger' });
