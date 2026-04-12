@@ -348,7 +348,7 @@ function HomePage() {
 
             <div className="flex flex-wrap items-start gap-3 pt-1">
               <div className="mr-auto min-w-[220px]">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00694b]">Live Operations</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00694b]">Live Cash Operations</p>
                 <h1 className="[font-family:Manrope,ui-sans-serif,system-ui] text-3xl font-bold tracking-tight text-[#001f2a] md:text-5xl">
                   M/S Kamrul Traders
                 </h1>
