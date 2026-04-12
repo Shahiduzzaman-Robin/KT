@@ -160,8 +160,8 @@ function HomePage() {
 
   function getDatePresetButtonClass(preset) {
     return activeDatePreset === preset
-      ? 'rounded-xl bg-[#00694b] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#008560]'
-      : 'rounded-xl bg-white px-3 py-2 text-xs font-semibold text-slate-700 transition hover:bg-slate-100';
+      ? 'rounded-[1.2rem] bg-[#00694b] px-4 py-3 text-xs font-black text-white shadow-lg shadow-emerald-900/10 transition-all scale-[1.02]'
+      : 'rounded-[1.2rem] bg-[#eef8ff] px-4 py-3 text-xs font-black text-slate-500 transition-all hover:bg-[#e0f2fe] hover:text-[#001f2a]';
   }
 
   async function deleteTransaction(id) {
@@ -207,95 +207,127 @@ function HomePage() {
         <AppSidebar
           onExport={exportExcel}
           compactFilters={(
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xs font-bold uppercase tracking-[0.16em] text-[#3d4a43]">Filters</h3>
+            <div className="flex flex-col h-full [font-family:Inter,ui-sans-serif,system-ui]">
+              <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4 no-print">
+                <h3 className="text-xl font-black tracking-tight text-[#001f2a]">Ledger Filters</h3>
                 <button
-                  className="rounded-lg bg-white px-2 py-1 text-[10px] font-semibold text-slate-600 transition hover:bg-slate-100"
+                  className="p-2 rounded-xl text-slate-400 hover:bg-white hover:text-[#ba1a1a] transition-all"
                   type="button"
+                  title="Reset all filters"
                   onClick={() => {
                     setActiveDatePreset('all');
-                    setFilters((prev) => ({ ...prev, from: '', to: '' }));
+                    setFilters({ type: '', from: '', to: '', minAmount: '', maxAmount: '' });
+                    loadTransactions(1);
                   }}
                 >
-                  Reset Dates
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
                 </button>
               </div>
 
-              <div>
-                <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Type</label>
-                <CustomSelect
-                  value={filters.type}
-                  onChange={(nextType) => setFilters((prev) => ({ ...prev, type: nextType }))}
-                  options={[
-                    { value: '', label: 'All Types' },
-                    { value: 'income', label: 'Income' },
-                    { value: 'outgoing', label: 'Outgoing' },
-                  ]}
-                  buttonClassName="!rounded-lg !border-transparent !bg-white !text-[#001f2a]"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <div>
-                  <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">From</label>
-                  <input
-                    className="w-full rounded-lg border border-transparent bg-white px-2.5 py-1.5 text-xs outline-none focus:border-[#006c4d]/20"
-                    type="date"
-                    value={filters.from}
-                    onChange={(event) => {
-                      setActiveDatePreset('');
-                      setFilters((prev) => ({ ...prev, from: event.target.value }));
-                    }}
+              <div className="space-y-8 flex-1">
+                {/* Transaction Type */}
+                <div className="space-y-4">
+                  <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Transaction Type</label>
+                  <CustomSelect
+                    value={filters.type}
+                    onChange={(nextType) => setFilters((prev) => ({ ...prev, type: nextType }))}
+                    options={[
+                      { value: '', label: 'All Types' },
+                      { value: 'income', label: 'Income Only' },
+                      { value: 'outgoing', label: 'Outgoing Only' },
+                    ]}
+                    buttonClassName="!rounded-2xl !border-transparent !bg-[#eef8ff] !py-4 !text-sm !font-bold !text-[#001f2a]"
                   />
                 </div>
-                <div>
-                  <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">To</label>
-                  <input
-                    className="w-full rounded-lg border border-transparent bg-white px-2.5 py-1.5 text-xs outline-none focus:border-[#006c4d]/20"
-                    type="date"
-                    value={filters.to}
-                    onChange={(event) => {
-                      setActiveDatePreset('');
-                      setFilters((prev) => ({ ...prev, to: event.target.value }));
-                    }}
-                  />
+
+                {/* Date Range */}
+                <div className="space-y-4">
+                  <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Date Range</label>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button className={getDatePresetButtonClass('today')} type="button" onClick={() => {
+                      setActiveDatePreset('today');
+                      setFilters((prev) => ({ ...prev, from: dayjs().format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
+                    }}>Today</button>
+                    <button className={getDatePresetButtonClass('week')} type="button" onClick={() => {
+                      setActiveDatePreset('week');
+                      setFilters((prev) => ({ ...prev, from: dayjs().startOf('week').format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
+                    }}>This Week</button>
+                    <button className={getDatePresetButtonClass('month')} type="button" onClick={() => {
+                      setActiveDatePreset('month');
+                      setFilters((prev) => ({ ...prev, from: dayjs().startOf('month').format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
+                    }}>This Month</button>
+                    <button className={getDatePresetButtonClass('all')} type="button" onClick={() => {
+                      setActiveDatePreset('all');
+                      setFilters((prev) => ({ ...prev, from: '', to: '' }));
+                    }}>All Time</button>
+                  </div>
+
+                  <div className="space-y-3 pt-2">
+                    <div className="relative group">
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#00694b]">
+                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <input
+                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20"
+                        type="date"
+                        value={filters.from}
+                        onChange={(e) => setFilters(p => ({ ...p, from: e.target.value }))}
+                      />
+                    </div>
+                    <div className="relative group">
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#00694b]">
+                        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <input
+                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20"
+                        type="date"
+                        value={filters.to}
+                        onChange={(e) => setFilters(p => ({ ...p, to: e.target.value }))}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Amount Range */}
+                <div className="space-y-4 pb-10">
+                  <label className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">Amount Range</label>
+                  <div className="flex items-center gap-3">
+                    <div className="relative flex-1">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-400 uppercase">Min</span>
+                      <input 
+                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20" 
+                        type="number" 
+                        placeholder="0.00" 
+                        value={filters.minAmount} 
+                        onChange={(e) => setFilters(p => ({ ...p, minAmount: e.target.value }))} 
+                      />
+                    </div>
+                    <span className="text-slate-300">—</span>
+                    <div className="relative flex-1">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-400 uppercase">Max</span>
+                      <input 
+                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20" 
+                        type="number" 
+                        placeholder="∞" 
+                        value={filters.maxAmount} 
+                        onChange={(e) => setFilters(p => ({ ...p, maxAmount: e.target.value }))} 
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                <input className="w-full rounded-lg border border-transparent bg-white px-2.5 py-1.5 text-xs outline-none focus:border-[#006c4d]/20" type="number" placeholder="Min" value={filters.minAmount} onChange={(event) => setFilters((prev) => ({ ...prev, minAmount: event.target.value }))} />
-                <input className="w-full rounded-lg border border-transparent bg-white px-2.5 py-1.5 text-xs outline-none focus:border-[#006c4d]/20" type="number" placeholder="Max" value={filters.maxAmount} onChange={(event) => setFilters((prev) => ({ ...prev, maxAmount: event.target.value }))} />
-              </div>
-
-              <div className="grid grid-cols-2 gap-2">
-                <button className={getDatePresetButtonClass('today')} type="button" onClick={() => {
-                  setActiveDatePreset('today');
-                  setFilters((prev) => ({ ...prev, from: dayjs().format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
-                }}>
-                  Today
-                </button>
-                <button className={getDatePresetButtonClass('week')} type="button" onClick={() => {
-                  setActiveDatePreset('week');
-                  setFilters((prev) => ({ ...prev, from: dayjs().startOf('week').format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
-                }}>
-                  Week
-                </button>
-                <button className={getDatePresetButtonClass('month')} type="button" onClick={() => {
-                  setActiveDatePreset('month');
-                  setFilters((prev) => ({ ...prev, from: dayjs().startOf('month').format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
-                }}>
-                  Month
-                </button>
-                <button className={getDatePresetButtonClass('all')} type="button" onClick={() => {
-                  setActiveDatePreset('all');
-                  setFilters((prev) => ({ ...prev, from: '', to: '' }));
-                }}>
-                  All Time
-                </button>
-              </div>
-
-              <button className="w-full rounded-lg bg-[#00694b] px-3 py-2 text-xs font-bold text-white transition hover:bg-[#008560]" type="button" onClick={() => loadTransactions(1)}>
+              <button 
+                className="w-full rounded-[1.5rem] bg-[#00694b] py-5 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl shadow-emerald-900/20 transition-all hover:scale-[1.02] hover:bg-[#004d37] active:scale-[0.98]" 
+                type="button" 
+                onClick={() => loadTransactions(1)}
+              >
                 Apply Filters
               </button>
             </div>
