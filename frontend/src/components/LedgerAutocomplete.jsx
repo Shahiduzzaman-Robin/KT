@@ -13,10 +13,12 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
   function pickSuggestion(ledger) {
-    onChange(ledger.name);
-    onSelect(ledger);
-    setSuggestions([]);
-    setHighlightedIndex(-1);
+    flushSync(() => {
+      onChange(ledger.name);
+      onSelect(ledger);
+      setSuggestions([]);
+      setHighlightedIndex(-1);
+    });
   }
 
   useEffect(() => {
@@ -89,6 +91,10 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
           {suggestions.map((ledger, index) => (
             <li 
               key={ledger._id}
+              onMouseDown={(e) => {
+                e.preventDefault(); // Prevent blur
+                pickSuggestion(ledger);
+              }}
               onClick={() => pickSuggestion(ledger)}
               className={`flex items-start justify-between cursor-pointer px-4 py-3 border-b last:border-none border-slate-50 transition-colors ${highlightedIndex === index ? 'bg-emerald-50' : 'hover:bg-slate-50'}`}
             >
