@@ -184,24 +184,24 @@ function LedgerManager() {
   }
 
   return (
-    <section className="rounded-3xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
+    <section className="rounded-xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
       <h2 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Ledger Management</h2>
 
       <input
-        className="mb-3 mt-3 w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+        className="mb-3 mt-3 w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
         placeholder="Search ledger..."
         value={query}
         onChange={(event) => setQuery(event.target.value)}
       />
 
       {role === 'viewer' ? (
-        <p className="mt-3 rounded-2xl bg-[#e6f6ff] p-4 text-sm text-[#3d4a43]">
+        <p className="mt-3 rounded-lg bg-[#e6f6ff] p-4 text-sm text-[#3d4a43]">
           Viewer mode is read-only. Ledger create, edit, and delete controls are hidden.
         </p>
       ) : (
         <>
           <form onSubmit={saveLedger} className="grid gap-2 md:grid-cols-2">
-            <input className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" placeholder="Name" value={form.name} onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))} />
+            <input className="w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" placeholder="Name" value={form.name} onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))} />
             <CustomSelect
               value={form.type}
               onChange={(nextType) => setForm((prev) => ({ ...prev, type: nextType }))}
@@ -211,15 +211,15 @@ function LedgerManager() {
                 { value: 'employee', label: 'Employee' },
                 { value: 'other', label: 'Other' },
               ]}
-              buttonClassName="!rounded-xl !border-transparent !bg-[#f4faff]"
+              buttonClassName="!rounded-lg !border-transparent !bg-[#f4faff]"
             />
-            <input className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" placeholder="Contact" value={form.contact} onChange={(event) => setForm((prev) => ({ ...prev, contact: event.target.value }))} />
-            <input className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" placeholder="Address" value={form.address} onChange={(event) => setForm((prev) => ({ ...prev, address: event.target.value }))} />
-            <textarea className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] md:col-span-2" rows="2" placeholder="Notes" value={form.notes} onChange={(event) => setForm((prev) => ({ ...prev, notes: event.target.value }))} />
+            <input className="w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" placeholder="Contact" value={form.contact} onChange={(event) => setForm((prev) => ({ ...prev, contact: event.target.value }))} />
+            <input className="w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]" placeholder="Address" value={form.address} onChange={(event) => setForm((prev) => ({ ...prev, address: event.target.value }))} />
+            <textarea className="w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] md:col-span-2" rows="2" placeholder="Notes" value={form.notes} onChange={(event) => setForm((prev) => ({ ...prev, notes: event.target.value }))} />
             <div className="md:col-span-2 flex gap-2">
-              <button className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95" type="submit">{editingId ? 'Update Ledger' : 'Add Ledger'}</button>
+              <button className="rounded-lg bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95" type="submit">{editingId ? 'Update Ledger' : 'Add Ledger'}</button>
               {editingId ? (
-                <button className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]" type="button" onClick={() => { setForm(blank); setEditingId(''); }}>
+                <button className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]" type="button" onClick={() => { setForm(blank); setEditingId(''); }}>
                   Cancel
                 </button>
               ) : null}
@@ -228,7 +228,7 @@ function LedgerManager() {
         </>
       )}
 
-      <div className="mt-4 max-h-64 overflow-y-auto rounded-2xl bg-[#f4faff] p-2">
+      <div className="mt-4 max-h-64 overflow-y-auto rounded-lg bg-[#f4faff] p-2">
         <table className="w-full text-sm">
           <thead className="text-[11px] uppercase tracking-[0.14em] text-[#3d4a43]">
             <tr>
@@ -245,24 +245,24 @@ function LedgerManager() {
                 <td className="px-3 py-3 text-[#3d4a43] uppercase">{ledger.isGroup ? 'Group' : ledger.type}</td>
                 <td className="px-3 py-3">
                   <div className="flex flex-wrap gap-1">
-                    <span className={`rounded-full px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${ledger.isActive === false ? 'bg-[#ffdad6] text-[#93000a]' : 'bg-[#84f8c8] text-[#005139]'}`}>
+                    <span className={`rounded-lg px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${ledger.isActive === false ? 'bg-[#ffdad6] text-[#93000a]' : 'bg-[#84f8c8] text-[#005139]'}`}>
                       {ledger.isActive === false ? 'Archived' : 'Active'}
                     </span>
-                    {ledger.isGroup && <span className="rounded-full bg-[#cce5ff] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#0066cc]">Group</span>}
-                    {ledger.parentLedgerId && <span className="rounded-full bg-[#e8d5ff] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#6b21a8]">Child</span>}
+                    {ledger.isGroup && <span className="rounded-lg bg-[#cce5ff] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#0066cc]">Group</span>}
+                    {ledger.parentLedgerId && <span className="rounded-lg bg-[#e8d5ff] px-2 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#6b21a8]">Child</span>}
                   </div>
                 </td>
                 {role !== 'viewer' ? (
                   <td className="px-3 py-3">
                     <div className="flex gap-2">
                       <button
-                        className="rounded-xl bg-[#d9f2ff] px-3 py-1.5 text-xs font-semibold text-[#005139] transition hover:bg-[#c9e7f7]"
+                        className="rounded-lg bg-[#d9f2ff] px-3 py-1.5 text-xs font-semibold text-[#005139] transition hover:bg-[#c9e7f7]"
                         type="button"
                         onClick={() => askEditLedger(ledger)}
                       >
                         Edit
                       </button>
-                      <button className="rounded-xl bg-[#ffdad6] px-3 py-1.5 text-xs font-semibold text-[#93000a] transition hover:brightness-95" type="button" onClick={() => askDeleteLedger(ledger)}>
+                      <button className="rounded-lg bg-[#ffdad6] px-3 py-1.5 text-xs font-semibold text-[#93000a] transition hover:brightness-95" type="button" onClick={() => askDeleteLedger(ledger)}>
                         {ledger.isActive === false ? 'Delete' : 'Archive'}
                       </button>
                     </div>
@@ -277,11 +277,11 @@ function LedgerManager() {
       {showConfirmCreate
         ? createPortal(
             <div className="fixed inset-0 z-[300] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-              <div className="w-full max-w-xl rounded-3xl bg-white p-5 shadow-2xl">
+              <div className="w-full max-w-xl rounded-xl bg-white p-5 shadow-2xl">
                 <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Confirm New Ledger</h3>
                 <p className="mt-1 text-sm text-[#3d4a43]">Please review ledger details before saving.</p>
 
-                <div className="mt-4 space-y-3 rounded-2xl bg-[#e6f6ff] p-4">
+                <div className="mt-4 space-y-3 rounded-lg bg-[#e6f6ff] p-4">
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Name:</span> <span className="font-extrabold text-[#001f2a]">{pendingCreatePayload?.name || '-'}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Type:</span> <span className="font-extrabold uppercase text-[#001f2a]">{pendingCreatePayload?.type || '-'}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Phone:</span> <span className="font-bold text-[#001f2a]">{pendingCreatePayload?.contact || '-'}</span></p>
@@ -291,7 +291,7 @@ function LedgerManager() {
 
                 <div className="mt-5 flex justify-end gap-2">
                   <button
-                    className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
+                    className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
                     type="button"
                     disabled={saving}
                     onClick={() => {
@@ -303,7 +303,7 @@ function LedgerManager() {
                   </button>
                   <button
                     ref={confirmCreateButtonRef}
-                    className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95"
+                    className="rounded-lg bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95"
                     type="button"
                     disabled={saving || !pendingCreatePayload}
                     onClick={() => confirmCreateLedger(pendingCreatePayload)}
@@ -320,7 +320,7 @@ function LedgerManager() {
       {actionModal
         ? createPortal(
             <div className="fixed inset-0 z-[300] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-              <div className="w-full max-w-xl rounded-3xl bg-white p-5 shadow-2xl">
+              <div className="w-full max-w-xl rounded-xl bg-white p-5 shadow-2xl">
                 <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">
                   {actionModal.type === 'edit' ? 'Confirm Edit Ledger' : actionModal.ledger.isActive === false ? 'Confirm Delete Ledger' : 'Confirm Archive Ledger'}
                 </h3>
@@ -332,7 +332,7 @@ function LedgerManager() {
                       : 'If this ledger has transactions, it will be archived to preserve history.'}
                 </p>
 
-                <div className="mt-4 space-y-3 rounded-2xl bg-[#e6f6ff] p-4">
+                <div className="mt-4 space-y-3 rounded-lg bg-[#e6f6ff] p-4">
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Name:</span> <span className="font-extrabold text-[#001f2a]">{actionModal.ledger.name}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Type:</span> <span className="font-extrabold uppercase text-[#001f2a]">{actionModal.ledger.type}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Phone:</span> <span className="font-bold text-[#001f2a]">{actionModal.ledger.contact || '-'}</span></p>
@@ -340,12 +340,12 @@ function LedgerManager() {
                 </div>
 
                 <div className="mt-5 flex justify-end gap-2">
-                  <button className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]" type="button" disabled={actionProcessing} onClick={() => setActionModal(null)}>
+                  <button className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]" type="button" disabled={actionProcessing} onClick={() => setActionModal(null)}>
                     Cancel
                   </button>
                   <button
                     ref={confirmActionButtonRef}
-                    className={actionModal.type === 'delete' ? 'rounded-xl bg-[#ffdad6] px-4 py-2 text-sm font-semibold text-[#93000a] transition hover:brightness-95' : 'rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95'}
+                    className={actionModal.type === 'delete' ? 'rounded-lg bg-[#ffdad6] px-4 py-2 text-sm font-semibold text-[#93000a] transition hover:brightness-95' : 'rounded-lg bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95'}
                     type="button"
                     disabled={actionProcessing}
                     onClick={confirmLedgerAction}

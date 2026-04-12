@@ -24,7 +24,7 @@ h3 {
 }
 
 .card {
-  @apply rounded-3xl border border-slate-200 bg-white/85 p-4 shadow-lg backdrop-blur;
+  @apply rounded-xl border border-slate-200 bg-white/85 p-4 shadow-lg backdrop-blur;
 }
 
 .section-title {
@@ -32,7 +32,7 @@ h3 {
 }
 
 .input {
-  @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-slate-800 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200;
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-800 outline-none transition focus:border-sky-400 focus:ring-2 focus:ring-sky-200;
 }
 
 .label {
@@ -48,11 +48,11 @@ h3 {
 }
 
 .primary-btn {
-  @apply rounded-xl bg-slate-900 px-4 py-2 font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400;
+  @apply rounded-lg bg-slate-900 px-4 py-2 font-semibold text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400;
 }
 
 .secondary-btn {
-  @apply rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 disabled:opacity-50;
+  @apply rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 disabled:opacity-50;
 }
 
 .text-btn {

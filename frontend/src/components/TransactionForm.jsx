@@ -233,18 +233,18 @@ function TransactionForm({ editingTransaction, onSaved }) {
     : 'bg-emerald-700 hover:bg-emerald-600 text-white';
 
   return (
-    <section className="rounded-3xl bg-white p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] md:p-5">
+    <section className="rounded-xl bg-white p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] md:p-5">
       <div className="mb-3 flex items-center justify-between gap-2">
         <h2 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">{editingTransaction ? 'Edit transaction' : 'New transaction'}</h2>
         {role !== 'viewer' ? (
-          <button className="rounded-xl bg-[#e6f6ff] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3d4a43] transition hover:bg-[#d9f2ff]" type="button" onClick={() => setShowNewLedger((prev) => !prev)}>
+          <button className="rounded-lg bg-[#e6f6ff] px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#3d4a43] transition hover:bg-[#d9f2ff]" type="button" onClick={() => setShowNewLedger((prev) => !prev)}>
             {showNewLedger ? 'Close quick ledger' : '+ Quick add ledger'}
           </button>
         ) : null}
       </div>
 
       {role === 'viewer' ? (
-        <div className="rounded-2xl bg-[#e6f6ff] p-4 text-sm text-[#3d4a43]">
+        <div className="rounded-lg bg-[#e6f6ff] p-4 text-sm text-[#3d4a43]">
           Viewer mode is read-only. Switch to Admin or Data Entry to add or edit transactions.
         </div>
       ) : (
@@ -263,7 +263,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div className="md:col-span-2">
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Type</label>
           <div
-            className="grid grid-cols-2 gap-2 rounded-2xl bg-[#e6f6ff] p-1"
+            className="grid grid-cols-2 gap-2 rounded-lg bg-[#e6f6ff] p-1"
             role="radiogroup"
             aria-label="Transaction type"
           >
@@ -271,7 +271,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
               type="button"
               role="radio"
               aria-checked={form.type === 'income'}
-              className={`rounded-xl px-3 py-2 text-sm font-semibold transition ${
+              className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
                 form.type === 'income'
                   ? 'bg-[#00694b] text-white shadow-[0_8px_24px_rgba(0,105,75,0.2)]'
                   : 'bg-white text-[#3d4a43] hover:bg-[#d9f2ff]'
@@ -284,7 +284,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
               type="button"
               role="radio"
               aria-checked={form.type === 'outgoing'}
-              className={`rounded-xl px-3 py-2 text-sm font-semibold transition ${
+              className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
                 form.type === 'outgoing'
                   ? 'bg-[#ba1a1a] text-white shadow-[0_8px_24px_rgba(186,26,26,0.2)]'
                   : 'bg-white text-[#3d4a43] hover:bg-[#ffe8e5]'
@@ -305,7 +305,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div>
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Amount (BDT)</label>
           <input
-            className={`w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] ${errors.amount ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
+            className={`w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] ${errors.amount ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
             type="number"
             min="0"
             value={form.amount}
@@ -317,7 +317,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div>
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Date</label>
           <input
-            className={`w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] disabled:cursor-not-allowed disabled:opacity-60 ${errors.date ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
+            className={`w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] disabled:cursor-not-allowed disabled:opacity-60 ${errors.date ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
             type="date"
             value={form.date}
             onChange={(event) => setForm((prev) => ({ ...prev, date: event.target.value }))}
@@ -330,7 +330,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div className="md:col-span-4">
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Description</label>
           <input
-            className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+            className="w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
             value={form.description}
             placeholder="Notes..."
             onChange={(event) => setForm((prev) => ({ ...prev, description: event.target.value }))}
@@ -338,7 +338,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         </div>
 
         <div className="md:col-span-4">
-          <button className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-5 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_rgba(0,105,75,0.2)] transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-50" disabled={loading} type="submit">
+          <button className="rounded-lg bg-gradient-to-br from-[#00694b] to-[#008560] px-5 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_rgba(0,105,75,0.2)] transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-50" disabled={loading} type="submit">
             {loading ? 'Saving...' : editingTransaction ? 'Update transaction' : 'Add transaction'}
           </button>
         </div>
@@ -346,11 +346,11 @@ function TransactionForm({ editingTransaction, onSaved }) {
       )}
 
       {role !== 'viewer' && showNewLedger ? (
-        <div className="mt-5 rounded-2xl bg-[#e6f6ff] p-4">
+        <div className="mt-5 rounded-lg bg-[#e6f6ff] p-4">
           <h3 className="mb-3 [font-family:Manrope,ui-sans-serif,system-ui] text-xl font-bold text-[#001f2a]">Quick Ledger Create</h3>
           <div className="grid gap-3 md:grid-cols-2">
             <input
-              className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+              className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
               placeholder="Ledger name"
               value={newLedger.name}
               onChange={(event) => setNewLedger((prev) => ({ ...prev, name: event.target.value }))}
@@ -364,29 +364,29 @@ function TransactionForm({ editingTransaction, onSaved }) {
                 { value: 'employee', label: 'Employee' },
                 { value: 'other', label: 'Other' },
               ]}
-              buttonClassName="!rounded-xl !border-transparent !bg-white"
+              buttonClassName="!rounded-lg !border-transparent !bg-white"
             />
             <input
-              className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+              className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
               placeholder="Contact"
               value={newLedger.contact}
               onChange={(event) => setNewLedger((prev) => ({ ...prev, contact: event.target.value }))}
             />
             <input
-              className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+              className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
               placeholder="Address"
               value={newLedger.address}
               onChange={(event) => setNewLedger((prev) => ({ ...prev, address: event.target.value }))}
             />
             <textarea
-              className="w-full rounded-xl border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] md:col-span-2"
+              className="w-full rounded-lg border border-transparent bg-white px-3 py-2 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] md:col-span-2"
               rows="2"
               placeholder="Notes"
               value={newLedger.notes}
               onChange={(event) => setNewLedger((prev) => ({ ...prev, notes: event.target.value }))}
             />
           </div>
-          <button className="mt-3 rounded-xl bg-[#001f2a] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:opacity-90" type="button" onClick={createLedger}>
+          <button className="mt-3 rounded-lg bg-[#001f2a] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:opacity-90" type="button" onClick={createLedger}>
             Save ledger
           </button>
         </div>
@@ -395,15 +395,15 @@ function TransactionForm({ editingTransaction, onSaved }) {
       {showConfirm
         ? createPortal(
             <div className={`fixed inset-0 z-[300] flex items-center justify-center p-4 backdrop-blur-md ${confirmBackdropTone}`}>
-              <div className={`w-full max-w-xl rounded-3xl border-[6px] bg-white p-5 shadow-2xl ${confirmCardTone} ${confirmBorderTone}`}>
+              <div className={`w-full max-w-xl rounded-xl border-[6px] bg-white p-5 shadow-2xl ${confirmCardTone} ${confirmBorderTone}`}>
                 <h3 className={`[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold ${confirmTitleTone}`}>Confirm New Transaction</h3>
                 <p className="mt-1 text-sm text-[#3d4a43]">Please review details before saving.</p>
 
-                <div className="mt-4 space-y-3 rounded-2xl bg-[#f4faff] p-4">
+                <div className="mt-4 space-y-3 rounded-lg bg-[#f4faff] p-4">
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Ledger:</span> <span className="font-extrabold text-[#001f2a]">{form.ledgerInput}</span></p>
                   <p className="text-lg">
                     <span className="font-semibold text-[#3d4a43]">Type:</span>{' '}
-                    <span className={`rounded-full px-2 py-0.5 text-sm font-extrabold ${confirmChipTone}`}>
+                    <span className={`rounded-lg px-2 py-0.5 text-sm font-extrabold ${confirmChipTone}`}>
                       {form.type.toUpperCase()}
                     </span>
                   </p>
@@ -414,7 +414,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
 
                 <div className="mt-5 flex justify-end gap-2">
                   <button
-                    className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
+                    className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
                     type="button"
                     disabled={loading}
                     onClick={() => {
@@ -426,7 +426,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
                   </button>
                   <button
                     ref={confirmButtonRef}
-                    className={`rounded-xl px-4 py-2 text-sm font-semibold transition ${confirmPrimaryTone}`}
+                    className={`rounded-lg px-4 py-2 text-sm font-semibold transition ${confirmPrimaryTone}`}
                     type="button"
                     disabled={loading || !pendingPayload}
                     onClick={() => saveTransaction(pendingPayload)}
@@ -443,11 +443,11 @@ function TransactionForm({ editingTransaction, onSaved }) {
       {showLedgerConfirm
         ? createPortal(
             <div className="fixed inset-0 z-[300] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-              <div className="w-full max-w-xl rounded-3xl bg-white p-5 shadow-2xl">
+              <div className="w-full max-w-xl rounded-xl bg-white p-5 shadow-2xl">
                 <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Confirm New Ledger</h3>
                 <p className="mt-1 text-sm text-[#3d4a43]">Please review ledger details before saving.</p>
 
-                <div className="mt-4 space-y-3 rounded-2xl bg-[#e6f6ff] p-4">
+                <div className="mt-4 space-y-3 rounded-lg bg-[#e6f6ff] p-4">
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Name:</span> <span className="font-extrabold text-[#001f2a]">{pendingLedgerPayload?.name || '-'}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Type:</span> <span className="font-extrabold uppercase text-[#001f2a]">{pendingLedgerPayload?.type || '-'}</span></p>
                   <p className="text-lg"><span className="font-semibold text-[#3d4a43]">Phone:</span> <span className="font-bold text-[#001f2a]">{pendingLedgerPayload?.contact || '-'}</span></p>
@@ -457,7 +457,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
 
                 <div className="mt-5 flex justify-end gap-2">
                   <button
-                    className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
+                    className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]"
                     type="button"
                     disabled={loading}
                     onClick={() => {
@@ -469,7 +469,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
                   </button>
                   <button
                     ref={ledgerConfirmButtonRef}
-                    className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95"
+                    className="rounded-lg bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95"
                     type="button"
                     disabled={loading || !pendingLedgerPayload}
                     onClick={() => saveNewLedger(pendingLedgerPayload)}

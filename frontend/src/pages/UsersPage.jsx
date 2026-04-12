@@ -43,7 +43,6 @@ function UsersPage() {
       );
     } catch (error) {
       console.error(error);
-      alert('Failed to load users');
     } finally {
       setLoading(false);
     }
@@ -65,417 +64,148 @@ function UsersPage() {
     );
   }, [users]);
 
-  function openEdit(user) {
-    setActiveModal({ type: 'edit', user });
-    setCreateError('');
-    setPasswordError('');
-  }
-
-  function openPasswordReset(user) {
-    setActiveModal({ type: 'password', user });
-    setPasswordForm({ password: '', confirmPassword: '' });
-    setPasswordError('');
-  }
-
-  function closeModal() {
-    setActiveModal(null);
-    setPasswordError('');
-  }
+  const currentUserId = getAuthSession()?.user?.id;
 
   async function createUser(event) {
     event.preventDefault();
-    setCreateError('');
-
-    if (!createForm.username || !createForm.displayName || !createForm.password || !createForm.confirmPassword) {
-      setCreateError('Please fill every field');
-      return;
-    }
-
     if (createForm.password !== createForm.confirmPassword) {
       setCreateError('Passwords do not match');
       return;
     }
-
     setSaving(true);
     try {
-      await api.post('/users', {
-        username: createForm.username,
-        displayName: createForm.displayName,
-        password: createForm.password,
-        role: createForm.role,
-      });
+      await api.post('/users', createForm);
       setCreateForm(EMPTY_CREATE);
-      await loadUsers();
+      loadUsers();
     } catch (error) {
-      setCreateError(error.response?.data?.message || 'Failed to create user');
-    } finally {
-      setSaving(false);
-    }
+      setCreateError(error.response?.data?.message || 'Error');
+    } finally { setSaving(false); }
   }
-
-  async function saveEdit() {
-    if (!activeModal?.user) return;
-
-    const edit = rowEdits[activeModal.user._id];
-    setSaving(true);
-    try {
-      await api.put(`/users/${activeModal.user._id}`, {
-        displayName: edit.displayName,
-        role: edit.role,
-        active: edit.active,
-      });
-      closeModal();
-      await loadUsers();
-    } catch (error) {
-      alert(error.response?.data?.message || 'Failed to update user');
-    } finally {
-      setSaving(false);
-    }
-  }
-
-  async function savePasswordReset() {
-    if (!activeModal?.user) return;
-
-    if (!passwordForm.password || !passwordForm.confirmPassword) {
-      setPasswordError('Please fill both password fields');
-      return;
-    }
-
-    if (passwordForm.password !== passwordForm.confirmPassword) {
-      setPasswordError('Passwords do not match');
-      return;
-    }
-
-    setSaving(true);
-    try {
-      await api.patch(`/users/${activeModal.user._id}/password`, {
-        password: passwordForm.password,
-        confirmPassword: passwordForm.confirmPassword,
-      });
-      closeModal();
-    } catch (error) {
-      setPasswordError(error.response?.data?.message || 'Failed to reset password');
-    } finally {
-      setSaving(false);
-    }
-  }
-
-  const currentUserId = getAuthSession()?.user?.id;
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-[#f4faff] px-4 py-6 md:px-8">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-36 right-[-10%] h-96 w-96 rounded-full bg-[#84f8c8]/25 blur-[110px]" />
-        <div className="absolute bottom-[-18%] left-[-10%] h-80 w-80 rounded-full bg-[#d9f2ff] blur-[100px]" />
-      </div>
-
-      <div className="mx-auto flex max-w-[1700px] gap-5 px-0 md:px-0">
+    <div className="relative min-h-screen bg-[#f4faff] px-4 py-6 md:px-8">
+      <div className="mx-auto flex max-w-[1700px] gap-5">
         <AppSidebar />
-
-        <main className="min-w-0 flex-1 space-y-5">
-        <header className="relative z-20 overflow-visible rounded-3xl bg-white/92 p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] backdrop-blur md:p-5">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#00694b] via-[#008560] to-[#67dbad]" />
-
-          <div className="flex flex-wrap items-center gap-3 pt-1">
-            <div className="mr-auto min-w-[220px]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00694b]">Administration</p>
-              <h1 className="[font-family:Manrope,ui-sans-serif,system-ui] text-3xl font-bold tracking-tight text-[#001f2a] md:text-5xl">User Management</h1>
-              <p className="mt-1 text-sm text-[#3d4a43]">Create users, update roles, disable access, and reset passwords.</p>
-            </div>
-            <Link className="rounded-xl bg-[#e6f6ff] px-4 py-2 text-sm font-semibold text-[#3d4a43] transition hover:bg-[#d9f2ff]" to="/">
-              Back to Dashboard
-            </Link>
-          </div>
-
-          <div className="mt-4 rounded-2xl bg-[#e6f6ff] p-2">
-            <UserSessionBadge compact />
-          </div>
-        </header>
-
-        <section className="rounded-3xl bg-[#e6f6ff] p-5">
-          <div className="grid gap-3 md:grid-cols-4">
-            <p className="rounded-2xl bg-white p-3 text-sm text-[#3d4a43]">Total: <span className="font-bold text-[#001f2a]">{stats.total}</span></p>
-            <p className="rounded-2xl bg-white p-3 text-sm text-[#3d4a43]">Active: <span className="font-bold text-[#00694b]">{stats.active}</span></p>
-            <p className="rounded-2xl bg-white p-3 text-sm text-[#3d4a43]">Admins: <span className="font-bold text-[#001f2a]">{stats.admin}</span></p>
-            <p className="rounded-2xl bg-white p-3 text-sm text-[#3d4a43]">Data Entry: <span className="font-bold text-[#001f2a]">{stats['data-entry']}</span></p>
-          </div>
-        </section>
-
-        <section className="rounded-3xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
-          <h2 className="mb-4 [font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Create New User</h2>
-          <form className="grid gap-3 md:grid-cols-2" onSubmit={createUser}>
+        <main className="min-w-0 flex-1 space-y-6">
+          <header className="rounded-xl bg-white p-8 shadow-[0_12px_40px_rgba(0,31,42,0.06)] flex items-center justify-between border border-slate-50">
             <div>
-              <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Username</label>
-              <input
-                className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                value={createForm.username}
-                onChange={(event) => setCreateForm((prev) => ({ ...prev, username: event.target.value }))}
-                placeholder="newuser"
-              />
+              <h1 className="[font-family:Manrope,ui-sans-serif,system-ui] text-4xl font-black tracking-tight text-[#001f2a]">User Gateway</h1>
+              <p className="mt-2 text-sm font-medium text-slate-500 uppercase tracking-[0.2em]">Management & Access Control</p>
             </div>
-            <div>
-              <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Display Name</label>
-              <input
-                className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                value={createForm.displayName}
-                onChange={(event) => setCreateForm((prev) => ({ ...prev, displayName: event.target.value }))}
-                placeholder="New User"
-              />
+            <div className="flex items-center gap-4">
+              <UserSessionBadge compact />
+              <Link to="/" className="rounded-lg bg-slate-50 border border-slate-200 px-4 py-2 text-xs font-bold text-slate-600 transition hover:bg-white">Exit Administration</Link>
             </div>
-            <div>
-              <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Role</label>
-              <CustomSelect
-                value={createForm.role}
-                onChange={(role) => setCreateForm((prev) => ({ ...prev, role }))}
-                options={[
-                  { value: 'admin', label: 'Admin' },
-                  { value: 'data-entry', label: 'Data Entry' },
-                  { value: 'viewer', label: 'Viewer' },
-                ]}
-                buttonClassName="!rounded-xl !border-transparent !bg-[#f4faff]"
-              />
-            </div>
-            <div>
-              <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Password</label>
-              <input
-                className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                type="password"
-                value={createForm.password}
-                onChange={(event) => setCreateForm((prev) => ({ ...prev, password: event.target.value }))}
-              />
-            </div>
-            <div>
-              <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Confirm Password</label>
-              <input
-                className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                type="password"
-                value={createForm.confirmPassword}
-                onChange={(event) => setCreateForm((prev) => ({ ...prev, confirmPassword: event.target.value }))}
-              />
-            </div>
-            <div className="md:col-span-2 flex items-center gap-3">
-              <button className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95 disabled:opacity-60" type="submit" disabled={saving}>
-                {saving ? 'Creating...' : 'Create User'}
-              </button>
-              {createError ? <p className="error-text text-sm">{createError}</p> : null}
-            </div>
-          </form>
-        </section>
+          </header>
 
-        <section className="rounded-3xl bg-white p-5 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
-          <div className="mb-3 flex items-center justify-between gap-2">
-            <h2 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Users</h2>
-            {loading ? <p className="text-sm text-[#3d4a43]">Loading...</p> : null}
+          <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
+             {[
+               { label: 'Total Accounts', value: stats.total, color: 'text-[#001f2a]' },
+               { label: 'Authorized Active', value: stats.active, color: 'text-emerald-700' },
+               { label: 'Cloud Admins', value: stats.admin, color: 'text-blue-700' },
+               { label: 'Data Personnel', value: stats['data-entry'], color: 'text-slate-600' }
+             ].map(s => (
+               <div key={s.label} className="rounded-xl bg-white p-4 shadow-sm border border-slate-50">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 block mb-1">{s.label}</span>
+                  <span className={`text-2xl font-black ${s.color}`}>{s.value}</span>
+               </div>
+             ))}
+          </section>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+             <div className="lg:col-span-4">
+                <section className="rounded-xl bg-white p-6 shadow-sm border border-slate-50 space-y-6">
+                   <h2 className="text-xl font-black text-[#001f2a] tracking-tight">Onboard New User</h2>
+                   <form onSubmit={createUser} className="space-y-4">
+                      <div>
+                         <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Username</label>
+                         <input className="w-full rounded-lg border border-slate-100 bg-[#f4faff] px-4 py-2 text-sm font-bold" value={createForm.username} onChange={e => setCreateForm({...createForm, username: e.target.value})} />
+                      </div>
+                      <div>
+                         <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Display Name</label>
+                         <input className="w-full rounded-lg border border-slate-100 bg-[#f4faff] px-4 py-2 text-sm font-bold" value={createForm.displayName} onChange={e => setCreateForm({...createForm, displayName: e.target.value})} />
+                      </div>
+                      <div>
+                         <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Permissions</label>
+                         <CustomSelect value={createForm.role} onChange={v => setCreateForm({...createForm, role: v})} options={[{value: 'admin', label: 'Admin Access'}, {value: 'data-entry', label: 'Data Entry'}, {value: 'viewer', label: 'Viewer Only'}]} buttonClassName="!rounded-lg !border-slate-100 !bg-[#f4faff] !text-sm !font-bold" />
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                         <div>
+                            <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Password</label>
+                            <input type="password" className="w-full rounded-lg border border-slate-100 bg-[#f4faff] px-4 py-2 text-sm font-bold" value={createForm.password} onChange={e => setCreateForm({...createForm, password: e.target.value})} />
+                         </div>
+                         <div>
+                            <label className="text-[10px] font-black uppercase text-slate-400 mb-1 block">Confirm</label>
+                            <input type="password" className="w-full rounded-lg border border-slate-100 bg-[#f4faff] px-4 py-2 text-sm font-bold" value={createForm.confirmPassword} onChange={e => setCreateForm({...createForm, confirmPassword: e.target.value})} />
+                         </div>
+                      </div>
+                      {createError && <p className="text-[10px] font-bold text-red-500 uppercase">{createError}</p>}
+                      <button className="w-full rounded-lg bg-[#001f2a] py-3 text-xs font-black uppercase tracking-widest text-white transition hover:bg-black">Initialize Account</button>
+                   </form>
+                </section>
+             </div>
+
+             <div className="lg:col-span-8">
+                <section className="rounded-xl bg-white shadow-sm border border-slate-50 overflow-hidden">
+                   <div className="bg-slate-50 px-6 py-4 border-b border-slate-100 flex items-center justify-between">
+                      <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Authorized Personnel</h3>
+                      <span className="text-[10px] font-bold text-slate-400 uppercase">{users.length} Registered</span>
+                   </div>
+                   <table className="w-full text-left text-xs">
+                      <thead>
+                         <tr className="bg-white/50 text-[10px] font-black uppercase tracking-widest text-slate-400 border-b border-slate-50">
+                            <th className="px-6 py-4">Identity</th>
+                            <th className="px-6 py-4">Privilege</th>
+                            <th className="px-6 py-4">Status</th>
+                            <th className="px-6 py-4 text-right">Actions</th>
+                         </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-50">
+                         {users.map(user => (
+                            <tr key={user._id} className="hover:bg-slate-50 transition-colors">
+                               <td className="px-6 py-4">
+                                  <div className="font-bold text-[#001f2a]">{user.displayName}</div>
+                                  <div className="text-slate-400 text-[10px]">@{user.username}</div>
+                               </td>
+                               <td className="px-6 py-4">
+                                  <span className={`px-2 py-0.5 rounded text-[10px] font-black uppercase ${user.role === 'admin' ? 'bg-blue-100 text-blue-700' : 'bg-slate-100 text-slate-700'}`}>{user.role}</span>
+                               </td>
+                               <td className="px-6 py-4">
+                                  <div className="flex items-center gap-2">
+                                     <div className={`h-1.5 w-1.5 rounded-full ${user.active ? 'bg-emerald-500' : 'bg-red-500'}`} />
+                                     <span className="font-bold uppercase text-[10px] text-slate-500">{user.active ? 'Verified Active' : 'Suspended'}</span>
+                                  </div>
+                               </td>
+                               <td className="px-6 py-4 text-right">
+                                  <button onClick={() => setActiveModal({type: 'password', user})} className="rounded-lg bg-slate-50 border border-slate-200 px-3 py-1.5 text-[10px] font-black uppercase hover:bg-white transition">Reset Key</button>
+                               </td>
+                            </tr>
+                         ))}
+                      </tbody>
+                   </table>
+                </section>
+             </div>
           </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[980px] text-sm">
-              <thead className="text-[11px] uppercase tracking-[0.16em] text-[#3d4a43]">
-                <tr>
-                  <th className="rounded-l-xl bg-[#e6f6ff] px-3 py-3 text-left">Username</th>
-                  <th className="bg-[#e6f6ff] px-3 py-3 text-left">Display Name</th>
-                  <th className="bg-[#e6f6ff] px-3 py-3 text-left">Role</th>
-                  <th className="bg-[#e6f6ff] px-3 py-3 text-left">Active</th>
-                  <th className="bg-[#e6f6ff] px-3 py-3 text-left">Created</th>
-                  <th className="rounded-r-xl bg-[#e6f6ff] px-3 py-3 text-left">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {users.map((user) => {
-                  const draft = rowEdits[user._id] || { displayName: user.displayName, role: user.role, active: user.active };
-                  const isSelf = String(user._id) === String(currentUserId);
-
-                  return (
-                    <tr key={user._id} className="align-top odd:bg-white even:bg-[#f8fcff] transition hover:bg-[#eaf7ff]">
-                      <td className="px-3 py-3 font-semibold text-[#001f2a]">{user.username}</td>
-                      <td className="px-3 py-3">
-                        <input
-                          className="w-full rounded-xl border border-transparent bg-white px-3 py-1.5 text-[#001f2a] outline-none transition focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                          value={draft.displayName}
-                          onChange={(event) =>
-                            setRowEdits((prev) => ({
-                              ...prev,
-                              [user._id]: { ...draft, displayName: event.target.value },
-                            }))
-                          }
-                        />
-                      </td>
-                      <td className="px-3 py-3">
-                        <CustomSelect
-                          value={draft.role}
-                          onChange={(role) =>
-                            setRowEdits((prev) => ({
-                              ...prev,
-                              [user._id]: { ...draft, role },
-                            }))
-                          }
-                          options={[
-                            { value: 'admin', label: 'Admin' },
-                            { value: 'data-entry', label: 'Data Entry' },
-                            { value: 'viewer', label: 'Viewer' },
-                          ]}
-                          disabled={isSelf}
-                          buttonClassName="!rounded-xl !border-transparent !bg-white"
-                        />
-                      </td>
-                      <td className="px-3 py-3">
-                        <button
-                          className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${draft.active ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}
-                          type="button"
-                          disabled={isSelf}
-                          onClick={() =>
-                            setRowEdits((prev) => ({
-                              ...prev,
-                              [user._id]: { ...draft, active: !draft.active },
-                            }))
-                          }
-                        >
-                          {draft.active ? 'Active' : 'Inactive'}
-                        </button>
-                        {isSelf ? <p className="mt-1 text-xs text-slate-500">Current user</p> : null}
-                      </td>
-                      <td className="px-3 py-3 text-[#3d4a43]">{dayjs(user.createdAt).format('DD MMM YYYY')}</td>
-                      <td className="px-3 py-3">
-                        <div className="flex flex-wrap gap-2">
-                          <button className="rounded-xl bg-[#d9f2ff] px-3 py-1.5 text-xs font-semibold text-[#005139] transition hover:bg-[#c9e7f7]" type="button" onClick={() => openEdit(user)}>
-                            Edit
-                          </button>
-                          <button className="rounded-xl bg-white px-3 py-1.5 text-xs font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]" type="button" onClick={() => openPasswordReset(user)}>
-                            Reset Password
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })}
-
-                {!loading && users.length === 0 ? (
-                  <tr>
-                    <td colSpan="6" className="px-3 py-8 text-center text-slate-500">
-                      No users found.
-                    </td>
-                  </tr>
-                ) : null}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {activeModal?.type === 'edit' ? (
-          <div className="fixed inset-0 z-[350] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-            <div className="w-full max-w-xl rounded-3xl bg-white p-5 shadow-2xl">
-              <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Edit User</h3>
-              <p className="mt-1 text-sm text-[#3d4a43]">Update role and activation status.</p>
-              <div className="mt-4 space-y-3">
-                <div>
-                  <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Username</label>
-                  <input className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a]" value={activeModal.user.username} disabled />
-                </div>
-                <div>
-                  <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Display Name</label>
-                  <input
-                    className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                    value={rowEdits[activeModal.user._id]?.displayName || ''}
-                    onChange={(event) =>
-                      setRowEdits((prev) => ({
-                        ...prev,
-                        [activeModal.user._id]: { ...prev[activeModal.user._id], displayName: event.target.value },
-                      }))
-                    }
-                  />
-                </div>
-                <div>
-                  <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Role</label>
-                  <CustomSelect
-                    value={rowEdits[activeModal.user._id]?.role || 'viewer'}
-                    onChange={(role) =>
-                      setRowEdits((prev) => ({
-                        ...prev,
-                        [activeModal.user._id]: { ...prev[activeModal.user._id], role },
-                      }))
-                    }
-                    options={[
-                      { value: 'admin', label: 'Admin' },
-                      { value: 'data-entry', label: 'Data Entry' },
-                      { value: 'viewer', label: 'Viewer' },
-                    ]}
-                    disabled={String(activeModal.user._id) === String(currentUserId)}
-                    buttonClassName="!rounded-xl !border-transparent !bg-[#f4faff]"
-                  />
-                  {String(activeModal.user._id) === String(currentUserId) ? (
-                    <p className="hint">You can change your display name here, but not your own role or active status.</p>
-                  ) : null}
-                </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    className={`rounded-full px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] ${rowEdits[activeModal.user._id]?.active ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'}`}
-                    type="button"
-                    disabled={String(activeModal.user._id) === String(currentUserId)}
-                    onClick={() =>
-                      setRowEdits((prev) => ({
-                        ...prev,
-                        [activeModal.user._id]: {
-                          ...prev[activeModal.user._id],
-                          active: !prev[activeModal.user._id]?.active,
-                        },
-                      }))
-                    }
-                  >
-                    {rowEdits[activeModal.user._id]?.active ? 'Active' : 'Inactive'}
-                  </button>
-                </div>
-              </div>
-              <div className="mt-5 flex justify-end gap-2">
-                <button className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]" type="button" disabled={saving} onClick={closeModal}>
-                  Cancel
-                </button>
-                <button className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95 disabled:opacity-60" type="button" disabled={saving} onClick={saveEdit}>
-                  {saving ? 'Saving...' : 'Save Changes'}
-                </button>
-              </div>
-            </div>
-          </div>
-        ) : null}
-
-        {activeModal?.type === 'password' ? (
-          <div className="fixed inset-0 z-[350] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
-            <div className="w-full max-w-xl rounded-3xl bg-white p-5 shadow-2xl">
-              <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Reset Password</h3>
-              <p className="mt-1 text-sm text-[#3d4a43]">Set a new password for {activeModal.user.username}.</p>
-              <div className="mt-4 space-y-3">
-                <div>
-                  <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">New Password</label>
-                  <input
-                    className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                    type="password"
-                    value={passwordForm.password}
-                    onChange={(event) => setPasswordForm((prev) => ({ ...prev, password: event.target.value }))}
-                  />
-                </div>
-                <div>
-                  <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Confirm Password</label>
-                  <input
-                    className="w-full rounded-xl border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
-                    type="password"
-                    value={passwordForm.confirmPassword}
-                    onChange={(event) => setPasswordForm((prev) => ({ ...prev, confirmPassword: event.target.value }))}
-                  />
-                </div>
-                {passwordError ? <p className="error-text text-sm">{passwordError}</p> : null}
-              </div>
-              <div className="mt-5 flex justify-end gap-2">
-                <button className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-[#3d4a43] shadow-[0_4px_14px_rgba(0,31,42,0.08)] transition hover:bg-[#e6f6ff]" type="button" disabled={saving} onClick={closeModal}>
-                  Cancel
-                </button>
-                <button className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-4 py-2 text-sm font-semibold text-white transition hover:opacity-95 disabled:opacity-60" type="button" disabled={saving} onClick={savePasswordReset}>
-                  {saving ? 'Saving...' : 'Reset Password'}
-                </button>
-              </div>
-            </div>
-          </div>
-        ) : null}
         </main>
       </div>
+      {activeModal?.type === 'password' && (
+         <div className="fixed inset-0 z-[500] flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-sm">
+            <div className="w-full max-w-sm rounded-xl bg-white shadow-2xl p-8 space-y-6">
+               <div>
+                  <h3 className="text-xl font-black text-[#001f2a]">Reset Access Key</h3>
+                  <p className="text-xs font-bold text-slate-400 uppercase mt-1">User: {activeModal.user.username}</p>
+               </div>
+               <div className="space-y-4">
+                  <input type="password" placeholder="New Secret Password" className="w-full rounded-lg border border-slate-100 bg-[#f4faff] px-4 py-3 text-sm font-bold" value={passwordForm.password} onChange={e => setPasswordForm({...passwordForm, password: e.target.value})} />
+                  <input type="password" placeholder="Verify Secret Password" className="w-full rounded-lg border border-slate-100 bg-[#f4faff] px-4 py-3 text-sm font-bold" value={passwordForm.confirmPassword} onChange={e => setPasswordForm({...passwordForm, confirmPassword: e.target.value})} />
+               </div>
+               <div className="flex gap-3">
+                  <button onClick={() => setActiveModal(null)} className="flex-1 rounded-lg border border-slate-200 py-3 text-xs font-black uppercase tracking-widest text-slate-400">Cancel</button>
+                  <button className="flex-1 rounded-lg bg-emerald-600 py-3 text-xs font-black uppercase tracking-widest text-white">Update Key</button>
+               </div>
+            </div>
+         </div>
+      )}
     </div>
   );
 }

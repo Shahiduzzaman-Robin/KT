@@ -142,7 +142,7 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
                     {ledger.address ? ` | ${ledger.address}` : ''}
                   </span>
                 </span>
-                <span className="rounded-full bg-slate-200 px-2 py-0.5 text-xs uppercase tracking-wide text-slate-600">
+                <span className="rounded-lg bg-slate-200 px-2 py-0.5 text-xs uppercase tracking-wide text-slate-600">
                   {ledger.isGroup ? 'Group' : ledger.type}
                 </span>
               </div>
