@@ -173,8 +173,18 @@ router.post('/:id/revert', requireAuth, authorizeRoles('admin'), async (req, res
     }
 
     // 1. Verify User Password
-    const user = await User.findById(req.user.id);
-    if (!user) return res.status(404).json({ message: 'User not found' });
+    // Check by ID first, then by Username (fallback for different auth types)
+    const user = await User.findOne({ 
+      $or: [
+        { _id: req.user.id || 'none' }, 
+        { username: req.user.username }
+      ] 
+    });
+    
+    if (!user) {
+      console.error('[Revert Error] Admin user not found:', req.user.username);
+      return res.status(404).json({ message: 'Internal Error: Could not verify admin account.' });
+    }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
