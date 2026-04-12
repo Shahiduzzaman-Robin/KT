@@ -6,6 +6,7 @@ import CustomSelect from '../components/CustomSelect';
 import UserSessionBadge from '../components/UserSessionBadge';
 import { formatDateTime } from '../utils/dateTime';
 import AppSidebar from '../components/AppSidebar';
+import { useCurrentRole } from '../utils/auth';
 
 const EMPTY_FILTERS = {
   from: '',
@@ -92,6 +93,7 @@ function getChangeRows(entry) {
 }
 
 function AuditLogsPage() {
+  const role = useCurrentRole();
   const [logs, setLogs] = useState([]);
   const [userOptions, setUserOptions] = useState([{ value: '', label: 'All Users' }]);
   const [total, setTotal] = useState(0);
@@ -262,7 +264,9 @@ function AuditLogsPage() {
           <section className="rounded-xl bg-white p-5 shadow-sm border border-slate-50 space-y-6">
             <div className="flex items-center justify-between">
                <h3 className="text-xl font-black text-[#001f2a] tracking-tight">Filters</h3>
-               <button onClick={exportCsv} className="rounded-lg bg-[#00694b] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[#004d37]">Export CSV</button>
+               {role === 'admin' && (
+                 <button onClick={exportCsv} className="rounded-lg bg-[#00694b] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[#004d37]">Export CSV</button>
+               )}
             </div>
             <div className="grid gap-3 md:grid-cols-7">
                <input type="date" className="w-full rounded-lg border border-slate-100 bg-[#f4faff] px-3 py-2 text-xs font-bold text-[#001f2a] outline-none" value={filters.from} onChange={e => setFilters(p => ({...p, from: e.target.value}))} />

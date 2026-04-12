@@ -5,7 +5,7 @@ const { requireAuth, authorizeRoles } = require('../middleware/auth');
 
 const router = express.Router();
 
-router.use(requireAuth, authorizeRoles('admin'));
+router.use(requireAuth);
 
 function parseRange(query) {
   const from = query.from && dayjs(query.from).isValid() ? dayjs(query.from).startOf('day').toDate() : null;
@@ -105,7 +105,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/export.csv', async (req, res) => {
+router.get('/export.csv', authorizeRoles('admin'), async (req, res) => {
   try {
     const query = buildQuery(req.query);
     const rows = await AuditLog.find(query).sort({ timestamp: -1, _id: -1 }).limit(5000).lean();
