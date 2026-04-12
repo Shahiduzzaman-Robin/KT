@@ -213,9 +213,9 @@ function DailyClosurePage() {
                      </div>
 
                      <div className={`pt-4 border-t ${data?.isAlreadyLocked ? 'border-emerald-700' : 'border-slate-100'}`}>
-                        <p className={`text-[10px] font-bold uppercase tracking-[0.2em] mb-1 ${data?.isAlreadyLocked ? 'text-emerald-200/70' : 'text-[#00694b]'}`}>Total Business Valuation (Cash + Loans)</p>
+                        <p className={`text-[10px] font-bold uppercase tracking-[0.2em] mb-1 ${data?.isAlreadyLocked ? 'text-emerald-200/70' : 'text-[#00694b]'}`}>Total Verified Physical Cash</p>
                         <p className="text-3xl font-black tracking-tighter tabular-nums">
-                           {formatBDT((data?.closingBalance || 0) + (data?.totalLoanOutstanding || 0))}
+                           {formatBDT(data?.closingBalance)}
                         </p>
                      </div>
                   </div>
