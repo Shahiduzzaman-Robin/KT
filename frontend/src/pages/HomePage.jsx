@@ -252,7 +252,7 @@ function HomePage() {
                     }}>Today</button>
                     <button className={getDatePresetButtonClass('week')} type="button" onClick={() => {
                       setActiveDatePreset('week');
-                      setFilters((prev) => ({ ...prev, from: dayjs().startOf('week').format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
+                      setFilters((prev) => ({ ...prev, from: dayjs().subtract(6, 'days').format('YYYY-MM-DD'), to: dayjs().format('YYYY-MM-DD') }));
                     }}>This Week</button>
                     <button className={getDatePresetButtonClass('month')} type="button" onClick={() => {
                       setActiveDatePreset('month');
