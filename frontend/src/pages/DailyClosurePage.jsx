@@ -36,19 +36,13 @@ function DailyClosurePage() {
       const { data: txRes } = await api.get('/transactions', {
         params: { from: dateToFetch, to: dateToFetch, limit: 100 }
       });
-      const { data: loansRes } = await api.get('/loans', {
-        params: { from: dateToFetch, to: dateToFetch }
-      });
 
       // Filter only current date logically (UTC Shift Safety) AND sort
-      const combined = [
-        ...(txRes.items || []).map(t => ({ ...t, kind: 'transaction' })),
-        ...(loansRes || []).map(l => ({ ...l, kind: 'loan' }))
-      ]
-      .filter(item => dayjs(item.date).isSame(dayjs(dateToFetch), 'day'))
-      .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+      const items = (txRes.items || [])
+        .filter(item => dayjs(item.date).isSame(dayjs(dateToFetch), 'day'))
+        .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 
-      setTransactions(combined);
+      setTransactions(items);
     } catch (err) {
       console.error('Failed to fetch closure data', err);
     } finally {
@@ -306,35 +300,27 @@ function DailyClosurePage() {
                         </tr>
                      </thead>
                      <tbody className="divide-y divide-slate-50">
-                        {transactions.map(item => (
-                          <tr key={item._id} className="hover:bg-slate-50 transition-colors group">
-                             <td className="px-8 py-5 text-xs font-bold text-slate-400">{dayjs(item.createdAt).format('hh:mm A')}</td>
-                             <td className="px-8 py-5">
-                                {item.kind === 'loan' ? (
-                                  <>
-                                    <div className="text-sm font-black text-blue-800">{item.borrowerName}</div>
-                                    <div className="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Loan & Advance</div>
-                                  </>
-                                ) : (
-                                  <>
-                                    <div className="text-sm font-black text-[#001f2a]">{item.ledgerId?.name || 'N/A'}</div>
-                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{item.type}</div>
-                                  </>
-                                )}
-                             </td>
-                             <td className="px-8 py-5 text-right">
-                                {item.kind === 'loan' ? (
-                                   <span className="text-sm font-black text-blue-600">
-                                      {formatBDT(item.totalAmount)}
-                                   </span>
-                                ) : (
+                        {transactions.map(item => {
+                           const isLoan = item.description?.toLowerCase().includes('loan');
+                           return (
+                             <tr key={item._id} className="hover:bg-slate-50 transition-colors group">
+                                <td className="px-8 py-5 text-xs font-bold text-slate-400">{dayjs(item.createdAt).format('hh:mm A')}</td>
+                                <td className="px-8 py-5">
+                                   <div className={`text-sm font-black ${isLoan ? 'text-blue-800' : 'text-[#001f2a]'}`}>
+                                     {item.ledgerId?.name || 'Loan Transaction'}
+                                   </div>
+                                   <div className={`text-[10px] font-bold uppercase tracking-widest ${isLoan ? 'text-blue-500' : 'text-slate-400'}`}>
+                                     {item.description || item.type}
+                                   </div>
+                                </td>
+                                <td className="px-8 py-5 text-right">
                                    <span className={`text-sm font-black ${item.type === 'income' ? 'text-emerald-600' : 'text-red-500'}`}>
                                       {item.type === 'income' ? '+' : '-'} {formatBDT(item.amount)}
                                    </span>
-                                )}
-                             </td>
-                          </tr>
-                        ))}
+                                </td>
+                             </tr>
+                           );
+                         })}
                      </tbody>
                   </table>
                </div>
