@@ -75,6 +75,8 @@ router.get('/preview', requireAuth, async (req, res) => {
     const openingBalance = lastReport ? lastReport.closingBalance : 0;
     const closingBalance = openingBalance + dayData.income - dayData.outgoing;
 
+    const existingReport = await DailyReport.findOne({ date: { $gte: todayStart, $lte: todayEnd } });
+    
     res.json({
       date: todayStr,
       openingBalance,
@@ -82,7 +84,8 @@ router.get('/preview', requireAuth, async (req, res) => {
       totalOutgoing: dayData.outgoing,
       closingBalance,
       transactionCount: dayData.count,
-      isAlreadyLocked: !!(await DailyReport.findOne({ date: { $gte: todayStart, $lte: todayEnd } })),
+      isAlreadyLocked: !!existingReport,
+      reportId: existingReport?._id,
       lastReportDate: lastReport?.date
     });
   } catch (err) {
@@ -91,7 +94,7 @@ router.get('/preview', requireAuth, async (req, res) => {
 });
 
 // Perform "Shop Closure"
-router.post('/close-day', requireAuth, authorizeRoles('admin'), async (req, res) => {
+router.post('/', requireAuth, authorizeRoles('admin'), async (req, res) => {
   try {
     const { date, notes } = req.body;
     const targetDate = dayjs(date || dayjs().format('YYYY-MM-DD')).startOf('day').toDate();
