@@ -27,8 +27,8 @@ function Dashboard({ daily }) {
       iconStyle: 'bg-[#ffdad6] text-[#ba1a1a]',
     },
     {
-      label: 'Daily Balance',
-      value: daily.balance,
+      label: 'Business Valuation',
+      value: (Number(daily.balance || 0) + Number(daily.loanOutstanding || 0)),
       valueTone: 'text-white',
       accent: true,
       icon: (
