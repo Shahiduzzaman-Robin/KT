@@ -10,6 +10,7 @@ import UserSessionBadge from '../components/UserSessionBadge';
 import { getSocketUrl } from '../utils/socket';
 import AppSidebar from '../components/AppSidebar';
 import { useCurrentRole } from '../utils/auth';
+import ActionModal from '../components/ActionModal';
 
 function HomePage() {
   const role = useCurrentRole();
@@ -30,6 +31,8 @@ function HomePage() {
     minAmount: '',
     maxAmount: '',
   });
+
+  const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
   const [daily, setDaily] = useState({ income: 0, outgoing: 0, balance: 0 });
   const [monthly, setMonthly] = useState({ income: 0, outgoing: 0, balance: 0 });
@@ -58,7 +61,11 @@ function HomePage() {
       setTotalPages(data.totalPages || 1);
     } catch (error) {
       console.error(error);
-      alert('Failed to load transactions');
+      setStatusMessage({
+        title: 'Load Failed',
+        message: 'Could not fetch latest transactions from the server.',
+        type: 'danger'
+      });
     } finally {
       setLoading(false);
     }
@@ -192,7 +199,11 @@ function HomePage() {
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error(error);
-      alert('Failed to export Excel');
+      setStatusMessage({
+        title: 'Export Failed',
+        message: 'There was a problem generating the Excel report. Please try again.',
+        type: 'danger'
+      });
     }
   }
 
@@ -536,6 +547,16 @@ function HomePage() {
       >
         +
       </button>
+
+      <ActionModal 
+        isOpen={!!statusMessage}
+        onClose={() => setStatusMessage(null)}
+        onConfirm={() => setStatusMessage(null)}
+        title={statusMessage?.title}
+        message={statusMessage?.message}
+        confirmText="Acknowledged"
+        type={statusMessage?.type}
+      />
     </div>
   );
 }

@@ -6,6 +6,8 @@ import LedgerAutocomplete from './LedgerAutocomplete';
 import { useCurrentRole } from '../utils/auth';
 import CustomSelect from './CustomSelect';
 
+import ActionModal from './ActionModal';
+
 const EMPTY = {
   ledgerInput: '',
   ledgerId: '',
@@ -28,6 +30,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
   const ledgerConfirmButtonRef = useRef(null);
   const [showNewLedger, setShowNewLedger] = useState(false);
   const [newLedger, setNewLedger] = useState({ name: '', type: 'other', contact: '', address: '', notes: '' });
+  const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
   useEffect(() => {
     if (!editingTransaction) {
@@ -177,7 +180,11 @@ function TransactionForm({ editingTransaction, onSaved }) {
       onSaved();
     } catch (requestError) {
       const errorMsg = requestError.response?.data?.details ||  requestError.response?.data?.message || requestError.message || 'Failed to save transaction';
-      alert(`Error: ${errorMsg}`);
+      setStatusMessage({
+        title: 'Transaction Error',
+        message: errorMsg,
+        type: 'danger'
+      });
     } finally {
       setLoading(false);
     }
@@ -185,7 +192,11 @@ function TransactionForm({ editingTransaction, onSaved }) {
 
   async function createLedger() {
     if (!newLedger.name.trim()) {
-      alert('Ledger name is required');
+      setStatusMessage({
+        title: 'Validation Failed',
+        message: 'Ledger name is required',
+        type: 'warning'
+      });
       return;
     }
 
@@ -212,7 +223,11 @@ function TransactionForm({ editingTransaction, onSaved }) {
       setShowLedgerConfirm(false);
       setPendingLedgerPayload(null);
     } catch (requestError) {
-      alert(requestError.response?.data?.message || 'Failed to create ledger');
+      setStatusMessage({
+        title: 'Error Creating Ledger',
+        message: requestError.response?.data?.message || 'Failed to create ledger',
+        type: 'danger'
+      });
     } finally {
       setLoading(false);
     }
@@ -482,6 +497,16 @@ function TransactionForm({ editingTransaction, onSaved }) {
             document.body
           )
         : null}
+
+      <ActionModal 
+        isOpen={!!statusMessage}
+        onClose={() => setStatusMessage(null)}
+        onConfirm={() => setStatusMessage(null)}
+        title={statusMessage?.title}
+        message={statusMessage?.message}
+        confirmText="Got it"
+        type={statusMessage?.type}
+      />
     </section>
   );
 }

@@ -4,6 +4,7 @@ import api from '../utils/api';
 import { useCurrentRole } from '../utils/auth';
 import { getSocketUrl } from '../utils/socket';
 import { io } from 'socket.io-client';
+import ActionModal from './ActionModal';
 
 function formatBDT(value) {
   return `৳ ${Number(value || 0).toLocaleString()}`;
@@ -15,6 +16,7 @@ function DailyClosure() {
   const [data, setData] = useState(null);
   const [notes, setNotes] = useState('');
   const [success, setSuccess] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(null); // { title, message, type, isConfirm, onConfirm }
 
   async function fetchPreview() {
     try {
@@ -42,17 +44,31 @@ function DailyClosure() {
   }, []);
 
   async function handleCloseDay() {
-    if (!window.confirm('Are you sure you want to close the day and lock the records? This action cannot be undone.')) {
-      return;
-    }
+    setStatusMessage({
+      title: 'Finalize Day?',
+      message: 'Are you sure you want to close the day and lock the records? This action cannot be undone.',
+      type: 'warning',
+      isConfirm: true,
+      onConfirm: async () => {
+        setStatusMessage(null);
+        await performClosure();
+      }
+    });
+  }
 
+  async function performClosure() {
     try {
       setLoading(true);
       await api.post('/reports/close-day', { date: data.date, notes });
       setSuccess(true);
       fetchPreview();
     } catch (err) {
-      alert(err.response?.data?.message || 'Failed to close day');
+      console.error(err);
+      setStatusMessage({
+        title: 'Closure Failed',
+        message: err.response?.data?.message || 'Failed to close day',
+        type: 'danger'
+      });
     } finally {
       setLoading(false);
     }
@@ -172,6 +188,16 @@ function DailyClosure() {
           </div>
         ) : null}
       </div>
+
+      <ActionModal 
+        isOpen={!!statusMessage}
+        onClose={() => setStatusMessage(null)}
+        onConfirm={statusMessage?.isConfirm ? statusMessage.onConfirm : () => setStatusMessage(null)}
+        title={statusMessage?.title}
+        message={statusMessage?.message}
+        confirmText={statusMessage?.isConfirm ? 'Confirm Closure' : 'Got it'}
+        type={statusMessage?.type}
+      />
     </div>
   );
 }

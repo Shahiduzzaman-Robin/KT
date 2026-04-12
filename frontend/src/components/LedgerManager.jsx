@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import api from '../utils/api';
 import { useCurrentRole } from '../utils/auth';
 import CustomSelect from './CustomSelect';
+import ActionModal from './ActionModal';
 
 const blank = { name: '', type: 'other', contact: '', address: '', notes: '' };
 
@@ -20,6 +21,7 @@ function LedgerManager() {
   const [actionModal, setActionModal] = useState(null);
   const [actionProcessing, setActionProcessing] = useState(false);
   const confirmActionButtonRef = useRef(null);
+  const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
   async function loadLedgers(search = '') {
     const { data } = await api.get('/ledgers', { params: { search, limit: 40, includeArchived: true } });
@@ -139,7 +141,11 @@ function LedgerManager() {
       setPendingCreatePayload(null);
       await loadLedgers(query);
     } catch (error) {
-      alert(error.response?.data?.message || 'Failed to create ledger');
+      setStatusMessage({
+        title: 'Creation Failed',
+        message: error.response?.data?.message || 'Failed to create ledger',
+        type: 'danger'
+      });
     } finally {
       setSaving(false);
     }
@@ -172,12 +178,20 @@ function LedgerManager() {
         const { data } = await api.delete(`/ledgers/${ledger._id}`);
         await loadLedgers(query);
         if (data?.message) {
-          alert(data.message);
+          setStatusMessage({
+            title: 'Action Successful',
+            message: data.message,
+            type: 'success'
+          });
         }
       }
       setActionModal(null);
     } catch (error) {
-      alert(error.response?.data?.message || 'Action failed');
+      setStatusMessage({
+        title: 'Action Error',
+        message: error.response?.data?.message || 'Action failed',
+        type: 'danger'
+      });
     } finally {
       setActionProcessing(false);
     }
@@ -364,6 +378,16 @@ function LedgerManager() {
             document.body
           )
         : null}
+
+      <ActionModal 
+        isOpen={!!statusMessage}
+        onClose={() => setStatusMessage(null)}
+        onConfirm={() => setStatusMessage(null)}
+        title={statusMessage?.title}
+        message={statusMessage?.message}
+        confirmText="OK"
+        type={statusMessage?.type}
+      />
     </section>
   );
 }
