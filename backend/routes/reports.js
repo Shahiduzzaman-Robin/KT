@@ -1,7 +1,10 @@
 const express = require('express');
 const dayjs = require('dayjs');
+const bcrypt = require('bcryptjs');
+const mongoose = require('mongoose');
 const DailyReport = require('../models/DailyReport');
 const Transaction = require('../models/Transaction');
+const User = require('../models/User');
 const { requireAuth, authorizeRoles } = require('../middleware/auth');
 const { sendDiscordNotification } = require('../utils/discord');
 const { logAudit } = require('../utils/audit');
@@ -86,9 +89,6 @@ router.get('/preview', requireAuth, async (req, res) => {
     res.status(500).json({ message: 'Failed to generate preview', error: err.message });
   }
 });
-
-const bcrypt = require('bcryptjs');
-const User = require('../models/User');
 
 // Perform "Shop Closure"
 router.post('/close-day', requireAuth, authorizeRoles('admin'), async (req, res) => {
@@ -188,7 +188,7 @@ router.post('/:id/revert', requireAuth, authorizeRoles('admin'), async (req, res
       return res.status(404).json({ message: 'Internal Error: Could not verify admin account.' });
     }
 
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.passwordHash);
     if (!isMatch) {
       return res.status(401).json({ message: 'Invalid password. Revert denied.' });
     }
