@@ -173,16 +173,18 @@ router.post('/:id/revert', requireAuth, authorizeRoles('admin'), async (req, res
     }
 
     // 1. Verify User Password
-    // Check by ID first, then by Username (fallback for different auth types)
-    const user = await User.findOne({ 
-      $or: [
-        { _id: req.user.id || 'none' }, 
-        { username: req.user.username }
-      ] 
-    });
+    const mongoose = require('mongoose');
+    let userQuery = { username: req.user.username };
+    
+    // If we have a valid-looking ID, we can use it, otherwise stick to username
+    if (req.user.id && mongoose.Types.ObjectId.isValid(req.user.id)) {
+      userQuery = { _id: req.user.id };
+    }
+
+    const user = await User.findOne(userQuery);
     
     if (!user) {
-      console.error('[Revert Error] Admin user not found:', req.user.username);
+      console.error('[Revert Error] Admin user not found for query:', userQuery);
       return res.status(404).json({ message: 'Internal Error: Could not verify admin account.' });
     }
 
