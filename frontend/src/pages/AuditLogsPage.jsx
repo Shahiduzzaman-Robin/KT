@@ -70,6 +70,7 @@ const ENTITY_FIELD_MAP = {
   user: ['username', 'displayName', 'role', 'active'],
   auth: ['status', 'description'],
   export: ['status', 'description'],
+  report: ['date', 'closingBalance', 'transactionCount', 'notes'],
 };
 
 function getEntityFields(entry) {
@@ -272,6 +273,8 @@ function AuditLogsPage() {
     if (normalized.includes('LOGIN')) return { label: 'Login', tone: 'bg-sky-100 text-sky-700' };
     if (normalized.includes('LOGOUT')) return { label: 'Logout', tone: 'bg-slate-100 text-slate-700' };
     if (normalized.includes('EXPORT')) return { label: 'Export', tone: 'bg-violet-100 text-violet-700' };
+    if (normalized.includes('REVERT')) return { label: 'Unlocked', tone: 'bg-indigo-100 text-indigo-700' };
+    if (normalized.includes('CLOSE')) return { label: 'Closed Day', tone: 'bg-red-50 text-red-600' };
 
     return { label: prettyLabel(action), tone: 'bg-slate-100 text-slate-700' };
   }
@@ -298,6 +301,10 @@ function AuditLogsPage() {
 
     if (entityType === 'export') {
       return '';
+    }
+
+    if (entityType === 'report') {
+      return snapshot.date ? dayjs(snapshot.date).format('DD MMM YYYY') : 'Daily Report';
     }
 
     return entry.description || prettyLabel(entry.entityType) || 'Record';
@@ -445,6 +452,7 @@ function AuditLogsPage() {
                 { value: 'user', label: 'User' },
                 { value: 'auth', label: 'Auth' },
                 { value: 'export', label: 'Export' },
+                { value: 'report', label: 'Business Closure' },
               ]}
               buttonClassName="!rounded-xl !border-transparent !bg-white"
             />
