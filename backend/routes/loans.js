@@ -38,10 +38,11 @@ router.post('/', async (req, res) => {
   try {
     const { borrowerName, amount, date, type, description, ledgerId, createTransaction } = req.body;
 
+    const numericAmount = Number(amount);
     const loan = new Loan({
       borrowerName,
-      totalAmount: amount,
-      remainingAmount: amount,
+      totalAmount: numericAmount,
+      remainingAmount: numericAmount,
       date: date || new Date(),
       type: type || 'loan',
       description,

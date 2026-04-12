@@ -115,7 +115,7 @@ router.get('/preview', requireAuth, async (req, res) => {
     // 3. Calculate Outstanding Loans
     const activeLoans = await Loan.aggregate([
       { $match: { status: 'active' } },
-      { $group: { _id: null, total: { $sum: '$remainingAmount' } } }
+      { $group: { _id: null, total: { $sum: { $toDecimal: "$remainingAmount" } } } }
     ]);
     const totalLoanOutstanding = activeLoans[0]?.total || 0;
 
