@@ -209,7 +209,7 @@ function HomePage() {
           compactFilters={(
             <div className="flex flex-col h-full [font-family:Inter,ui-sans-serif,system-ui]">
               <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4 no-print">
-                <h3 className="text-xl font-black tracking-tight text-[#001f2a]">Ledger Filters</h3>
+                <h3 className="text-xl font-black tracking-tight text-[#001f2a]">Filters</h3>
                 <button
                   className="p-2 rounded-lg text-slate-400 hover:bg-white hover:text-[#ba1a1a] transition-all"
                   type="button"
