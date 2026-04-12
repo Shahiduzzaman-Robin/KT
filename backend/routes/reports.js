@@ -215,7 +215,12 @@ router.post('/:id/revert', requireAuth, authorizeRoles('admin'), async (req, res
 
     res.json({ message: 'Closure successfully reverted. Records are now unlocked.' });
   } catch (err) {
-    res.status(500).json({ message: 'Failed to revert closure', error: err.message });
+    console.error('[REVERT_CRASH]:', err);
+    res.status(500).json({ 
+      message: 'Critical error during closure reversal', 
+      error: err.message,
+      stack: err.stack // temporarily include stack to debug the 500
+    });
   }
 });
 
