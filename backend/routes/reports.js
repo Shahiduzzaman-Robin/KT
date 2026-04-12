@@ -37,9 +37,14 @@ router.get('/:id/details', requireAuth, async (req, res) => {
       date: { $gte: startOfDay, $lte: endOfDay }
     }).populate('ledgerId', 'name type').sort({ createdAt: 1 });
 
+    const loans = await Loan.find({
+      date: { $gte: startOfDay, $lte: endOfDay }
+    }).sort({ createdAt: 1 });
+
     res.json({
       report,
-      transactions
+      transactions,
+      loans: loans || []
     });
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch report details', error: err.message });

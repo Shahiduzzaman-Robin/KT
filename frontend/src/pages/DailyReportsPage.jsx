@@ -36,7 +36,12 @@ function DailyReportsPage() {
     try {
       setLoadingDetails(true);
       const { data } = await api.get(`/reports/${reportId}/details`);
-      setDetails(data);
+      const combined = [
+        ...(data.transactions || []).map(t => ({ ...t, kind: 'transaction' })),
+        ...(data.loans || []).map(l => ({ ...l, kind: 'loan' }))
+      ].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
+      setDetails({ ...data, combined });
     } catch (err) {
       setStatusMessage({
         title: 'Load Error',
@@ -252,25 +257,34 @@ function DailyReportsPage() {
                           </tr>
                        </thead>
                        <tbody className="text-[11px]">
-                          {details.transactions.map((tx) => (
-                            <tr key={tx._id} className="border-b border-black/10 print:border-black">
-                               <td className="border-r border-black/10 print:border-black p-2 whitespace-nowrap">{dayjs(tx.createdAt).format('hh:mm A')}</td>
-                               <td className="border-r border-black/10 print:border-black p-2 font-bold">
-                                  {tx.ledgerId?.name || 'N/A'}
-                                  {tx.description && <div className="text-[9px] font-normal italic mt-0.5 text-slate-600 print:text-black">Note: {tx.description}</div>}
-                               </td>
-                               <td className="border-r border-black/10 print:border-black p-2 text-right">
-                                  {tx.type === 'income' ? formatBDT(tx.amount) : '-'}
-                               </td>
-                               <td className="p-2 text-right">
-                                  {tx.type === 'outgoing' ? formatBDT(tx.amount) : '-'}
-                               </td>
-                            </tr>
-                          ))}
-                          {details.transactions.length === 0 && (
-                            <tr><td colSpan="4" className="p-8 text-center text-slate-400">No transactions recorded for this day.</td></tr>
-                          )}
-                       </tbody>
+                           {details.combined?.map((item) => (
+                             <tr key={item._id} className="border-b border-black/10 print:border-black">
+                                <td className="border-r border-black/10 print:border-black p-2 whitespace-nowrap">{dayjs(item.createdAt).format('hh:mm A')}</td>
+                                <td className="border-r border-black/10 print:border-black p-2 font-bold">
+                                   {item.kind === 'loan' ? (
+                                     <>
+                                       <span className="text-blue-800">[LOAN] {item.borrowerName}</span>
+                                       {item.description && <div className="text-[9px] font-normal italic mt-0.5 text-slate-600 print:text-black">Note: {item.description}</div>}
+                                     </>
+                                   ) : (
+                                     <>
+                                       {item.ledgerId?.name || 'N/A'}
+                                       {item.description && <div className="text-[9px] font-normal italic mt-0.5 text-slate-600 print:text-black">Note: {item.description}</div>}
+                                     </>
+                                   )}
+                                </td>
+                                <td className="border-r border-black/10 print:border-black p-2 text-right">
+                                   {item.kind === 'transaction' && item.type === 'income' ? formatBDT(item.amount) : '-'}
+                                </td>
+                                <td className="p-2 text-right">
+                                   {item.kind === 'loan' ? formatBDT(item.totalAmount) : (item.kind === 'transaction' && item.type === 'outgoing' ? formatBDT(item.amount) : '-')}
+                                </td>
+                             </tr>
+                           ))}
+                           {(!details.combined || details.combined.length === 0) && (
+                             <tr><td colSpan="4" className="p-8 text-center text-slate-400">No activity recorded for this day.</td></tr>
+                           )}
+                        </tbody>
                     </table>
 
                     <div className="grid grid-cols-2 gap-8 mb-12">

@@ -36,7 +36,17 @@ function DailyClosurePage() {
       const { data: txRes } = await api.get('/transactions', {
         params: { from: dateToFetch, to: dateToFetch, limit: 100 }
       });
-      setTransactions(txRes.items || []);
+      const { data: loansRes } = await api.get('/loans', {
+        params: { from: dateToFetch, to: dateToFetch }
+      });
+
+      // Combine and sort by time (createdAt)
+      const combined = [
+        ...(txRes.items || []).map(t => ({ ...t, kind: 'transaction' })),
+        ...(loansRes || []).map(l => ({ ...l, kind: 'loan' }))
+      ].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
+      setTransactions(combined);
     } catch (err) {
       console.error('Failed to fetch closure data', err);
     } finally {
@@ -294,17 +304,32 @@ function DailyClosurePage() {
                         </tr>
                      </thead>
                      <tbody className="divide-y divide-slate-50">
-                        {transactions.map(tx => (
-                          <tr key={tx._id} className="hover:bg-slate-50 transition-colors group">
-                             <td className="px-8 py-5 text-xs font-bold text-slate-400">{dayjs(tx.createdAt).format('hh:mm A')}</td>
+                        {transactions.map(item => (
+                          <tr key={item._id} className="hover:bg-slate-50 transition-colors group">
+                             <td className="px-8 py-5 text-xs font-bold text-slate-400">{dayjs(item.createdAt).format('hh:mm A')}</td>
                              <td className="px-8 py-5">
-                                <div className="text-sm font-black text-[#001f2a]">{tx.ledgerId?.name}</div>
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{tx.type}</div>
+                                {item.kind === 'loan' ? (
+                                  <>
+                                    <div className="text-sm font-black text-blue-800">{item.borrowerName}</div>
+                                    <div className="text-[10px] font-bold text-blue-500 uppercase tracking-widest">Loan & Advance</div>
+                                  </>
+                                ) : (
+                                  <>
+                                    <div className="text-sm font-black text-[#001f2a]">{item.ledgerId?.name || 'N/A'}</div>
+                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{item.type}</div>
+                                  </>
+                                )}
                              </td>
                              <td className="px-8 py-5 text-right">
-                                <span className={`text-sm font-black ${tx.type === 'income' ? 'text-emerald-600' : 'text-red-500'}`}>
-                                   {tx.type === 'income' ? '+' : '-'} {formatBDT(tx.amount)}
-                                </span>
+                                {item.kind === 'loan' ? (
+                                   <span className="text-sm font-black text-blue-600">
+                                      {formatBDT(item.totalAmount)}
+                                   </span>
+                                ) : (
+                                   <span className={`text-sm font-black ${item.type === 'income' ? 'text-emerald-600' : 'text-red-500'}`}>
+                                      {item.type === 'income' ? '+' : '-'} {formatBDT(item.amount)}
+                                   </span>
+                                )}
                              </td>
                           </tr>
                         ))}

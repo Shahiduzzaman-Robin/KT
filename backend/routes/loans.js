@@ -16,12 +16,17 @@ router.use(requireAuth);
 // Get all loans
 router.get('/', async (req, res) => {
   try {
-    const { status, type } = req.query;
+    const { status, type, from, to } = req.query;
     const query = {};
     if (status) query.status = status;
     if (type) query.type = type;
+    if (from || to) {
+      query.date = {};
+      if (from) query.date.$gte = new Date(from);
+      if (to) query.date.$lte = new Date(new Date(to).setHours(23, 59, 59, 999));
+    }
 
-    const loans = await Loan.find(query).sort({ date: -1 });
+    const loans = await Loan.find(query).sort({ createdAt: 1 });
     res.json(loans);
   } catch (error) {
     res.status(500).json({ message: 'Failed to fetch loans', error: error.message });
