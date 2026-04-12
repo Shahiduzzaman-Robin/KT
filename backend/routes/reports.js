@@ -67,12 +67,43 @@ router.get('/preview', requireAuth, async (req, res) => {
 
     const dayData = stats[0] || { income: 0, outgoing: 0, count: 0 };
 
-    // 2. Get the last locked report for opening balance
+    // 2. Calculate Opening Balance with smart "Gap Catch-up"
     const lastReport = await DailyReport.findOne({ 
       date: { $lt: todayStart } 
     }).sort({ date: -1 });
 
-    const openingBalance = lastReport ? lastReport.closingBalance : 0;
+    let openingBalance = 0;
+    if (lastReport) {
+      // Find any transactions that happened between the last report and today (The "Gap")
+      const lastReportEnd = dayjs(lastReport.date).endOf('day').toDate();
+      const gapStats = await Transaction.aggregate([
+        { $match: { date: { $gt: lastReportEnd, $lt: todayStart } } },
+        {
+          $group: {
+            _id: null,
+            income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
+            outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
+          },
+        },
+      ]);
+      const gapData = gapStats[0] || { income: 0, outgoing: 0 };
+      openingBalance = lastReport.closingBalance + gapData.income - gapData.outgoing;
+    } else {
+      // No previous report exists - calculate balance of all transactions before today
+      const legacyStats = await Transaction.aggregate([
+        { $match: { date: { $lt: todayStart } } },
+        {
+          $group: {
+            _id: null,
+            income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
+            outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
+          },
+        },
+      ]);
+      const legacyData = legacyStats[0] || { income: 0, outgoing: 0 };
+      openingBalance = legacyData.income - legacyData.outgoing;
+    }
+
     const closingBalance = openingBalance + dayData.income - dayData.outgoing;
 
     const existingReport = await DailyReport.findOne({ date: { $gte: todayStart, $lte: todayEnd } });
@@ -122,8 +153,39 @@ router.post('/', requireAuth, authorizeRoles('admin'), async (req, res) => {
     ]);
 
     const dayData = stats[0] || { income: 0, outgoing: 0, count: 0 };
+    
+    // Smart Gap Catch-up for actual closure
     const lastReport = await DailyReport.findOne({ date: { $lt: targetDate } }).sort({ date: -1 });
-    const openingBalance = lastReport ? lastReport.closingBalance : 0;
+    let openingBalance = 0;
+    if (lastReport) {
+      const lastReportEnd = dayjs(lastReport.date).endOf('day').toDate();
+      const gapStats = await Transaction.aggregate([
+        { $match: { date: { $gt: lastReportEnd, $lt: targetDate } } },
+        {
+          $group: {
+            _id: null,
+            income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
+            outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
+          },
+        },
+      ]);
+      const gapData = gapStats[0] || { income: 0, outgoing: 0 };
+      openingBalance = lastReport.closingBalance + gapData.income - gapData.outgoing;
+    } else {
+      const legacyStats = await Transaction.aggregate([
+        { $match: { date: { $lt: targetDate } } },
+        {
+          $group: {
+            _id: null,
+            income: { $sum: { $cond: [{ $eq: ['$type', 'income'] }, '$amount', 0] } },
+            outgoing: { $sum: { $cond: [{ $eq: ['$type', 'outgoing'] }, '$amount', 0] } },
+          },
+        },
+      ]);
+      const legacyData = legacyStats[0] || { income: 0, outgoing: 0 };
+      openingBalance = legacyData.income - legacyData.outgoing;
+    }
+
     const closingBalance = openingBalance + dayData.income - dayData.outgoing;
 
     const report = await DailyReport.create({
