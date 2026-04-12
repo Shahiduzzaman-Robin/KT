@@ -5,6 +5,7 @@ import api from '../utils/api';
 import AppSidebar from '../components/AppSidebar';
 import UserSessionBadge from '../components/UserSessionBadge';
 import PasswordModal from '../components/PasswordModal';
+import ActionModal from '../components/ActionModal';
 
 function formatBDT(value) {
   if (value === 0) return '0.00';
@@ -19,6 +20,7 @@ function DailyReportsPage() {
   const [loadingDetails, setLoadingDetails] = useState(false);
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
   const [revertLoading, setRevertLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
   async function fetchReports() {
     try {
@@ -66,12 +68,20 @@ function DailyReportsPage() {
     try {
       setRevertLoading(true);
       await api.post(`/reports/${selectedReport._id}/revert`, { password });
-      alert('Day successfully unlocked! You can now edit transactions for this date.');
+      setStatusMessage({
+        title: 'Unlock Success',
+        message: 'Day successfully unlocked! You can now edit transactions for this date.',
+        type: 'success'
+      });
       setIsPasswordModalOpen(false);
       closeDocument();
       fetchReports();
     } catch (err) {
-      alert(err.response?.data?.message || 'Failed to revert closure');
+      setStatusMessage({
+        title: 'Unlock Failed',
+        message: err.response?.data?.message || 'Verification failed. Password might be incorrect.',
+        type: 'danger'
+      });
     } finally {
       setRevertLoading(false);
     }
@@ -342,6 +352,16 @@ function DailyReportsPage() {
         loading={revertLoading}
         title="Confirm Historical Unlock"
         message={`DANGER: You are about to UNLOCK the records for ${dayjs(selectedReport?.date).format('DD MMM YYYY')}. This will delete the archived report and allow edits for this date.`}
+      />
+
+      <ActionModal 
+        isOpen={!!statusMessage}
+        onClose={() => setStatusMessage(null)}
+        onConfirm={() => setStatusMessage(null)}
+        title={statusMessage?.title}
+        message={statusMessage?.message}
+        confirmText="Got it"
+        type={statusMessage?.type}
       />
     </div>
   );

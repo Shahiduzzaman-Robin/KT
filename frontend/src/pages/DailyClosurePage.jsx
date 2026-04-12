@@ -8,6 +8,7 @@ import { io } from 'socket.io-client';
 import AppSidebar from '../components/AppSidebar';
 import UserSessionBadge from '../components/UserSessionBadge';
 import PasswordModal from '../components/PasswordModal';
+import ActionModal from '../components/ActionModal';
 
 function formatBDT(value) {
   return `৳ ${Number(value || 0).toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
@@ -22,6 +23,8 @@ function DailyClosurePage() {
   const [transactions, setTransactions] = useState([]);
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
   const [revertLoading, setRevertLoading] = useState(false);
+  const [isCloseConfirmOpen, setIsCloseConfirmOpen] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(null); // { title, message, type }
 
   async function fetchFullData() {
     try {
@@ -49,18 +52,23 @@ function DailyClosurePage() {
     return () => socket.disconnect();
   }, []);
 
-  async function handleCloseDay() {
-    if (!window.confirm('CRITICAL ACTION: Are you sure you want to lock ALL today\'s records? This will generate a permanent archive entry.')) {
-      return;
-    }
-
+  async function handleCloseDayConfirm() {
+    setIsCloseConfirmOpen(false);
     try {
       setLoading(true);
       await api.post('/reports/close-day', { date: data.date, notes });
-      alert('Day closed successfully! Records are now locked.');
+      setStatusMessage({
+        title: 'Closure Success!',
+        message: 'Business day has been securely locked and archived. You can viewed the finalized report in the archive.',
+        type: 'success'
+      });
       fetchFullData();
     } catch (err) {
-      alert(err.response?.data?.message || 'Failed to close day');
+      setStatusMessage({
+        title: 'Closure Failed',
+        message: err.response?.data?.message || 'The system encountered an error while trying to lock the day.',
+        type: 'danger'
+      });
     } finally {
       setLoading(false);
     }
@@ -79,11 +87,19 @@ function DailyClosurePage() {
       }
 
       await api.post(`/reports/${todayReport._id}/revert`, { password });
-      alert('Day successfully unlocked!');
+      setStatusMessage({
+        title: 'Day Unlocked',
+        message: 'The business day is now editable again. Existing reports for this date have been removed.',
+        type: 'success'
+      });
       setIsPasswordModalOpen(false);
       fetchFullData();
     } catch (err) {
-      alert(err.response?.data?.message || 'Verification failed. Day remains locked.');
+      setStatusMessage({
+        title: 'Unlock Failed',
+        message: err.response?.data?.message || 'Verification failed. Password may be incorrect.',
+        type: 'danger'
+      });
     } finally {
       setRevertLoading(false);
     }
@@ -101,7 +117,6 @@ function DailyClosurePage() {
     <div className="relative min-h-screen bg-[#f4faff] text-[#001f2a] [font-family:Inter,ui-sans-serif,system-ui]">
       <div className="mx-auto flex max-w-[1700px] gap-5 px-4 py-5 md:px-6">
         <AppSidebar />
-
         <main className="min-w-0 flex-1 space-y-6">
           <header className="rounded-3xl bg-white p-8 shadow-[0_12px_40px_rgba(0,31,42,0.06)] flex items-center justify-between border border-slate-50">
             <div>
@@ -201,7 +216,7 @@ function DailyClosurePage() {
                       />
                       
                       <button 
-                        onClick={handleCloseDay}
+                        onClick={() => setIsCloseConfirmOpen(true)}
                         disabled={loading}
                         className="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-[#ba1a1a] to-[#8c1d1d] py-6 text-xs font-black uppercase tracking-[0.3em] text-white shadow-2xl shadow-red-900/30 transition hover:translate-y-[-2px] disabled:opacity-50"
                       >
@@ -269,6 +284,25 @@ function DailyClosurePage() {
         loading={revertLoading}
         title="Confirm Unlock"
         message="DANGER: You are about to UNLOCK today's records. They will become editable and the archival report will be deleted."
+      />
+      <ActionModal 
+        isOpen={isCloseConfirmOpen}
+        onClose={() => setIsCloseConfirmOpen(false)}
+        onConfirm={handleCloseDayConfirm}
+        title="Finalize Closure?"
+        message="Are you sure you want to lock ALL today's records? This will generate a permanent archive and block further entries."
+        confirmText="Yes, Lock Everything"
+        type="danger"
+      />
+
+      <ActionModal 
+        isOpen={!!statusMessage}
+        onClose={() => setStatusMessage(null)}
+        onConfirm={() => setStatusMessage(null)}
+        title={statusMessage?.title}
+        message={statusMessage?.message}
+        confirmText="Got it"
+        type={statusMessage?.type}
       />
     </div>
   );
