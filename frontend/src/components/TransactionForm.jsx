@@ -17,7 +17,7 @@ const EMPTY = {
   description: '',
 };
 
-function TransactionForm({ editingTransaction, onSaved }) {
+function TransactionForm({ editingTransaction, onSaved, isModal = false }) {
   const role = useCurrentRole();
   const [form, setForm] = useState(EMPTY);
   const [errors, setErrors] = useState({});
@@ -248,7 +248,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
     : 'bg-emerald-700 hover:bg-emerald-600 text-white';
 
   return (
-    <section className="rounded-xl bg-white p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] md:p-5">
+    <section className={isModal ? 'p-1' : 'rounded-xl bg-white p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] md:p-5'}>
       <div className="mb-3 flex items-center justify-between gap-2">
         <h2 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">{editingTransaction ? 'Edit transaction' : 'New transaction'}</h2>
         {role !== 'viewer' ? (
@@ -409,7 +409,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
 
       {showConfirm
         ? createPortal(
-            <div className={`fixed inset-0 z-[300] flex items-center justify-center p-4 backdrop-blur-md ${confirmBackdropTone}`}>
+            <div className={`fixed inset-0 z-[1200] flex items-center justify-center p-4 backdrop-blur-md ${confirmBackdropTone}`}>
               <div className={`w-full max-w-xl rounded-xl border-[6px] bg-white p-5 shadow-2xl ${confirmCardTone} ${confirmBorderTone}`}>
                 <h3 className={`[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold ${confirmTitleTone}`}>Confirm New Transaction</h3>
                 <p className="mt-1 text-sm text-[#3d4a43]">Please review details before saving.</p>
@@ -457,7 +457,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
 
       {showLedgerConfirm
         ? createPortal(
-            <div className="fixed inset-0 z-[300] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
+            <div className="fixed inset-0 z-[1200] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-md">
               <div className="w-full max-w-xl rounded-xl bg-white p-5 shadow-2xl">
                 <h3 className="[font-family:Manrope,ui-sans-serif,system-ui] text-2xl font-bold text-[#001f2a]">Confirm New Ledger</h3>
                 <p className="mt-1 text-sm text-[#3d4a43]">Please review ledger details before saving.</p>

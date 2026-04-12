@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import { io } from 'socket.io-client';
 import api from '../utils/api';
 import Dashboard from '../components/Dashboard';
-import TransactionForm from '../components/TransactionForm';
+import TransactionModal from '../components/TransactionModal';
 import TransactionTable from '../components/TransactionTable';
 import CustomSelect from '../components/CustomSelect';
 import UserSessionBadge from '../components/UserSessionBadge';
@@ -20,9 +20,9 @@ function HomePage() {
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
   const [editingTransaction, setEditingTransaction] = useState(null);
+  const [isTransactionModalOpen, setIsTransactionModalOpen] = useState(false);
   const [quickSearch, setQuickSearch] = useState('');
   const [activeDatePreset, setActiveDatePreset] = useState('all');
-  const [formHighlight, setFormHighlight] = useState(false);
 
   const [filters, setFilters] = useState({
     type: '',
@@ -40,7 +40,6 @@ function HomePage() {
   const refreshRef = useRef(null);
   const refreshTimerRef = useRef(null);
   const latestSocketPayloadRef = useRef(null);
-  const formSectionRef = useRef(null);
 
   const loadTransactions = useCallback(async (nextPage = 1) => {
     setLoading(true);
@@ -150,19 +149,11 @@ function HomePage() {
   const tableTotal = searchEnabled ? visibleTransactions.length : total;
   const tableTotalPages = searchEnabled ? 1 : totalPages;
 
-  useEffect(() => {
-    if (!formHighlight) return undefined;
 
-    const timer = setTimeout(() => {
-      setFormHighlight(false);
-    }, 1400);
-
-    return () => clearTimeout(timer);
-  }, [formHighlight]);
 
   function openNewTransactionArea() {
-    setFormHighlight(true);
-    formSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setEditingTransaction(null);
+    setIsTransactionModalOpen(true);
   }
 
   function getDatePresetButtonClass(preset) {
@@ -486,19 +477,7 @@ function HomePage() {
               </div>
             </section>
 
-            <section
-              ref={formSectionRef}
-              className={`rounded-lg transition ${formHighlight ? 'ring-4 ring-[#84f8c8]/60' : ''}`}
-            >
-              <TransactionForm
-                editingTransaction={editingTransaction}
-                onSaved={async () => {
-                  setEditingTransaction(null);
-                  await loadTransactions(1);
-                  await loadSummary();
-                }}
-              />
-            </section>
+            {/* Transaction form is now in a modal */}
 
             <section className="space-y-3">
               {loading ? <p className="px-2 text-sm text-slate-600">Loading transactions...</p> : null}
@@ -525,7 +504,10 @@ function HomePage() {
                     void loadTransactions(nextPage);
                   }
                 }}
-                onEdit={(tx) => setEditingTransaction(tx)}
+                onEdit={(tx) => {
+                  setEditingTransaction(tx);
+                  setIsTransactionModalOpen(true);
+                }}
                 onDelete={deleteTransaction}
               />
 
@@ -547,6 +529,19 @@ function HomePage() {
       >
         +
       </button>
+
+      <TransactionModal
+        isOpen={isTransactionModalOpen}
+        onClose={() => {
+          setIsTransactionModalOpen(false);
+          setEditingTransaction(null);
+        }}
+        editingTransaction={editingTransaction}
+        onSaved={async () => {
+          await loadTransactions(1);
+          await loadSummary();
+        }}
+      />
 
       <ActionModal 
         isOpen={!!statusMessage}
