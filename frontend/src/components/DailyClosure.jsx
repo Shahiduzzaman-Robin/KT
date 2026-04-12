@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 import api from '../utils/api';
 import { useCurrentRole } from '../utils/auth';
+import { getSocketUrl } from '../utils/socket';
+import { io } from 'socket.io-client';
 
 function formatBDT(value) {
   return `৳ ${Number(value || 0).toLocaleString()}`;
@@ -28,6 +30,16 @@ function DailyClosure() {
 
   useEffect(() => {
     fetchPreview();
+
+    // Listen for real-time transaction changes to refresh the report
+    const socket = io(getSocketUrl());
+    socket.on('transactions-changed', () => {
+      fetchPreview();
+    });
+
+    return () => {
+      socket.disconnect();
+    };
   }, []);
 
   async function handleCloseDay() {
