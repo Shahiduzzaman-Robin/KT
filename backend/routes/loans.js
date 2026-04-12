@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const { borrowerName, amount, date, type, description, ledgerId, createTransaction } = req.body;
-    throw new Error("!!! SYSTEM PROOF: THIS IS THE ACTIVE CODEBASE !!!");
+ 
     const numericAmount = Number(amount);
     const loan = new Loan({
       borrowerName,

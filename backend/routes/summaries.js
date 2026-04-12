@@ -14,7 +14,7 @@ async function sumBetween(startDate, endDate) {
         },
         // Exclude loan-related movements from business totals
         loanId: { $exists: false },
-        description: { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }
+        description: { $not: { $regex: 'loan', $options: 'i' } }
       },
     },
     {
@@ -93,7 +93,7 @@ router.get('/category-breakdown', async (req, res) => {
         $match: {
           date: { $gte: from, $lte: to },
           loanId: { $exists: false },
-          description: { $not: { $regexMatch: { input: "$description", regex: /loan/i } } }
+          description: { $not: /loan/i }
         }
       },
       {
