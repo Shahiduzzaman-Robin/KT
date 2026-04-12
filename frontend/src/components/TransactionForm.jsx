@@ -305,7 +305,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div>
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Amount (BDT)</label>
           <input
-            className={`w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] ${errors.amount ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
+            className={`input ${errors.amount ? 'border-red-400 focus:ring-red-300' : ''}`}
             type="number"
             min="0"
             value={form.amount}
@@ -317,7 +317,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div>
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Date</label>
           <input
-            className={`w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)] disabled:cursor-not-allowed disabled:opacity-60 ${errors.date ? 'focus:shadow-[0_0_0_2px_rgba(186,26,26,0.25)]' : ''}`}
+            className={`input disabled:cursor-not-allowed disabled:opacity-60 ${errors.date ? 'border-red-400 focus:ring-red-300' : ''}`}
             type="date"
             value={form.date}
             onChange={(event) => setForm((prev) => ({ ...prev, date: event.target.value }))}
@@ -330,7 +330,7 @@ function TransactionForm({ editingTransaction, onSaved }) {
         <div className="md:col-span-4">
           <label className="mb-1 block text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Description</label>
           <input
-            className="w-full rounded-lg border border-transparent bg-[#f4faff] px-3 py-2 text-[#001f2a] outline-none transition focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+            className="input"
             value={form.description}
             placeholder="Notes..."
             onChange={(event) => setForm((prev) => ({ ...prev, description: event.target.value }))}

@@ -25,38 +25,39 @@ function AppSidebar({ onExport, compactFilters }) {
         </svg>
       )
     },
-    ...(role === 'admin'
-      ? [
-          { 
-            to: '/reports', 
-            label: 'Reports Archive', 
-            icon: (
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-              </svg>
-            )
-          },
-          { 
-            to: '/audit-logs', 
-            label: 'Audit Logs', 
-            icon: (
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            )
-          },
-          { 
-            to: '/users', 
-            label: 'Users', 
-            icon: (
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            )
-          },
-        ]
-      : []),
+    { 
+      to: '/audit-logs', 
+      label: 'Audit Logs', 
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      )
+    },
   ];
+
+  const adminLinks = [
+    { 
+      to: '/reports', 
+      label: 'Reports Archive', 
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+        </svg>
+      )
+    },
+    { 
+      to: '/users', 
+      label: 'Users', 
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      )
+    },
+  ];
+
+  const allLinks = [...links, ...(role === 'admin' ? adminLinks : [])];
 
   return (
     <aside className="hidden h-fit w-72 shrink-0 flex-col rounded-xl bg-[#e6f6ff] p-5 xl:flex sticky top-5 shadow-2xl shadow-blue-900/5 border border-white/50 backdrop-blur-sm">
@@ -71,7 +72,7 @@ function AppSidebar({ onExport, compactFilters }) {
       </div>
 
       <nav className="space-y-2">
-        {links.map((item) => {
+        {allLinks.map((item) => {
           const active = location.pathname === item.to;
           return (
             <Link
