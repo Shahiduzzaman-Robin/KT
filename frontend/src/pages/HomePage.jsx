@@ -305,24 +305,24 @@ function HomePage() {
                     }
                     input[type=number] { -moz-appearance: textfield; }
                   `}</style>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
                     <div className="relative flex-1">
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-400 uppercase pointer-events-none">Min</span>
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[8px] font-black text-slate-400 uppercase pointer-events-none">Min</span>
                       <input 
-                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-14 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all font-mono" 
+                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-10 pr-2 text-xs font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all" 
                         type="number" 
-                        placeholder="0.00" 
+                        placeholder="0" 
                         value={filters.minAmount} 
                         onChange={(e) => setFilters(p => ({ ...p, minAmount: e.target.value }))} 
                       />
                     </div>
-                    <span className="text-slate-300 font-bold">—</span>
+                    <span className="text-slate-300 font-bold text-xs">/</span>
                     <div className="relative flex-1">
-                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[9px] font-black text-slate-400 uppercase pointer-events-none">Max</span>
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[8px] font-black text-slate-400 uppercase pointer-events-none">Max</span>
                       <input 
-                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-14 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all font-mono" 
+                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-10 pr-2 text-xs font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all" 
                         type="number" 
-                        placeholder="Unlimited" 
+                        placeholder="Any" 
                         value={filters.maxAmount} 
                         onChange={(e) => setFilters(p => ({ ...p, maxAmount: e.target.value }))} 
                       />
