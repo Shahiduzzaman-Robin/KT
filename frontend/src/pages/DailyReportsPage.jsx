@@ -59,6 +59,23 @@ function DailyReportsPage() {
     window.print();
   };
 
+  const handleRevert = async () => {
+    const password = window.prompt('DANGER: You are about to UNLOCK this business day. All records for this date will become editable again.\n\nPlease enter your ADMIN PASSWORD to confirm:');
+    if (!password) return;
+
+    try {
+      setLoadingDetails(true);
+      await api.post(`/reports/${selectedReport._id}/revert`, { password });
+      alert('Day successfully unlocked! You can now edit transactions for this date.');
+      closeDocument();
+      fetchReports();
+    } catch (err) {
+      alert(err.response?.data?.message || 'Failed to revert closure');
+    } finally {
+      setLoadingDetails(false);
+    }
+  };
+
   return (
     <div className="relative min-h-screen bg-[#f4faff] text-[#001f2a] [font-family:Inter,ui-sans-serif,system-ui]">
       <style>{`
@@ -187,7 +204,17 @@ function DailyReportsPage() {
               </div>
               <div className="flex items-center gap-3">
                 <button 
-                  onClick={handlePrint}
+                  onClick={handleRevert}
+                  className="flex items-center gap-2 rounded-xl bg-red-100 px-4 py-2 text-xs font-bold text-red-700 transition hover:bg-red-200"
+                  title="Unlock this day for corrections"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 00-2 2z" />
+                  </svg>
+                  Unlock & Revert
+                </button>
+                <button 
+                   onClick={handlePrint}
                   className="flex items-center gap-2 rounded-xl bg-[#001f2a] px-4 py-2 text-xs font-bold text-white transition hover:opacity-90"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

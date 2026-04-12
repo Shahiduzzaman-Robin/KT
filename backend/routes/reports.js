@@ -87,6 +87,9 @@ router.get('/preview', requireAuth, async (req, res) => {
   }
 });
 
+const bcrypt = require('bcryptjs');
+const User = require('../models/User');
+
 // Perform "Shop Closure"
 router.post('/close-day', requireAuth, authorizeRoles('admin'), async (req, res) => {
   try {
@@ -155,13 +158,52 @@ router.post('/close-day', requireAuth, authorizeRoles('admin'), async (req, res)
       after: report.toObject()
     });
 
-    // Discord Notification (Simple text for now)
-    // We can expand our discord.js utility to handle reports later
-    console.log(`[Report] Day closed: ${dayjs(targetDate).format('DD MMM YYYY')}`);
-
     res.status(201).json(report);
   } catch (err) {
     res.status(500).json({ message: 'Failed to close day', error: err.message });
+  }
+});
+
+// Revert "Shop Closure" (Unlock Day)
+router.post('/:id/revert', requireAuth, authorizeRoles('admin'), async (req, res) => {
+  try {
+    const { password } = req.body;
+    if (!password) {
+      return res.status(400).json({ message: 'Password confirmation is required to revert closure.' });
+    }
+
+    // 1. Verify User Password
+    const user = await User.findById(req.user.id);
+    if (!user) return res.status(404).json({ message: 'User not found' });
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Invalid password. Revert denied.' });
+    }
+
+    // 2. Find and Delete the Report
+    const report = await DailyReport.findById(req.params.id);
+    if (!report) return res.status(404).json({ message: 'Report not found' });
+
+    await DailyReport.findByIdAndDelete(req.params.id);
+
+    // 3. Audit Log
+    await logAudit({
+      req,
+      entityType: 'report',
+      entityId: String(report._id),
+      action: 'REVERT_CLOSE_DAY',
+      userId: String(req.user.id),
+      userName: req.user.username,
+      role: req.user.role,
+      status: 'SUCCESS',
+      description: `Reverted closure for ${dayjs(report.date).format('YYYY-MM-DD')}. Day is now UNLOCKED.`,
+      before: report.toObject()
+    });
+
+    res.json({ message: 'Closure successfully reverted. Records are now unlocked.' });
+  } catch (err) {
+    res.status(500).json({ message: 'Failed to revert closure', error: err.message });
   }
 });
 
