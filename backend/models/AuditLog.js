@@ -4,7 +4,7 @@ const auditLogSchema = new mongoose.Schema(
   {
     entityType: {
       type: String,
-      enum: ['ledger', 'transaction', 'user', 'auth', 'export', 'system'],
+      enum: ['ledger', 'transaction', 'user', 'auth', 'export', 'system', 'report'],
       required: true,
       index: true,
     },
