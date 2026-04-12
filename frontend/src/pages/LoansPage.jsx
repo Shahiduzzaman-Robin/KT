@@ -19,7 +19,6 @@ function LoansPage() {
     borrowerName: '',
     amount: '',
     date: dayjs().format('YYYY-MM-DD'),
-    type: 'loan',
     description: '',
     ledgerId: '',
     ledgerInput: ''
@@ -65,7 +64,6 @@ function LoansPage() {
         borrowerName: '',
         amount: '',
         date: dayjs().format('YYYY-MM-DD'),
-        type: 'loan',
         description: '',
         ledgerId: '',
         ledgerInput: ''
@@ -146,17 +144,10 @@ function LoansPage() {
               </div>
               <div className="lg:col-span-1">
                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Amount (BDT)</label>
-                <input required type="number" className="w-full rounded-lg bg-slate-50 border-none p-3 text-xs font-bold outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500" value={newLoan.amount} onChange={e => setNewLoan({...newLoan, amount: e.target.value})} />
+                <input id="amount" name="amount" type="number" placeholder="0.00" value={newLoan.amount} onChange={e => setNewLoan(prev => ({ ...prev, amount: e.target.value }))} className="w-full rounded-lg border-2 border-slate-50 bg-[#f8fbff] px-4 py-3 text-sm font-bold text-[#001f2a] focus:border-[#00694b] focus:bg-white focus:outline-none transition-all" required />
               </div>
-              <div className="lg:col-span-1">
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Type</label>
-                <select className="w-full rounded-lg bg-slate-50 border-none p-3 text-xs font-bold outline-none ring-1 ring-slate-200" value={newLoan.type} onChange={e => setNewLoan({...newLoan, type: e.target.value})}>
-                  <option value="loan">Loan</option>
-                  <option value="advance">Advance</option>
-                </select>
-              </div>
-              <div className="lg:col-span-1">
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Cash Account / Ledger</label>
+              <div className="lg:col-span-2">
+                <label className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Cash Account / Ledger</label>
                 <LedgerAutocomplete 
                   value={newLoan.ledgerInput}
                   selectedLedgerId={newLoan.ledgerId}
