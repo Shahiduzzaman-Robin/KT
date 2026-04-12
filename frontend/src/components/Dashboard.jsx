@@ -46,7 +46,7 @@ function Dashboard({ daily }) {
         {cardData.map((card) => (
           <div
             key={card.label}
-            className={`group relative overflow-hidden rounded-[2rem] p-6 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-emerald-900/5 ${
+            className={`group relative overflow-hidden rounded-xl p-6 transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-emerald-900/5 ${
               card.accent
                 ? 'bg-gradient-to-br from-[#00694b] to-[#01402e] text-white shadow-xl shadow-emerald-900/20'
                 : 'bg-white border border-slate-50'
@@ -68,7 +68,7 @@ function Dashboard({ daily }) {
                 </div>
               </div>
               
-              <div className={`flex h-12 w-12 items-center justify-center rounded-2xl shadow-inner transition-transform group-hover:rotate-6 ${card.iconStyle}`}>
+              <div className={`flex h-12 w-12 items-center justify-center rounded-lg shadow-inner transition-transform group-hover:rotate-6 ${card.iconStyle}`}>
                 {card.icon}
               </div>
             </div>

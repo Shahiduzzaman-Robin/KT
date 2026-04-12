@@ -160,8 +160,8 @@ function HomePage() {
 
   function getDatePresetButtonClass(preset) {
     return activeDatePreset === preset
-      ? 'rounded-[1.2rem] bg-[#00694b] px-4 py-3 text-xs font-black text-white shadow-lg shadow-emerald-900/10 transition-all scale-[1.02]'
-      : 'rounded-[1.2rem] bg-[#eef8ff] px-4 py-3 text-xs font-black text-slate-500 transition-all hover:bg-[#e0f2fe] hover:text-[#001f2a]';
+      ? 'rounded-lg bg-[#00694b] px-4 py-3 text-xs font-black text-white shadow-lg shadow-emerald-900/10 transition-all scale-[1.02]'
+      : 'rounded-lg bg-[#eef8ff] px-4 py-3 text-xs font-black text-slate-500 transition-all hover:bg-[#e0f2fe] hover:text-[#001f2a]';
   }
 
   async function deleteTransaction(id) {
@@ -238,7 +238,7 @@ function HomePage() {
                       { value: 'income', label: 'Income Only' },
                       { value: 'outgoing', label: 'Outgoing Only' },
                     ]}
-                    buttonClassName="!rounded-2xl !border-transparent !bg-[#eef8ff] !py-4 !text-sm !font-bold !text-[#001f2a]"
+                    buttonClassName="!rounded-lg !border-transparent !bg-[#eef8ff] !py-4 !text-sm !font-bold !text-[#001f2a]"
                   />
                 </div>
 
@@ -268,11 +268,11 @@ function HomePage() {
                     <div className="relative group">
                       <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#00694b]">
                         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v12a2 2 0 002 2z" />
                         </svg>
                       </div>
                       <input
-                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20"
+                        className="w-full rounded-lg border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20"
                         type="date"
                         value={filters.from}
                         onChange={(e) => setFilters(p => ({ ...p, from: e.target.value }))}
@@ -281,11 +281,11 @@ function HomePage() {
                     <div className="relative group">
                       <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#00694b]">
                         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v12a2 2 0 002 2z" />
                         </svg>
                       </div>
                       <input
-                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20"
+                        className="w-full rounded-lg border-none bg-[#eef8ff] py-4 pl-12 pr-4 text-sm font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20"
                         type="date"
                         value={filters.to}
                         onChange={(e) => setFilters(p => ({ ...p, to: e.target.value }))}
@@ -309,7 +309,7 @@ function HomePage() {
                     <div className="relative flex-1">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[8px] font-black text-slate-400 uppercase pointer-events-none">Min</span>
                       <input 
-                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-10 pr-2 text-xs font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all" 
+                        className="w-full rounded-lg border-none bg-[#eef8ff] py-4 pl-10 pr-2 text-xs font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all" 
                         type="number" 
                         placeholder="0" 
                         value={filters.minAmount} 
@@ -320,7 +320,7 @@ function HomePage() {
                     <div className="relative flex-1">
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[8px] font-black text-slate-400 uppercase pointer-events-none">Max</span>
                       <input 
-                        className="w-full rounded-2xl border-none bg-[#eef8ff] py-4 pl-10 pr-2 text-xs font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all" 
+                        className="w-full rounded-lg border-none bg-[#eef8ff] py-4 pl-10 pr-2 text-xs font-bold text-[#001f2a] outline-none ring-0 focus:bg-white focus:ring-2 focus:ring-[#00694b]/20 transition-all" 
                         type="number" 
                         placeholder="Any" 
                         value={filters.maxAmount} 
@@ -332,7 +332,7 @@ function HomePage() {
               </div>
 
               <button 
-                className="w-full rounded-[1.5rem] bg-[#00694b] py-5 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl shadow-emerald-900/20 transition-all hover:scale-[1.02] hover:bg-[#004d37] active:scale-[0.98]" 
+                className="w-full rounded-xl bg-[#00694b] py-5 text-sm font-black uppercase tracking-[0.2em] text-white shadow-xl shadow-emerald-900/20 transition-all hover:scale-[1.02] hover:bg-[#004d37] active:scale-[0.98]" 
                 type="button" 
                 onClick={() => loadTransactions(1)}
               >
@@ -343,7 +343,7 @@ function HomePage() {
         />
 
         <main className="min-w-0 flex-1 space-y-4">
-          <header className="sticky top-2 z-30 overflow-visible rounded-3xl bg-white/92 p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] backdrop-blur md:p-5">
+          <header className="sticky top-2 z-30 overflow-visible rounded-xl bg-white/92 p-4 shadow-[0_12px_40px_rgba(0,31,42,0.06)] backdrop-blur md:p-5">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#00694b] via-[#008560] to-[#67dbad]" />
 
             <div className="flex flex-wrap items-start gap-3 pt-1">
@@ -355,11 +355,11 @@ function HomePage() {
               </div>
 
               <div className="ml-auto flex flex-wrap items-center justify-end gap-2">
-                <div className="rounded-2xl bg-[#e6f6ff] p-2">
+                <div className="rounded-xl bg-[#e6f6ff] p-2">
                   <UserSessionBadge compact />
                 </div>
                 <button
-                  className="rounded-full bg-gradient-to-br from-[#00694b] to-[#008560] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/15 transition hover:opacity-95"
+                  className="rounded-xl bg-gradient-to-br from-[#00694b] to-[#008560] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-900/15 transition hover:opacity-95"
                   type="button"
                   onClick={openNewTransactionArea}
                 >
@@ -477,7 +477,7 @@ function HomePage() {
 
             <section
               ref={formSectionRef}
-              className={`rounded-3xl transition ${formHighlight ? 'ring-4 ring-[#84f8c8]/60' : ''}`}
+              className={`rounded-xl transition ${formHighlight ? 'ring-4 ring-[#84f8c8]/60' : ''}`}
             >
               <TransactionForm
                 editingTransaction={editingTransaction}
@@ -497,7 +497,7 @@ function HomePage() {
                   <path d="M21 21L16.65 16.65M18.5 10.5C18.5 14.9183 14.9183 18.5 10.5 18.5C6.08172 18.5 2.5 14.9183 2.5 10.5C2.5 6.08172 6.08172 2.5 10.5 2.5C14.9183 2.5 18.5 6.08172 18.5 10.5Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                 </svg>
                 <input
-                  className="w-full rounded-full bg-[#f4faff] py-3 pl-9 pr-4 text-sm text-[#001f2a] outline-none ring-0 placeholder:text-slate-400 focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
+                  className="w-full rounded-xl bg-[#f4faff] py-3 pl-9 pr-4 text-sm text-[#001f2a] outline-none ring-0 placeholder:text-slate-400 focus:bg-white focus:shadow-[0_0_0_2px_rgba(0,108,77,0.2)]"
                   placeholder="Search current page transactions..."
                   value={quickSearch}
                   onChange={(event) => setQuickSearch(event.target.value)}
@@ -529,7 +529,7 @@ function HomePage() {
       </div>
 
       <button
-        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-[#00694b] text-3xl text-white shadow-2xl shadow-emerald-900/25 transition hover:scale-105 md:flex"
+        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-xl bg-[#00694b] text-3xl text-white shadow-2xl shadow-emerald-900/25 transition hover:scale-105 md:flex"
         type="button"
         aria-label="New transaction"
         onClick={openNewTransactionArea}

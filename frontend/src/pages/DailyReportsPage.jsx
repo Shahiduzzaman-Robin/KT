@@ -114,7 +114,7 @@ function DailyReportsPage() {
         <AppSidebar />
 
         <main className="min-w-0 flex-1 space-y-4">
-          <header className="rounded-3xl bg-white p-6 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
+          <header className="rounded-xl bg-white p-6 shadow-[0_12px_40px_rgba(0,31,42,0.06)]">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="[font-family:Manrope,ui-sans-serif,system-ui] text-3xl font-bold tracking-tight text-[#001f2a]">
@@ -126,7 +126,7 @@ function DailyReportsPage() {
             </div>
           </header>
 
-          <div className="rounded-3xl bg-white shadow-[0_12px_40px_rgba(0,31,42,0.06)] overflow-hidden">
+          <div className="rounded-xl bg-white shadow-[0_12px_40px_rgba(0,31,42,0.06)] overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
@@ -184,10 +184,10 @@ function DailyReportsPage() {
 
       {selectedReport && createPortal(
         <div className="fixed inset-0 z-[500] flex items-start justify-center overflow-y-auto bg-slate-900/60 p-4 backdrop-blur-sm print-container print:relative print:z-0 print:bg-white print:p-0 print:overflow-visible">
-          <div className="relative w-full max-w-4xl rounded-2xl bg-white shadow-2xl document-container my-10 min-h-[90vh] flex flex-col print:my-0 print:min-h-0 print:shadow-none print:w-full">
+          <div className="relative w-full max-w-4xl rounded-xl bg-white shadow-2xl document-container my-10 min-h-[90vh] flex flex-col print:my-0 print:min-h-0 print:shadow-none print:w-full">
             
             {/* Document Header Controls */}
-            <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-8 py-4 rounded-t-2xl no-print">
+            <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50 px-8 py-4 rounded-t-xl no-print">
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Document View</span>
@@ -195,7 +195,7 @@ function DailyReportsPage() {
               <div className="flex items-center gap-3">
                 <button 
                    onClick={handlePrint}
-                  className="flex items-center gap-2 rounded-xl bg-[#001f2a] px-4 py-2 text-xs font-bold text-white transition hover:opacity-90"
+                  className="flex items-center gap-2 rounded-lg bg-[#001f2a] px-4 py-2 text-xs font-bold text-white transition hover:opacity-90"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
@@ -204,7 +204,7 @@ function DailyReportsPage() {
                 </button>
                 <button 
                   onClick={closeDocument}
-                  className="h-9 w-9 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-400 hover:text-red-500 transition"
+                  className="h-9 w-9 flex items-center justify-center rounded-lg bg-white border border-slate-200 text-slate-400 hover:text-red-500 transition"
                 >
                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
