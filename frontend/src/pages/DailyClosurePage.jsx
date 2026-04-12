@@ -126,6 +126,7 @@ function DailyClosurePage() {
                 <input 
                   type="date" 
                   value={targetDate}
+                  max={dayjs().format('YYYY-MM-DD')}
                   onChange={(e) => setTargetDate(e.target.value)}
                   className="bg-transparent border-none p-0 text-sm font-black text-[#00694b] focus:ring-0 cursor-pointer"
                 />
