@@ -40,25 +40,13 @@ function DailyClosurePage() {
         params: { from: dateToFetch, to: dateToFetch }
       });
 
-      // Filter logically for this business day AND sort chronologically (Noon before Evening)
+      // Filter only current date logically (UTC Shift Safety) AND sort
       const combined = [
         ...(txRes.items || []).map(t => ({ ...t, kind: 'transaction' })),
         ...(loansRes || []).map(l => ({ ...l, kind: 'loan' }))
       ]
       .filter(item => dayjs(item.date).isSame(dayjs(dateToFetch), 'day'))
-      .sort((a, b) => {
-        const dateA = dayjs(a.createdAt);
-        const dateB = dayjs(b.createdAt);
-        
-        // Sort purely by the 'Time of Day' (Minutes from Midnight)
-        const minA = dateA.hour() * 60 + dateA.minute();
-        const minB = dateB.hour() * 60 + dateB.minute();
-        
-        if (minA !== minB) return minA - minB;
-        
-        // Final tie-breaker: creation sequence
-        return dateA.valueOf() - dateB.valueOf();
-      });
+      .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 
       setTransactions(combined);
     } catch (err) {

@@ -21,16 +21,14 @@ function LoansPage() {
     type: 'loan',
     description: '',
     ledgerId: '',
-    ledgerInput: '',
-    createTransaction: true
+    ledgerInput: ''
   });
 
   const [reduceAmount, setReduceAmount] = useState({
     amount: '',
     description: '',
     ledgerId: '',
-    ledgerInput: '',
-    createTransaction: true
+    ledgerInput: ''
   });
 
   const fetchLoans = useCallback(async () => {
@@ -51,8 +49,12 @@ function LoansPage() {
 
   const handleAddLoan = async (e) => {
     e.preventDefault();
+    if (!newLoan.ledgerId) {
+      setStatusMessage({ title: 'Ledger Required', message: 'You must select a ledger to record the outgoing cash.', type: 'warning' });
+      return;
+    }
     try {
-      await api.post('/loans', newLoan);
+      await api.post('/loans', { ...newLoan, createTransaction: true });
       setShowAddModal(false);
       setNewLoan({
         borrowerName: '',
@@ -61,8 +63,7 @@ function LoansPage() {
         type: 'loan',
         description: '',
         ledgerId: '',
-        ledgerInput: '',
-        createTransaction: true
+        ledgerInput: ''
       });
       fetchLoans();
       setStatusMessage({ title: 'Success', message: 'Loan added successfully', type: 'success' });
@@ -73,15 +74,18 @@ function LoansPage() {
 
   const handleReduceLoan = async (e) => {
     e.preventDefault();
+    if (!reduceAmount.ledgerId) {
+      setStatusMessage({ title: 'Ledger Required', message: 'You must select a ledger to record the income.', type: 'warning' });
+      return;
+    }
     try {
-      await api.post(`/loans/${selectedLoan._id}/reduce`, reduceAmount);
+      await api.post(`/loans/${selectedLoan._id}/reduce`, { ...reduceAmount, createTransaction: true });
       setShowReduceModal(false);
       setReduceAmount({
         amount: '',
         description: '',
         ledgerId: '',
-        ledgerInput: '',
-        createTransaction: true
+        ledgerInput: ''
       });
       setSelectedLoan(null);
       fetchLoans();
@@ -233,16 +237,13 @@ function LoansPage() {
                 </div>
               </div>
               <div>
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Ledger (Optional for Auto-Transaction)</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Ledger (Auto-Transaction)</label>
                 <LedgerAutocomplete 
                   value={newLoan.ledgerInput}
                   onChange={val => setNewLoan({...newLoan, ledgerInput: val})}
                   onSelect={l => setNewLoan({...newLoan, ledgerId: l?._id || ''})}
                 />
-                <div className="mt-2 flex items-center gap-2">
-                  <input type="checkbox" id="createTx" checked={newLoan.createTransaction} onChange={e => setNewLoan({...newLoan, createTransaction: e.target.checked})} />
-                  <label htmlFor="createTx" className="text-xs font-bold text-slate-500">Record outgoing transaction from cash</label>
-                </div>
+                <p className="mt-1 text-[10px] font-bold text-slate-400">This will automatically reduce your cash balance.</p>
               </div>
               <div className="flex gap-3 pt-4">
                 <button type="button" onClick={() => setShowAddModal(false)} className="flex-1 py-3 text-sm font-bold text-slate-400 hover:text-slate-600 uppercase tracking-widest">Cancel</button>
@@ -266,16 +267,13 @@ function LoansPage() {
                 <input required type="number" max={selectedLoan.remainingAmount} className="w-full rounded-lg bg-slate-50 border-none p-3 text-sm font-bold outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500" value={reduceAmount.amount} onChange={e => setReduceAmount({...reduceAmount, amount: e.target.value})} />
               </div>
               <div>
-                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Source Ledger (Optional)</label>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Source Ledger (Audit trail)</label>
                 <LedgerAutocomplete 
                   value={reduceAmount.ledgerInput}
                   onChange={val => setReduceAmount({...reduceAmount, ledgerInput: val})}
                   onSelect={l => setReduceAmount({...reduceAmount, ledgerId: l?._id || ''})}
                 />
-                <div className="mt-2 flex items-center gap-2">
-                  <input type="checkbox" id="createTxReduce" checked={reduceAmount.createTransaction} onChange={e => setReduceAmount({...reduceAmount, createTransaction: e.target.checked})} />
-                  <label htmlFor="createTxReduce" className="text-xs font-bold text-slate-500">Record income transaction to cash</label>
-                </div>
+                <p className="mt-1 text-[10px] font-bold text-slate-400">This will automatically increase your cash balance.</p>
               </div>
               <div className="flex gap-3 pt-4">
                 <button type="button" onClick={() => setShowReduceModal(false)} className="flex-1 py-3 text-sm font-bold text-slate-400 hover:text-slate-600 uppercase tracking-widest">Cancel</button>
