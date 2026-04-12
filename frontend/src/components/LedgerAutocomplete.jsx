@@ -13,12 +13,10 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
   function pickSuggestion(ledger) {
-    flushSync(() => {
-      onChange(ledger.name);
-      onSelect(ledger);
-      setSuggestions([]);
-      setHighlightedIndex(-1);
-    });
+    onChange(ledger.name);
+    onSelect(ledger);
+    setSuggestions([]);
+    setHighlightedIndex(-1);
   }
 
   useEffect(() => {
@@ -29,7 +27,7 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
     }
 
     const query = value?.trim();
-    if (!query) {
+    if (!query || query.length < 2) {
       setSuggestions([]);
       setHighlightedIndex(-1);
       return;
@@ -49,31 +47,20 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
       } finally {
         setLoading(false);
       }
-    }, 180);
+    }, 150);
 
     return () => clearTimeout(timer);
-  }, [value, selectedLedgerId]);
+  }, [value, selectedLedgerId, excludeGroups]);
 
   return (
-    <div className="relative">
-      <label className="label">Ledger</label>
+    <div className="relative w-full">
       <input
-        className={`input ${error ? 'border-red-400 focus:ring-red-300' : ''}`}
+        className={`w-full rounded-lg bg-slate-50 border-none p-3 text-xs font-bold outline-none ring-1 ring-slate-200 focus:ring-2 focus:ring-emerald-500 transition-all ${error ? 'ring-red-400' : ''}`}
         value={value}
-        placeholder="Type ledger name e.g. Kamrul"
-        role="combobox"
-        aria-expanded={suggestions.length > 0}
-        aria-controls="ledger-suggestion-list"
-        aria-activedescendant={
-          highlightedIndex >= 0 && suggestions[highlightedIndex]
-            ? `ledger-option-${suggestions[highlightedIndex]._id}`
-            : undefined
-        }
+        placeholder="Search Ledger..."
         onChange={(event) => {
           onChange(event.target.value);
-          if (selectedLedgerId) {
-            onSelect(null);
-          }
+          if (selectedLedgerId) onSelect(null);
         }}
         onKeyDown={(event) => {
           if (event.key === 'ArrowDown') {
@@ -81,76 +68,43 @@ function LedgerAutocomplete({ value, onChange, selectedLedgerId, onSelect, error
             event.preventDefault();
             setHighlightedIndex((prev) => (prev + 1) % suggestions.length);
           }
-
           if (event.key === 'ArrowUp') {
             if (!suggestions.length) return;
             event.preventDefault();
             setHighlightedIndex((prev) => (prev <= 0 ? suggestions.length - 1 : prev - 1));
           }
-
-          if (event.key === 'Enter') {
-            if (suggestions.length > 0) {
-              event.preventDefault();
-              const indexToPick = highlightedIndex >= 0 ? highlightedIndex : 0;
-              pickSuggestion(suggestions[indexToPick]);
-              return;
-            }
-
-            // Prevent premature form submit while autocomplete request is still in flight.
-            if (loading && value?.trim() && !selectedLedgerId) {
-              event.preventDefault();
-            }
+          if (event.key === 'Enter' && suggestions.length > 0) {
+            event.preventDefault();
+            pickSuggestion(suggestions[highlightedIndex >= 0 ? highlightedIndex : 0]);
           }
-
           if (event.key === 'Escape') {
             setSuggestions([]);
             setHighlightedIndex(-1);
           }
         }}
       />
-      {loading ? <p className="hint">Searching...</p> : null}
-      {suggestions.length > 0 ? (
-        <ul id="ledger-suggestion-list" className="absolute z-20 mt-2 w-full rounded-xl border border-slate-200 bg-white/95 shadow-xl backdrop-blur">
+      {loading && <div className="absolute right-3 top-3"><div className="h-4 w-4 animate-spin rounded-full border-2 border-emerald-500 border-t-transparent" /></div>}
+      {suggestions.length > 0 && (
+        <ul className="absolute z-[1500] mt-2 w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
           {suggestions.map((ledger, index) => (
-            <li key={ledger._id}>
-              <div
-                id={`ledger-option-${ledger._id}`}
-                role="option"
-                aria-selected={highlightedIndex === index}
-                tabIndex={-1}
-                className={`grid w-full grid-cols-[1fr_auto] items-start gap-3 px-3 py-2 text-left ${
-                  highlightedIndex === index ? 'bg-sky-50' : 'hover:bg-slate-100'
-                }`}
-                onPointerEnter={() => setHighlightedIndex(index)}
-                onMouseEnter={() => setHighlightedIndex(index)}
-                onPointerDown={(event) => {
-                  event.preventDefault();
-                  pickSuggestion(ledger);
-                }}
-                onMouseDown={(event) => {
-                  event.preventDefault();
-                  pickSuggestion(ledger);
-                }}
-                onClick={() => pickSuggestion(ledger)}
-              >
-                <span className="min-w-0">
-                  <span className="block truncate font-medium text-slate-700">{ledger.name}{ledger.isGroup ? ' 📊' : ''}</span>
-                  <span className="mt-0.5 block truncate text-xs text-slate-500">
-                    Last Tx: {ledger.lastTransactionAt ? dayjs(ledger.lastTransactionAt).format('DD MMM YYYY') : 'None'}
-                    <span className="mx-1">|</span>
-                    {ledger.contact || 'No phone'}
-                    {ledger.address ? ` | ${ledger.address}` : ''}
-                  </span>
-                </span>
-                <span className="rounded-lg bg-slate-200 px-2 py-0.5 text-xs uppercase tracking-wide text-slate-600">
-                  {ledger.isGroup ? 'Group' : ledger.type}
+            <li 
+              key={ledger._id}
+              onClick={() => pickSuggestion(ledger)}
+              className={`flex items-start justify-between cursor-pointer px-4 py-3 border-b last:border-none border-slate-50 transition-colors ${highlightedIndex === index ? 'bg-emerald-50' : 'hover:bg-slate-50'}`}
+            >
+              <div className="min-w-0">
+                <span className="block truncate text-sm font-bold text-slate-800">{ledger.name}</span>
+                <span className="block truncate text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-0.5">
+                  {ledger.type} {ledger.balance !== undefined ? `• ${formatBDT(ledger.balance)}` : ''}
                 </span>
               </div>
+              <span className="ml-2 rounded-md bg-slate-100 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-widest text-slate-500">
+                {ledger.isGroup ? 'Group' : 'Ledger'}
+              </span>
             </li>
           ))}
         </ul>
-      ) : null}
-      {error ? <p className="error-text">{error}</p> : null}
+      )}
     </div>
   );
 }
